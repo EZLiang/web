@@ -54,6 +54,7 @@ function GenerateTopNavigationBar()
             + GetBooksSubMenu() + `
           </div>
         </div>
+        <a id="blog" href="` + siteRoot + `/blog/index.html">Blog</a>
 
         <div style="float: right; margin:5pt; font-size:16pt; color: yellow;">
           Evin Liang
