@@ -1,7 +1,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;*/
 }
 
 .mainContent {
@@ -14,25 +14,32 @@ body {
   position: fixed; /* Set the topNavBar to fixed position */
   top: 0; /* Position the topNavBar at the top of the page */
   width: 100%; /* Full width */
-  border-bottom: 4px solid white;
+  border-bottom: 4px solid white;  
 }
 
 .topNavBar a {
   float: left;
-  font-size: 16pt;
+  font-size: 14pt;
+  font-family: var(--font-base,"Lato",sans-serif);
   color: white;
   text-align: center;
   padding: 6pt 8pt;
   text-decoration: none;
 }
 
+.topNavBar a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 .dropDown {
   float: left;
   overflow: hidden;
+  font-size: 14pt;  
+  font-family: var(--font-base,"Lato",sans-serif);
 }
 
 .dropDown .dropButton {
-  font-size: 14pt;  
   border: none;
   outline: none;
   color: white;
