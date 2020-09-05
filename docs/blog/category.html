@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../assets/main.css" />
+    <link rel="stylesheet" type="text/css" href="blog.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="data.js"></script>
+    <script src="blog.js"></script>
+  </head>
+  <body>
+    <h1></h1>
+    <div id="post">
+      <ul id="postList"></ul>
+    </div>
+    <script>
+      $("title").text(blogData.name);
+      $("h1").text(blogData.name);
+      try {
+        var q = window.location.href.split("?")[1].split("&");
+        var query = {};
+        for (var i of q) {
+        query[i.split("=")[0]] = decodeURIComponent(i.split("=")[1]);
+      }
+      } catch (error) {
+        window.location.href = window.location.href.slice(0, -13) + "index.html";
+      }
+      var category = query.category;
+      for (var i of posts) {
+        if (i.categories.includes(category)) {
+          $("ul#postList").prepend(formatBlurb(i));
+        }
+      }
+    </script>
+  </body>
