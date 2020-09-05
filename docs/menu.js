@@ -1,5 +1,5 @@
 
-function GenerateTopNavigationBar()
+function GenerateTopNavigationBar(dotPath)
 {
     var WebSiteRoot = 'http://evin.ezget.info/';
     WebSiteRoot = 'file:///C:/src/ezLiang/web/docs/';
@@ -7,14 +7,14 @@ function GenerateTopNavigationBar()
     var bookGroupSubMenu = ''    
     for (var index = 0; index < books.length; index++)
     {
-        bookGroupSubMenu += '            <a href="' + WebSiteRoot + 'books/books.html?group=' + index + '">' + books[index].group + '</a>\n';
+        bookGroupSubMenu += '            <a href="' + dotPath + 'books/books.html?group=' + index + '">' + books[index].group + '</a>\n';
     }
 
     document.write(`
       <div class="topNavBar">
-        <a href="` + WebSiteRoot + `">Home</a>
+        <a href="` + dotPath + `">Home</a>
         <div class="dropDown">
-          <a href="` + WebSiteRoot + `books/index.html" class="dropButton">Reading-List</a>
+          <a href="` + dotPath + `books/index.html" class="dropButton">Reading-List</a>
           <div class="dropDown-content">\n`
           + bookGroupSubMenu + `
           </div>
