@@ -1,0 +1,4 @@
+[submodule "web.shared"]
+	path = web.shared
+	url = https://github.com/joey-us/web.shared.git
+	branch = master

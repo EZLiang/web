@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Reading List</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../../web.shared/docs/main.css" />
+  <script type="text/javascript" src="book-list.js"></script>
+  <script type="text/javascript" src="../menu.js"></script>
+</head>
+<body>
+  
+  <script type="text/javascript">
+    GenerateTopNavigationBar();
+  </script>
+  
+  <div class="mainContent">
+    <h1>My Reading List</h1>
+
+    <script type="text/javascript">
+        const StyleA = ' style="color:black; text-decoration: none;" onmouseover="this.style.color="blue" onmouseout="this.style.color="black" ';
+
+        // pages
+        document.write('<h4>Click for Each Page</h4>\n<ul>\n');
+
+        for (var groupIndex = 0; groupIndex < books.length; groupIndex++)
+        {
+            document.write('<li><a ' + StyleA + 'href="books.html?group=' + groupIndex + '">' + books[groupIndex].group + '</a></li>\n');
+        }
+        document.write('</ul><br><hr>\n\n');
+
+        // books
+        document.write('<h4>Click for Each Book</h4>\n<dl>');
+
+        for (var groupIndex = 0; groupIndex < books.length; groupIndex++)
+        {
+            var bookGroup = books[groupIndex];
+            document.write('<p style="margin-bottom: 5px;"><a ' + StyleA + 'href="books.html?group=' + groupIndex + '">' + bookGroup.group + '</a></p>\n');
+            document.write('<ol style="margin-top: 0px;">\n');
+
+            for (var bookIndex = 0; bookIndex < bookGroup.list.length; bookIndex++)
+            {
+                document.write('<li><a ' + StyleA + 'href="books.html?group=' + groupIndex + '#book-' + bookIndex + '">' + bookGroup.list[bookIndex].title + '</a></li>\n');
+            }
+            document.write('</ol><br>\n');
+        }
+
+    </script>
+  </div>
+
+</body>
+</html>
