@@ -1,30 +1,65 @@
 
-function GenerateTopNavigationBar(dotPath, page)
+function GenerateTopNavigationBar()
 {
-    var WebSiteRoot = 'http://evin.ezget.info/';
-    WebSiteRoot = 'file:///C:/src/ezLiang/web/docs/';
+    var siteRoot = '';  // no ending slash
+    var activeMenuId = 'home';
+    var pathName = "";
     
-    var bookGroupSubMenu = ''    
-    for (var index = 0; index < books.length; index++)
+    if (window.location.protocol == 'file:')
     {
-        bookGroupSubMenu += '      <a href="' + dotPath + 'books/books.html?group=' + index + '">' + books[index].group + '</a>\n';
+      // only for local test
+      const RootEnd = '/web/docs/';
+      var href = window.location.href;
+
+      var endAt = href.indexOf(RootEnd);
+      endAt += RootEnd.length - 1; // no ending slah
+
+      siteRoot = href.substr(0, endAt);
+      pathName = href.substring(endAt);
+    }
+    else
+    {
+      siteRoot = window.location.origin;
+      pathName = window.location.pathname;
     }
 
-    var HomeClass = (page == "Home") ? ' class="active" ' : '';
-    var bookClass = (page == "Reading-List") ? ' class="active" ' : '';
+    var pathArray = pathName.split('/');
+    if (pathArray.length > 1)
+    {
+      // may be a file, check if it is something with a '.'
+      // so, DO NOT use a top folder with '.' in the name
+      if (pathArray[1].indexOf('.') < 0)
+      {
+        activeMenuId = pathArray[1];
+      }
+    }
+
+    function GetBooksSubMenu()
+    {
+      var result = '';
+      for (var index = 0; index < books.length; index++)
+      {
+          result += '      <a href="' + siteRoot + '/books/books.html?group=' + index + '">' + books[index].group + '</a>\n';
+      }
+
+      return result;
+    }
+
     document.write(`
       <div class="topNavBar">
-        <a ` + HomeClass + ` href="` + dotPath + `">Home</a>
+        <a id="home" href="` + siteRoot + `/">Home</a>
         <div class="dropDown">
-          <a ` + bookClass + ` href="` + dotPath + `books/index.html" class="dropButton">Reading-List</a>
+          <a id="books" href="` + siteRoot + `/books/index.html" class="dropButton">Reading-List</a>
           <div class="dropDown-content">`
-            + bookGroupSubMenu +`
+            + GetBooksSubMenu() + `
           </div>
         </div>
 
         <div style="float: right; margin:5pt; font-size:16pt; color: yellow;">
           Evin Liang
         </div>
-      </div>`);  
+      </div>`);
+
+    document.getElementById(activeMenuId).classList.add('active');
 }
 
