@@ -6,20 +6,20 @@ var books =
         list:
         [
             {
-                image: "books-00000",
+                image: "books-00000.jpg",
                 title: "Beast Academy 3A, 3B, 3C, 3D", 
                 author: "Jason Batterson, Shannon Rogers",
                 description: `(2016 spring) Beast Academy provides a fun, rigorous, challenging, complete curriculum for aspiring 
                     math beasts.`
             },
             {
-                image: "books-00001",
+                image: "books-00001.jpg",
                 title: "Beast Academy 4A, 4B, 4C, 4D", 
                 author: "Jason Batterson, Shannon Rogers",
                 description: `Beast Academy provides a fun, rigorous, challenging, complete curriculum for aspiring math beasts.`
             },
             {
-                image: "books-00002",
+                image: "books-00002.jpg",
                 title: "The 15 Minute Mathematician", 
                 author: "Anne Rooney",
                 description: `(2016 spring) Part of the Arcturus series, Ideas to Save Your Life, The 15-Minute Mathematician 
@@ -29,7 +29,7 @@ var books =
                     subject of mathematics...`
             },
             {
-                image: "books-00003",
+                image: "books-00003.jpg",
                 title: "The Best Writing on Mathematics series 2010~2016", 
                 author: "Mircea Pitici, ...",
                 description: `This anthology brings together the year&#39;s finest writing on mathematics from around the world. 
@@ -41,7 +41,7 @@ var books =
                     scenes of today&#39;s hottest mathematical debates.`
             },
             {
-                image: "books-00008",
+                image: "books-00008.jpg",
                 title: "Things to Make and Do in the Fourth Dimension: A Mathematician&#39;s Journey Through Narcissistic Numbers,"
                     + " Optimal Dating Algorithms, at Least Two Kinds of Infinity, and More", 
                 author: "Matt Parker",
@@ -52,7 +52,7 @@ var books =
                     the math behind barcodes and iPhone screens to the different kinds of infinity-and slightly beyond.`
             },
             {
-                image: "books-00009",
+                image: "books-00009.jpg",
                 title: "The Magic of Math: Solving for x and Figuring Out Why", 
                 author: "Arthur Benjamin",
                 description: `The Magic of Math is the math book you wish you had in school. Using a delightful assortment of 
@@ -63,7 +63,7 @@ var books =
                     and easy to understand for math fan and math-phobic alike.`
             },
             {
-                image: "books-00010",
+                image: "books-00010.jpg",
                 title: "The Story Of Mathematics: From Babylonian Numerals To Chaos Theory", 
                 author: "Ian Stewart",
                 description: `Beginning with the first Mesopotamian number symbols and concluding with the mind-bending problems 
@@ -73,7 +73,7 @@ var books =
                     outrageous ideas.`
             },
             {
-                image: "books-00011",
+                image: "books-00011.jpg",
                 title: "100 Essential Things You Didn&#39;t Know You Didn&#39;t Know about Math and the Arts", 
                 author: "John D. Barrow",
                 description: `Barrow whisks us through 100 thought-provoking and often whimsical intersections between math and 
@@ -82,7 +82,7 @@ var books =
                     typewriters tackling Shakespeare.`
             },
             {
-                image: "books-00012",
+                image: "books-00012.jpg",
                 title: "Dr. Euler&#39;s Fabulous Formula: Cures Many Mathematical Ills", 
                 author: "Paul J. Nahin  (Princeton Science Library)",
                 description: `Dr. Euler&#39;s Fabulous Formula shares the fascinating story of the groundbreaking formula-long 
@@ -91,7 +91,7 @@ var books =
                     applications of complex numbers alongside intriguing stories from the history of mathematics.`
             },
             {
-                image: "books-00013",
+                image: "books-00013.jpg",
                 title: "Foolproof, and Other Mathematical Meditations", 
                 author: "Brian Hayes  (The MIT Press)",
                 description: `A non-mathematician explores mathematical terrain, reporting accessibly and engagingly on topics 
@@ -100,7 +100,7 @@ var books =
                     mathematicians.`
             },
             {
-                image: "books-00014",
+                image: "books-00014.jpg",
                 title: "Catalan Numbers", 
                 author: "Richard P. Stanley",
                 description: `Catalan numbers are probably the most ubiquitous sequence of numbers in mathematics. This book 
@@ -108,7 +108,7 @@ var books =
                     combinatorics, algebra, analysis, number theory, probability theory, geometry, topology, and other areas.`
             },
             {
-                image: "books-00015",
+                image: "books-00015.jpg",
                 title: "Gamma: Exploring Euler&#39;s Constant", 
                 author: "Julian Havil and Freeman Dyson (Princeton Science Library)",
                 description: `Sure to be popular with not only students and instructors but all math aficionados, Gamma takes us 
@@ -116,7 +116,7 @@ var books =
                     mathematics from some remarkable mathematicians.`
             },
             {
-                image: "books-00016",
+                image: "books-00016.jpg",
                 title: "The Math Book", 
                 author: "Clifford Pickover",
                 description: `Math&#39;s infinite mysteries unfold in this paperback edition of the bestselling TheMath Book. 
@@ -125,7 +125,7 @@ var books =
                     mathematical history`
             },
             {
-                image: "books-00017",
+                image: "books-00017.jpg",
                 title: "Guide to Essential Math: A Review for Physics, Chemistry and Engineering Students", 
                 author: "S.M. Blinder",
                 description: `This book reminds students in junior, senior and graduate level courses in physics, chemistry and 
@@ -135,7 +135,7 @@ var books =
                     to think in mathematical terms and to apply quantitative methods to scientific problems.`
             },
             {
-                image: "books-00019",
+                image: "books-00019.jpg",
                 title: "Beautiful Geometry", 
                 author: "Eli Maor and Eugen Jost",
                 description: `As much a work of art as a book about mathematics, Beautiful Geometry presents more than sixty 
@@ -143,7 +143,7 @@ var books =
                     accounts of the fascinating history and people behind each.`
             },
             {
-                image: "books-00020",
+                image: "books-00020.jpg",
                 title: "Mathematical Magic", 
                 author: "William Simon",
                 description: `You don't have to be a mathematician or magician to perform the tricks in this fascinating treasury 
@@ -159,7 +159,7 @@ var books =
         list:
         [
             {
-                image: "books-00021",
+                image: "books-00021.jpg",
                 title: "The Best Writing on Mathematics series 2017", 
                 author: "Mircea Pitici",
                 description: `This annual anthology brings together the year's finest mathematics writing from around the world.
@@ -167,14 +167,14 @@ var books =
                     Mathematics 2017 makes available to a wide audience many articles not easily found anywhere else...`
             },
             {
-                image: "books-00022",
+                image: "books-00022.jpg",
                 title: "Beast Academy 5A, 5B, 5C, 5D", 
                 author: "Jason Batterson, Erich Owen",
                 description: `AoPS 8-Book Set : Art of Problem Solving Beast Academy 5A and 5B and 5C and 5D Guide and Practice 
                     8-Book Set`
             },
             {
-                image: "books-00023",
+                image: "books-00023.jpg",
                 title: "Invitation to a Mathematical Festival (MSRI Mathematical Circles Library)", 
                 author: "Ivan Yashchenko",
                 description: `Held annually in Moscow since 1990, the Mathematical Festival is a brilliant and fascinating math
@@ -187,7 +187,7 @@ var books =
                     be enjoyed by students with a deeper interest in mathematics.`
             },
             {
-                image: "books-00024",
+                image: "books-00024.jpg",
                 title: "The Irrationals: A Story of the Numbers You Can&#39;t Count On", 
                 author: "Julian Havil",
                 description: `In The Irrationals, the first popular and comprehensive book on the subject, Julian Havil tells the
@@ -197,7 +197,7 @@ var books =
                     illuminating, this is a book for everyone who loves math and the history behind it.`
             },
             {
-                image: "books-00025",
+                image: "books-00025.jpg",
                 title: "The Circle - A Mathematical Exploration Beyond the Line", 
                 author: "Alfred Posamentier & Robert Geretschlager",
                 description: `The circle has fascinated mathematicians since ancient times. This entertaining book describes in
@@ -211,7 +211,7 @@ var books =
                     compass alone.`
             },
             {
-                image: "books-00026",
+                image: "books-00026.jpg",
                 title: "An Interactive Introduction to Knot Theory (Aurora: Dover Modern Math Originals)", 
                 author: "Inga Johnson and Allison K. Henrich",
                 description: `This well-written and engaging volume, intended for undergraduates, introduces knot theory, an area
@@ -219,7 +219,7 @@ var books =
                     for undergraduates, introduces knot theory, an area of growing interest in contemporary mathematics.`
             },
             {
-                image: "books-00027",
+                image: "books-00027.jpg",
                 title: "Burn Math Class: And Reinvent Mathematics for Yourself", 
                 author: "Jason Wilkes",
                 description: `Focusing on how mathematics is created rather than on mathematical facts, Wilkes teaches the
@@ -228,7 +228,7 @@ var books =
                     (re)invented from scratch without preexisting textbooks and courses.`
             },
             {
-                image: "books-00028",
+                image: "books-00028.jpg",
                 title: "Geometry in Figures: Second edition", 
                 author: "Arseniy V Akopyan",
                 description: `This book is a collection of theorems and problems in classical Euclidean geometry formulated in
@@ -236,7 +236,7 @@ var books =
                     like classical geometry. This is second, extended edition.`
             },
             {
-                image: "books-00029",
+                image: "books-00029.jpg",
                 title: "Euclid&#39;s Elements", 
                 author: "Euclid, Dana Densmore, et al.",
                 description: `The classic Heath translation, in a completely new layout with plenty of space and generous
@@ -251,7 +251,7 @@ var books =
         list:
         [
             {
-                image: "books-00030",
+                image: "books-00030.jpg",
                 title: "The Best Writing on Mathematics series 2018", 
                 author: "Mircea Pitici",
                 description: `This annual anthology brings together the year&#39;s finest mathematics writing from around the 
@@ -262,7 +262,7 @@ var books =
                     practice&ndash;and taking readers behind the scenes of today&#39;s hottest mathematical debates.`
             },
             {
-                image: "books-00031",
+                image: "books-00031.jpg",
                 title: "Ordinary Differential Equations (Dover Books on Mathematics)", 
                 author: "Morris Tenenbaum, Harry Pollard",
                 description: `This unusually well-written, skillfully organized introductory text provides an exhaustive survey 
@@ -273,7 +273,7 @@ var books =
                     mathematics, engineering and the sciences.`
             },
             {
-                image: "books-00032",
+                image: "books-00032.jpg",
                 title: "The Joy of Mathematics", 
                 author: "Alfred S. Posamentier, Robert Geretschl&auml;ger, et al",
                 description: `Using jargon-free language and many illustrations, the authors&ndash;all veteran math 
@@ -281,7 +281,7 @@ var books =
                     mathematics can reinforce common sense`
             },
             {
-                image: "books-00033",
+                image: "books-00033.jpg",
                 title: "The Call of the Primes: Surprising Patterns, Peculiar Puzzles, and Other Marvels of Mathematics", 
                 author: "Owen O&#39;Shea",
                 description: `This sampler of entertaining mathematical diversions reveals the elegance and extraordinary
@@ -292,7 +292,7 @@ var books =
                     more, the author shows that math can be fun while having some profound implications.`
             },
             {
-                image: "books-00034",
+                image: "books-00034.jpg",
                 title: "Symmetry Monster", 
                 author: "Mark Ronan",
                 description: `This story of discovery of Symmetry Monster involves extraordinary characters, and Mark Ronan
@@ -300,7 +300,7 @@ var books =
                     joint project ever in the field of mathematics.`
             },
             {
-                image: "books-00035",
+                image: "books-00035.jpg",
                 title: "Across the Board: The Mathematics of Chessboard Problems", 
                 author: "John J. Watkins",
                 description: `Across the Board is the definitive work on chessboard problems. It is not simply about chess but 
@@ -310,7 +310,7 @@ var books =
                     surprisingly fertile area of recreational mathematics.`
             },
             {
-                image: "books-00036",
+                image: "books-00036.jpg",
                 title: "Math with Bad Drawings: Illuminating the Ideas That Shape Our Reality", 
                 author: "Ben Orlin",
                 description: `A hilarious reeducation in mathematics-full of joy, jokes, and stick figures-that sheds light on 
@@ -319,7 +319,7 @@ var books =
                     Math with Bad Drawings is a life-changing book for the math-estranged and math-enamored alike`
             },
             {
-                image: "books-00037",
+                image: "books-00037.jpg",
                 title: "The Probability Lifesaver: All the Tools You Need to Understand Chance", 
                 author: "Steven J. Miller",
                 description: `The Probability Lifesaver is based on a successful course that Steven Miller has taught at Brown
@@ -327,7 +327,7 @@ var books =
                     introduction to the subject or as a supplement for a course,`
             },
             {
-                image: "books-00038",
+                image: "books-00038.jpg",
                 title: "Fractal Worlds: Grown, Built, and Imagined", 
                 author: "Michael Frame, Amelia Urry",
                 description: `Fractal geometry is a uniquely fascinating area of mathematics, exhibited in a range of shapes 
@@ -337,7 +337,7 @@ var books =
                     appear in nature, art, medicine, and technology.`
             },
             {
-                image: "books-00039",
+                image: "books-00039.jpg",
                 title: "Summing It Up: From One Plus One to Modern Number Theory", 
                 author: "Avner Ash, Robert Gross",
                 description: `Summing It Up uses addition as a springboard to present a fascinating and accessible look at
@@ -347,7 +347,7 @@ var books =
                     forms, and issues at the forefront of current mathematical research.`
             },
             {
-                image: "books-00040",
+                image: "books-00040.jpg",
                 title: "Digital Dice: Computational Solutions to Practical Probability Problems (Princeton Puzzlers)", 
                 author: "Paul J. Nahin",
                 description: `Popular-math writer Paul Nahin challenges readers to solve twenty-one difficult but fun problems,
@@ -355,7 +355,7 @@ var books =
                     characteristic style, Nahin brings the problems to life with interesting and odd historical anecdotes`
             },
             {
-                image: "books-00041",
+                image: "books-00041.jpg",
                 title: "Math Jokes 4 Mathy Folks", 
                 author: "G. Patrick Vennebush",
                 description: `Who says math can't be funny? In Math Jokes 4 Mathy Folks, Patrick Vennebush dispels the myth of 
@@ -364,7 +364,7 @@ var books =
                     containing over 400 jokes.`
             },
             {
-                image: "books-00042",
+                image: "books-00042.jpg",
                 title: "An Introduction to the Theory of Numbers", 
                 author: "G.H. Hardy, E.M. Wright",
                 description: `on the reading list of virtually all elementary number theory courses and is widely regarded as the
@@ -373,7 +373,7 @@ var books =
                     upwards as well as an essential reference for all number theorists`
             },
             {
-                image: "books-00043",
+                image: "books-00043.jpg",
                 title: "Euler&#39;s Gem The Polyhedron Formula and the Birth of Topology", 
                 author: "David S. Richeson",
                 description: `Leonhard Euler&#39;s polyhedron formula describes the structure of many objects-from soccer balls
@@ -386,7 +386,7 @@ var books =
                     acreage of a tree farm by counting trees, and how many crayons are needed to color any map.`
             },
             {
-                image: "books-00044",
+                image: "books-00044.jpg",
                 title: "Math Art: Truth, Beauty, and Equations", 
                 author: "Stephen Ornes",
                 description: `The worlds of visual art and mathematics come together in this spectacular volume by awardwinning
@@ -394,7 +394,7 @@ var books =
                     thought-provoking explanations of the mathematical concept and equations behind the art.`
             },
             {
-                image: "books-00045",
+                image: "books-00045.jpg",
                 title: "Man Who Knew Infinity",
                 author: "Robert Kanigel",
                 description: `The book was named a National Book Critics Circle finalist, a Los Angeles Times Book Prize
@@ -402,7 +402,7 @@ var books =
                     German, Greek, Chinese, Thai, and other languages, and has been made into a feature film`
             },
             {
-                image: "books-00046",
+                image: "books-00046.jpg",
                 title: "An Imaginary Tale: The Story of &radic;-1", 
                 author: "Paul J. Nahin",
                 description: `In An Imaginary Tale, Paul Nahin tells the 2000-year-old history of one of mathematics&#39; most
@@ -410,7 +410,7 @@ var books =
                     mathematical problems that conjured it up, and the colorful characters who tried to solve them`
             },
             {
-                image: "books-00047",
+                image: "books-00047.jpg",
                 title: "Partial Differential Equations with Fourier Series and Boundary Value Problems: Third Edition "
                     + " (Dover Books on Mathematics)", 
                 author: "Nakhle H. Asmar",
@@ -423,7 +423,7 @@ var books =
                     exercises in each section.`
             },
             {
-                image: "books-00048",
+                image: "books-00048.jpg",
                 title: "Math with Bad Drawings: Illuminating the Ideas That Shape Our Reality", 
                 author: "Ben Orlin",
                 description: `In Math With Bad Drawings, Ben Orlin reveals to us what math actually is; its myriad uses, its
@@ -435,7 +435,7 @@ var books =
                     headache that ensues when attempting to build a spherical Death Star.`
             },
             {
-                image: "books-00049",
+                image: "books-00049.jpg",
                 title: "Humble Pi: A Comedy of Maths Errors", 
                 author: "Matt Parker",
                 description: `**The First Ever Maths Book to be a No.1 Bestseller**
@@ -447,7 +447,7 @@ var books =
                     our world.`
             },
             {
-                image: "books-00050",
+                image: "books-00050.jpg",
                 title: "The Prime Number Conspiracy: The Biggest Ideas in Math from Quanta (The MIT Press)", 
                 author: "Thomas Lin, James Gleick",
                 description: `These stories from Quanta Magazine map the routes of mathematical exploration, showing readers
@@ -464,7 +464,7 @@ var books =
         list:
         [
             {
-                image: "books-00051",
+                image: "books-00051.jpg",
                 title: "Zero: The Biography of a Dangerous Idea", 
                 author: "Charles Seife",
                 description: `In Zero, Science Journalist Charles Seife follows this innocent-looking number from its birth as an
@@ -474,7 +474,7 @@ var books =
                     to understand it and whose clashes shook the foundations of philosophy, science, mathematics, and religion.`
             },
             {
-                image: "books-00058",
+                image: "books-00058.jpg",
                 title: "e: The Story of a Number", 
                 author: "Eli Maor",
                 description: `The interest earned on a bank account, the arrangement of seeds in a sunflower, and the shape of 
@@ -484,7 +484,7 @@ var books =
                     central importance of e to mathematics and illuminates a golden era in the age of science.`
             },
             {
-                image: "books-00052",
+                image: "books-00052.jpg",
                 title: "Symmetry", 
                 author: "Hermann Weyl (Princeton Science Library (104)",
                 description: `Hermann Weyl explores the concept of symmetry beginning with the idea that it represents a
@@ -495,7 +495,7 @@ var books =
                     of applications and importance of symmetry.`
             },
             {
-                image: "books-00053",
+                image: "books-00053.jpg",
                 title: "Weird Math: A Teenage Genius and His Teacher Reveal the Strange Connections Between Math and Everyday Life", 
                 author: "David Darling, Agnijo Banerjee",
                 description: `As teen math prodigy Agnijo Banerjee and his teacher David Darling reveal, complex math
@@ -506,7 +506,7 @@ var books =
                     mysteries of math, it will entrance beginners and seasoned mathematicians alike.`
             },
             {
-                image: "books-00054",
+                image: "books-00054.jpg",
                 title: "Adventures in Mathematical Reasoning (Dover Books on Mathematics)", 
                 author: "Sherman Stein",
                 description: `Equally appealing to beginners and to the mathematically adept, this book bridges the humanities
@@ -520,7 +520,7 @@ var books =
                     probability - both accessible and exciting.`
             },
             {
-                image: "books-00055",
+                image: "books-00055.jpg",
                 title: "The Mathematics of Various Entertaining Subjects: Volume 2: Research in Games, Graphs, Counting, and Complexity", 
                 author: "Jennifer Beineke, Jason Rosenhouse",
                 description: `This latest volume gathers together the top experts in recreational math and presents a compelling
@@ -534,7 +534,7 @@ var books =
                     research, probability, game theory, and music theory.`
             },
             {
-                image: "books-00056",
+                image: "books-00056.jpg",
                 title: "The Mathematics of Various Entertaining Subjects: Volume 3: The Magic of Mathematics", 
                 author: "Jennifer Beineke, Jason Rosenhouse",
                 description: `This volume focuses on four areas: puzzles and brainteasers, games, algebra and number theory, and
@@ -546,7 +546,7 @@ var books =
                     Entertaining Subjects is sure to challenge and inspire mathematicians and math enthusiasts.`
             },
             {
-                image: "books-00057",
+                image: "books-00057.jpg",
                 title: "Mathcounts State Competition Preparation, Volume 1~5", 
                 author: "Yongcheng Chen, Sam Chen",
                 description: `The books (Volumes 1 to 5) can be used by 5th to 8th grade students preparing for Mathcounts 
@@ -555,7 +555,7 @@ var books =
                     problems, and (3) detailed solutions to all problems.`
             },
             {
-                image: "books-00062",
+                image: "books-00062.jpg",
                 title: "Competition Math for Middle School", 
                 author: "J. Batterson",
                 description: `Written for the gifted math student, the new math coach, the teacher in search of problems and
@@ -565,14 +565,14 @@ var books =
                     concepts and provide helpful tips and tricks`
             },
             {
-                image: "books-00063",
+                image: "books-00063.jpg",
                 title: "Art of Problem Solving Beyond, Volume 2, Textbook and Solutions Manual, 2-Book Set", 
                 author: "Sandor Lehoczky, Richard Rusczyk",
                 description: `A classic problem solving textbook for students in grades 9-12 who are preparing 
                     for advanced high school contests like the AMC 12, AIME, and the Harvard-MIT Mathematics Tournament.`
             },
             {
-                image: "books-00064",
+                image: "books-00064.jpg",
                 title: "Intermediate Counting & Probability and Intermediate Counting & Probability Solutions Manual "
                     + " (The Art of Problem Solving)", 
                 author: "David Patrick",
@@ -581,14 +581,14 @@ var books =
                     theory, and more.`
             },
             {
-                image: "books-00105",
+                image: "books-00105.jpg",
                 title: "G&ouml;del, Escher, Bach: An Eternal Golden Braid", 
                 author: "Douglas R. Hofstadter",
                 description: `G&ouml;del, Escher, Bach is a wonderful exploration of fascinating ideas at the heart of cognitive
                     science: meaning, reduction, recursion, and much more.`
             },
             {
-                image: "books-00065",
+                image: "books-00065.jpg",
                 title: "Winning Ways: For Your Mathematical Plays. Volume 1: Games in General", 
                 author: "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
                 description: `This classic on games and how to play them intelligently is being re-issued in a new, four volume
@@ -598,7 +598,7 @@ var books =
                     formats in order to develop winning strategies.`
             },
             {
-                image: "books-00066",
+                image: "books-00066.jpg",
                 title: "Winning Ways for Your Mathematical Plays, Vol. 2", 
                 author: "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
                 description: `In the quarter of a century since three mathematicians and game theorists collaborated to create
@@ -612,7 +612,7 @@ var books =
                     Infinite and Indefinite - Games Eternal&ndash;Games Entailed - Survival in the Lost World`
             },
             {
-                image: "books-00067",
+                image: "books-00067.jpg",
                 title: "Winning Ways for Your Mathematical Plays, Volume 3 2nd Edition", 
                 author: "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
                 description: `In the quarter of a century since three mathematicians and game theorists collaborated to create
@@ -624,7 +624,7 @@ var books =
                     Lines and Squares`
             },
             {
-                image: "books-00068",
+                image: "books-00068.jpg",
                 title: "Winning Ways for Your Mathematical Plays, Volume 4", 
                 author: "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
                 description: `In the quarter of a century since three mathematicians and game theorists collaborated to create
@@ -633,7 +633,7 @@ var books =
                     games such as Solitaire.`
             },
             {
-                image: "books-00069",
+                image: "books-00069.jpg",
                 title: "The Book of Numbers", 
                 author: "Conway, John H., Richard K. Guy",
                 description: `&ldquo;...the great feature of the book is that anyone can read it without excessive head 
@@ -646,7 +646,7 @@ var books =
                     &ldquo;This popularization of number theory looks like another classic.&rdquo; -LIBRARY JOURNAL`
             },
             {
-                image: "books-00070",
+                image: "books-00070.jpg",
                 title: "On Numbers and Games", 
                 author: "John H. Conway",
                 description: `ONAG, as the book is commonly known, is one of those rare publications that sprang to life in a
@@ -660,7 +660,7 @@ var books =
                     on surreal numbers and the additive theory of partizan games.`
             },
             {
-                image: "books-00071",
+                image: "books-00071.jpg",
                 title: "Surreal Numbers", 
                 author: "Donald E. Knuth",
                 description: `Nearly 30 years ago, John Horton Conway introduced a new way to construct numbers. Donald E.
@@ -672,7 +672,7 @@ var books =
                     dialogue on abstract mathematical ideas, and who might wish to experience how new mathematics is created.`
             },
             {
-                image: "books-00072",
+                image: "books-00072.jpg",
                 title: "Concrete Mathematics: A Foundation for Computer Science (2nd Edition)", 
                 author: "Ronald L. Graham, Donald E. Knuth , et al.",
                 description: `This book introduces the mathematics that supports advanced computer programming and the
@@ -683,7 +683,7 @@ var books =
                     in virtually every discipline.`
             },
             {
-                image: "books-00073",
+                image: "books-00073.jpg",
                 title: "The Art of Computer Programming, Volume 4, Fascicle 6: Satisfiability, 1st Edition", 
                 author: "Donald E. Knuth",
                 description: `This multivolume work on the analysis of algorithms has long been recognized as the definitive
@@ -702,7 +702,7 @@ var books =
                     than 500 exercises are provided, arranged carefully for self-instruction, together with detailed answers.`
             },
             {
-                image: "books-00074",
+                image: "books-00074.jpg",
                 title: "The Symmetries of Things 1st Edition", 
                 author: "John H. Conway, Heidi Burgiel, Chaim Goodman-Strauss",
                 description: `Inspired by the geometric intuition of Bill Thurston and empowered by his own analytical skills,
@@ -713,7 +713,7 @@ var books =
                     interested lay people, artists, working mathematicians, and researchers`
             },
             {
-                image: "books-00075",
+                image: "books-00075.jpg",
                 title: "Must Know High School Geometry 1st Edition", 
                 author: "Allen Ma, Amber Kuang",
                 description: `The authors, between them, teach high school math courses including geometry, trigonometry, precalculus,
@@ -725,7 +725,7 @@ var books =
                     and on exams.`
             },
             {
-                image: "books-00076",
+                image: "books-00076.jpg",
                 title: "Undergraduate Algebra (Undergraduate Texts in Mathematics)", 
                 author: "Serge Lang",
                 description: `(haven&#39;t finished reading)<br>
@@ -734,7 +734,7 @@ var books =
                     matrices including descriptions of the conjugation representation of the diagonal group`
             },
             {
-                image: "books-00077",
+                image: "books-00077.jpg",
                 title: "Advanced Algebra Student Edition", 
                 author: "Univ. of Chicago School Math Project, James Flanders",
                 description: `The UCSMP Third Edition curriculum emphasizes problem solving, everyday applications, and the
@@ -754,7 +754,7 @@ var books =
         list:
         [
             {
-                image: "books-00080",
+                image: "books-00080.jpg",
                 title: "Astronomy magazine, 2014 - current", 
                 author: "",
                 description: `The world's best-selling astronomy magazine offers you the most exciting, visually stunning, 
@@ -763,7 +763,7 @@ var books =
                     much more! All this in an easy-to-understand, user-friendly style that's perfect for astronomers at any level.`
             },
             {
-                image: "books-00081",
+                image: "books-00081.jpg",
                 title: "Popular Science, 2014 - current", 
                 author: "",
                 description: `Popular Science is an American quarterly magazine carrying popular science content, which refers 
@@ -773,14 +773,14 @@ var books =
                     and is distributed to at least 45 countries.`
             },
             {
-                image: "books-00082",
+                image: "books-00082.jpg",
                 title: "Popular Mechanics, 2014 - 2018", 
                 author: "",
                 description: `Popular Mechanics is a magazine of popular science and technology, featuring automotive, home, 
                     outdoor, electronics, science, do-it-yourself, and technology topics. Military topics...`
             },
             {
-                image: "books-00083",
+                image: "books-00083.jpg",
                 title: "Raspberry Pi For Kids For Dummies", 
                 author: "Richard Wentk",
                 description: `Raspberry Pi For Kids For Dummies makes it easy for kids to set-up, operate, and troubleshoot
@@ -791,7 +791,7 @@ var books =
                     everything you need to have fun with Pi is inside!`
             },
             {
-                image: "books-00084",
+                image: "books-00084.jpg",
                 title: "Learn Python in One Day and Learn It Well. Python for Beginners with Hands-on Project", 
                 author: "Chan, Jamie",
                 description: `The best way to learn Python is by doing. This book includes a complete project at the end 
@@ -800,7 +800,7 @@ var books =
                     and master the language.`
             },
             {
-                image: "books-00085",
+                image: "books-00085.jpg",
                 title: "Electronics For Dummies", 
                 author: "Cathleen Shamieh, Gordon McComb",
                 description: `Electronics is fascinating - want to make something of it? This book shows you how!
@@ -810,13 +810,13 @@ var books =
                     what you can make with them, and how to do it safely.`
             },
             {
-                image: "books-00086",
+                image: "books-00086.jpg",
                 title: "Dempsey Parr&#39;s Science Encyclopedia", 
                 author: "Ian Graham; Et Al",
                 description: ``
             },
             {
-                image: "books-00087",
+                image: "books-00087.jpg",
                 title: "What if?", 
                 author: "Randall Munroe",
                 description: `The book features new and never-before-answered questions, along with updated and expanded
@@ -824,7 +824,7 @@ var books =
                     xkcd fans and anyone who loves to ponder the hypothetical.`
             },
             {
-                image: "books-00088",
+                image: "books-00088.jpg",
                 title: "Molecules: The Elements and the Architecture of Everything", 
                 author: "Theodore Gray, Nick Mann",
                 description: `In this paperback edition of the beloved second book in Theodore Gray&#39;s bestselling (1.5 million
@@ -832,7 +832,7 @@ var books =
                     the molecules that form the things that make up our world.`
             },
             {
-                image: "books-00089",
+                image: "books-00089.jpg",
                 title: "Elements: A Visual Exploration of Every Known Atom in the Universe", 
                 author: "Theodore Gray, Nick Mann",
                 description: `An eye-opening, original collection of gorgeous, never-before-seen photographic representations
@@ -844,7 +844,7 @@ var books =
                     purest form.`
             },
             {
-                image: "books-00090",
+                image: "books-00090.jpg",
                 title: "Balancing Chemical Equations Worksheets (Over 200 Reactions to Balance): Chemistry Essentials Practice "
                     + " Workbook with Answers", 
                 author: "Chris McMullen",
@@ -857,7 +857,7 @@ var books =
                     - Opening chapter reviews pertinent concepts and ideas.`
             },
             {
-                image: "books-00091",
+                image: "books-00091.jpg",
                 title: "General Chemistry (Dover Books on Chemistry)", 
                 author: "Linus Pauling (Two-Time Nobel Laureate)",
                 description: `When it was first published, this first-year chemistry text revolutionized the teaching of 
@@ -873,7 +873,7 @@ var books =
                     correlation with the electronic structure of atoms, especially electronegativity.`
             },
             {
-                image: "books-00059",
+                image: "books-00059.jpg",
                 title: "Natural Products - Their Chemistry and Biological Significance", 
                 author: "J Mann, RS. Davidson, J.M. Hobbs, D.V. Banthorpe, and J.B. Harborne",
                 description: `This highly informative text explores the structure, chemistry, biosynthesis and interaction of 
@@ -884,7 +884,7 @@ var books =
                     Products&rdquo; takes a chemical viewpoint but biological interrelationships are also discussed`
             },
             {
-                image: "books-00092",
+                image: "books-00092.jpg",
                 title: "Brief Answer to The Big Questions", 
                 author: "Stephen Hawking",
                 description: `Will humanity survive? Should we colonize space? Does God exist? These are just a few of the
@@ -892,7 +892,7 @@ var books =
                     greatest minds in history.`
             },
             {
-                image: "books-00093",
+                image: "books-00093.jpg",
                 title: "An Uncommon History of Common Things", 
                 author: "National Geographic",
                 description: `This vivid, engrossing book reveals the fascinating stories behind the objects in your world, what
@@ -901,7 +901,7 @@ var books =
                     and learn how GPS came to be.`
             },
             {
-                image: "books-00094",
+                image: "books-00094.jpg",
                 title: "A Journey Through The Universe", 
                 author: "New Scientist",
                 description: `There's a whole universe out there... and this book is your journey into space. Imagine you had a 
@@ -909,14 +909,14 @@ var books =
                     solar system and keep going. Where do you end up, and what do you see along the way? `
             },
             {
-                image: "books-00095",
+                image: "books-00095.jpg",
                 title: "How to Fall Slower Than Gravity", 
                 author: "Paul J. Nahin",
                 description: `Paul Nahin is a master at explaining odd phenomena through straightforward mathematics. In this
                     collection of twenty-six intriguing problems, he explores how mathematical physicists think.`
             },
             {
-                image: "books-00096",
+                image: "books-00096.jpg",
                 title: "A Little Book of Black Holes", 
                 author: "Steven Gubser, & Frans Pretorius",
                 description: `Princeton physics professors Gubser and Pretorius condense their significant expertise in black
@@ -925,7 +925,7 @@ var books =
                     holes simple yet destructive manifestations of geometric destiny.`
             },
             {
-                image: "books-00097",
+                image: "books-00097.jpg",
                 title: "Einstein&#39;s Riddle: Riddles, Paradoxes, and Conundrums to Stretch Your Mind", 
                 author: "Jeremy Stangroom",
                 description: `Einstein&#39;s Riddle features fifty of the toughest logic problems, lateral thinking puzzles, and 
@@ -933,7 +933,7 @@ var books =
                     tell us about how we reason, and provide a rigorous intellectual workout.`
             },
             {
-                image: "books-00098",
+                image: "books-00098.jpg",
                 title: "101 Things I Learned in Engineering School", 
                 author: "John Kuprenas and Matthew Frederick",
                 description: `An experienced civil engineer presents the physics and fundamentals underlying the many fields
@@ -941,7 +941,7 @@ var books =
                     can illuminate questions from the simple to the profound`
             },
             {
-                image: "books-00099",
+                image: "books-00099.jpg",
                 title: "Caesar&#39;s Last Breath: And Other True Tales of History, Science, and the Sextillions of Molecules "
                     + " in the Air Around Us", 
                 author: "Sam Kean",
@@ -952,7 +952,7 @@ var books =
                     history of the world.`
             },
             {
-                image: "books-00100",
+                image: "books-00100.jpg",
                 title: "A Brief History of Time", 
                 author: "Stephen Hawking",
                 description: `A landmark volume in science writing by one of the great minds of our time, Stephen Hawking&#39;s
@@ -965,7 +965,7 @@ var books =
                     imagination, Stephen Hawking brings us closer to the ultimate secrets at the very heart of creation.`
             },
             {
-                image: "books-00004",
+                image: "books-00004.jpg",
                 title: "CSS Secrets: Better Solutions to Everyday Web Design Problems", 
                 author: "Lea Verou",
                 description: `In this practical guide, CSS expert Lea Verou provides 47 undocumented techniques and tips to help
@@ -976,7 +976,7 @@ var books =
                     flexible, lightweight, and standards-compliant results.`
             },
             {
-                image: "books-00005",
+                image: "books-00005.jpg",
                 title: "Python Without Fear, 1st Edition", 
                 author: "Brian Overland",
                 description: `Whether you&#39;re new to programming or moving from another language, Python Without Fear will 
@@ -989,7 +989,7 @@ var books =
                     <li>How to think &ldquo;Pythonically&rdquo; and avoid common &ldquo;gotchas&rdquo;</li></ul>`
             },
             {
-                image: "books-00006",
+                image: "books-00006.jpg",
                 title: "JavaScript and JQuery: Interactive Front-End Web Development, 1st Edition", 
                 author: "Jon Duckett",
                 description: `THIS BOOK COVERS:<ul>
@@ -1003,7 +1003,7 @@ var books =
                       from scratch and how the theory you have learned is put into practice).</li></ul>`
             },
             {
-                image: "books-00007",
+                image: "books-00007.jpg",
                 title: "HTML and CSS: Design and Build Websites 1st Edition", 
                 author: "Jon Duckett",
                 description: `A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! <ul>
@@ -1022,7 +1022,7 @@ var books =
         list:
         [
             {
-                image: "books-00101",
+                image: "books-00101.jpg",
                 title: "The Feynman Lectures on Physics, Vol. I: The New Millennium Edition: Mainly Mechanics, Radiation, "
                     + " and Heat (Volume 1)", 
                 author: "Richard P. Feynman , Robert B. Leighton , et al.",
@@ -1035,7 +1035,7 @@ var books =
                     but for anyone seeking an introduction to the field from the inimitable Feynman.`
             },
             {
-                image: "books-00102",
+                image: "books-00102.jpg",
                 title: "How To: Absurd Scientific Advice for Common Real-World Problems", 
                 author: "Randall Munroe",
                 description: `Bestselling author and cartoonist Randall Munroe explains how to predict the weather by
@@ -1047,7 +1047,7 @@ var books =
                     using tectonic plates to subduct it into the Earth&#39;s mantle, or launching it into the Sun.`
             },
             {
-                image: "books-00103",
+                image: "books-00103.jpg",
                 title: "What Should We Be Worried About?: Real Scenarios That Keep Scientists Up at Night (Edge Question Series)", 
                 author: "John Brockman",
                 description: `Drawing from the horizons of science, today&#39;s leading thinkers reveal the hidden threats nobody 
@@ -1057,7 +1057,7 @@ var books =
                     He asked them to disclose...`
             },
             {
-                image: "books-00104",
+                image: "books-00104.jpg",
                 title: "How Charts Lie: Getting Smarter about Visual Information", 
                 author: "Alberto Cairo",
                 description: `In How Charts Lie, data visualization expert Alberto Cairo teaches us to not only spot the lies in
@@ -1069,7 +1069,7 @@ var books =
                     world.`
             },
             {
-                image: "books-00106",
+                image: "books-00106.jpg",
                 title: "The Fallacy Detective: Thirty-Eight Lessons on How to Recognize Bad Reasoning", 
                 author: "Nathaniel Bluedorn, Hans Bluedorn , et al.",
                 description: `The Fallacy Detective has been the best selling text for teaching logical fallacies and introduction
