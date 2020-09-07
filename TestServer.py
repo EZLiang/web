@@ -6,32 +6,57 @@ PORT = 8000
 
 
 class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
-    def processJekyll(self, dir, filePath):
-        path = dir + filePath
-        file = open(path, "r")
+    def processHtmlFile(self, dir, filePath):
 
-        # to-do:
-        lines = file.readlines()
-        file.seek(0, os.SEEK_SET)
-        content = file.read()
-        file.close()
+        htmlPath = dir + filePath
+        htmlFile = open(htmlPath, "r")
 
-        # to-do: improve this
-        layoutLine = lines[1]
-        layoutIndex = layoutLine.find("layout:")
-        if layoutIndex != 0:
-            return content
+        htmlLine = htmlFile.readline()
+        if htmlLine != "---\n":
+            # not Jekyll
+            return htmlLine + htmlFile.read()
+
+        # Jekyll, parse the header
+        layoutName = "default"
+        tags = {}
+        while True:
+            htmlLine = htmlFile.readline()
+            # If line is blank, then you struck the EOF
+            if not htmlLine :
+                raise ValueError("Jekyll ending not found")
+            if htmlLine == "---\n":
+                break
+
+            pair = htmlLine.split(":")
+            name = pair[0]
+            value = pair[1].rstrip("\n").strip()
+
+            if name != name.strip():
+                raise ValueError("Jekyll tag has space surrounded")
+
+            if name == "layout":
+                layoutName = value
+            else:
+                tags[name] = value
+                if name == "title":
+                    tags["page."+name] = value
         
-        layoutIndex = len("layout:")
-        layoutName = layoutLine[layoutIndex:]
-        layoutName = layoutName.strip().rstrip("\n")
+        htmlContent = htmlFile.read()
+        htmlFile.close()
+
         layoutPath = dir + "/_layouts/" + layoutName + ".html"
         layoutFile = open(layoutPath, "r")
         layoutContent = layoutFile.read()
         layoutFile.close()
 
-        result = layoutContent.replace("{{ content }}", content)
-        return result        
+        result = layoutContent.replace("{{ content }}", htmlContent)
+
+        for name, value in tags.items():
+            result = result.replace("{{ " + name + " }}", value)
+
+        return result
+
+
 
     def do_GET(self):
         try:
@@ -46,7 +71,7 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
             print("---- ", path)
-            result = self.processJekyll(self.directory, path)
+            result = self.processHtmlFile(self.directory, path)
 
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
