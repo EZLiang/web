@@ -13,7 +13,7 @@ layout: blog
   <div id="category-{{ category[0] }}" style="display: none">
     <h1>Category: {{ category[0] }}</h1><br />
     <ul>
-      {% for post in category[0] limit:5 %}
+      {% for post in category[1] limit:5 %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
       {% endfor %}
     </ul>
