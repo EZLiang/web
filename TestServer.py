@@ -4,17 +4,20 @@ import socketserver # Establish the TCP Socket connections
  
 PORT = 8000
 
+class JekyllParser:
+    def __init__(self, dir):
+        self.dir = dir
 
-class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
-    def processHtmlFile(self, dir, filePath):
-
-        htmlPath = dir + filePath
+    # return {layoutName, tagsDictionary, conent}
+    # layoutName empty: not Jekyll aware
+    def loadAndParseJekyllFrontMatter(self, filePath):
+        htmlPath = self.dir + filePath
         htmlFile = open(htmlPath, "r")
 
         htmlLine = htmlFile.readline()
         if htmlLine != "---\n":
             # not Jekyll
-            return htmlLine + htmlFile.read()
+            return None, None, htmlLine + htmlFile.read()
 
         # Jekyll, parse the header
         layoutName = "default"
@@ -40,24 +43,47 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 tags[name] = value
                 if name == "title":
                     tags["page."+name] = value
-        
+
         htmlContent = htmlFile.read()
         htmlFile.close()
 
-        layoutPath = dir + "/_layouts/" + layoutName + ".html"
-        layoutFile = open(layoutPath, "r")
-        layoutContent = layoutFile.read()
-        layoutFile.close()
-
-        result = layoutContent.replace("{{ content }}", htmlContent)
-
-        for name, value in tags.items():
-            result = result.replace("{{ " + name + " }}", value)
-
-        return result
+        return layoutName, tags, htmlContent
 
 
+    def processHtmlFile(self, filePath):
 
+        layoutContent = ""
+        pageList = []
+        layoutList = []
+
+        # local/parse contents and Jekyll front-matter in the order
+        currentFileName = filePath
+        while True:
+            layoutName, tags, content = self.loadAndParseJekyllFrontMatter(currentFileName)
+            if layoutName == None or layoutName in layoutList:
+                layoutContent = content
+                break
+
+            pageList.insert(0, [tags, content])
+            layoutList.append(layoutName)
+            currentFileName = "/_layouts/" + layoutName + ".html"
+        
+        # apply layout(s)
+        for page in pageList:
+            tags = page[0]
+            content = page[1]
+
+            layoutContent = layoutContent.replace("{{ content }}", content)
+
+            if tags != None:
+                for name, value in tags.items():
+                    layoutContent = layoutContent.replace("{{ " + name + " }}", value)
+
+        return layoutContent
+
+
+
+class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         try:
             path = self.path
@@ -71,18 +97,20 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
             print("---- ", path)
-            result = self.processHtmlFile(self.directory, path)
+            parser = JekyllParser(self.directory)
+            result = parser.processHtmlFile(path)
 
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
             self.end_headers()
             self.wfile.write(result.encode('utf-8'))
 
-        except:
-            print("---- failed")
+        except Exception as e:
+            msg = "Error: " + str(type(e)) + " - " + ','.join(e.args)
+            print(msg)
             self.send_response(500)
             self.end_headers()
-            self.wfile.write(b'Failed')
+            self.wfile.write(msg.encode('utf-8'))
             #return http.server.SimpleHTTPRequestHandler.do_GET(self)
  
 os.chdir("docs")
