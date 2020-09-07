@@ -5,9 +5,9 @@ layout: blog
 <p class="meta">{{ page.date | date_to_string }}</p>
 <p><em>
   {%- if page.categories.size > 0 -%}
-    In: {%- for category in page.categories -%}
+    In: {% for category in page.categories -%}
       <a href="/blog/category.html#category-{{ category }}">{{ category }}</a>
-    {%- endfor -%}
+    {%- endfor %}
   {%- endif -%}
 </em></p>
 
