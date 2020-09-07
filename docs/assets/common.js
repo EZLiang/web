@@ -1,5 +1,8 @@
 
-function GenerateTopNavigationBar()
+// global variable
+var g_SiteRoot = "";
+
+function GetSiteRootAndActiveMenuId()
 {
     var siteRoot = '';  // no ending slash
     var activeMenuId = 'home';
@@ -34,6 +37,14 @@ function GenerateTopNavigationBar()
       }
     }
 
+    return {siteRoot, activeMenuId};
+}
+
+function GenerateTopNavigationBar()
+{
+    let { siteRoot, activeMenuId } = GetSiteRootAndActiveMenuId();
+    g_SiteRoot = siteRoot;
+
     function GetBooksSubMenu()
     {
       var result = '';
@@ -55,6 +66,7 @@ function GenerateTopNavigationBar()
           </div>
         </div>
         <a id="blog" href="` + siteRoot + `/blog/index.html">Blog</a>
+        <a id="blog_" href="` + siteRoot + `/blog_/index.html">Blog-2</a>
         <a id="contact" href="` + siteRoot + `/contact/index.html">Contact</a>
 
         <div style="float: right; margin:5pt; font-size:16pt; color: yellow;">

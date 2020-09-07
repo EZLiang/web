@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/assets/main.css">
+  
+        <script type="text/javascript" src="/assets/menu.js"></script>
+        <script type="text/javascript" src="/books/book-list.js"></script>
+    </head>
+    
+    <body>
+        <script type="text/javascript">
+            GenerateTopNavigationBar();
+        </script>
+          
+        <div class="mainContent">
+        
+        {{ content }}
+        
+        </div>
+
+        <footer>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>

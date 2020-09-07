@@ -1,44 +1,14 @@
-<!DOCTYPE html>
+---
+layout: default
+title: Blog, Evin Liang, Clarke Middle School
+---
 
-<html>
-  <head>
-    <title></title>
-    <link rel="stylesheet" type="text/css" href="../assets/main.css" />
-    <link rel="stylesheet" type="text/css" href="blog.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="data.js"></script>
-    <script src="blog.js"></script>
-  </head>
-  <body>
-    <h1></h1>
-    <div id="post"></div>
-    <div id="sidebar">
-      <p>Recent posts:</p>
-      <ul id="postList"></ul>
-    </div>
-    <script>
-      $("title").text(blogData.name);
-      $("h1").text(blogData.name);
-      try {
-        var q = window.location.href.split("?")[1].split("&");
-        var query = {};
-        for (var i of q) {
-        query[i.split("=")[0]] = decodeURIComponent(i.split("=")[1]);
-      }
-      } catch (error) {
-        var query = {};
-      }
+    <h1>{{ page.title }}</h1>
+    <ul class="posts">
 
-      var postlen = Math.min(10, posts.length);
-      for (var i = posts.length - 1; i >= posts.length - postlen; i--) {
-        $("ul#postList").append(formatBlurb(posts[i]));
-      }
-
-      if (typeof query.postid != "undefined") {
-        $("#post").html(formatPost(posts[parseInt(query.postid)]));
-      } else {
-        $("#post").html("<h3>Welcome to " + blogData.name + "!");
-      }
-    </script>
-  </body>
-</html>
+        {% for post in site.posts %}
+        <li>
+            <span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>

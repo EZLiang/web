@@ -1,55 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My Reading List</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../main.css" />
-  <script type="text/javascript" src="../menu.js"></script>
-  <script type="text/javascript" src="book-list.js"></script>
-</head>
-<body>
-  
-  <script type="text/javascript">
-    GenerateTopNavigationBar();
-  </script>
-  
-  <div class="mainContent">
-    <script type="text/javascript">
+---
+layout: default
+title: My Reading List
+---
 
-        function getURLParameter(name) {
-            return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
-        }
+<script type="text/javascript">
 
-        function WriteBook(book, index) 
-        {
-            var bLeft = (index%2 == 0);
+    function getURLParameter(name) {
+        return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
 
-            // some themes' header bar may overlap the content, put link target as top as possible
-            document.write('<hr id="book-' + index + '" style="border: 1pt solid white; margin-bottom: 10pt;">\n');
-            document.write('<hr style="border:4pt solid #d0d0d0; border-radius: 5pt;">\n');
+    function WriteBook(book, index) 
+    {
+        var bLeft = (index%2 == 0);
 
-            document.write('<img align="' + (bLeft ? 'left' : 'right') +
-                '" width=120em style="padding: 1em;" src="images/' + book.image + '.jpg">\n');
+        // some themes' header bar may overlap the content, put link target as top as possible
+        document.write('<hr id="book-' + index + '" style="border: 1pt solid white; margin-bottom: 10pt;">\n');
+        document.write('<hr style="border:4pt solid #d0d0d0; border-radius: 5pt;">\n');
 
-            document.write('<strong>' + book.title + '</strong><br>\n');
-            document.write('Author(s): <i>' + book.author + '</i><br>\n');
-            document.write(book.description.replace(/                    /g, ' ') + '\n');
-            
-            document.write('<br clear="all">\n\n');
-        } 
+        document.write('<img align="' + (bLeft ? 'left' : 'right') +
+            '" width=120em style="padding: 1em;" src="images/' + book.image + '.jpg">\n');
 
-        var groupIndex = getURLParameter("group");
-        if (groupIndex === undefined || groupIndex == null || groupIndex >= books.length) {
-            groupIndex = 0;
-        }
+        document.write('<strong>' + book.title + '</strong><br>\n');
+        document.write('Author(s): <i>' + book.author + '</i><br>\n');
+        document.write(book.description.replace(/                    /g, ' ') + '\n');
+        
+        document.write('<br clear="all">\n\n');
+    } 
 
-        document.write('<h1>' + books[groupIndex].group + '</h1>\n');
-        document.write('<span style="display: block; color: black;">\n\n');
-        books[groupIndex].list.forEach(WriteBook);
-        document.write('\n<br>\n</span>');
+    var groupIndex = getURLParameter("group");
+    if (groupIndex === undefined || groupIndex == null || groupIndex >= books.length) {
+        groupIndex = 0;
+    }
 
-    </script>
-  </div>
+    document.write('<h1>' + books[groupIndex].group + '</h1>\n');
+    document.write('<span style="display: block; color: black;">\n\n');
+    books[groupIndex].list.forEach(WriteBook);
+    document.write('\n<br>\n</span>');
 
-</body>
-</html>
+</script>
