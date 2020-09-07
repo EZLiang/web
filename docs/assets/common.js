@@ -29,9 +29,10 @@ function GetSiteRootAndActiveMenuId()
     var pathArray = pathName.split('/');
     if (pathArray.length > 1)
     {
-      // may be a file, check if it is something with a '.'
-      // so, DO NOT use a top folder with '.' in the name
-      if (pathArray[1].indexOf('.') < 0)
+      // - may be empty if pathName is '/'
+      // - may be a file, check if it is something with a '.'
+      //   so, DO NOT use a top folder with '.' in the name
+      if (pathArray[1] != '' && pathArray[1].indexOf('.') < 0)
       {
         activeMenuId = pathArray[1];
       }
