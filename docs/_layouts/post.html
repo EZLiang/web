@@ -14,3 +14,16 @@ layout: blog
 <div class="post">
   {{ content }}
 </div>
+
+{% if page.mathjax %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
+<script>
+  document.getElementsByTagName("a").forEach(element => {
+    if (/^A\d{6}/.test(element.innerText)) {
+      element.setAttribute("href", "https://oeis.org/" + element.innerText);
+    }
+  });
+</script>
