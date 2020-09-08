@@ -40,9 +40,9 @@ class JekyllParser:
             if name == "layout":
                 layoutName = value
             else:
-                tags[name] = value
-                if name == "title":
-                    tags["page."+name] = value
+                #tags[name] = value
+                #if name == "title":
+                tags["page."+name] = value
 
         htmlContent = htmlFile.read()
         htmlFile.close()
