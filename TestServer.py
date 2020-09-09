@@ -12,7 +12,7 @@ class JekyllParser:
     # layoutName empty: not Jekyll aware
     def loadAndParseJekyllFrontMatter(self, filePath):
         htmlPath = self.dir + filePath
-        htmlFile = open(htmlPath, "r")
+        htmlFile = open(htmlPath, "r", encoding='utf-8')
 
         htmlLine = htmlFile.readline()
         if htmlLine != "---\n":
@@ -91,7 +91,7 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             if idx > 0:
                 path = path[:idx]
             
-            if path.endswith("/"):
+            if path == "/":
                 path += "index.html"
             elif not path.endswith(".html"):
                 return http.server.SimpleHTTPRequestHandler.do_GET(self)
@@ -101,7 +101,9 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             result = parser.processHtmlFile(path)
 
             self.send_response(200)
-            self.send_header('Content-type', 'text/html')
+            self.send_header('Content-type', 'text/html; charset=utf-8')
+            self.send_header('Cache-Control', 'no-store, must-revalidate')
+            self.send_header('Expires', '0')
             self.end_headers()
             self.wfile.write(result.encode('utf-8'))
 
