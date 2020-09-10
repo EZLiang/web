@@ -15,7 +15,7 @@ class JekyllParser:
         htmlFile = open(htmlPath, "r", encoding='utf-8')
 
         htmlLine = htmlFile.readline()
-        if htmlLine != "---\n":
+        if not htmlLine.startswith("---"):
             # not Jekyll
             return None, None, htmlLine + htmlFile.read()
 
@@ -27,7 +27,7 @@ class JekyllParser:
             # If line is blank, then you struck the EOF
             if not htmlLine :
                 raise ValueError("Jekyll ending not found")
-            if htmlLine == "---\n":
+            if htmlLine.startswith("---"):
                 break
 
             pair = htmlLine.split(":")
