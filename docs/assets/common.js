@@ -40,14 +40,9 @@ function GenerateTopNavigationBar()
             + GetBooksSubMenu() + `
           </div>
         </div>
-<<<<<<< HEAD
         <a id="blog" href="` + siteRoot + `/blog/index.html">Blog</a>
         <a id="contact" href="` + siteRoot + `/contact/index.html">Contact</a>
         <a href="http://fractran.ezget.info">FRACTRAN</a>
-=======
-        <a id="menu.blog" href="/blog/index.html">Blog</a>
-        <a id="menu.contact" href="/contact/index.html">Contact</a>
->>>>>>> 70d98f66e31ed10b7678248510905d812725231f
 
         <div style="float: right; margin:5pt; font-size:16pt; color: gray;">
           Evin Liang
