@@ -87,8 +87,9 @@ body {
   
 
 footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    margin-top: 10pt;
+    border-top: 1px solid lightskyblue;
+    font-size: 1em;
     text-align: center;
     align-items: center;
 }
@@ -100,7 +101,8 @@ footer ul {
 }
 footer ul li {
     display: inline;
-    margin-right: 20px;
+    margin-left: 10pt;
+    margin-right: 10pt;
 }
 
 a {

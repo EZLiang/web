@@ -21,9 +21,10 @@ layout: blog
 {% endif %}
 
 <script>
-  document.getElementsByTagName("a").forEach(element => {
-    if (/^A\d{6}/.test(element.innerText)) {
-      element.setAttribute("href", "https://oeis.org/" + element.innerText);
-    }
-  });
+  var ele = document.getElementsByTagName("a");
+  for (i = 0; i < ele.length; i++) {
+      if (/^A\d{6}/.test(ele[i].innerText)) {
+        ele[i].setAttribute("href", "https://oeis.org/" + ele[i].innerText);
+      }
+  };
 </script>
