@@ -38,6 +38,18 @@ h1.format > a {
   font-size: 12px;
 }
 
+#sidebar p {
+  font-weight: bold;
+}
+
 abbr {
   text-decoration: dotted;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
 }

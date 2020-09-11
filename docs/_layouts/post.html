@@ -20,6 +20,13 @@ layout: blog
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
 
+{% if post.next %}
+  <div class="fl"><a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
+{% endif %}
+{% if post.previous %}
+  <div class="fr"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+{% endif %}
+
 <script>
   var ele = document.getElementsByTagName("a");
   for (i = 0; i < ele.length; i++) {
