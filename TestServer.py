@@ -1,8 +1,15 @@
 import os
+import collections
+import markdown
 import http.server # Our http server handler for http requests
 import socketserver # Establish the TCP Socket connections
  
 PORT = 8000
+
+# sync with docs/_config.yml
+DefaultPageLayout = "default"
+DefaultPostLayout = "post"
+DefaultPostCategory = "other"
 
 class JekyllParser:
     def __init__(self, dir):
@@ -20,8 +27,13 @@ class JekyllParser:
             return None, None, htmlLine + htmlFile.read()
 
         # Jekyll, parse the header
-        layoutName = "default"
+        # default value, if not found in header, sync with docs/_config.yml         
+        layoutName = DefaultPageLayout
         tags = {}
+        if filePath.startswith("/_posts/"):
+            layoutName = DefaultPostLayout
+            tags["page.category"] = DefaultPostCategory
+
         while True:
             htmlLine = htmlFile.readline()
             # If line is blank, then you struck the EOF
@@ -40,8 +52,6 @@ class JekyllParser:
             if name == "layout":
                 layoutName = value
             else:
-                #tags[name] = value
-                #if name == "title":
                 tags["page."+name] = value
 
         htmlContent = htmlFile.read()
@@ -50,36 +60,39 @@ class JekyllParser:
         return layoutName, tags, htmlContent
 
 
+
     def processHtmlFile(self, filePath):
 
-        layoutContent = ""
-        pageList = []
-        layoutList = []
+        resultPage = "" # final result
+        layoutNameList = [] # avoid loop
+        LayoutPage = collections.namedtuple("LayoutPage", "tags content")
+        layoutList = []   # layout page list, not include the root layout template, which should have content only
 
         # local/parse contents and Jekyll front-matter in the order
         currentFileName = filePath
         while True:
             layoutName, tags, content = self.loadAndParseJekyllFrontMatter(currentFileName)
+
+            if currentFileName.endswith(".md"):
+                content = markdown.markdown(content)
+
             if layoutName == None or layoutName in layoutList:
-                layoutContent = content
+                resultPage = content
                 break
 
-            pageList.insert(0, [tags, content])
-            layoutList.append(layoutName)
+            layoutList.insert(0, LayoutPage(tags, content))
+            layoutNameList.append(layoutName)
             currentFileName = "/_layouts/" + layoutName + ".html"
         
         # apply layout(s)
-        for page in pageList:
-            tags = page[0]
-            content = page[1]
+        for page in layoutList:
+            resultPage = resultPage.replace("{{ content }}", page.content)
 
-            layoutContent = layoutContent.replace("{{ content }}", content)
+            if page.tags != None:
+                for name, value in page.tags.items():
+                    resultPage = resultPage.replace("{{ " + name + " }}", value)
 
-            if tags != None:
-                for name, value in tags.items():
-                    layoutContent = layoutContent.replace("{{ " + name + " }}", value)
-
-        return layoutContent
+        return resultPage
 
 
 
@@ -93,10 +106,9 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             
             if path == "/":
                 path += "index.html"
-            elif not path.endswith(".html"):
+            elif not path.endswith(".html") and not path.endswith(".md"):
                 return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
-            print("---- ", path)
             parser = JekyllParser(self.directory)
             result = parser.processHtmlFile(path)
 
