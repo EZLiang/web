@@ -9,7 +9,6 @@ PORT = 8000
 # sync with docs/_config.yml
 DefaultPageLayout = "default"
 DefaultPostLayout = "post"
-DefaultPostCategory = "other"
 
 class JekyllParser:
     def __init__(self, dir):
@@ -18,31 +17,25 @@ class JekyllParser:
     # return {layoutName, tagsDictionary, conent}
     # layoutName empty: not Jekyll aware
     def loadAndParseJekyllFrontMatter(self, filePath):
-        htmlPath = self.dir + filePath
-        htmlFile = open(htmlPath, "r", encoding='utf-8')
-
-        htmlLine = htmlFile.readline()
-        if not htmlLine.startswith("---"):
-            # not Jekyll
-            return None, None, htmlLine + htmlFile.read()
-
         # Jekyll, parse the header
-        # default value, if not found in header, sync with docs/_config.yml         
-        layoutName = DefaultPageLayout
+        layoutName = ""
         tags = {}
-        if filePath.startswith("/_posts/"):
-            layoutName = DefaultPostLayout
-            tags["page.category"] = DefaultPostCategory
+
+        file = open(self.dir + filePath, "r", encoding='utf-8')
+        currentLine = file.readline()
+        if not currentLine.startswith("---"):
+            # not Jekyll
+            return layoutName, tags, currentLine + file.read()
 
         while True:
-            htmlLine = htmlFile.readline()
+            currentLine = file.readline()
             # If line is blank, then you struck the EOF
-            if not htmlLine :
+            if not currentLine :
                 raise ValueError("Jekyll ending not found")
-            if htmlLine.startswith("---"):
+            if currentLine.startswith("---"):
                 break
 
-            pair = htmlLine.split(":")
+            pair = currentLine.split(":")
             name = pair[0]
             value = pair[1].rstrip("\n").strip()
 
@@ -54,14 +47,11 @@ class JekyllParser:
             else:
                 tags["page."+name] = value
 
-        htmlContent = htmlFile.read()
-        htmlFile.close()
-
-        return layoutName, tags, htmlContent
+        return layoutName, tags, file.read()
 
 
 
-    def processHtmlFile(self, filePath):
+    def processfile(self, filePath):
 
         resultPage = "" # final result
         layoutNameList = [] # avoid loop
@@ -69,20 +59,31 @@ class JekyllParser:
         layoutList = []   # layout page list, not include the root layout template, which should have content only
 
         # local/parse contents and Jekyll front-matter in the order
-        currentFileName = filePath
-        while True:
-            layoutName, tags, content = self.loadAndParseJekyllFrontMatter(currentFileName)
 
-            if currentFileName.endswith(".md"):
+        while True:
+            layoutName, tags, content = self.loadAndParseJekyllFrontMatter(filePath)
+
+            if filePath.endswith(".md"):
                 content = markdown.markdown(content)
 
-            if layoutName == None or layoutName in layoutList:
+            isPost = filePath.startswith("/_posts/")
+
+            if isPost and "page.category" not in tags and "page.categories" not in tags:
+                content = "<h1 style='background:red;'>Warning: No category assigned</h1>\n\n" + content
+            
+            if layoutName == "":
+                if isPost:
+                    layoutName = DefaultPostLayout
+                else:
+                    layoutName = DefaultPageLayout
+
+            if layoutName in layoutNameList:
                 resultPage = content
                 break
 
             layoutList.insert(0, LayoutPage(tags, content))
             layoutNameList.append(layoutName)
-            currentFileName = "/_layouts/" + layoutName + ".html"
+            filePath = "/_layouts/" + layoutName + ".html"
         
         # apply layout(s)
         for page in layoutList:
@@ -110,7 +111,7 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
                 return http.server.SimpleHTTPRequestHandler.do_GET(self)
 
             parser = JekyllParser(self.directory)
-            result = parser.processHtmlFile(path)
+            result = parser.processfile(path)
 
             self.send_response(200)
             self.send_header('Content-type', 'text/html; charset=utf-8')
