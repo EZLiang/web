@@ -777,10 +777,43 @@ var books =
         [
             {
                 image: "books-00xxx.jpg",
-                title: "", 
-                author: "",
-                description: ``
-            }
+                title: "Change is the Only Constant", 
+                author: "Ben Orlin",
+                description: `Change is the Only Constant is an engaging and eloquent exploration of the intersection between calculus 
+                and daily life, complete with Orlin's sly humor and memorably bad drawings. By spinning 28 engaging mathematical tales, 
+                Orlin shows us that calculus is simply another language to express the very things we humans grapple with every day -- 
+                love, risk, time, and most importantly, change. Divided into two parts, "Moments" and "Eternities," and drawing on everyone 
+                from Sherlock Holmes to Mark Twain to David Foster Wallace, Change is the Only Constant unearths connections between 
+                calculus, art, literature, and a beloved dog named Elvis. This is not just math for math's sake; it's math for the sake 
+                of becoming a wiser and more thoughtful human.`
+            },
+            {
+                image: "books-00xxx.jpg",
+                title: "An Introduction to the Theory of Numbers", 
+                author: "Ivan Niven, Herbert S. Zuckermann, Hugh L. Montgomery",
+                description: `The Fifth Edition of one of the standard works on number theory, written by internationally-recognized 
+                mathematicians. Chapters are relatively self-contained for greater flexibility. New features include expanded 
+                treatment of the binomial theorem, techniques of numerical calculation and a section on public key cryptography. Contains 
+                an outstanding set of problems.`
+            },
+            {
+                image: "books-00xxx.jpg",
+                title: "Advanced Calculus Explored", 
+                author: "Hamza Alsamraee",
+                description: `Are you a student that is often puzzled about how to translate your math background to applications in your 
+                science and engineering classes?<br />Are you a mathematical enthusiast who loves challenging calculus problems?<br />
+                In this example-focused book, Hamza Alsamraee presents a plethora of techniques and methods to aid the regular student 
+                develop their skills to transition to more advanced mathematics.<br />`
+            },
+            {
+                image: "books-00xxx.jpg",
+                title: "A Walk Through Combinatorics", 
+                author: "Mikl&oacute;s B&oacute;na",
+                description: `This is a textbook for an introductory combinatorics course that can take up one or two semesters. 
+                An extensive list of problems, ranging from routine exercises to research questions, is included. In each section, 
+                there are also exercises that contain material not explicitly discussed in the preceding text, so as to provide instructors 
+                with extra choices if they want to shift the emphasis of their course.`
+            },
         ]
     },
 
