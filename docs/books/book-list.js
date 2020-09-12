@@ -745,6 +745,41 @@ var books =
                     for modeling real-world situations. A geometry course or its equal is a prerequisite. Students who
                     have studied UCSMP Advanced Algebra are prepared for courses commonly found at the senior
                     level, including trigonometry and precalculus courses.`
+            },
+            {
+                image: "books-00107.jpg",
+                title: "Geometry: Seeing, Doing, Understanding", 
+                author: "Harold R Jacobs",
+                description: `Jacob's Geometry textbook has guided nearly one million students through the process of developing 
+                    not just knowledge about Geometry, but a lasting understanding of Geometry concepts, principles, and 
+                    application. Considered by many to be the authoritative Geometry text, Jacobs' math has solidified its 
+                    reputation of preparing students for academic & career success and is a highly respected standard for 
+                    teaching high school Geometry. Harold Jacobs' clear, engaging, conversational approach guides students 
+                    through practical, real-world Geometry, allowing them to develop a true understanding of deductive 
+                    reasoning, lines & angles, congruence, inequalities, quadrilaterals, area, triangles, circles, theorems, 
+                    polygons, geometric solids, and more!`
+            },
+            {
+                image: "books-00108.jpg",
+                title: "An Introduction to the Theory of Numbers 5th Edition", 
+                author: "Ivan Niven, Herbert S. Zuckerman, Hugh L. Montgomery",
+                description: `The Fifth Edition of one of the standard works on number theory, written by 
+                    internationally-recognized mathematicians. Chapters are relatively self-contained for greater flexibility. 
+                    New features include expanded treatment of the binomial theorem, techniques of numerical calculation and a 
+                    section on public key cryptography. Contains an outstanding set of problems.`
+            }
+        ]
+    },
+
+    {
+        group: "Mathematics, 7th grade, 2020 fall - 2021 summer",
+        list:
+        [
+            {
+                image: "books-00xxx.jpg",
+                title: "", 
+                author: "",
+                description: ``
             }
         ]
     },
