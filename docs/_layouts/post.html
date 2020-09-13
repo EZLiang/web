@@ -23,12 +23,15 @@ layout: blog
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 {% endif %}
 
-{% if page.next %}
-  <div class="fl"><a href="{{ page.next.url }}">{{ page.next.title }}</a></div>
-{% endif %}
-{% if page.previous %}
-  <div class="fr"><a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
-{% endif %}
+<br clear="all" />
+<div>
+  {% if page.next %}
+    <div class="fr"><a href="{{ page.next.url }}">{{ page.next.title }}</a> &gt;</div>
+  {% endif %}
+  {% if page.previous %}
+    <div class="fl">&lt; <a href="{{ page.previous.url }}">{{ page.previous.title }}</a></div>
+  {% endif %}
+</div>
 
 <script>
   var ele = document.getElementsByTagName("a");

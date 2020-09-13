@@ -62,3 +62,9 @@ abbr {
 .fr {
   float: right;
 }
+
+.fl, .fr {
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: 1px solid gray;
+}
