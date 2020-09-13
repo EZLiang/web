@@ -9,8 +9,8 @@ layout: blog
 <p><em>
   {%- if page.categories.size > 0 -%}
     In: {% for category in page.categories -%}
-      <a href="/blog/category.html#category-{{ category }}">{{ category }}</a>
-    {%- endfor %}
+      <a href="/blog/category.html#category-{{ category }}">{{ category }}</a> 
+    {% endfor %}
   {%- endif -%}
 </em></p>
 
