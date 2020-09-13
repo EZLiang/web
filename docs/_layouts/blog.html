@@ -7,46 +7,48 @@
   </head>
   <body>
     <h1 class="format"><a href="/blog/index.html">Untitled Blog</a></h1>
-    <div id="post">
-      {{ content }}
-    </div>
-    <div id="sidebar">
-      <p>Recent posts:</p>
-      <ul id="postList">
-        {% for post in site.posts limit:10 %}
-          <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-      <p>Archives:</p>
-      {% assign bOpenDetails = true %}
-      {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
-      {% for year in postsByYear %}
-        {% if bOpenDetails == true %}
-          <details open>
-        {% else %}
-          <details>
-        {% endif %}
-        <summary><strong>{{ year.name }}</strong></summary>
-        {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
-        {% for month in postsByMonth %}
+    <div id="container">
+      <div id="post">
+        {{ content }}
+      </div>
+      <div id="sidebar">
+        <p>Recent posts:</p>
+        <ul id="postList">
+          {% for post in site.posts limit:10 %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+        <p>Archives:</p>
+        {% assign bOpenDetails = true %}
+        {% assign postsByYear = site.posts | group_by_exp:"post", "post.date | date: '%Y'" %}
+        {% for year in postsByYear %}
           {% if bOpenDetails == true %}
             <details open>
-            {% assign bOpenDetails = false %}
           {% else %}
             <details>
           {% endif %}
-          <summary>{{ month.name }}</summary>
-          <ul style="margin-top:2pt; margin-bottom:1pt;">
-            {% for post in month.items %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endfor %}
-          </ul>
-          </details>
-        {% endfor %} <!-- months -->
+          <summary><strong>{{ year.name }}</strong></summary>
+          {% assign postsByMonth = year.items | group_by_exp:"post", "post.date | date: '%B'" %}
+          {% for month in postsByMonth %}
+            {% if bOpenDetails == true %}
+              <details open>
+              {% assign bOpenDetails = false %}
+            {% else %}
+              <details>
+            {% endif %}
+            <summary>{{ month.name }}</summary>
+            <ul style="margin-top:2pt; margin-bottom:1pt;">
+              {% for post in month.items %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+              {% endfor %}
+            </ul>
+            </details>
+          {% endfor %} <!-- months -->
 
-      </details>
-      <br>
-      {% endfor %}    <!-- years -->
+          </details>
+          <br>
+        {% endfor %}    <!-- years -->
+      </div>
     </div>
   </body>
 </html>

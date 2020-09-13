@@ -30,16 +30,21 @@ h1.format > a {
   color: black;
 }
 
+#container {
+  display: flex;
+}
+
 #post {
   margin: 2rem;
   float: left;
   padding: 1rem;
+  flex: 4;
 }
 
 #sidebar {
   float: right;
-  width: 20%;
   font-size: 0.9rem;
+  flex: 1;
 }
 
 #sidebar p {
