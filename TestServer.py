@@ -72,10 +72,12 @@ class JekyllParser:
                 content = "<h1 style='background:red;'>Warning: No category assigned</h1>\n\n" + content
             
             if layoutName == "":
-                if isPost:
-                    layoutName = DefaultPostLayout
-                else:
-                    layoutName = DefaultPageLayout
+                #if isPost:
+                #    layoutName = DefaultPostLayout
+                #else:
+                #    layoutName = DefaultPageLayout
+                resultPage = content
+                break
 
             if layoutName in layoutNameList:
                 resultPage = content
