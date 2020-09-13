@@ -6,9 +6,7 @@ import socketserver # Establish the TCP Socket connections
  
 PORT = 8000
 
-# sync with docs/_config.yml
-DefaultPageLayout = "default"
-DefaultPostLayout = "post"
+DefaultLayouts = dict.fromkeys(["pages","posts"], "")
 
 class JekyllParser:
     def __init__(self, dir):
@@ -72,14 +70,12 @@ class JekyllParser:
                 content = "<h1 style='background:red;'>Warning: No category assigned</h1>\n\n" + content
             
             if layoutName == "":
-                #if isPost:
-                #    layoutName = DefaultPostLayout
-                #else:
-                #    layoutName = DefaultPageLayout
-                resultPage = content
-                break
+                if isPost:
+                    layoutName = DefaultLayouts["posts"]
+                else:
+                    layoutName = DefaultLayouts["pages"]
 
-            if layoutName in layoutNameList:
+            if layoutName == "" or layoutName in layoutNameList:
                 resultPage = content
                 break
 
@@ -130,7 +126,23 @@ class JekyllHttpRequestHandler(http.server.SimpleHTTPRequestHandler):
             self.wfile.write(msg.encode('utf-8'))
             #return http.server.SimpleHTTPRequestHandler.do_GET(self)
  
+
+def LoadJekyllConfig(filePath):    
+    config = confuse.Configuration('.', read=False)
+    config.set_file(filePath)
+
+    for cfg in config['defaults']:
+        # ignore error check for now, and other values too
+        DefaultLayouts[cfg['scope']['type'].get()] = cfg['values']['layout'].get()
+
+
 os.chdir("docs")
+try:
+    import confuse
+    LoadJekyllConfig('./_config.yml')
+except:
+    print("ignore loading _config.yml")
+
 
 Handler = JekyllHttpRequestHandler
  
