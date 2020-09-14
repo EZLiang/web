@@ -758,15 +758,6 @@ var books =
                     through practical, real-world Geometry, allowing them to develop a true understanding of deductive 
                     reasoning, lines & angles, congruence, inequalities, quadrilaterals, area, triangles, circles, theorems, 
                     polygons, geometric solids, and more!`
-            },
-            {
-                image: "books-00108.jpg",
-                title: "An Introduction to the Theory of Numbers 5th Edition", 
-                author: "Ivan Niven, Herbert S. Zuckerman, Hugh L. Montgomery",
-                description: `The Fifth Edition of one of the standard works on number theory, written by 
-                    internationally-recognized mathematicians. Chapters are relatively self-contained for greater flexibility. 
-                    New features include expanded treatment of the binomial theorem, techniques of numerical calculation and a 
-                    section on public key cryptography. Contains an outstanding set of problems.`
             }
         ]
     },
@@ -776,7 +767,26 @@ var books =
         list:
         [
             {
-                image: "books-00xxx.jpg",
+                image: "books-00111.jpg",
+                title: "The Higher Arithmetic: An Introduction to the Theory of Numbers 7th Edition", 
+                author: "H. Davenport",
+                description: `Updated in a seventh edition, The Higher Arithmetic introduces concepts and theorems in a way that 
+                    does not require the reader to have an in-depth knowledge of the theory of numbers, and also touches on 
+                    matters of deep mathematical significance. This new edition includes state of the art material on the use of 
+                    computers in number theory, as well as taking full account of the proving of Fermat's last theorem.`
+            },
+            {
+                image: "books-00112.jpg",
+                title: "The Knot Book", 
+                author: "Colin Adams",
+                description: `Knots are familiar objects. We use them to moor our boats, to wrap our packages, to tie our shoes. 
+                    Yet the mathematical theory of knots quickly leads to deep results in topology and geometry. "The Knot Book" 
+                    is an introduction to this rich theory, starting with our familiar understanding of knots and a bit of 
+                    college algebra and finishing with exciting topics of current research. "The Knot Book" is also about the 
+                    excitement of doing mathematics.`
+            },
+            {
+                image: "books-00114.jpg",
                 title: "Change is the Only Constant", 
                 author: "Ben Orlin",
                 description: `Change is the Only Constant is an engaging and eloquent exploration of the intersection between calculus 
@@ -788,7 +798,7 @@ var books =
                 of becoming a wiser and more thoughtful human.`
             },
             {
-                image: "books-00xxx.jpg",
+                image: "books-00108.jpg",
                 title: "An Introduction to the Theory of Numbers", 
                 author: "Ivan Niven, Herbert S. Zuckermann, Hugh L. Montgomery",
                 description: `The Fifth Edition of one of the standard works on number theory, written by internationally-recognized 
@@ -797,17 +807,17 @@ var books =
                 an outstanding set of problems.`
             },
             {
-                image: "books-00xxx.jpg",
-                title: "Advanced Calculus Explored", 
-                author: "Hamza Alsamraee",
+                image: "books-00113.jpg",
+                title: "Advanced Calculus Explored: With Applications in Physics, Chemistry, and Beyond", 
+                author: "Hamza E. Alsamraee",
                 description: `Are you a student that is often puzzled about how to translate your math background to applications in your 
                 science and engineering classes?<br />Are you a mathematical enthusiast who loves challenging calculus problems?<br />
                 In this example-focused book, Hamza Alsamraee presents a plethora of techniques and methods to aid the regular student 
                 develop their skills to transition to more advanced mathematics.<br />`
             },
             {
-                image: "books-00xxx.jpg",
-                title: "A Walk Through Combinatorics", 
+                image: "books-00110.jpg",
+                title: "A Walk Through Combinatorics: An Introduction to Enumeration and Graph Theory (Second Edition)", 
                 author: "Mikl&oacute;s B&oacute;na",
                 description: `This is a textbook for an introductory combinatorics course that can take up one or two semesters. 
                 An extensive list of problems, ranging from routine exercises to research questions, is included. In each section, 
@@ -1142,6 +1152,119 @@ var books =
                 author: "Nathaniel Bluedorn, Hans Bluedorn , et al.",
                 description: `The Fallacy Detective has been the best selling text for teaching logical fallacies and introduction
                     to logic for over 15 years.`
+            },
+            {
+                image: "books-00109.jpg",
+                title: "A short introduction to LaTeX: A book for beginners", 
+                author: "Firuza Karmali Aibara",
+                description: `Learn the basics of LaTeX, explore it, and start creating beautiful documents`
+            }
+        ]
+    },
+
+    {
+        group: "To Read",
+        list:
+        [
+            {
+                image: "books-00119.jpg",
+                title: "Introduction to Differential Geometry of Space Curves and Surfaces: Differential Geometry of Curves and Surfaces", 
+                author: "Taha Sochi",
+                bought: "2019.11.21",
+                description: `This book is about differential geometry of space curves and surfaces. The formulation and 
+                    presentation are largely based on a tensor calculus approach. It can be used as part of a course on tensor 
+                    calculus as well as a textbook or a reference for an intermediate-level course on differential geometry of 
+                    curves and surfaces. The book is furnished with an index, extensive sets of exercises and many cross 
+                    references, which are hyperlinked for the ebook users, to facilitate linking related concepts and sections. 
+                    The book also contains a considerable number of 2D and 3D graphic illustrations to help the readers and users 
+                    to visualize the ideas and understand the abstract concepts. We also provided an introductory chapter where 
+                    the main concepts and techniques needed to understand the offered materials of differential geometry are 
+                    outlined to make the book fairly self-contained and reduce the need for external references.`
+            },
+            {
+                image: "books-00115.jpg",
+                title: "The Best Writing on Mathematics 2020", 
+                author: "Mircea Pitici",
+                bought: "2020.09.03 - pre-order",
+                description: `This annual anthology brings together the year’s finest mathematics writing from around the world. 
+                    Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on 
+                    Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else―and you 
+                    don’t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, 
+                    meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday 
+                    aspects of math, and take readers behind the scenes of today’s hottest mathematical debates.`
+            },
+            {
+                image: "books-00116.jpg",
+                title: "How to Solve It: A New Aspect of Mathematical Method", 
+                author: "G. Polya, John H. Conway",
+                bought: "2020.09.03",
+                description: `A perennial bestseller by eminent mathematician G. Polya, How to Solve It will show anyone in any 
+                    field how to think straight. In lucid and appealing prose, Polya reveals how the mathematical method of 
+                    demonstrating a proof or finding an unknown can be of help in attacking any problem that can be "reasoned" 
+                    out―from building a bridge to winning a game of anagrams. Generations of readers have relished Polya's 
+                    deft―indeed, brilliant―instructions on stripping away irrelevancies and going straight to the heart of the problem.`
+            },
+            {
+                image: "books-00117.jpg",
+                title: "The Art and Craft of Problem Solving - 2nd Edition", 
+                author: "Paul Zeitz",
+                bought: "2020.09.09",
+                description: `The newly revised Second Edtion of this distinctive text uniquely blends interesting problems with 
+                    strategies, tools, and techniques to develop mathematical skill and intuition necessary for problem solving. 
+                    Readers are encouraged to do math rather than just study it. The author draws upon his experience as a coach 
+                    for the International Mathematics Olympiad to give students an enhanced sense of mathematics and the ability 
+                    to investigate and solve problems.`
+            },
+            {
+                image: "books-00118.jpg",
+                title: "A Decade of the Berkeley Math Circle: The American Experience", 
+                author: "Zvezdelina Stankova, Tom Rike",
+                bought: "2020.09.09",
+                description: `Many mathematicians have been drawn to mathematics through their experience with math circles: 
+                    extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem 
+                    solving techniques and inspiring in them a lifelong love for mathematics.`
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
+            },
+            {
+                image: "books-001xx.jpg",
+                title: "", 
+                author: "",
+                bought: "2020.",
+                description: ``
             }
         ]
     }

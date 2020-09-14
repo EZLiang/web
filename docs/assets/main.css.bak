@@ -3,7 +3,12 @@ body {
     padding: 0pt;
 }
 
-/* ----- top navigation bar ----- */
+.mainContent {
+    margin: 30pt 10pt 10pt 10pt;
+}
+
+/* ----- top navigation bar : begin ----- */
+
 nav {    
     /* overflow: hidden; */
     position: fixed;
@@ -54,28 +59,8 @@ nav .dropDown:hover .dropDown-content {
     display: block;
 }
   
-header {
-    padding-top: 3rem;
-    width: 100%; 
-    height: 7rem;
-}
-header h1 {
-    height: 1.5em;
-    text-align: center;
-    text-anchor: middle;
-    vertical-align: middle;
-    font-size: 2rem;
-    line-height: 1em;
-    background: #6cf;
-    background-clip: border-box;
-    border-radius: 0.2em;
-    box-shadow: 0px 0px 0.5em 0.5em #6cf;
-}
-
-section {
-    width: 100%;
-    margin: 1rem;
-}
+/* ----- top navigation bar : end ----- */
+  
 
 footer {
     margin-top: 10pt;

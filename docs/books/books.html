@@ -32,7 +32,9 @@ title: My Reading List
         groupIndex = 0;
     }
 
-    document.write('<h1>' + books[groupIndex].group + '</h1>\n');
+    document.title = books[groupIndex].group;
+    document.getElementById("page-title").innerText = document.title;
+
     document.write('<span style="display: block; color: black;">\n\n');
     books[groupIndex].list.forEach(WriteBook);
     document.write('\n<br>\n</span>');
