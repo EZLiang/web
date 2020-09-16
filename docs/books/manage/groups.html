@@ -184,7 +184,7 @@ title: Edit Books Groups
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '/edit/books', true);
         xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        var formData = JSON.stringify(books);
+        var formData = JSON.stringify(books, null, 1);
         xhr.send(formData);
     }
 
