@@ -19,7 +19,7 @@ var sConfig =
             </div>
         </div>`,
     ExtraMenus_Evin: `
-                <a href="/admin/books/">Manage Books</a>
+                <a href="/books/edit/">Manage Books</a>
     `
 }
 

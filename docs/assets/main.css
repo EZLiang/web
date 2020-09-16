@@ -77,6 +77,20 @@ section {
     margin: 1rem;
 }
 
+section .flex-container {
+    margin: 0.5rem;
+	display: -webkit-flex; /* Safari */		
+    display: flex; /* Standard syntax */
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+section .flex {
+	padding: 1rem;
+	-webkit-flex: 1; /* Safari */
+	-ms-flex: 1; /* IE 10 */
+	flex: 1; /* Standard syntax */
+}
+
 footer {
     margin-top: 10pt;
     border-top: 1px solid lightskyblue;

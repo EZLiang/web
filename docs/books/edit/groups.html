@@ -1,0 +1,191 @@
+---
+layout: default
+title: Edit Books Groups
+---
+
+<style>
+    select:hover, button:hover, input:hover {
+        background-color: #c0d0f0;
+    }
+
+    select {
+        margin: 0.1rem;
+        width: 28rem;
+        border: 1px solid gray;
+    }
+
+    button, input {
+        margin: 0.1rem;
+        width: 6rem;
+    }
+
+    input[type="text"] {
+        width: 27.5rem;
+    }
+
+    td {
+        vertical-align: top;
+    }
+
+</style>
+
+<table>
+    <tr>
+        <td>
+            <select id="groupListBox" size="15" onchange="OnGroupSelectionChanged(this.value)"></select>
+        </td>
+        <td>
+            <button onclick='OnGroupMoveUp()'>Move Up</button></br>
+            <button onclick='OnGroupMoveDown()'>Move Down</button></br>
+            <br>
+            <input id='groupHidden' type="checkbox" style="width:initial;" onclick="OnGroupHiddenChanged(this.checked)"> Hidden<br>
+    
+            <button style="vertical-align: bottom; margin-top:8rem;" onclick='OnGroupSave()'>Save</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input id="groupName" type="text">
+        </td>
+        <td>
+            <button onclick='OnGroupRename()'>Rename</button><br>
+            <button onclick='OnGroupCreate()'>New Group</button>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<h4>List in selected group</h4>
+<div id="bookListBox">
+</div>
+
+<script type="text/javascript">
+    // several other function need this, to avoid re-query index...
+    var selectedGroup = -1;
+
+    function RefreshGroupList()
+    {
+        var groupHtml = '';
+        books.forEach( (bookGroup,index) => {
+            groupHtml += '<option value="' + index + 
+                (selectedGroup==index ? '" selected>' : '">') + 
+                bookGroup.group + '</option>';
+        });
+
+        var groupBox = document.getElementById("groupListBox");
+        groupBox.innerHTML = groupHtml;
+    }
+
+    // initial populating the list
+    RefreshGroupList();
+
+    function RefreshBookList()
+    {
+        if (selectedGroup < 0)
+            return;
+
+        var bookList = '<ol>';
+        books[selectedGroup].list.forEach( book => {
+            bookList += '<li>' + book.title + ' ... <i>' + book.author + '</i></li>';
+        });
+        bookList += '</ol>';
+
+        var bookBox = document.getElementById('bookListBox');
+        bookBox.innerHTML = bookList;
+    }
+
+
+    function OnGroupSelectionChanged(selectedIndex)
+    {
+        selectedGroup = parseInt(selectedIndex);
+
+        var groupNameBox = document.getElementById("groupName");
+        groupNameBox.value = books[selectedIndex].group;
+
+        var groupHiddenBox = document.getElementById("groupHidden");
+        groupHiddenBox.checked = books[selectedIndex].hidden == true;
+
+        RefreshBookList();
+    }
+
+    function OnGroupHiddenChanged(bHidden)
+    {
+        if (selectedGroup < 0)
+            return;
+
+        books[selectedGroup].hidden = bHidden;
+    }
+
+    function OnGroupMoveUp()
+    {
+        if (selectedGroup < 1)
+            return;
+
+        [books[selectedGroup-1], books[selectedGroup]] = [books[selectedGroup], books[selectedGroup-1]];
+        selectedGroup--;
+        RefreshGroupList();
+    }
+
+    function OnGroupMoveDown()
+    {
+        if (selectedGroup > books.length-2)
+            return;
+
+        [books[selectedGroup+1], books[selectedGroup]] = [books[selectedGroup], books[selectedGroup+1]];
+        selectedGroup++;
+        RefreshGroupList();
+    }
+
+    function OnGroupRename()
+    {
+        if (selectedGroup < 0)
+        {
+            alert("no selection");
+            return;
+        }
+
+        var groupNameBox = document.getElementById("groupName");
+        if (groupNameBox.value == "") {
+            alert("No name");
+            return;
+        }
+
+        books[selectedGroup].group = groupNameBox.value;
+
+        RefreshGroupList();
+    }
+
+    function OnGroupCreate()
+    {
+        var groupNameBox = document.getElementById("groupName");
+        if (groupNameBox.value == "") {
+            alert("No name");
+            return;
+        }
+
+        books.push({
+            group: groupNameBox.value,
+            hidden: false,
+            list: []
+        })
+
+        RefreshGroupList();
+    }
+
+    function OnGroupSave()
+    {
+        //var resultBox = document.getElementById('bookListResult');
+        //resultBox.value = books; //JSON.stringify(books);
+
+        var form = document.getElementById('groupEditForm');
+        //form.submit();
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/edit/books', true);
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        var formData = JSON.stringify(books);
+        xhr.send(formData);
+    }
+
+</script>

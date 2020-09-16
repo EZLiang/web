@@ -19,9 +19,9 @@ function HandleRequest(request, response)
 	var u = url.parse(request.url, true);
 	var pathName = u.pathname;
 
-	if (pathName.startsWith("/manage/books/"))
+	if (pathName.startsWith("/edit/books"))
 	{
-		return ManageBooksHandler.HandleRequest(request, u, response);
+		return ManageBooksHandler.HandleRequest(request, response);
 	}
 
 	if (request.method != 'GET')
