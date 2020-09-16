@@ -1,27 +1,27 @@
-var fs = require('fs');
-var http = require('http');
-var url = require('url');
+const fs = require('fs');
+const http = require('http');
+const url = require('url');
 
-var JekyllHandler = require('./JekyllRequestHandler');
+const ManageBooksHandler = require('./ManageBooksHandler');
+const JekyllHandler = require('./JekyllRequestHandler');
+const DefaultHandler = require('./DefaultRequestHandler');
 
 
-function HandleRequest_admin(request,response)
-{
-
-}
 
 // since workspace is at repository root
-var WebRoot = './docs';
+const WebRoot = './docs';
+ManageBooksHandler.Initialize(WebRoot);
 JekyllHandler.Initialize(WebRoot);
+DefaultHandler.Initialize(WebRoot);
 
 function HandleRequest(request, response)
 {
 	var u = url.parse(request.url, true);
 	var pathName = u.pathname;
 
-	if (pathName.startsWith("/admin"))
+	if (pathName.startsWith("/manage/books/"))
 	{
-		return HandleRequest_admin(request, response);
+		return ManageBooksHandler.HandleRequest(request, u, response);
 	}
 
 	if (request.method != 'GET')
@@ -40,18 +40,7 @@ function HandleRequest(request, response)
 	}
 
 	// anything else, return the file
-
-	function GetMineTypeByExtention(pathName)
-	{
-		if (pathName.endsWith('.css'))	return 'text/css';
-		if (pathName.endsWith('.ico'))	return 'image/x-icon';
-
-		return 'text/plain';
-	}
-
-	response.writeHead(200, { 'Content-Type': GetMineTypeByExtention(pathName) });
-	response.write(fs.readFileSync(WebRoot + pathName));
-	response.end();
+	return DefaultHandler.HandleRequest(pathName, response);
 }
 
 
@@ -69,6 +58,8 @@ var server=http.createServer(function(request, response){
 		response.writeHead(404, { 'Content-Type': 'text/plain' });
 		response.write(msg);
 		response.end();
+
+		console.log(err);
 	}
 });
 

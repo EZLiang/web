@@ -58,6 +58,7 @@ function GenerateTopNavigationBar()
               <a href="/_posts/">Posts</a>
               <a href="/_layouts/">Layouts</a>
               <a href="/assets/">Assets</a>
+              <a href="/manage/books/">Manage Books</a>
           </div>
         </div>
         `;

@@ -1,4 +1,6 @@
-var fs = require('fs');
+const fs = require('fs');
+const showdown = require('showdown');
+const yaml = require('js-yaml')
 
 var sDefaultLayouts = { pages: "", posts: ""};
 var sWebRoot = "";
@@ -7,7 +9,30 @@ function Initialize(webRoot)
 {
     sWebRoot = webRoot;
 
-    // to-do: load default layouts
+    function LoadConfig()
+    {
+        try {
+            const cfgString = fs.readFileSync(sWebRoot + '/_config.yml', 'utf8');
+            const cfg = yaml.safeLoad(cfgString);
+            
+            if (cfg.defaults === undefined)
+                return;
+
+            cfg.defaults.forEach(entry => {
+                if (entry.scope === undefined || entry.scope.type === undefined || 
+                    entry.values == undefined || entry.values.layout === undefined)
+                    return;
+
+                sDefaultLayouts[entry.scope.type] = entry.values.layout;
+                console.log('default layout override by config: ' +  entry.scope.type + ' = ' + entry.values.layout);
+            });
+        }
+        catch (e) {
+            console.log(e);            
+        }
+    }
+
+    LoadConfig();
 }
 
 function ParseJekyllFrontMatter(fileContent)
@@ -69,11 +94,14 @@ function LoadAndParseJekyllLayouts(pathName)
         var page = ParseJekyllFrontMatter(rawContent);
 
         if (pathName.endsWith(".md"))
-            page.content = markdown.markdown(page.content);
+        {
+            var md = new showdown.Converter();
+            page.content = md.makeHtml(page.content);
+        }
 
         var isPost = pathName.startsWith("/_posts/")
 
-        if (isPost &&  page.tags.indexOf("category") < 0 && page.tags.indexOf("categories") < 0)
+        if (isPost &&  page.tags.category === undefined && page.tags.categories === undefined)
             page.content = "<h1 style='background:red;'>Warning: No category assigned</h1>\n\n" + page.content;
     
         if (page.layout == "")
