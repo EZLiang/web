@@ -11,9 +11,7 @@ title: My Reading List Index
 
     for (var groupIndex = 0; groupIndex < books.length; groupIndex++)
     {
-        if (IsShowableBookGroup(books[groupIndex])) {
-            document.write('<li><a ' + StyleA + 'href="books.html?group=' + groupIndex + '">' + books[groupIndex].group + '</a></li>\n');
-        }
+        document.write('<li><a ' + StyleA + 'href="books.html?group=' + groupIndex + '">' + books[groupIndex].group + '</a></li>\n');
     }
     document.write('</ul><br><hr>\n\n');
 
@@ -23,9 +21,6 @@ title: My Reading List Index
     for (var groupIndex = 0; groupIndex < books.length; groupIndex++)
     {
         var bookGroup = books[groupIndex];
-        if (!IsShowableBookGroup(bookGroup)) {
-            continue;
-        }
 
         document.write('<p style="margin-bottom: 5px;"><a ' + StyleA + 'href="books.html?group=' + groupIndex + '">' + bookGroup.group + '</a></p>\n');
         document.write('<ol style="margin-top: 0px;">\n');

@@ -1164,6 +1164,7 @@ var books =
 
     {
         group: "To Read",
+        hidden: true,
         list:
         [
             {

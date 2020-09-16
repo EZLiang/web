@@ -47,6 +47,7 @@ function HandleRequest(request, response)
 var server=http.createServer(function(request, response){
 	try
 	{
+		console.log(' - ' + request.method + ' : ' + request.url);
 		HandleRequest(request, response);
 	}
 	catch (err)

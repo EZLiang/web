@@ -1,20 +1,42 @@
 const fs = require('fs');
 const showdown = require('showdown');
-const yaml = require('js-yaml')
+const yaml = require('js-yaml');
 
-var sDefaultLayouts = { pages: "", posts: ""};
-var sWebRoot = "";
+var sConfig = 
+{
+    WebRoot: "",
+    DefaultLayouts: { pages: "", posts: ""},
+
+    ExtraMenuTag: "<!-- extra menu -->",
+    ExtraMenus: `
+        <div id="Admin" class="dropDown">
+            <span><a id="menu.admin" href="/">Admin</a></span>
+            <div class="dropDown-content">
+                <a href="/_posts/">Posts</a>
+                <a href="/_layouts/">Layouts</a>
+                <a href="/assets/">Assets</a>
+                <!-- extra menu -->
+            </div>
+        </div>`,
+    ExtraMenus_Evin: `
+                <a href="/admin/books/">Manage Books</a>
+    `
+}
 
 function Initialize(webRoot)
 {
-    sWebRoot = webRoot;
+    sConfig.WebRoot = webRoot;
 
     function LoadConfig()
     {
         try {
-            const cfgString = fs.readFileSync(sWebRoot + '/_config.yml', 'utf8');
+            const cfgString = fs.readFileSync(sConfig.WebRoot + '/_config.yml', 'utf8');
             const cfg = yaml.safeLoad(cfgString);
-            
+
+            if (cfg.name == 'Evin Liang') {
+                sConfig.ExtraMenus = sConfig.ExtraMenus.replace(sConfig.ExtraMenuTag, sConfig.ExtraMenus_Evin);
+            }
+
             if (cfg.defaults === undefined)
                 return;
 
@@ -23,7 +45,7 @@ function Initialize(webRoot)
                     entry.values == undefined || entry.values.layout === undefined)
                     return;
 
-                sDefaultLayouts[entry.scope.type] = entry.values.layout;
+                sConfig.DefaultLayouts[entry.scope.type] = entry.values.layout;
                 console.log('default layout override by config: ' +  entry.scope.type + ' = ' + entry.values.layout);
             });
         }
@@ -90,7 +112,7 @@ function LoadAndParseJekyllLayouts(pathName)
 
     while (true)
     {
-        var rawContent = fs.readFileSync(sWebRoot + pathName, {encoding:'utf8', flag:'r'});
+        var rawContent = fs.readFileSync(sConfig.WebRoot + pathName, {encoding:'utf8', flag:'r'});
         var page = ParseJekyllFrontMatter(rawContent);
 
         if (pathName.endsWith(".md"))
@@ -107,9 +129,9 @@ function LoadAndParseJekyllLayouts(pathName)
         if (page.layout == "")
         {
             if (isPost)
-                page.layout = sDefaultLayouts.posts;
+                page.layout = sConfig.DefaultLayouts.posts;
             else
-                page.layout = sDefaultLayouts.pages;
+                page.layout = sConfig.DefaultLayouts.pages;
         }
 
         if (page.layout == "" || layoutNameList.indexOf(page.layout) >= 0)
@@ -128,7 +150,9 @@ function LoadAndParseJekyllLayouts(pathName)
 function HandleRequest(pathName, response)
 {
     var layoutList = LoadAndParseJekyllLayouts(pathName);
-    var result = layoutList.rootContent;
+
+    // rootContent should be from /_layouts/default.html, insert extra menus into it
+    var result = layoutList.rootContent.replace(sConfig.ExtraMenuTag, sConfig.ExtraMenus);    
 
     for (var page of layoutList.pages)
     {

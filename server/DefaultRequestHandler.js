@@ -35,9 +35,10 @@ function GetDirectoryContent(path)
 
     var list = fs.readdirSync(path);
     list.forEach(file => {
-        if (fs.lstatSync(path + '/' + file).isDirectory())
+        if (fs.lstatSync(path + file).isDirectory())
         {
-            result += '<a href="' + file + '">[' + file + ']</a><br>';
+            // !! ending '/' in href is important !!
+            result += '<a href="' + file + '/">[' + file + ']</a><br>';
         }
         else
         {
@@ -55,6 +56,10 @@ function HandleRequest(pathName, response)
     var isDirectory = fs.lstatSync(path).isDirectory();
     if (isDirectory)
     {
+        if (!path.endsWith('/')) {
+            path += '/';
+        }
+        
         var dirList = GetDirectoryContent(path);
 
         response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });

@@ -7,11 +7,46 @@
   
         <script type="text/javascript" src="/assets/common.js"></script>
         <script type="text/javascript" src="/books/book-list.js"></script>
+        <script type="text/javascript">
+            if (window.location.hostname != '127.0.0.1') {
+                for (var i = 0; i < books.length; ) {
+                    if (books[i].hidden == true) {
+                        books.splice(i,1);
+                    }
+                    else {
+                        i++;
+                    }
+                }
+            }
+        </script>
     </head>
     
     <body>
+
+        <nav>
+            <a id="menu.home" href="/">Home</a>
+            <div class="dropDown">
+              <a id="menu.books" href="/books/index.html">Reading-List</a>
+              <div class="dropDown-content">
+                <script type="text/javascript">
+                    books.forEach( (group, index) => {
+                        document.write('<a href="/books/books.html?group=' + index + '">' + group.group + '</a>\n');
+                    });
+                </script>
+              </div>
+            </div>
+            <a id="menu.blog" href="/blog/index.html">Blog</a>
+            <a id="menu.contact" href="/contact/index.html">Contact</a>
+            <a href="http://fractran.ezget.info">FRACTRAN</a>    
+            <!-- extra menu -->
+    
+            <div style="float: right; margin:5pt; font-size:16pt; color: gray;">
+              Evin Liang
+            </div>
+        </nav>
+
         <script type="text/javascript">
-            GenerateTopNavigationBar();
+            SetActiveMenu();
         </script>
           
         <header>
