@@ -175,12 +175,6 @@ title: Edit Books Groups
 
     function OnGroupSave()
     {
-        //var resultBox = document.getElementById('bookListResult');
-        //resultBox.value = books; //JSON.stringify(books);
-
-        var form = document.getElementById('groupEditForm');
-        //form.submit();
-
         var xhr = new XMLHttpRequest();
         xhr.open('POST', '/edit/books', true);
         xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');

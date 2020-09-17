@@ -1,0 +1,270 @@
+---
+layout: default
+title: Edit Books In Group
+---
+
+<style>
+    select:hover, button:hover, input:hover {
+        background-color: #c0d0f0;
+    }
+
+    select {
+        margin: 0rem;
+        width: 50rem;
+        border: 1px solid gray;
+    }
+
+    button{
+        margin: 0.1rem;
+        width: 8rem;
+    }
+
+</style>
+
+<select id="groupListBox" style="margin-left:0.5rem;" onchange="OnGroupSelectionChanged(this.value)"></select>
+
+<div class="flex-container" style="margin-top:0px;">    
+    <div>
+        <select id="bookListBox" size="15" onchange="OnBookSelectionChanged(this.value)"></select>
+    </div>
+
+    <div>
+        <button onclick='OnBookMoveUp()'>Move Up</button></br>
+        <button onclick='OnBookMoveDown()'>Move Down</button></br>
+        <br>
+        <button onclick='OnBookAddNew()'>Add New</button><br>
+        <button onclick='OnBookDelete()' style="background-color: red;">Delete</button><br>
+        
+        <button style="vertical-align: bottom; margin-top:6rem;" onclick='OnBookSave()'>Save</button>
+    </div>    
+</div>
+
+<hr>
+
+<strong>Book Details</strong> &nbsp; &nbsp; &nbsp;
+<button onclick='OnBookApplyChange()'>Apply Change</button>
+
+<div class="flex-container">
+    <div>
+        Title:<br>
+        <textarea id="bookTitle" rows="3" cols="50"></textarea><br>
+        Author:<br>
+        <textarea id="bookAuthor" rows="3" cols="50"></textarea><br>
+        Comment:<br>
+        <textarea id="bookComment" rows="5" cols="50"></textarea><br>
+        Image:<br>
+        <input type="file" id="bookImage" accept=".jpg,.jpeg,.png">
+    </div>
+
+    <div style="margin-left:2rem;">
+        Descript:<br>
+        <textarea id="bookDescription" rows="15" cols="80"></textarea>
+    </div>
+</div>
+
+<hr>
+<div id="preview"></div>
+<hr>
+
+<script type="text/javascript">
+    "use strict";
+
+    // several other function need this, to avoid re-query index...
+    var selectedGroupIndex = 0;
+    var selectedBookIndex = -1;
+    
+    function GetSelectedBookList()
+    {
+        if (selectedGroupIndex < 0)
+            return null;
+
+        return books[selectedGroupIndex].list;
+    }
+    function GetSelectedBook()
+    {
+        if (selectedGroupIndex < 0 || selectedBookIndex < 0)
+            return null;
+
+        return books[selectedGroupIndex].list[selectedBookIndex];
+    }
+
+    function RefreshGroupList()
+    {
+        var groupHtml = '';
+        books.forEach( (bookGroup,index) => {
+            groupHtml += '<option value="' + index + 
+                (selectedGroupIndex==index ? '" selected>' : '">') + 
+                bookGroup.group + '</option>';
+        });
+
+        var groupBox = document.getElementById("groupListBox");
+        groupBox.innerHTML = groupHtml;
+    }
+
+    function RefreshBookList()
+    {
+        var list = GetSelectedBookList();
+        if (list == null)
+            return;
+
+        var listHtml = '';
+        list.forEach( (book,index) => {
+            listHtml += '<option value="' + index + 
+                (selectedBookIndex==index ? '" selected>' : '">') + 
+                book.title + '</option>';
+        });
+
+        var bookBox = document.getElementById("bookListBox");
+        bookBox.innerHTML = listHtml;
+    }
+
+    // initial populating the list
+    RefreshGroupList();
+    RefreshBookList();
+
+    function OnGroupSelectionChanged(selectedIndex)
+    {
+        selectedGroupIndex = parseInt(selectedIndex);
+        selectedBookIndex = -1;
+        
+        RefreshBookList();
+    }
+
+    function OnBookSelectionChanged(selectedIndex)
+    {
+        selectedBookIndex = parseInt(selectedIndex);
+        var book = GetSelectedBook();
+
+        // update detail
+        if (book == null) {
+            document.getElementById("bookTitle").value = "";
+            document.getElementById("bookAuthor").value = "";
+            document.getElementById("bookComment").value = "";
+            document.getElementById("bookDescription").value = "";
+            document.getElementById("bookImage").value = "";
+        }
+        else {
+            document.getElementById("bookTitle").value = book.title;
+            document.getElementById("bookAuthor").value = book.author;
+            document.getElementById("bookComment").value = book.comment;
+            document.getElementById("bookDescription").value = book.description;
+            document.getElementById("bookImage").value = book.image;
+        }
+
+        UpdatePreview(book);
+    }
+
+    function UpdatePreview(book)
+    {
+        var result = "";
+        if (book != null)
+        {
+           result = '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">' +
+            '<strong>' + book.title + '</strong><br>' +
+            'Author(s): <i>' + book.author + '</i><br>' +
+            book.description +
+            '<br clear="all">';
+        }
+        
+        document.getElementById("preview").innerHTML = result;
+    }
+
+    function OnBookMoveUp()
+    {
+        var list = GetSelectedBookList();
+        if (selectedBookIndex < 1)
+            return;
+
+        [list[selectedBookIndex-1], list[selectedBookIndex]] = [list[selectedBookIndex], list[selectedBookIndex-1]];
+        selectedBookIndex--;
+        RefreshBookList();
+    }
+
+    function OnBookMoveDown()
+    {
+        var list = GetSelectedBookList();
+        if (selectedBookIndex > list.length-2)
+            return;
+
+        [list[selectedBookIndex+1], list[selectedBookIndex]] = [list[selectedBookIndex], list[selectedBookIndex+1]];
+        selectedBookIndex++;
+        RefreshBookList();
+    }
+
+    function OnBookApplyChange()
+    {
+        var book = GetSelectedBook();
+        if (book == null)
+            return;
+
+        var title = document.getElementById("bookTitle").value;
+        var author = document.getElementById("bookAuthor").value;
+        var comment = document.getElementById("bookComment").value;
+        var description = document.getElementById("bookDescription").value;
+
+        var image = "";
+        var imageFiles = document.getElementById("bookImage").files;
+        if (imageFiles.length > 0)
+            image = imageFiles[0].name;
+
+
+        if (title == '') {
+            alert("no title");
+            return;
+        }
+
+        book.title = title;
+        book.author = author;
+        book.comment = comment;
+        book.description = description;
+        book.image = image;
+
+        RefreshBookList();
+        UpdatePreview(book);
+    }
+
+    function OnBookAddNew()
+    {
+        var list = GetSelectedBookList();
+        if (list == null)
+            return;
+
+        list.push({
+            title: "{untitled}",
+            author: "",
+            comment: "",
+            description: "",
+            image: ""
+        });
+
+        selectedBookIndex = list.length - 1;
+
+        RefreshBookList();
+    }
+
+    function OnBookDelete()
+    {
+        if (selectedBookIndex < 0)
+            return;
+
+        var list = GetSelectedBookList();
+        list.splice(selectedBookIndex,1);
+
+        selectedBookIndex = -1;
+        RefreshBookList();
+
+        OnBookSelectionChanged(-1);
+
+        // to-do: check orphan image on disk
+    }
+
+    function OnBookSave()
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/edit/books', true);
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        var formData = JSON.stringify(books, null, 1);
+        xhr.send(formData);
+    }
+
+</script>
