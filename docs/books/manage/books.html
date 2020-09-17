@@ -29,13 +29,26 @@ title: Edit Books In Group
     </div>
 
     <div>
-        <button onclick='OnBookMoveUp()'>Move Up</button></br>
-        <button onclick='OnBookMoveDown()'>Move Down</button></br>
+        <button onclick='OnBookMoveUp()'>Move Up</button><br>
+        <button onclick='OnBookMoveDown()'>Move Down</button><br>
+        <br>
+        <div class="dropDown">
+            <button onclick="var dp = document.getElementById('groupChangeDropDown'); if (dp.style.display=='block') dp.style.display='none'; else dp.style.display='block';">Change Group</button>
+
+            <div id="groupChangeDropDown" class="dropDownContent-Click" style="margin-left: -15rem;">
+              <script type="text/javascript">
+                  document.write(`<a onclick="OnChangeGroup('-1')">-- cancel --</a>`);                  
+                  books.forEach( (group, index) => {
+                    document.write(`<a onclick="OnChangeGroup('` + index + `')">` + group.group + `</a>`);
+                  });
+              </script>
+            </div>
+        </div><br>
         <br>
         <button onclick='OnBookAddNew()'>Add New</button><br>
         <button onclick='OnBookDelete()' style="background-color: red;">Delete</button><br>
-        
-        <button style="vertical-align: bottom; margin-top:6rem;" onclick='OnBookSave()'>Save</button>
+        <br><br><br><br>
+        <button onclick='OnBookSave()'>Save</button>
     </div>    
 </div>
 
@@ -190,6 +203,33 @@ title: Edit Books In Group
         [list[selectedBookIndex+1], list[selectedBookIndex]] = [list[selectedBookIndex], list[selectedBookIndex+1]];
         selectedBookIndex++;
         RefreshBookList();
+    }
+
+    function OnChangeGroup(newGroupIndex)
+    {
+        document.getElementById('groupChangeDropDown').style.display='none';
+
+        // 'cancel' clicked
+        if (newGroupIndex < 0) {
+            return;
+        }
+
+        var book = GetSelectedBook();
+        if (book == null) {
+          return;
+        }
+            
+        if (newGroupIndex == selectedGroupIndex) {
+            alert("same group select, no change will be made");
+            return;
+        }
+
+        books[newGroupIndex].list.push(book);
+        books[selectedGroupIndex].list.splice(selectedBookIndex,1);
+
+        selectedBookIndex = -1;
+        RefreshBookList();
+        OnBookSelectionChanged(-1);
     }
 
     function OnBookImagePicked(imageFile)

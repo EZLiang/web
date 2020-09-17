@@ -11,7 +11,7 @@ var sConfig =
     ExtraMenus: `
         <div id="Admin" class="dropDown">
             <span><a id="menu.admin" href="/">Admin</a></span>
-            <div class="dropDown-content">
+            <div class="dropDownContent-hover">
                 <a href="/_posts/">Posts</a>
                 <a href="/_layouts/">Layouts</a>
                 <a href="/assets/">Assets</a>
