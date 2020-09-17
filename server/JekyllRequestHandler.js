@@ -11,7 +11,7 @@ var sConfig =
     ExtraMenus: `
         <div id="Admin" class="dropDown">
             <span><a id="menu.admin" href="/">Admin</a></span>
-            <div class="dropDown-content">
+            <div class="dropDownContent-hover">
                 <a href="/_posts/">Posts</a>
                 <a href="/_layouts/">Layouts</a>
                 <a href="/assets/">Assets</a>
@@ -87,7 +87,11 @@ function ParseJekyllFrontMatter(fileContent)
 
         var pair = line.split(":");
         var name = pair[0];
-        var value = pair[1].trim();
+        var value = pair[1];
+        if (value.endsWith('\r')) {
+            value = value.slice(0, -1);
+        }
+        value = value.trim();
 
         if (name != name.trim())
             throw exception("Jekyll tag has space surrounded");

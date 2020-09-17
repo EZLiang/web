@@ -29,31 +29,33 @@ nav a:hover {
 nav a.active {
     background-color: #4CAF50;
 }
-nav .dropDown {
+
+.dropDown {
     position: relative;
     display: inline-block;
 }    
-.dropDown-content {
+.dropDownContent-hover, .dropDownContent-Click {
     display: none;
     position: absolute;
+    white-space: nowrap;
     background-color: #f9f9f9;
-    min-width: 30rem;
     border: 1px dotted gray;
     box-shadow: 0pt 0.5rem 1rem 0pt rgba(0,0,0,0.2);
     z-index: 1;
 } 
-nav .dropDown-content a {
+.dropDownContent-hover a, .dropDownContent-Click a {
     display: block;
     color: black;
     font-size: 1rem;
 }
-nav .dropDown-content a:hover {
+.dropDownContent-hover a:hover, .dropDownContent-Click a:hover {
     background-color: #ddd;
 }
-nav .dropDown:hover .dropDown-content {
+.dropDown:hover .dropDownContent-hover {
     display: block;
 }
-  
+/* note: dropDownContent-click need to handle the display block<->none in javascript */
+
 header {
     padding-top: 3rem;
     width: 100%; 

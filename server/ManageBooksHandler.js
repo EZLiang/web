@@ -23,12 +23,14 @@ function HandleRequest(request, response)
     request.on('end', function () {
         // to-do: verify
 
-        result = 'var books = \n' + 
-            postBody + 
-            '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
-            'if (isNodeJs()) \n{\n  module.exports = books; \n}'
+        var fd = fs.openSync(sBookListFile, 'w');
+        fs.writeSync(fd, 'var books = \n');
+        fs.writeSync(fd, postBody);
+        fs.writeSync(fd, '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
+            'if (isNodeJs()) \n{\n  module.exports = books; \n}');
+        fs.closeSync(fd);
 
-        fs.writeFileSync(sBookListFile, result);
+        console.log('-- book-list updated --');
 
         // client sent it asynchronously, so no need to response
         //response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });

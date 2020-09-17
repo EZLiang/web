@@ -29,13 +29,26 @@ title: Edit Books In Group
     </div>
 
     <div>
-        <button onclick='OnBookMoveUp()'>Move Up</button></br>
-        <button onclick='OnBookMoveDown()'>Move Down</button></br>
+        <button onclick='OnBookMoveUp()'>Move Up</button><br>
+        <button onclick='OnBookMoveDown()'>Move Down</button><br>
+        <br>
+        <div class="dropDown">
+            <button onclick="var dp = document.getElementById('groupChangeDropDown'); if (dp.style.display=='block') dp.style.display='none'; else dp.style.display='block';">Change Group</button>
+
+            <div id="groupChangeDropDown" class="dropDownContent-Click" style="margin-left: -15rem;">
+              <script type="text/javascript">
+                  document.write(`<a onclick="OnChangeGroup('-1')">-- cancel --</a>`);                  
+                  books.forEach( (group, index) => {
+                    document.write(`<a onclick="OnChangeGroup('` + index + `')">` + group.group + `</a>`);
+                  });
+              </script>
+            </div>
+        </div><br>
         <br>
         <button onclick='OnBookAddNew()'>Add New</button><br>
         <button onclick='OnBookDelete()' style="background-color: red;">Delete</button><br>
-        
-        <button style="vertical-align: bottom; margin-top:6rem;" onclick='OnBookSave()'>Save</button>
+        <br><br><br><br>
+        <button onclick='OnBookSave()'>Save</button>
     </div>    
 </div>
 
@@ -49,16 +62,17 @@ title: Edit Books In Group
         Title:<br>
         <textarea id="bookTitle" rows="3" cols="50"></textarea><br>
         Author:<br>
-        <textarea id="bookAuthor" rows="3" cols="50"></textarea><br>
+        <textarea id="bookAuthor" rows="2" cols="50"></textarea><br>
         Comment:<br>
-        <textarea id="bookComment" rows="5" cols="50"></textarea><br>
-        Image:<br>
-        <input type="file" id="bookImage" accept=".jpg,.jpeg,.png">
+        <textarea id="bookComment" rows="4" cols="50"></textarea><br>
+        Image: <input type="file" accept=".jpg,.jpeg,.png" onchange="OnBookImagePicked(this.files[0].name)"><br>
+        <input id="bookImage" size="45">
+        
     </div>
 
     <div style="margin-left:2rem;">
         Descript:<br>
-        <textarea id="bookDescription" rows="15" cols="80"></textarea>
+        <textarea id="bookDescription" rows="16" cols="80"></textarea>
     </div>
 </div>
 
@@ -146,7 +160,7 @@ title: Edit Books In Group
         else {
             document.getElementById("bookTitle").value = book.title;
             document.getElementById("bookAuthor").value = book.author;
-            document.getElementById("bookComment").value = book.comment;
+            document.getElementById("bookComment").value = book.comment === undefined ? "" : book.comment;
             document.getElementById("bookDescription").value = book.description;
             document.getElementById("bookImage").value = book.image;
         }
@@ -191,6 +205,38 @@ title: Edit Books In Group
         RefreshBookList();
     }
 
+    function OnChangeGroup(newGroupIndex)
+    {
+        document.getElementById('groupChangeDropDown').style.display='none';
+
+        // 'cancel' clicked
+        if (newGroupIndex < 0) {
+            return;
+        }
+
+        var book = GetSelectedBook();
+        if (book == null) {
+          return;
+        }
+            
+        if (newGroupIndex == selectedGroupIndex) {
+            alert("same group select, no change will be made");
+            return;
+        }
+
+        books[newGroupIndex].list.push(book);
+        books[selectedGroupIndex].list.splice(selectedBookIndex,1);
+
+        selectedBookIndex = -1;
+        RefreshBookList();
+        OnBookSelectionChanged(-1);
+    }
+
+    function OnBookImagePicked(imageFile)
+    {
+        document.getElementById("bookImage").value = imageFile;
+    }
+
     function OnBookApplyChange()
     {
         var book = GetSelectedBook();
@@ -201,12 +247,7 @@ title: Edit Books In Group
         var author = document.getElementById("bookAuthor").value;
         var comment = document.getElementById("bookComment").value;
         var description = document.getElementById("bookDescription").value;
-
-        var image = "";
-        var imageFiles = document.getElementById("bookImage").files;
-        if (imageFiles.length > 0)
-            image = imageFiles[0].name;
-
+        var image = document.getElementById("bookImage").value;
 
         if (title == '') {
             alert("no title");
