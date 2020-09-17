@@ -23,19 +23,27 @@ function HandleRequest(request, response)
     request.on('end', function () {
         // to-do: verify
 
-        var fd = fs.openSync(sBookListFile, 'w');
-        fs.writeSync(fd, 'var books = \n');
-        fs.writeSync(fd, postBody);
-        fs.writeSync(fd, '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
-            'if (isNodeJs()) \n{\n  module.exports = books; \n}');
-        fs.closeSync(fd);
+        try {
+            var fd = fs.openSync(sBookListFile, 'w');
+            fs.writeSync(fd, 'var books = \n');
+            fs.writeSync(fd, postBody);
+            fs.writeSync(fd, '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
+                'if (isNodeJs()) \n{\n  module.exports = books; \n}');
+            fs.closeSync(fd);
 
-        console.log('-- book-list updated --');
-
-        // client sent it asynchronously, so no need to response
-        //response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        //response.write('to-do');
-        //response.end();        
+            console.log('-- book-list updated --');
+        
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.write('The new list was saved.');
+            response.end();
+        }
+        catch (err) {
+            console.log(err);
+            
+            response.writeHead(500, { 'Content-Type': 'text/plain' });
+            response.write('Failed to save, please check server log.');
+            response.end();
+        }
     });
     
 }

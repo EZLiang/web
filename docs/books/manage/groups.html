@@ -175,11 +175,18 @@ title: Edit Books Groups
 
     function OnGroupSave()
     {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/edit/books', true);
-        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        var formData = JSON.stringify(books, null, 1);
-        xhr.send(formData);
+        var payload = JSON.stringify(books, null, 1);
+
+        var request = new XMLHttpRequest();
+        request.open('POST', '/edit/books', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            alert(request.response);
+        };
+
+        request.send(payload);
     }
 
 </script>
