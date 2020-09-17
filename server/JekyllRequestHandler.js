@@ -69,11 +69,11 @@ function ParseJekyllFrontMatter(fileContent)
         return page;
     }
 
-    page.content = page.content.substring(page.content.indexOf("\r\n") + 2);
+    page.content = page.content.substring(page.content.indexOf("\n") + 1);
 
     while (true) 
     {
-        var idx = page.content.indexOf("\r\n");
+        var idx = page.content.indexOf("\n");
         if (idx < 0)
         {
             // If line is blank, then hit the EOF
@@ -81,13 +81,17 @@ function ParseJekyllFrontMatter(fileContent)
         }
         
         var line = page.content.substring(0, idx);
-        page.content = page.content.substring(idx + 2);
+        page.content = page.content.substring(idx + 1);
         if (line.startsWith("---"))
             break;
 
         var pair = line.split(":");
         var name = pair[0];
-        var value = pair[1].trim();
+        var value = pair[1];
+        if (value.endsWith('\r')) {
+            value = value.slice(0, -1);
+        }
+        value = value.trim();
 
         if (name != name.trim())
             throw exception("Jekyll tag has space surrounded");
