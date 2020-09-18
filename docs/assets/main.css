@@ -80,14 +80,14 @@ section {
 }
 
 section .flex-container {
-    margin: 0.5rem;
+    margin: 0rem;
 	display: -webkit-flex; /* Safari */		
     display: flex; /* Standard syntax */
     -webkit-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 section .flex {
-	padding: 1rem;
+	padding: 0.5rem;
 	-webkit-flex: 1; /* Safari */
 	-ms-flex: 1; /* IE 10 */
 	flex: 1; /* Standard syntax */

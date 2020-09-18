@@ -1,21 +1,31 @@
 const fs = require('fs');
+const latexPdf = require('./Books-MakeLatexPdf');
 
+// for web
 var sWebRoot = "";
+
+// for local process
+var sCwd = "";
 var sBookListFile = "";
+var sTmpFolder = "";
+var sImgFolder = "";
+var sLatexFile = "";
+var sPdfFile = "";
 
 function Initialize(webRoot)
 {
     sWebRoot = webRoot;
-    sBookListFile = webRoot + "/books/book-list.js";
+
+    sCwd = process.cwd() + '\\';   // should be workspace folder
+    sBookListFile = sCwd + "docs\\books\\book-list.js";
+    sTmpFolder = sCwd + 'tmp\\';
+    sImgFolder = sCwd + 'docs\\books\\images\\'
+    sLatexFile = sTmpFolder + 'ReadingList.tex';
+    sPdfFile = sTmpFolder + 'ReadingList.pdf';
 }
 
-function HandleRequest(request, response)
+function UpdateBookList(request, response)
 {
-    if (request.method != 'POST')
-	{
-		throw {'status': 400, 'message': 'Only [POST] method is supported at this URL'};
-    }
-    
     var postBody = "";
     request.on('data', function (chunk) {
         postBody += chunk;
@@ -23,21 +33,67 @@ function HandleRequest(request, response)
     request.on('end', function () {
         // to-do: verify
 
-        var fd = fs.openSync(sBookListFile, 'w');
-        fs.writeSync(fd, 'var books = \n');
-        fs.writeSync(fd, postBody);
-        fs.writeSync(fd, '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
-            'if (isNodeJs()) \n{\n  module.exports = books; \n}');
-        fs.closeSync(fd);
+        try {
+            var fd = fs.openSync(sBookListFile, 'w');
+            fs.writeSync(fd, 'var books = \n');
+            fs.writeSync(fd, postBody);
+            fs.writeSync(fd, '\n\nvar isNodeJs = new Function("try {return this===global;}catch(e){return false;}");\n' +
+                'if (isNodeJs()) \n{\n  module.exports = books; \n}');
+            fs.closeSync(fd);
 
-        console.log('-- book-list updated --');
-
-        // client sent it asynchronously, so no need to response
-        //response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
-        //response.write('to-do');
-        //response.end();        
+            console.log('-- book-list updated --');
+        
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.write('The new list was saved.');
+            response.end();
+        }
+        catch (err) {
+            console.log(err);
+            
+            response.writeHead(500, { 'Content-Type': 'text/plain' });
+            response.write('Failed to save, please check server log.');
+            response.end();
+        }
     });
+}
+
+function HandleMakeLatex(response)
+{
+    const bookList = require(sBookListFile);
+    var latex = latexPdf.GenerateLatex(bookList, sImgFolder, sLatexFile);
+
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.write(latex);
+    response.end();
+}
+
+function HandleMakePdf(response)
+{
+    var pdf = fs.readFileSync(sPdfFile, 'binary');
     
+    response.writeHead(200, { 'Content-Type': 'application/pdf' });
+    response.write(pdf);
+    response.end();
+}
+
+function HandleRequest(request, url, response)
+{
+    var paths = url.pathname.split('/');
+    paths = paths.slice(3); // 1st one is empty string before '/'
+
+    if (paths.length == 0 && request.method == 'POST') {
+        return UpdateBookList(request, response);
+    }
+
+    if (paths.length == 1 && request.method == 'GET') {
+        switch (paths[0])
+        {
+            case 'latex': return HandleMakeLatex(response);
+            case 'pdf': return HandleMakePdf(response);
+        }
+    }
+
+    throw {'status': 400, 'message': 'Unsupported request'};    
 }
 
 

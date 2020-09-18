@@ -34,7 +34,6 @@ title: Edit Books In Group
         <br>
         <div class="dropDown">
             <button onclick="var dp = document.getElementById('groupChangeDropDown'); if (dp.style.display=='block') dp.style.display='none'; else dp.style.display='block';">Change Group</button>
-
             <div id="groupChangeDropDown" class="dropDownContent-Click" style="margin-left: -15rem;">
               <script type="text/javascript">
                   document.write(`<a onclick="OnChangeGroup('-1')">-- cancel --</a>`);                  
@@ -243,11 +242,31 @@ title: Edit Books In Group
         if (book == null)
             return;
 
-        var title = document.getElementById("bookTitle").value;
-        var author = document.getElementById("bookAuthor").value;
-        var comment = document.getElementById("bookComment").value;
-        var description = document.getElementById("bookDescription").value;
-        var image = document.getElementById("bookImage").value;
+        function GetAndCheckValue(elementId)
+        {
+            var v = document.getElementById(elementId).value;
+            var va = [...v];
+            va.forEach( (c,idx) => {
+                var charCode = c.charCodeAt(0);
+                if (charCode < 10 || charCode > 126) {
+                    throw elementId + ' contains special char [' + charCode + '] at location of ' + idx + '\nAbort';
+                }
+            });
+
+            return v;
+        }
+
+        try {
+            var title = GetAndCheckValue("bookTitle");
+            var author = GetAndCheckValue("bookAuthor");
+            var comment = GetAndCheckValue("bookComment");
+            var description = GetAndCheckValue("bookDescription");
+            var image = GetAndCheckValue("bookImage");
+        }
+        catch (err) {
+            alert(err);
+            return;
+        }
 
         if (title == '') {
             alert("no title");
@@ -301,11 +320,18 @@ title: Edit Books In Group
 
     function OnBookSave()
     {
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', '/edit/books', true);
-        xhr.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        var formData = JSON.stringify(books, null, 1);
-        xhr.send(formData);
+        var payload = JSON.stringify(books, null, 1);
+
+        var request = new XMLHttpRequest();
+        request.open('POST', '/admin/books', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            alert(request.response);
+        };
+
+        request.send(payload);
     }
 
 </script>

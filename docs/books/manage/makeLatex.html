@@ -1,0 +1,74 @@
+---
+layout: default
+title: Generate LaTeX/Pdf Book List
+---
+
+<style>
+    .flex {
+        min-height: 40rem;
+        padding: 0.1rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100%;        
+    }
+</style>
+
+
+
+<hr>
+<div class="flex-container">
+    <div class="flex">
+        <button onclick="GenerateLatex()">Generate LaTeX</button>&nbsp;
+        <button onclick="CopyLatex()">Copy To Clipboard</button><br>
+        <textarea id="latexCode" readonly></textarea>
+    </div>
+    <div class="flex">
+        <button onclick="GeneratePdf()">Generate Pdf</button><br>
+        <object id="pdfViewer" type="application/pdf" width="100%" height="100%">
+            alt : <a href="test.pdf">test.pdf</a>
+        </object>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function GenerateLatex() {
+        let request = new XMLHttpRequest();
+        request.open('GET', 'http://127.0.0.1:8000/admin/books/latex');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            document.getElementById('latexCode').value = request.response;
+        };
+        request.send();
+    }
+
+    function CopyLatex() {
+        var texBox = document.getElementById("latexCode");
+        texBox.select();
+        // texBox.setSelectionRange(0, 99999); /*For mobile devices*/
+        document.execCommand("copy");
+    }
+
+    function GeneratePdf() {
+        if (document.getElementById('latexCode').value == '') {
+            alert("Please generate LaTeX first");
+            return;
+        }
+
+        let request = new XMLHttpRequest();
+        request.open('GET', 'http://127.0.0.1:8000/admin/books/pdf');
+        request.responseType = 'blob';
+
+        request.onload = function() {
+            var bufferPromise = request.response.blob.arrayBuffer();
+            
+
+            document.getElementById('pdfViewer').data = buffer;
+        };
+        request.send();
+    }
+
+</script>
