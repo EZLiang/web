@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Node.js: WebServer",
+            "name": "WebServer",
             "program": "${workspaceFolder}/server/WebServer.js",
             "request": "launch",
             "skipFiles": [
@@ -14,11 +14,24 @@
             "type": "pwa-node"
         },
         {
-            "name": "Python: Test Server",
-            "type": "python",
+            "name": "Make Latex",
+            "program": "${workspaceFolder}/server/Books-MakeLatexPdf.js",
+            "args": ["latex"],
             "request": "launch",
-            "program": "TestServer.py",
-            "console": "integratedTerminal"
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
+        },
+        {
+            "name": "Make Pdf",
+            "program": "${workspaceFolder}/server/Books-MakeLatexPdf.js",
+            "args": ["pdf"],
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "pwa-node"
         }
     ]
 }

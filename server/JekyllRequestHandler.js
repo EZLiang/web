@@ -21,6 +21,7 @@ var sConfig =
     ExtraMenus_Evin: `
                 <a href="/books/manage/groups.html">Manage: Book Groups</a>
                 <a href="/books/manage/books.html">Manage: Books in Group</a>
+                <a href="/books/manage/makeLatex.html">Manage: Books in Latex/Pdf format</a>
     `
 }
 

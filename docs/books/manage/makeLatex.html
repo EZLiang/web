@@ -1,0 +1,52 @@
+---
+layout: default
+title: Generate LaTeX/Pdf Book List
+---
+
+<style>
+    .flex {
+        min-height: 40rem;
+        padding: 0.1rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 100%;        
+    }
+</style>
+
+<button onclick="Generate()">Generate LaTex/Pdf</button>
+<hr>
+<div class="flex-container">
+    <div class="flex">
+        <textarea id="latexCode" readonly></textarea>
+    </div>
+    <div class="flex">
+        <object data="test.pdf" type="application/pdf" width="300" height="200">
+            alt : <a href="test.pdf">test.pdf</a>
+        </object>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    function Generate() {
+        let request = new XMLHttpRequest();
+        request.open('GET', 'http://127.0.0.1:8000/assets/main.css');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            document.getElementById('latexCode').value = request.response;
+        };
+        request.send();
+
+        fetch('http://127.0.0.1:8000/assets/common.js').then(function(response) {
+            response.text().then(function(text) {
+                //document.getElementById('pdfCode').value = text;
+            });
+        });
+    }
+
+</script>
+
+https://www.kirupa.com/html5/making_http_requests_js.htm
