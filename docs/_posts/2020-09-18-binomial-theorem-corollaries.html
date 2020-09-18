@@ -1,0 +1,18 @@
+---
+layout: post
+title: Binomial Theorem Corollaries
+categories: math power-of-proof
+mathjax: true
+draft: true
+---
+
+Here are some simple proofs based on the binomial theorem. They also demonstrate how amazing mathematical proofs can be.
+<h1>1. The hockey stick identity</h1>
+<p>By the formula for the sum of a geometric series, \(\frac{(1+r)^{n+1}-1}{(1+r)-1}=\displaystyle\sum_{i=0}^n (1+r)^i\). Now expanding both sides by the binomial theorem and simplifying, $$\displaystyle\sum_{i=0}^n \binom{n+1}{i+1}r^i=\displaystyle\sum_{i=0}^n \displaystyle\sum_{j=0}^i \binom{i}{j}r^j$$ Now rearrange the sum on the left (it is a finite sum after all) to get $$\displaystyle\sum_{i=0}^n \binom{n+1}{i+1}r^i=\displaystyle\sum_{j=0}^n r^j\displaystyle\sum_{i=j}^n \binom{i}{j}$$ Equating coefficients of \(r^k\) on both side gives the dsired result.</p>
+
+
+<h1 id="id-1">2. Vandermonde's identity</h1>
+<p>Well, obviously, \((1+r)^n (1+r)^m =(1+r)^{n+m}\). Again, use the binomial theorem to expand both sides: $$\left(\displaystyle\sum_{i=0}^n \binom{n}{i}r^i \right)\left(\displaystyle\sum_{i=0}^m \binom{m}{i}r^i \right)=\displaystyle\sum_{i=0}^{n+m} \binom{n+m}{i}r^i$$ The coefficient of \(r^k\) in the LHS is $$\displaystyle\sum_{i+j=k}\binom{n}{i}\binom{m}{j} =\displaystyle\sum_{i=0}^k \binom{n}{i}\binom{m}{k-i}$$ so equating coeffiecients of \(r^k\) yields Vandermonde's identity.</p>
+
+<h1>3. Tri-Vandermonde</h1>
+<p>Same as <a href="#id-1">#2</a>, except with the product of three binomials.</p>
