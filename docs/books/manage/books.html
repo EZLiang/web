@@ -323,7 +323,7 @@ title: Edit Books In Group
         var payload = JSON.stringify(books, null, 1);
 
         var request = new XMLHttpRequest();
-        request.open('POST', '/edit/books', true);
+        request.open('POST', '/admin/books', true);
         request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         request.responseType = 'text';
 

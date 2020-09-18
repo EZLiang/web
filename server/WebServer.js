@@ -16,12 +16,12 @@ DefaultHandler.Initialize(WebRoot);
 
 function HandleRequest(request, response)
 {
-	var u = url.parse(request.url, true);
-	var pathName = u.pathname;
+	var urlParts = url.parse(request.url, true);
+	var pathName = urlParts.pathname;
 
-	if (pathName.startsWith("/edit/books"))
+	if (pathName.startsWith("/admin/books"))
 	{
-		return ManageBooksHandler.HandleRequest(request, response);
+		return ManageBooksHandler.HandleRequest(request, urlParts, response);
 	}
 
 	if (request.method != 'GET')
