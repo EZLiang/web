@@ -65,11 +65,19 @@ function HandleMakeLatex(response)
     response.writeHead(200, { 'Content-Type': 'text/plain' });
     response.write(latex);
     response.end();
+
+    // async generate pdf
+    latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
 }
 
 function HandleMakePdf(response)
 {
-    var pdf = fs.readFileSync(sPdfFile, 'binary');
+    // sync call will fail, so let HandleMakeLatex do async call, here just return pdf file
+    //latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
+
+    // to-do: wait for pdf ready
+
+    var pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
     
     response.writeHead(200, { 'Content-Type': 'application/pdf' });
     response.write(pdf);
@@ -88,8 +96,8 @@ function HandleRequest(request, url, response)
     if (paths.length == 1 && request.method == 'GET') {
         switch (paths[0])
         {
-            case 'latex': return HandleMakeLatex(response);
-            case 'pdf': return HandleMakePdf(response);
+            case 'ReadingList.tex': return HandleMakeLatex(response);
+            case 'ReadingList.pdf': return HandleMakePdf(response);
         }
     }
 

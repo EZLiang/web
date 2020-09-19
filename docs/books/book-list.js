@@ -733,48 +733,26 @@ var books =
     "author": "Zvezdelina Stankova, Tom Rike",
     "bought": "2020.09.09",
     "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics."
+   }
+  ]
+ },
+ {
+  "group": "Nonexistent books",
+  "hidden": true,
+  "list": [
+   {
+    "title": "This book does not exist",
+    "author": "Evin Liang, Quansheng Liang",
+    "comment": "Just a test",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque convallis sapien in velit euismod, vitae feugiat ex molestie. Vestibulum augue massa, pharetra quis eros non, tincidunt fermentum turpis. Mauris vel tincidunt dolor. Morbi quis diam eu neque scelerisque malesuada et quis dui. In et justo laoreet, fringilla libero eget, sagittis justo. Morbi egestas quis metus id congue. Sed ligula lorem, auctor quis commodo in, ullamcorper a erat. Aenean iaculis sem nisi, at euismod massa malesuada ut. Donec vehicula est augue. Aenean fermentum, nulla efficitur vestibulum euismod, velit leo aliquet nisi, nec laoreet mauris nisl a quam. Mauris tempor luctus luctus. Praesent ut eleifend nibh. Etiam scelerisque eget tortor vel facilisis. Donec arcu quam, condimentum a egestas sit amet, tempor ac eros.",
+    "image": ""
    },
    {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
-   },
-   {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
-   },
-   {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
-   },
-   {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
-   },
-   {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
-   },
-   {
-    "image": "books-001xx.jpg",
-    "title": "",
-    "author": "",
-    "bought": "2020.",
-    "description": ""
+    "title": "HTML Injection",
+    "author": "A. Hacker",
+    "comment": "",
+    "description": "<marquee style=\"color: blue;\">",
+    "image": "books-00119.jpg"
    }
   ]
  }

@@ -37,10 +37,14 @@ class LatexGenerator
 
     FormatBookImage(book)
     {
+        var imgEntry = (book.image == "") ? 
+            "" :
+            "\\includegraphics[width=1.0in]{" + book.image + "}\n";
+
         this.mResult += 
             "\\begin{minipage}[t]{0.15\\textwidth}\n" +
             "\\strut\\vspace*{-\\baselineskip}\\newline\n" +
-            "\\includegraphics[width=1.0in]{" + book.image + "}\n" +
+            imgEntry +
             "\\end{minipage}\n";
     }
     FormatBookDescription(book)
@@ -79,6 +83,10 @@ class LatexGenerator
 
     FormatBookGroup(bookGroup, index)
     {
+        if (bookGroup.hidden == true) {
+            return;
+        }
+
         if (index != 0) {
             this.mResult += "\n\\newpage\n";
         }
@@ -151,9 +159,25 @@ function GeneratePdf(latexFile, outputDir)
         latexFile
     ];
 
-    const exec = require('child_process').execFileSync;
-    exec('pdflatex.exe', args);
-    console.log("Pdf generated. ");
+    /* this fails w/ error:
+    Uncaught Error: EPIPE: broken pipe, write
+    Process exited with code 1
+
+    const execFileSync = require('child_process').execFileSync;
+    execFileSync('pdflatex.exe', args);
+    console.log("Pdf generated.");
+    */
+
+    const execFile = require('child_process').execFile;
+    const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
+        if (error) {
+            console.error('stderr', stderr);
+            throw error;
+        }
+
+        console.log("Pdf generated. ");
+    });
+
 }
 
 module.exports = {
