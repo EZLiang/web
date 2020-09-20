@@ -330,8 +330,8 @@ title: Edit Books In Group
         request.send(payload);
     }
 
-    selectedGroupIndex = getURLParameterAsInt('group', -1);
-    selectedBookIndex = getURLParameterAsInt('book', -1);
+    selectedGroupIndex = getURLParameterAsInt('group', selectedGroupIndex);
+    selectedBookIndex = getURLParameterAsInt('book', selectedBookIndex);
     
     RefreshGroupList();
     RefreshBookList();
