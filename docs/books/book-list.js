@@ -483,7 +483,7 @@ var books =
     "image": "books-00113.jpg",
     "title": "Advanced Calculus Explored: With Applications in Physics, Chemistry, and Beyond",
     "author": "Hamza E. Alsamraee",
-    "description": "Are you a student that is often puzzled about how to translate your math background to applications in your science and engineering classes?<br />Are you a mathematical enthusiast who loves challenging calculus problems?<br /> In this example-focused book, Hamza Alsamraee presents a plethora of techniques and methods to aid the regular student develop their skills to transition to more advanced mathematics.<br />"
+    "description": "Are you a student that is often puzzled about how to translate your math background to applications in your science and engineering classes?<br> Are you a mathematical enthusiast who loves challenging calculus problems?<br> In this example-focused book, Hamza Alsamraee presents a plethora of techniques and methods to aid the regular student develop their skills to transition to more advanced mathematics.<br>"
    },
    {
     "image": "books-00110.jpg",

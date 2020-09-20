@@ -1,24 +1,24 @@
 
 class LaTeXEscaper
 {
-    static Escaper = /(&(#39|ndash|ldquo|rdquo|ouml|auml);|&radic;-1|<(ul|li|em|\/em|\/li|\/ul|br)>|                    )/g;
+    static Escaper = /(&(#39|auml|ldquo|oacute|ouml|ndash|rdquo);|&radic;-1|<(br|em|\/em|li|\/li|ul|\/ul)>|                    )/g;
 
     static Escapes = {
         '&#39;': '\'',
-        '&ndash;': '-',
-        '&ldquo;': '``',
-        '&rdquo;': '\'\'',
-        '&radic;-1': '$\\sqrt{-1}$',
-        '&ouml;': '\\"{o}',
         '&auml;': '\\"{a}',
-        '<ul>': '\\begin{itemize}',
-        '<li>': '\\item ',
-        '<em>': '\\textit{',
-        '</ul>': '\\end{itemize}',
-        '</li>': '',
-        '</em>': '}',
+        '&ldquo;': '``',
+        '&ndash;': '-',
+        '&ouml;': '\\"{o}',
+        '&oacute;': 'ó',
+        '&radic;-1': '$\\sqrt{-1}$',
+        '&rdquo;': '\'\'',
         '<br>': '\\newline',
-        '                    ': ' '
+        '<em>': '\\textit{',
+        '</em>': '}',
+        '<li>': '\\item ',
+        '</li>': '',
+        '<ul>': '\\begin{itemize}',
+        '</ul>': '\\end{itemize}'
     }
 
     // Escape a string for HTML interpolation.
