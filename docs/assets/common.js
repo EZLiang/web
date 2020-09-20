@@ -18,3 +18,19 @@ function SetActiveMenu()
     if (activeMenu != null)
       activeMenu.classList.add('active');
 }
+
+function getURLParameter(name) {
+    return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(window.location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+}
+
+function getURLParameterAsInt(name, defaultValue) {
+    var x = getURLParameter(name);
+    if (x != null) {
+      x = parseInt(x);
+      if (x != NaN) {
+        return x;
+      }
+    }
+
+    return defaultValue;
+}

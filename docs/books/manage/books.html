@@ -131,10 +131,6 @@ title: Edit Books In Group
         bookBox.innerHTML = listHtml;
     }
 
-    // initial populating the list
-    RefreshGroupList();
-    RefreshBookList();
-
     function OnGroupSelectionChanged(selectedIndex)
     {
         selectedGroupIndex = parseInt(selectedIndex);
@@ -333,5 +329,12 @@ title: Edit Books In Group
 
         request.send(payload);
     }
+
+    selectedGroupIndex = getURLParameterAsInt('group', -1);
+    selectedBookIndex = getURLParameterAsInt('book', -1);
+    
+    RefreshGroupList();
+    RefreshBookList();
+    OnBookSelectionChanged(selectedBookIndex);
 
 </script>

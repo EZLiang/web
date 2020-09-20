@@ -15,7 +15,7 @@ title: Search Books
 <script type="text/javascript">
     "use strict";
 
-    function FormatBook(book)
+    function FormatBook(book, groupIndex, bookIndex)
     {
         var result = "";
         if (book != null)
@@ -24,6 +24,7 @@ title: Search Books
             '<strong>' + book.title + '</strong><br>' +
             'Author(s): <i>' + book.author + '</i><br>' +
             book.description +
+            '&nbsp; <a href="/books/manage/books.html?group=' + groupIndex + '&book=' + bookIndex + '"> &#x270E; </a>' +
             '\n<br clear="all"><hr>\n';
         }
         
@@ -91,7 +92,7 @@ title: Search Books
                 (book.comment === undefined ? false : book.comment.search(regExp) >= 0) ||
                 (book.description.search(regExp) >= 0))
             {
-                result += FormatBook(book);
+                result += FormatBook(book, groupIndex, i);
             }
         }
 
