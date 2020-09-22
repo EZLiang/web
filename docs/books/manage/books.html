@@ -82,6 +82,7 @@ title: Edit Books In Group
 <div id="preview"></div>
 <hr>
 
+<script type="text/javascript" src="manage.js"></script>
 <script type="text/javascript">
     "use strict";
 
@@ -127,7 +128,8 @@ title: Edit Books In Group
         list.forEach( (book,index) => {
             listHtml += '<option value="' + index + 
                 (selectedBookIndex==index ? '" selected>' : '">') + 
-                book.title + '</option>';
+                (book.title=='' ? '{untitled}' : book.title) + 
+                '</option>';
         });
 
         var bookBox = document.getElementById("bookListBox");
@@ -154,6 +156,8 @@ title: Edit Books In Group
             document.getElementById("bookComment").value = "";
             document.getElementById("bookDescription").value = "";
             document.getElementById("bookImage").value = "";
+
+            document.getElementById("preview").innerHTML = "";
         }
         else {
             document.getElementById("bookTitle").value = book.title;
@@ -161,24 +165,9 @@ title: Edit Books In Group
             document.getElementById("bookComment").value = book.comment === undefined ? "" : book.comment;
             document.getElementById("bookDescription").value = book.description;
             document.getElementById("bookImage").value = book.image;
-        }
 
-        UpdatePreview(book);
-    }
-
-    function UpdatePreview(book)
-    {
-        var result = "";
-        if (book != null)
-        {
-           result = '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">' +
-            '<strong>' + book.title + '</strong><br>' +
-            'Author(s): <i>' + book.author + '</i><br>' +
-            book.description +
-            '<br clear="all">';
+            document.getElementById("preview").innerHTML = FormatBook(book);
         }
-        
-        document.getElementById("preview").innerHTML = result;
     }
 
     function OnBookMoveUp()
@@ -230,12 +219,6 @@ title: Edit Books In Group
         OnBookSelectionChanged(-1);
     }
 
-    function OnBookImagePicked(imageFile)
-    {
-        var chooser = document.getElementById("bookImageChooser");
-        document.getElementById("bookImage").value = imageFile;
-    }
-
     function OnBookPickUpImage(fromExisting)
     {
         let method = fromExisting ? 'GET' : 'PUT';
@@ -244,7 +227,9 @@ title: Edit Books In Group
         request.responseType = 'text';
 
         request.onload = function() {
-            document.getElementById("bookImage").value = request.response;
+            if (request.response != '') {
+                document.getElementById("bookImage").value = request.response;
+            }
         };
 
         request.send();
@@ -294,7 +279,7 @@ title: Edit Books In Group
         book.image = image;
 
         RefreshBookList();
-        UpdatePreview(book);
+        document.getElementById("preview").innerHTML = FormatBook(book);
     }
 
     function OnBookAddNew()
@@ -304,7 +289,7 @@ title: Edit Books In Group
             return;
 
         list.push({
-            title: "{untitled}",
+            title: "",
             author: "",
             comment: "",
             description: "",
@@ -314,6 +299,7 @@ title: Edit Books In Group
         selectedBookIndex = list.length - 1;
 
         RefreshBookList();
+        OnBookSelectionChanged(selectedBookIndex);
     }
 
     function OnBookDelete()
@@ -333,24 +319,11 @@ title: Edit Books In Group
         RefreshBookList();
 
         OnBookSelectionChanged(-1);
-
-        // to-do: check orphan image on disk
     }
 
     function OnBookSave()
     {
-        var payload = JSON.stringify(books, null, 1);
-
-        var request = new XMLHttpRequest();
-        request.open('POST', '/admin/books/newList', true);
-        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-        request.responseType = 'text';
-
-        request.onload = function() {
-            alert(request.response);
-        };
-
-        request.send(payload);
+        SaveBookList(books);
     }
 
     selectedGroupIndex = getURLParameterAsInt('group', selectedGroupIndex);

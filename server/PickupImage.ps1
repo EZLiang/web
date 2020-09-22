@@ -14,11 +14,11 @@ $imgPicker.InitialDirectory = $initialFolder
 $imgPicker.Filter = 'Images files (*.jpg;*.jpeg;*.png)|*.jpg;*.jpeg;*.png'
 
 $topForm = New-Object System.Windows.Forms.Form -property @{TopMost = $True}
-$result = $imgPicker.ShowDialog($topForm)
+$dlgResult = $imgPicker.ShowDialog($topForm)
 
-if($result -eq "OK")    {    
-    Write-Host $imgPicker.filename   
-} 
-else { 
-    Write-Host ""
-} 
+$result = "{}"
+if($dlgResult -eq "OK")    {
+    $result = @{ImageFile = $imgPicker.SafeFileName; ImagePath = $imgPicker.FileName }  | ConvertTo-Json
+}
+
+Write-Host $result

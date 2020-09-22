@@ -163,23 +163,19 @@ function PickUpImage(response, isGet)
 
         sn++;
         const zeroPad = (num, places) => String(num).padStart(places, '0');
-        let imgName = zeroPad(sn, 5);
+        let newImgFile = zeroPad(sn, 5);
         let imgExtension = imgPath.substring(imgPath.lastIndexOf('.'));
-        imgName = 'books-' + imgName + imgExtension;
+        newImgFile = 'books-' + newImgFile + imgExtension;
 
-        let newImgPath = sImgFolder + imgName;
+        let newImgPath = sImgFolder + newImgFile;
         fs.copyFileSync(imgPath, newImgPath);
-        return imgName;
+        return newImgFile;
     }
 
-    function ProcessPickedUpImage(imgPath)
+    function ProcessPickedUpImage(imgFile, imgPath)
     {
-        var imgFile = "";
-
-        if (imgPath.toLowerCase().startsWith(sImgFolder.toLowerCase())) {
-            imgFile = imgPath.substring(sImgFolder.length);
-        }
-        else {
+        if (! imgPath.toLowerCase().startsWith(sImgFolder.toLowerCase())) {
+            // only make a copy and get a new name if picking from outside of books' image folder
             imgFile = CopyImageFile(imgPath);
         }
 
@@ -200,17 +196,13 @@ function PickUpImage(response, isGet)
             throw error;
         }
 
-        let imgPath = stdout;
-        if (imgPath.endsWith('\n')) {
-            imgPath = imgPath.slice(0, -1);
-        }
-
-        if (imgPath == "") {
+        let imgPicker = JSON.parse(stdout);
+        if (imgPicker.ImageFile === undefined) {
             response.end();
             return;
         }
 
-        ProcessPickedUpImage(imgPath);
+        ProcessPickedUpImage(imgPicker.ImageFile, imgPicker.ImagePath);
     });
 }
 

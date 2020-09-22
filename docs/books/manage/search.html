@@ -14,25 +14,9 @@ title: Search Books
 <hr>
 <div id="resultList"></div>
 
+<script type="text/javascript" src="manage.js"></script>
 <script type="text/javascript">
     "use strict";
-
-    function FormatBook(book, groupIndex, bookIndex)
-    {
-        var result = "";
-        if (book != null)
-        {
-           result = '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">' +
-            '<strong>' + book.title + '</strong><br>' +
-            'Author(s): <i>' + book.author + '</i><br>' +
-            book.description +
-            '&nbsp; <a href="/books/manage/books.html?group=' + groupIndex + '&book=' + bookIndex + '"> &#x270E; </a>' +
-            '\n<br clear="all"><hr>\n';
-        }
-        
-        return result;
-    }
-
 
     function OnBookSearchSpeicalChar()
     {
@@ -62,7 +46,7 @@ title: Search Books
                     HasSpecialCharactar(book.comment) ||
                     HasSpecialCharactar(book.description))
                 {
-                    result += FormatBook(book);
+                    result += FormatBook(book, groupIndex, bookIndex);
                 }
             });
 

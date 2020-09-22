@@ -34,7 +34,7 @@
             "type": "pwa-node"
         },
         {
-            "name": "PowerShell Launch Script",
+            "name": "PS: PickupImage",
             "type": "PowerShell",
             "request": "launch",
             "script": "${workspaceFolder}\\server\\PickupImage.ps1",
