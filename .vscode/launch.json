@@ -32,6 +32,13 @@
                 "<node_internals>/**"
             ],
             "type": "pwa-node"
+        },
+        {
+            "name": "PowerShell Launch Script",
+            "type": "PowerShell",
+            "request": "launch",
+            "script": "${workspaceFolder}\\server\\PickupImage.ps1",
+            "cwd": "${workspaceFolder}"
         }
     ]
 }

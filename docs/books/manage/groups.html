@@ -178,7 +178,7 @@ title: Edit Books Groups
         var payload = JSON.stringify(books, null, 1);
 
         var request = new XMLHttpRequest();
-        request.open('POST', '/admin/books', true);
+        request.open('POST', '/admin/books/newList', true);
         request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         request.responseType = 'text';
 

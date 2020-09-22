@@ -37,7 +37,7 @@ title: Generate LaTeX/Pdf Book List
 
     function GenerateLatex() {
         let request = new XMLHttpRequest();
-        request.open('GET', '/admin/books/ReadingList.tex');
+        request.open('GET', '/admin/books/readingList.tex');
         request.responseType = 'text';
 
         request.onload = function() {
@@ -60,7 +60,7 @@ title: Generate LaTeX/Pdf Book List
         }
 
         var pdfBox = document.getElementById('pdfPreview');
-        pdfBox.src = "/admin/books/ReadingList.pdf";
+        pdfBox.src = "/admin/books/readingList.pdf";
     }
 
 </script>

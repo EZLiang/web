@@ -6,7 +6,9 @@ title: Search Books
 <style>
 </style>
 
+
 <button onclick="OnBookSearchSpeicalChar()">Search Special Charactar</button> &nbsp; 
+<button onclick="OnBookSearchImageStatus()">Search ImageStatus</button> <br>
 <button onclick="OnBookSearchText()">Search Books</button>
 <input id="searchText" type="text" size="60">
 <hr>
@@ -31,42 +33,42 @@ title: Search Books
         return result;
     }
 
-    function HasSpecialCharactar(string)
-    {
-        if (string === undefined) {
-            return false;
-        }
-
-        var va = [...string];
-        va.forEach( (c,idx) => {
-            var charCode = c.charCodeAt(0);
-            if (charCode < 10 || charCode > 126) {
-                return true;
-            }
-        });
-
-        return false;
-    }
-
-    function SearchSpeicalCharInBookGroup(bookGroup, groupIndex)
-    {
-        var result = "";
-        bookGroup.list.forEach( (book, bookIndex) => {
-            if (HasSpecialCharactar(book.title) ||
-                HasSpecialCharactar(book.author) ||
-                HasSpecialCharactar(book.comment) ||
-                HasSpecialCharactar(book.description))
-            {
-                result += FormatBook(book);
-            }
-        });
-
-        return result;
-    }
-
 
     function OnBookSearchSpeicalChar()
     {
+        function HasSpecialCharactar(string)
+        {
+            if (string === undefined) {
+                return false;
+            }
+
+            var va = [...string];
+            va.forEach( (c,idx) => {
+                var charCode = c.charCodeAt(0);
+                if (charCode < 10 || charCode > 126) {
+                    return true;
+                }
+            });
+
+            return false;
+        }
+
+        function SearchSpeicalCharInBookGroup(bookGroup, groupIndex)
+        {
+            var result = "";
+            bookGroup.list.forEach( (book, bookIndex) => {
+                if (HasSpecialCharactar(book.title) ||
+                    HasSpecialCharactar(book.author) ||
+                    HasSpecialCharactar(book.comment) ||
+                    HasSpecialCharactar(book.description))
+                {
+                    result += FormatBook(book);
+                }
+            });
+
+            return result;
+        }
+
         var resultHtml = "";
 
         books.forEach( (bookGroup, groupIndex) => {
@@ -80,27 +82,28 @@ title: Search Books
         document.getElementById("resultList").innerHTML = resultHtml;
     }
 
-    function SearchTextInBookGroup(bookGroup, groupIndex, regExp)
-    {
-        var result = "";
-        
-        for (var i = 0; i < bookGroup.list.length; i++) {
-            var book = bookGroup.list[i];
-
-            if ((book.title.search(regExp) >= 0) ||
-                (book.author.search(regExp) >= 0) ||
-                (book.comment === undefined ? false : book.comment.search(regExp) >= 0) ||
-                (book.description.search(regExp) >= 0))
-            {
-                result += FormatBook(book, groupIndex, i);
-            }
-        }
-
-        return result;
-    }
 
     function OnBookSearchText()
     {
+        function SearchTextInBookGroup(bookGroup, groupIndex, regExp)
+        {
+            var result = "";
+            
+            for (var i = 0; i < bookGroup.list.length; i++) {
+                var book = bookGroup.list[i];
+
+                if ((book.title.search(regExp) >= 0) ||
+                    (book.author.search(regExp) >= 0) ||
+                    (book.comment === undefined ? false : book.comment.search(regExp) >= 0) ||
+                    (book.description.search(regExp) >= 0))
+                {
+                    result += FormatBook(book, groupIndex, i);
+                }
+            }
+
+            return result;
+        }
+
         var text = document.getElementById("searchText").value;
         if (text == "") {
             alert("no text input for search");
@@ -119,6 +122,40 @@ title: Search Books
         }
 
         document.getElementById("resultList").innerHTML = resultHtml;
+    }
+
+
+    function OnBookSearchImageStatus() {
+        let request = new XMLHttpRequest();
+        request.open('GET', '/admin/books/imageStatus');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            let result = JSON.parse(request.response);
+
+            let html = '<strong>Images Not Used</strong><ul>';
+            for (var i = 0; i < result.ImagesNotUsed.length; i++) {
+                html += '<li>' + result.ImagesNotUsed[i] + '</li>';
+            }
+
+            html += '</ul><hr><strong>Books Without Image</strong><ul>';
+
+            for (var i = 0; i < result.BooksWithoutImage.length; i++) {
+                var item = result.BooksWithoutImage[i];
+                html += '<li><a href="books.html?group=' + item.group + '&book=' + item.book + '">' + books[item.group].list[item.book].title + '</a></li>';
+            }
+
+            html += '</ul><hr><strong>Books Image Missed On Disk</strong><ul>';
+
+            for (var i = 0; i < result.BooksImageMissed.length; i++) {
+                var item = result.BooksImageMissed[i];
+                html += '<li><a href="books.html?group=' + item.group + '&book=' + item.book + '">' + books[item.group].list[item.book].title + '</li>';
+            }
+            html += '</ul>'
+
+            document.getElementById('resultList').innerHTML = html;
+        };
+        request.send();
     }
 
 </script>

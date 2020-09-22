@@ -1,6 +1,8 @@
 const fs = require('fs');
 const latexPdf = require('./Books-MakeLatexPdf');
 
+"use stricket";
+
 // for web
 var sWebRoot = "";
 
@@ -11,6 +13,7 @@ var sTmpFolder = "";
 var sImgFolder = "";
 var sLatexFile = "";
 var sPdfFile = "";
+var sImgPickerPs = "";
 
 function Initialize(webRoot)
 {
@@ -22,7 +25,9 @@ function Initialize(webRoot)
     sImgFolder = sCwd + 'docs\\books\\images\\'
     sLatexFile = sTmpFolder + 'ReadingList.tex';
     sPdfFile = sTmpFolder + 'ReadingList.pdf';
+    sImgPickerPs = sCwd + "server\\PickupImage.ps1";
 }
+
 
 function UpdateBookList(request, response)
 {
@@ -57,6 +62,7 @@ function UpdateBookList(request, response)
     });
 }
 
+
 function HandleMakeLatex(response)
 {
     const bookList = require(sBookListFile);
@@ -69,6 +75,7 @@ function HandleMakeLatex(response)
     // async generate pdf
     latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
 }
+
 
 function HandleMakePdf(response)
 {
@@ -84,20 +91,162 @@ function HandleMakePdf(response)
     response.end();
 }
 
+
+function GetImageStatus(response)
+{
+    // existing img files
+    var onDiskImgList = fs.readdirSync(sImgFolder);
+    // to-do: filtering if needed
+
+    var booksWithoutImage = [];
+    var booksImageMissed = [];
+    var referredImgList = [];
+
+    function CheckBookImage(book, groupIndex, bookIndex) {
+        if (book.image === undefined || book.image == null || book.image == '') {
+            booksWithoutImage.push({group: gi, book: bi});
+            return;
+        }
+
+        if (! onDiskImgList.includes(book.image)) {
+            booksImageMissed.push({group: gi, book: bi});
+            return;
+        }
+
+        referredImgList.push(book.image);
+    }
+
+    const bookList = require(sBookListFile);
+    for (var gi = 0; gi < bookList.length; gi++) {
+        for (var bi = 0; bi < bookList[gi].list.length; bi++) {
+            CheckBookImage(bookList[gi].list[bi], gi, bi);
+        }
+    }
+    
+    var imagesNotUsed = [];
+    for (var i = 0; i < onDiskImgList.length; i++) {
+        if (! referredImgList.includes(onDiskImgList[i])) {
+            imagesNotUsed.push(onDiskImgList[i]);
+        }
+    }
+
+    var result = {
+        ImagesNotUsed: imagesNotUsed,
+        BooksWithoutImage: booksWithoutImage,
+        BooksImageMissed: booksImageMissed
+    }
+    
+    response.writeHead(200, { 'Content-Type': 'application/json' });
+    response.write(JSON.stringify(result, 1));
+    response.end();
+}
+
+
+function PickUpImage(response)
+{
+    function CopyImageFile(imgPath)
+    {
+        let sn = 0;
+        
+        // find largest file number
+        let regName = new RegExp('books-\\d+\.*', 'i');
+        let regNumber = new RegExp('\\d+');
+        let onDiskImgList = fs.readdirSync(sImgFolder);
+        onDiskImgList.forEach(name => {
+            if (regName.test(name)) {
+                let n = parseInt(regNumber.exec(name)[0])
+                if (n > sn) {
+                    sn = n;
+                }
+            }
+        });
+
+        sn++;
+        const zeroPad = (num, places) => String(num).padStart(places, '0');
+        let imgName = zeroPad(sn, 5);
+        let imgExtension = imgPath.substring(imgPath.lastIndexOf('.'));
+        imgName = 'books-' + imgName + imgExtension;
+
+        let newImgPath = sImgFolder + imgName;
+        fs.copyFileSync(imgPath, newImgPath);
+        return imgName;
+    }
+
+    function ProcessPickedUpImage(imgPath)
+    {
+        var imgFile = "";
+
+        if (imgPath.startsWith(sImgFolder)) {
+            imgFile = imgPath.substring(sImgFoler.length);
+        }
+        else {
+            imgFile = CopyImageFile(imgPath);
+        }
+
+        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.write(imgFile);
+        response.end();
+    }
+
+    const execFile = require('child_process').execFile;
+    const child = execFile('powershell.exe', [sImgPickerPs], (error, stdout, stderr) => {
+        if (error) {
+            console.error('stderr', stderr);
+            throw error;
+        }
+
+        let imgPath = stdout;
+        if (imgPath.endsWith('\n')) {
+            imgPath = imgPath.slice(0, -1);
+        }
+
+        if (imgPath == "") {
+            response.end();
+            return;
+        }
+
+        ProcessPickedUpImage(imgPath);
+    });
+}
+
+
 function HandleRequest(request, url, response)
 {
     var paths = url.pathname.split('/');
     paths = paths.slice(3); // 1st one is empty string before '/'
 
-    if (paths.length == 0 && request.method == 'POST') {
-        return UpdateBookList(request, response);
-    }
-
-    if (paths.length == 1 && request.method == 'GET') {
+    if (paths.length > 0) {
         switch (paths[0])
         {
-            case 'ReadingList.tex': return HandleMakeLatex(response);
-            case 'ReadingList.pdf': return HandleMakePdf(response);
+            case 'imagePickUp': 
+                if (request.method == 'GET') {
+                    return PickUpImage(response);
+                }
+                break;
+
+            case 'imageStatus': 
+                if (request.method == 'GET') {
+                    return GetImageStatus(response);
+                }
+                break;
+
+            case 'newList':
+                if (request.method == 'POST') {
+                    return UpdateBookList(request, response);
+                }
+                break;
+
+            case 'readingList.pdf': 
+                if (request.method == 'GET') {
+                    return HandleMakePdf(response);
+                }
+                break;
+
+            case 'readingList.tex': 
+                if (request.method == 'GET') {
+                    return HandleMakeLatex(response);
+                }
+                break;
         }
     }
 

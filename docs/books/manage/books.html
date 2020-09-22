@@ -64,8 +64,13 @@ title: Edit Books In Group
         <textarea id="bookAuthor" rows="2" cols="50"></textarea><br>
         Comment:<br>
         <textarea id="bookComment" rows="4" cols="50"></textarea><br>
-        Image: <input type="file" accept=".jpg,.jpeg,.png" onchange="OnBookImagePicked(this.files[0].name)"><br>
-        <input id="bookImage" size="45">
+        Image: 
+        <input id="bookImageChooser" type="file" accept=".jpg,.jpeg,.png" style="display:none;" onchange="OnBookImagePicked(this.files[0].name)">
+        <button onclick="document.getElementById('bookImageChooser').click();">--Choose An Image</button>
+
+        <button onclick="OnBookPickUpImage()">Choose An Image</button>
+        <br>
+        <input id="bookImage" size="45" readonly>
         
     </div>
 
@@ -229,7 +234,21 @@ title: Edit Books In Group
 
     function OnBookImagePicked(imageFile)
     {
+        var chooser = document.getElementById("bookImageChooser");
         document.getElementById("bookImage").value = imageFile;
+    }
+
+    function OnBookPickUpImage()
+    {
+        var request = new XMLHttpRequest();
+        request.open('GET', '/admin/books/imagePickUp', true);
+        request.responseType = 'text';
+
+        request.onload = function() {
+            document.getElementById("bookImage").value = request.response;
+        };
+
+        request.send();
     }
 
     function OnBookApplyChange()
@@ -300,8 +319,13 @@ title: Edit Books In Group
 
     function OnBookDelete()
     {
-        if (selectedBookIndex < 0)
+        if (selectedBookIndex < 0) {
             return;
+        }
+
+        if (confirm('Are you sure you want to delete the selected book?') != true) {
+            return;
+        }
 
         var list = GetSelectedBookList();
         list.splice(selectedBookIndex,1);
@@ -319,7 +343,7 @@ title: Edit Books In Group
         var payload = JSON.stringify(books, null, 1);
 
         var request = new XMLHttpRequest();
-        request.open('POST', '/admin/books', true);
+        request.open('POST', '/admin/books/newList', true);
         request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
         request.responseType = 'text';
 

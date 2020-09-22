@@ -1,3 +1,5 @@
+"use strict";
+
 function SetActiveMenu()
 {
     var activeMenuName = 'home';
