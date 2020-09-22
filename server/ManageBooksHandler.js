@@ -142,7 +142,7 @@ function GetImageStatus(response)
 }
 
 
-function PickUpImage(response)
+function PickUpImage(response, isGet)
 {
     function CopyImageFile(imgPath)
     {
@@ -176,8 +176,8 @@ function PickUpImage(response)
     {
         var imgFile = "";
 
-        if (imgPath.startsWith(sImgFolder)) {
-            imgFile = imgPath.substring(sImgFoler.length);
+        if (imgPath.toLowerCase().startsWith(sImgFolder.toLowerCase())) {
+            imgFile = imgPath.substring(sImgFolder.length);
         }
         else {
             imgFile = CopyImageFile(imgPath);
@@ -188,8 +188,13 @@ function PickUpImage(response)
         response.end();
     }
 
+    let initialFolder = '';
+    if (isGet) {
+        initialFolder = sImgFolder;
+    }
+
     const execFile = require('child_process').execFile;
-    const child = execFile('powershell.exe', [sImgPickerPs], (error, stdout, stderr) => {
+    const child = execFile('powershell.exe', [sImgPickerPs, initialFolder], (error, stdout, stderr) => {
         if (error) {
             console.error('stderr', stderr);
             throw error;
@@ -220,7 +225,10 @@ function HandleRequest(request, url, response)
         {
             case 'imagePickUp': 
                 if (request.method == 'GET') {
-                    return PickUpImage(response);
+                    return PickUpImage(response, true);
+                }
+                if (request.method == 'PUT') {
+                    return PickUpImage(response, false);
                 }
                 break;
 

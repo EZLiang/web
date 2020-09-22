@@ -65,10 +65,8 @@ title: Edit Books In Group
         Comment:<br>
         <textarea id="bookComment" rows="4" cols="50"></textarea><br>
         Image: 
-        <input id="bookImageChooser" type="file" accept=".jpg,.jpeg,.png" style="display:none;" onchange="OnBookImagePicked(this.files[0].name)">
-        <button onclick="document.getElementById('bookImageChooser').click();">--Choose An Image</button>
-
-        <button onclick="OnBookPickUpImage()">Choose An Image</button>
+        <button onclick="OnBookPickUpImage(true)">Pick From BookImages</button>
+        <button onclick="OnBookPickUpImage(false)">Pick From Downloads</button>
         <br>
         <input id="bookImage" size="45" readonly>
         
@@ -238,10 +236,11 @@ title: Edit Books In Group
         document.getElementById("bookImage").value = imageFile;
     }
 
-    function OnBookPickUpImage()
+    function OnBookPickUpImage(fromExisting)
     {
+        let method = fromExisting ? 'GET' : 'PUT';
         var request = new XMLHttpRequest();
-        request.open('GET', '/admin/books/imagePickUp', true);
+        request.open(method, '/admin/books/imagePickUp', true);
         request.responseType = 'text';
 
         request.onload = function() {
