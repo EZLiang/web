@@ -1,0 +1,169 @@
+---
+layout: default
+title: Books DB Health Check
+---
+
+<style>
+    hr {
+        border-top: 1px dotted grey;
+    }
+
+    div .imgBox {
+        display: flex;
+        margin: 0.1rem;
+        border: 1px dotted gray;
+    }
+    div .toBottom {        
+        align-self: flex-end;
+    }
+    div .imgBox img {
+        width: 10rem;
+    }
+</style>
+
+
+<button onclick="OnBookCheckHealth()">Check</button>
+<hr class="section">
+<strong>Images not used</strong>
+<div id="imagesNotUsed"></div>
+<hr class="section">
+<strong>Books no image is set</strong>
+<div id="booksNoImage"></div>
+<hr class="section">
+<strong>Books the image is missing</strong>
+<div id="booksMissingImage"></div>
+<hr class="section">
+<strong>Books with special charactar</strong>
+<div id="booksHasSpeicalChar"></div>
+
+
+
+<script type="text/javascript" src="manage.js"></script>
+<script type="text/javascript">
+    "use strict";
+
+    function CheckSpeicalChar()
+    {
+        function HasSpecialCharactar(string)
+        {
+            if (string === undefined) {
+                return false;
+            }
+
+            var va = [...string];
+            va.forEach( (c,idx) => {
+                var charCode = c.charCodeAt(0);
+                if (charCode < 10 || charCode > 126) {
+                    return true;
+                }
+            });
+
+            return false;
+        }
+
+        function SearchSpeicalCharInBookGroup(bookGroup, groupIndex)
+        {
+            var result = "";
+            bookGroup.list.forEach( (book, bookIndex) => {
+                if (HasSpecialCharactar(book.title) ||
+                    HasSpecialCharactar(book.author) ||
+                    HasSpecialCharactar(book.comment) ||
+                    HasSpecialCharactar(book.description))
+                {
+                    result += '<hr>' + FormatBook(book, groupIndex, bookIndex);
+                }
+            });
+
+            return result;
+        }
+
+        var resultHtml = "";
+
+        books.forEach( (bookGroup, groupIndex) => {
+            resultHtml += SearchSpeicalCharInBookGroup(bookGroup, groupIndex);
+        })
+
+        if (resultHtml == "") {
+            resultHtml = "{none}";
+        }
+
+        document.getElementById("booksHasSpeicalChar").innerHTML = resultHtml;
+    }
+
+
+    function CheckImageStatus() {
+        let request = new XMLHttpRequest();
+        request.open('GET', '/admin/books/imageStatus');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            let result = JSON.parse(request.response);
+
+
+            let html = '';
+            result.ImagesNotUsed.forEach( imgName =>  {
+                html += '<div class="imgBox"><div class="toBottom"><img src="../images/' + imgName + '"><br>' + 
+                    imgName + ' &nbsp; <a onclick=OnDeleteImage("' + imgName + '")>&#x2718;</a></div></div>';
+            });
+            if (html == "") {
+                html = "{none}";
+            }
+            else {
+                html = '<div class="flex-container">' + html + '</div>';
+            }
+            document.getElementById('imagesNotUsed').innerHTML = html;
+
+
+            html = '';
+            result.BooksWithoutImage.forEach( item =>  {
+                html += '<li>' + books[item.group].list[item.book].title + GetEditLink(item.group,item.book) + '</li>';
+            });
+            if (html == "") {
+                html = "{none}";
+            }
+            else {
+                html = '<ul>' + html + '</ul>'
+            }
+            document.getElementById('booksNoImage').innerHTML = html;
+
+
+            html = '';
+            result.BooksImageMissed.forEach( item => {
+                html += '<li>' + books[item.group].list[item.book].title + GetEditLink(item.group,item.book) + '</li>';
+            });
+            if (html == "") {
+                html = "{none}";
+            }
+            else {
+                html = '<ul>' + html + '</ul>'
+            }
+            document.getElementById('booksMissingImage').innerHTML = html;
+        };
+        request.send();
+    }
+
+    function OnBookCheckHealth()
+    {
+        CheckSpeicalChar();
+        CheckImageStatus();
+    }
+
+    function OnDeleteImage(imgName)
+    {
+        if (confirm('Are you sure you want to delete the selected image?') != true) {
+            return;
+        }
+
+        let request = new XMLHttpRequest();
+        request.open('DELETE', '/admin/books/image/' + imgName);
+        request.responseType = 'text';
+
+        request.onload = function() {
+            alert(request.response);
+
+            CheckImageStatus();
+        }
+        request.send();
+    }
+
+</script>

@@ -62,14 +62,18 @@ title: Edit Books In Group
         <textarea id="bookTitle" rows="3" cols="50"></textarea><br>
         Author:<br>
         <textarea id="bookAuthor" rows="2" cols="50"></textarea><br>
-        Comment:<br>
-        <textarea id="bookComment" rows="4" cols="50"></textarea><br>
-        Image: 
-        <button onclick="OnBookPickUpImage(true)">Pick From BookImages</button>
-        <button onclick="OnBookPickUpImage(false)">Pick From Downloads</button>
-        <br>
-        <input id="bookImage" size="45" readonly>
-        
+        <div class="flex-container">
+            <div>
+                Comment:<br>
+                <textarea id="bookComment" rows="4" cols="35"></textarea><br>
+                Image: <label id="bookImageName"></label><br>
+                <button style="width: 8rem;" onclick="OnBookPickUpImage('GET')">Pick From BookImages</button>
+                <button style="width: 8rem;" onclick="OnBookPickUpImage('PUT')">Pick From Downloads</button>
+            </div>
+            <div style="display: flex;">
+                <img id="bookImage" style="width: 6rem; padding-left: 0.5rem; align-self: flex-end;" />
+            </div>
+        </div>
     </div>
 
     <div style="margin-left:2rem;">
@@ -136,6 +140,12 @@ title: Edit Books In Group
         bookBox.innerHTML = listHtml;
     }
 
+    function RefreshBookImageField(imgName)
+    {
+        document.getElementById("bookImageName").innerText = imgName;
+        document.getElementById("bookImage").src = '../images/' + imgName;
+    }
+
     function OnGroupSelectionChanged(selectedIndex)
     {
         selectedGroupIndex = parseInt(selectedIndex);
@@ -154,8 +164,8 @@ title: Edit Books In Group
             document.getElementById("bookTitle").value = "";
             document.getElementById("bookAuthor").value = "";
             document.getElementById("bookComment").value = "";
-            document.getElementById("bookDescription").value = "";
-            document.getElementById("bookImage").value = "";
+            document.getElementById("bookDescription").value = "";            
+            RefreshBookImageField("");
 
             document.getElementById("preview").innerHTML = "";
         }
@@ -164,7 +174,7 @@ title: Edit Books In Group
             document.getElementById("bookAuthor").value = book.author;
             document.getElementById("bookComment").value = book.comment === undefined ? "" : book.comment;
             document.getElementById("bookDescription").value = book.description;
-            document.getElementById("bookImage").value = book.image;
+            RefreshBookImageField(book.image);
 
             document.getElementById("preview").innerHTML = FormatBook(book);
         }
@@ -219,16 +229,15 @@ title: Edit Books In Group
         OnBookSelectionChanged(-1);
     }
 
-    function OnBookPickUpImage(fromExisting)
+    function OnBookPickUpImage(method)
     {
-        let method = fromExisting ? 'GET' : 'PUT';
         var request = new XMLHttpRequest();
         request.open(method, '/admin/books/imagePickUp', true);
         request.responseType = 'text';
 
         request.onload = function() {
             if (request.response != '') {
-                document.getElementById("bookImage").value = request.response;
+                RefreshBookImageField(request.response);
             }
         };
 
@@ -260,7 +269,7 @@ title: Edit Books In Group
             var author = GetAndCheckValue("bookAuthor");
             var comment = GetAndCheckValue("bookComment");
             var description = GetAndCheckValue("bookDescription");
-            var image = GetAndCheckValue("bookImage");
+            var image = document.getElementById("bookImageName").innerText;
         }
         catch (err) {
             alert(err);

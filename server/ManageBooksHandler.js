@@ -29,7 +29,7 @@ function Initialize(webRoot)
 }
 
 
-function UpdateBookList(request, response)
+function SaveBookList(request, response)
 {
     var postBody = "";
     request.on('data', function (chunk) {
@@ -207,6 +207,16 @@ function PickUpImage(response, isGet)
 }
 
 
+function DeleteImage(imgName, response)
+{
+    fs.unlinkSync(sImgFolder + imgName);
+
+    response.writeHead(200, { 'Content-Type': 'text/plain' });
+    response.write(imgName + ' was deleted');
+    response.end();
+}
+
+
 function HandleRequest(request, url, response)
 {
     var paths = url.pathname.split('/');
@@ -215,6 +225,11 @@ function HandleRequest(request, url, response)
     if (paths.length > 0) {
         switch (paths[0])
         {
+            case 'image': 
+            if (request.method == 'DELETE' && paths.length == 2) {
+                return DeleteImage(paths[1], response);
+            }
+     
             case 'imagePickUp': 
                 if (request.method == 'GET') {
                     return PickUpImage(response, true);
@@ -232,7 +247,7 @@ function HandleRequest(request, url, response)
 
             case 'newList':
                 if (request.method == 'POST') {
-                    return UpdateBookList(request, response);
+                    return SaveBookList(request, response);
                 }
                 break;
 
