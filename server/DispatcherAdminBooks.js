@@ -34,11 +34,11 @@ class AdminImage
 {
     static Delete(request, response, url, paths)
     {
-        if (paths.length != 1) {
+        if (paths.length == 0) {
             throw Error("missing image name");
         }
 
-        let imgName = paths[1];
+        let imgName = paths[0];
         fs.unlinkSync(sImgFolder + imgName);
 
         response.writeHead(200, { 'Content-Type': 'text/plain' });
@@ -242,11 +242,11 @@ class Dispatcher
             return { action: entry.action, paths: paths.slice(1) };
         }
 
-        if ( method.children === undefined || paths.length == 1) {
+        if ( entry.children === undefined || paths.length == 1) {
             return null;
         }
 
-        return this.GetActionFromTable(method, paths.slice(1), method.children);
+        return this._GetActionFromTable(method, paths.slice(1), entry.children);
     }
 
     static _GetActionFromTable(method, paths, actionTable)

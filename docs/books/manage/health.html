@@ -27,7 +27,6 @@ title: Books DB Health Check
 </style>
 
 
-<button onclick="OnCheckAll()">Check All</button>
 <button onclick="OnCheckUnUsedImages()">Check Un-used Images</button>
 <button onclick="OnCheckBooks()">Check Books</button>
 <hr>
@@ -42,7 +41,7 @@ title: Books DB Health Check
     function GetImageListOnDisk(handleImgList)
     {
         let request = new XMLHttpRequest();
-        request.open('GET', '/admin/books/image/list' + imgName);
+        request.open('GET', '/admin/books/image/list');
         request.responseType = 'text';
 
         request.onload = function() {
@@ -53,7 +52,35 @@ title: Books DB Health Check
 
     function OnCheckUnUsedImages()
     {
+        function UpdateResult(imgList) {
+            let html = '<h3>Un-Used Images</h3>';
+
+            if (imgList.length == 0) {
+                html += '{none}';
+            }
+            else {
+                html += '<div class="flex-container">';
+                imgList.forEach( imgName =>  {
+                    html += '<div class="imgBox"><div class="toBottom"><img src="../images/' + imgName + '"><br>' + 
+                        imgName + ' &nbsp; <a onclick=OnDeleteImage("' + imgName + '")>&#x2718;</a></div></div>';
+                });
+                html += '</div>';
+            }
+
+            document.getElementById('resultList').innerHTML = html;
+        }
+
         GetImageListOnDisk( imgList => {
+            books.forEach( bookGroup => {
+                bookGroup.list.forEach( book => {
+                    let idx = imgList.indexOf(book.image);
+                    if (idx >= 0) {
+                        imgList.splice(idx, 1);
+                    }
+
+                    UpdateResult(imgList);
+                });
+            });
         });
     }
 
@@ -183,7 +210,7 @@ title: Books DB Health Check
         request.onload = function() {
             alert(request.response);
 
-            CheckImageStatus();
+            OnCheckUnUsedImages();
         }
         request.send();
     }
