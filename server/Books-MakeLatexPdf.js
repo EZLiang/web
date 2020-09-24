@@ -12,7 +12,7 @@ class LaTeXEscaper
         '&oacute;': 'ó',
         '&radic;-1': '$\\sqrt{-1}$',
         '&rdquo;': '\'\'',
-        '<br>': '\\newline',
+        '<br>': '\\newline ',
         '<em>': '\\textit{',
         '</em>': '}',
         '<li>': '\\item ',

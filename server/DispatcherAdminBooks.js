@@ -26,7 +26,7 @@ function Initialize(webRoot)
     sImgFolder = sCwd + 'docs\\books\\images\\'
     sLatexFile = sTmpFolder + 'ReadingList.tex';
     sPdfFile = sTmpFolder + 'ReadingList.pdf';
-    sImgPickerPs = sCwd + "server\\PickupImage.ps1";
+    sImgPickerPs = sCwd + "server\\Books-PickupImage.ps1";
 }
 
 
@@ -116,14 +116,14 @@ class AdminImage
 
     static PickUpExisting(request, response, url, paths)
     {
-        this._PickUp(response, sImgFolder);
+        AdminImage._PickUp(response, sImgFolder);
     }
     static PickUpNew(request, response, url, paths)
     {
-        this._PickUp(response, '');
+        AdminImage._PickUp(response, '');
     }
 
-}   // Image
+}   // AdminImage
 
 
 class AdminReadingList

@@ -232,7 +232,7 @@ title: Edit Books In Group
     function OnBookPickUpImage(method)
     {
         var request = new XMLHttpRequest();
-        request.open(method, '/admin/books/imagePickUp', true);
+        request.open(method, '/admin/books/image/picker', true);
         request.responseType = 'text';
 
         request.onload = function() {
@@ -250,42 +250,30 @@ title: Edit Books In Group
         if (book == null)
             return;
 
-        function GetAndCheckValue(elementId)
-        {
-            var v = document.getElementById(elementId).value;
-            var va = [...v];
-            va.forEach( (c,idx) => {
-                var charCode = c.charCodeAt(0);
-                if (charCode < 10 || charCode > 126) {
-                    throw elementId + ' contains special char [' + charCode + '] at location of ' + idx + '\nAbort';
-                }
-            });
-
-            return v;
+        let newBook = {
+            title: document.getElementById('bookTitle').value,
+            author: document.getElementById('bookAuthor').value,
+            comment: document.getElementById('bookComment').value,
+            description: document.getElementById('bookDescription').value,
+            image: document.getElementById('bookImageName').value            
         }
 
-        try {
-            var title = GetAndCheckValue("bookTitle");
-            var author = GetAndCheckValue("bookAuthor");
-            var comment = GetAndCheckValue("bookComment");
-            var description = GetAndCheckValue("bookDescription");
-            var image = document.getElementById("bookImageName").innerText;
-        }
-        catch (err) {
-            alert(err);
-            return;
-        }
-
-        if (title == '') {
+        if (newBook.title == '') {
             alert("no title");
             return;
         }
 
-        book.title = title;
-        book.author = author;
-        book.comment = comment;
-        book.description = description;
-        book.image = image;
+        let fieldWithSpecialChar = FindBookFieldWithSpecialChar(newBook);
+        if (fieldWithSpecialChar != '') {
+            alert('[' + fieldWithSpecialChar + '] contains special charactar');
+            return;
+        }
+
+        book.title = newBook.title;
+        book.author = newBook.author;
+        book.comment = newBook.comment;
+        book.description = newBook.description;
+        book.image = newBook.image;
 
         RefreshBookList();
         document.getElementById("preview").innerHTML = FormatBook(book);

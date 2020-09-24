@@ -77,125 +77,67 @@ title: Books DB Health Check
                     if (idx >= 0) {
                         imgList.splice(idx, 1);
                     }
-
-                    UpdateResult(imgList);
                 });
             });
+
+            UpdateResult(imgList);
         });
     }
 
     function OnCheckBooks()
     {
-        GetImageListOnDisk( imgList => {
-        });
-    }
+        function CheckBooks(imgList) {
+            var result = [];
 
+            books.forEach( (bookGroup, gi) => {
+                bookGroup.list.forEach( (book, bi) => {
+                    let issues = [];
 
-    function CheckSpeicalChar()
-    {
-        function HasSpecialCharactar(string)
-        {
-            if (string === undefined) {
-                return false;
-            }
+                    if (book.image === undefined || book.image == null || book.image == '') {
+                        issues.push('image not set');
+                    }
+                    else if (!imgList.includes(book.image)) {
+                        issues.push('image missing from disk');
+                    }
 
-            var va = [...string];
-            va.forEach( (c,idx) => {
-                var charCode = c.charCodeAt(0);
-                if (charCode < 10 || charCode > 126) {
-                    return true;
-                }
-            });
+                    let fieldWithSpecialChar = FindBookFieldWithSpecialChar(book);
+                    if (fieldWithSpecialChar != '') {
+                        issues.push('field [' + fieldWithSpecialChar + '] contains special charactar');
+                    }
 
-            return false;
-        }
-
-        function SearchSpeicalCharInBookGroup(bookGroup, groupIndex)
-        {
-            var result = "";
-            bookGroup.list.forEach( (book, bookIndex) => {
-                if (HasSpecialCharactar(book.title) ||
-                    HasSpecialCharactar(book.author) ||
-                    HasSpecialCharactar(book.comment) ||
-                    HasSpecialCharactar(book.description))
-                {
-                    result += '<hr>' + FormatBook(book, groupIndex, bookIndex);
-                }
+                    if (issues.length > 0) {
+                        result.push({ group: gi, book: bi, issues: issues });
+                    }
+                });
             });
 
             return result;
         }
+        
+        function UpdateResult(bookListWithIssue) {
+            let html = '<h3>Books With Issue(s)</h3>';
 
-        var resultHtml = "";
+            if (bookListWithIssue.length == 0) {
+                html += '{none}';
+            }
+            else {
+                html += '<ul>';
+                bookListWithIssue.forEach( item =>  {
+                    html += '<li>' + books[item.group].list[item.book].title + '<br><i>' + 
+                        item.issues.join(', ') + '</i>' + GetEditLink(item.group,item.book) + '</li>';        
+                });
+                html += '</ul>';
+            }
 
-        books.forEach( (bookGroup, groupIndex) => {
-            resultHtml += SearchSpeicalCharInBookGroup(bookGroup, groupIndex);
-        })
-
-        if (resultHtml == "") {
-            resultHtml = "{none}";
+            document.getElementById('resultList').innerHTML = html;
         }
 
-        document.getElementById("booksHasSpeicalChar").innerHTML = resultHtml;
+        GetImageListOnDisk( imgList => {
+            let bookListWithIssue = CheckBooks(imgList);
+            UpdateResult(bookListWithIssue);
+        });
     }
 
-
-    function CheckImageStatus() {
-        let request = new XMLHttpRequest();
-        request.open('GET', '/admin/books/imageStatus');
-        request.responseType = 'text';
-
-        request.onload = function() {
-            let result = JSON.parse(request.response);
-
-
-            let html = '';
-            result.ImagesNotUsed.forEach( imgName =>  {
-                html += '<div class="imgBox"><div class="toBottom"><img src="../images/' + imgName + '"><br>' + 
-                    imgName + ' &nbsp; <a onclick=OnDeleteImage("' + imgName + '")>&#x2718;</a></div></div>';
-            });
-            if (html == "") {
-                html = "{none}";
-            }
-            else {
-                html = '<div class="flex-container">' + html + '</div>';
-            }
-            document.getElementById('imagesNotUsed').innerHTML = html;
-
-
-            html = '';
-            result.BooksWithoutImage.forEach( item =>  {
-                html += '<li>' + books[item.group].list[item.book].title + GetEditLink(item.group,item.book) + '</li>';
-            });
-            if (html == "") {
-                html = "{none}";
-            }
-            else {
-                html = '<ul>' + html + '</ul>'
-            }
-            document.getElementById('booksNoImage').innerHTML = html;
-
-
-            html = '';
-            result.BooksImageMissed.forEach( item => {
-                html += '<li>' + books[item.group].list[item.book].title + GetEditLink(item.group,item.book) + '</li>';
-            });
-            if (html == "") {
-                html = "{none}";
-            }
-            else {
-                html = '<ul>' + html + '</ul>'
-            }
-            document.getElementById('booksMissingImage').innerHTML = html;
-        };
-        request.send();
-    }
-
-    function OnBookCheckHealth()
-    {
-        CheckSpeicalChar();
-        CheckImageStatus();
-    }
 
     function OnDeleteImage(imgName)
     {

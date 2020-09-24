@@ -27,9 +27,55 @@ function GetEditLink(groupIndex, bookIndex)
 // when group/book indexes are valid, add a link to edit book
 function FormatBook(book, groupIndex = -1, bookIndex = -1)
 {
-    return '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">' +
+    let html = '';
+    if (book.image === undefined || book.image == '') {
+        html = '<strong style="color:red;">{No Image Selected}</strong><br>';
+    }
+    else {
+        html = '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">';
+    }
+
+    html +=
         '<strong>' + book.title + '</strong><br>' +
         'Author(s): <i>' + book.author + '</i><br>' +
         book.description + GetEditLink(groupIndex, bookIndex) +
         '<br clear="all"><br clear="all">';
+
+    return html;
+}
+
+
+function FindBookFieldWithSpecialChar(book)
+{
+    function FindSpecialCharactar(tag, string)
+    {
+        if (string === undefined) {
+            return '';
+        }
+
+        for (let i = 0; i < string.length; i++) {
+            var charCode = string.charCodeAt(i);
+            if (charCode < 10 || charCode > 126) {
+                return tag + '[' + string.charAt(i) + '/' + charCode + '@' + i + ']';
+            }
+        }
+
+        return '';
+    }
+
+    let fieldList = {
+        title: book.title,
+        author: book.author,
+        comment: book.comment,
+        description: book.description
+    };
+
+    for (const [key,value] of Object.entries(fieldList)) {
+        let f = FindSpecialCharactar(key, value);
+        if (f != '') {
+            return f;
+        }
+    }
+
+    return '';
 }
