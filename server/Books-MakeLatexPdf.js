@@ -143,11 +143,16 @@ class LatexGenerator
     }
 }
 
+
 function GenerateLatex(books, imgRoot, latexFile)
 {
-    const latex = LatexGenerator.Generate(books, imgRoot);
-    require('fs').writeFileSync(latexFile, latex);
-    return latex;
+    let promise = new Promise((resolve, reject) => {        
+        const latex = LatexGenerator.Generate(books, imgRoot);
+        require('fs').writeFileSync(latexFile, latex);
+        resolve(latex);
+    });
+
+    return promise;
 }
 
 function GeneratePdf(latexFile, outputDir)
@@ -168,16 +173,20 @@ function GeneratePdf(latexFile, outputDir)
     console.log("Pdf generated.");
     */
 
-    const execFile = require('child_process').execFile;
-    const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
-        if (error) {
-            console.error('stderr', stderr);
-            throw error;
-        }
 
-        console.log("Pdf generated. ");
+   let promise = new Promise((resolve, reject) => {
+        const execFile = require('child_process').execFile;
+        const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
+            if (error) {
+                console.error('stderr', stderr);
+                reject(error);
+            }
+
+            resolve();
+        });
     });
 
+    return promise;
 }
 
 module.exports = {
@@ -200,14 +209,23 @@ if (process.argv.length > 2)
     switch (process.argv[2])
     {
         case 'latex':
+        {    
             const bookList = require(BookListFile);
-            var texSrc = GenerateLatex(bookList, BookImageFolder, LatexFile);
-            console.log(texSrc.substr(0, 200));
+            let promise = GenerateLatex(bookList, BookImageFolder, LatexFile);
+            promise.then( texSrc => {
+                console.log(texSrc.substr(0, 200));
+            });
             break;
+        }
 
         case 'pdf':
-            GeneratePdf(LatexFile, OutputFolder);
+        {
+            let promise = GeneratePdf(LatexFile, OutputFolder);
+            promise.then( () => {
+                console.log('returned from GeneratePdf');
+            });
             break;
+        }
     }
 }
 

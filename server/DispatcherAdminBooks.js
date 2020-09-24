@@ -161,27 +161,68 @@ class AdminReadingList
         });
     }
 
-    static MakeLatex(request, response, url, paths)
-    {
-        const bookList = require(sBookListFile);
-        var latex = latexPdf.GenerateLatex(bookList, sImgFolder, sLatexFile);
+    _IsEngineBusy = false;
+    static async _WaitEngineAvailable() {
+        const WaitTimeOutMs = 20 * 1000;
+        const WaitIntervalMs = 250;
+        const WaitCount = WaitTimeOutMs / WaitIntervalMs;
+        
+        function Sleep() {
+            return new Promise(resolve => setTimeout(resolve, WaitIntervalMs));
+        }
 
-        response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.write(latex);
-        response.end();
+        console.log('wait begin: engine is busy: ' + AdminReadingList._IsEngineBusy);
 
-        // async generate pdf
-        latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
+        for (let i = 1; AdminReadingList._IsEngineBusy && i <= WaitCount; i++)
+        {
+            if (i%4 == 0) {
+                console.log('waiting LaTex/Pdf engine...');
+            }
+
+            await Sleep();
+        }
+
+        if (AdminReadingList._IsEngineBusy) {
+            throw "Waiting for LaTeX/Pdf engine timed out";
+        }
+    
+        console.log('wait ends');
     }
 
-    static GetPdf(request, response, url, paths)
+    static async MakeLatex(request, response, url, paths)
     {
-        // sync call will fail, so let HandleMakeLatex do async call, here just return pdf file
-        //latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
+        const bookList = require(sBookListFile);
 
-        // to-do: wait for pdf ready
+        await AdminReadingList._WaitEngineAvailable();
+        AdminReadingList._IsEngineBusy = true;
+        let promiseLatex = latexPdf.GenerateLatex(bookList, sImgFolder, sLatexFile);
 
-        var pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
+        let pdfConvertStarted = false;
+
+        promiseLatex.then( result => {
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.write(result);
+            response.end();
+
+            // async generate pdf
+            let promisePdf = latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
+            pdfConvertStarted = true;
+
+            promisePdf.finally(() => {
+                AdminReadingList._IsEngineBusy = false;
+            });
+        });
+        promiseLatex.finally( () => {
+            if (!pdfConvertStarted) {
+                AdminReadingList._IsEngineBusy = false;
+            }
+        });
+    }
+
+    static async GetPdf(request, response, url, paths)
+    {
+        await AdminReadingList._WaitEngineAvailable();
+        let pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
         
         response.writeHead(200, { 'Content-Type': 'application/pdf' });
         response.write(pdf);

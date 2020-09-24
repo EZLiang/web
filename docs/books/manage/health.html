@@ -106,7 +106,7 @@ title: Books DB Health Check
                     }
 
                     if (issues.length > 0) {
-                        result.push({ group: gi, book: bi, issues: issues });
+                        result.push({ group: gi, book: bi, title: book.title, issues: issues });
                     }
                 });
             });
@@ -121,12 +121,10 @@ title: Books DB Health Check
                 html += '{none}';
             }
             else {
-                html += '<ul>';
                 bookListWithIssue.forEach( item =>  {
-                    html += '<li>' + books[item.group].list[item.book].title + '<br><i>' + 
-                        item.issues.join(', ') + '</i>' + GetEditLink(item.group,item.book) + '</li>';        
+                    html += '<p>&nbsp; Title: <strong>' + item.title + '</strong><br>Issues: ' + 
+                        item.issues.join(', ') + '</i>' + GetEditLink(item.group,item.book) + '</p>';
                 });
-                html += '</ul>';
             }
 
             document.getElementById('resultList').innerHTML = html;
