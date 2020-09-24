@@ -2,7 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const latexPdf = require('./Books-MakeLatexPdf');
 
-"use stricket";
+"use strict";
 
 // for web
 var sWebRoot = "";
@@ -128,6 +128,8 @@ class AdminImage
 
 class AdminReadingList
 {
+    _LastPdfError = [];
+
     static SaveList(request, response, url, paths)
     {
         var postBody = "";
@@ -208,6 +210,12 @@ class AdminReadingList
             let promisePdf = latexPdf.GeneratePdf(sLatexFile, sTmpFolder);
             pdfConvertStarted = true;
 
+            promisePdf.then( () => {
+                AdminReadingList._LastPdfError = [];
+            });
+            promisePdf.catch(error => {
+                AdminReadingList._LastPdfError = latexPdf.PdfTeXLog.ParseLog(fs.readFileSync("./tmp/ReadingList.log"));
+            })
             promisePdf.finally(() => {
                 AdminReadingList._IsEngineBusy = false;
             });
@@ -222,11 +230,19 @@ class AdminReadingList
     static async GetPdf(request, response, url, paths)
     {
         await AdminReadingList._WaitEngineAvailable();
-        let pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
-        
-        response.writeHead(200, { 'Content-Type': 'application/pdf' });
-        response.write(pdf);
-        response.end();
+
+        if (AdminReadingList._LastPdfError.length == 0) {
+            let pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
+            
+            response.writeHead(200, { 'Content-Type': 'application/pdf' });
+            response.write(pdf);
+            response.end();
+        }
+        else {
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.write(AdminReadingList._LastPdfError.join('\n'));
+            response.end();
+        }
     }
 
 }   // AdminReadingList

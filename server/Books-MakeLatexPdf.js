@@ -1,3 +1,4 @@
+const fs = require("fs");
 
 class LaTeXEscaper
 {
@@ -115,7 +116,7 @@ class LatexGenerator
             return;
         }
 
-        this.mResult += "\\newline\\newline\n" + "\\subsection*{" + bookGroup.group +
+        this.mResult += "\\subsection*{" + bookGroup.group +
         "}\n\\begin{enumerate}\n";
         bookGroup.list.forEach(this.FormatBookIndex, this)
         this.mResult += "\\end{enumerate}\n\n"
@@ -177,11 +178,52 @@ function GenerateLatex(books, imgRoot, latexFile)
 {
     let promise = new Promise((resolve, reject) => {        
         const latex = LatexGenerator.Generate(books, imgRoot);
-        require('fs').writeFileSync(latexFile, latex);
+        fs.writeFileSync(latexFile, latex);
         resolve(latex);
     });
 
     return promise;
+}
+
+class PdfTeXLog
+{
+    LatexErrors = [];
+
+    log = "";
+
+    ReadLine()
+    {
+        if (this.log == "") {
+            return false;
+        }
+        var result = this.log.substring(0, this.log.indexOf("\n"));
+        this.log = this.log.substring(this.log.indexOf("\n") + 1);
+        return result
+    }
+
+    _ParseLog()
+    {
+        while (true) {
+            let line = this.ReadLine();
+            if (line === false) {
+                return
+            }
+            if (line.startsWith("! LaTeX Error:")) {
+                for (var lineNum = this.ReadLine(); !lineNum.startsWith("l.");
+                lineNum = this.ReadLine()) {}
+                lineNum = lineNum.split(".")[1].split(" ")[0];
+                this.LatexErrors.push(line + " on " + lineNum);
+            }
+        }
+    }
+
+    static ParseLog(logFile)
+    {
+        var parse = new PdfTeXLog();
+        parse.log = logFile;
+        parse._ParseLog();
+        return parse.LatexErrors;
+    }
 }
 
 function GeneratePdf(latexFile, outputDir)
@@ -208,7 +250,8 @@ function GeneratePdf(latexFile, outputDir)
         const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
             if (error) {
                 console.error('stderr', stderr);
-                reject(error);
+                let e = PdfTeXLog.ParseLog(fs.readFileSync("./tmp/ReadingList.log", "utf-8"));
+                reject(e);
             }
 
             resolve();
@@ -226,11 +269,13 @@ module.exports = {
 // below: local run for testing
 
 // relative to workspace root
+//#region 
 const Cwd = process.cwd() + '\\';
 const BookListFile = Cwd + 'docs\\books\\book-list.js';
 const BookImageFolder = Cwd + 'docs\\books\\images\\';
 const OutputFolder = Cwd + 'tmp\\';
 const LatexFile = OutputFolder + 'ReadingList.tex';
+//#endregion
 
 
 if (process.argv.length > 2)
@@ -253,6 +298,7 @@ if (process.argv.length > 2)
             promise.then( () => {
                 console.log('returned from GeneratePdf');
             });
+            promise.catch((x) => console.log(x.length==0 ? '(none)' : x.join('\n')));
             break;
         }
     }
