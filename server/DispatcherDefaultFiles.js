@@ -72,6 +72,8 @@ function HandleRequest(pathName, response)
         response.write(fs.readFileSync(path));
         response.end();
     }
+
+    return true;
 }
 
 

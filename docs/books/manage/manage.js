@@ -4,7 +4,7 @@ function SaveBookList(newBookList)
     var payload = JSON.stringify(newBookList, null, 1);
 
     var request = new XMLHttpRequest();
-    request.open('POST', '/admin/books/newList', true);
+    request.open('POST', '/admin/books/readingList', true);
     request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
     request.responseType = 'text';
 

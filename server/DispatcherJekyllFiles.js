@@ -178,6 +178,8 @@ function HandleRequest(pathName, response)
         { 'Expires': '0'});
     response.write(result);
     response.end();	
+
+    return true;
 }
 
 

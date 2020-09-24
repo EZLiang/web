@@ -8,6 +8,11 @@ title: Books DB Health Check
         border-top: 1px dotted grey;
     }
 
+    button {
+        margin: 0.1rem;
+        width: 10rem;
+    }
+
     div .imgBox {
         display: flex;
         margin: 0.1rem;
@@ -22,25 +27,42 @@ title: Books DB Health Check
 </style>
 
 
-<button onclick="OnBookCheckHealth()">Check</button>
-<hr class="section">
-<strong>Images not used</strong>
-<div id="imagesNotUsed"></div>
-<hr class="section">
-<strong>Books no image is set</strong>
-<div id="booksNoImage"></div>
-<hr class="section">
-<strong>Books the image is missing</strong>
-<div id="booksMissingImage"></div>
-<hr class="section">
-<strong>Books with special charactar</strong>
-<div id="booksHasSpeicalChar"></div>
+<button onclick="OnCheckAll()">Check All</button>
+<button onclick="OnCheckUnUsedImages()">Check Un-used Images</button>
+<button onclick="OnCheckBooks()">Check Books</button>
+<hr>
+<div id="resultList"></div>
 
 
 
 <script type="text/javascript" src="manage.js"></script>
 <script type="text/javascript">
     "use strict";
+
+    function GetImageListOnDisk(handleImgList)
+    {
+        let request = new XMLHttpRequest();
+        request.open('GET', '/admin/books/image/list' + imgName);
+        request.responseType = 'text';
+
+        request.onload = function() {
+            handleImgList(JSON.parse(request.response));
+        }
+        request.send();
+    }
+
+    function OnCheckUnUsedImages()
+    {
+        GetImageListOnDisk( imgList => {
+        });
+    }
+
+    function OnCheckBooks()
+    {
+        GetImageListOnDisk( imgList => {
+        });
+    }
+
 
     function CheckSpeicalChar()
     {
