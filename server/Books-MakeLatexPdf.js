@@ -35,6 +35,8 @@ class LatexGenerator
 {
     mResult = "";
 
+    myCounter = 0;
+
     FormatBookImage(book)
     {
         var imgEntry = (book.image == "") ? 
@@ -63,7 +65,7 @@ class LatexGenerator
                 "\\hdashrule[0ex]{\\textwidth}{0.5pt}{1mm 3mm}\n" +
                 "\\strut\\vspace*{-\\baselineskip}\\newline\n\n";
 
-        this.mResult += "\\begin{minipage}{\\textwidth}\n";
+        this.mResult += "\\hypertarget{book-" + this.myCounter + "}{}\\begin{minipage}{\\textwidth}\n";
 
         if (index%2 == 0)
         {
@@ -79,6 +81,7 @@ class LatexGenerator
         }
 
         this.mResult += "\\end{minipage}\n";
+        this.myCounter++;
     }
 
     FormatBookGroup(bookGroup, index)
@@ -97,6 +100,25 @@ class LatexGenerator
             "\\hdashrule[2ex]{\\textwidth}{0.5pt}{}\n\n";
 
         bookGroup.list.forEach(this.FormatBook, this);
+    }
+
+    FormatBookIndex(book)
+    {
+        this.mResult += "\\item \\hyperlink{book-" + this.myCounter + "}{" +
+        LaTeXEscaper.Escape(book.title) + "}\n"
+        this.myCounter++
+    }
+
+    FormatIndexGroup(bookGroup)
+    {
+        if (bookGroup.hidden == true) {
+            return;
+        }
+
+        this.mResult += "\\newline\\newline\n" + "\\subsection*{" + bookGroup.group +
+        "}\n\\begin{enumerate}\n";
+        bookGroup.list.forEach(this.FormatBookIndex, this)
+        this.mResult += "\\end{enumerate}\n\n"
     }
 
     static Generate(books, imgRoot)
@@ -134,9 +156,16 @@ class LatexGenerator
 
         var gen = new LatexGenerator();
         gen.mResult = DocHead;
+        gen.myCounter = 0;
         
         //gen.FormatBookGroup(books[0], 0);
         books.forEach(gen.FormatBookGroup, gen);
+
+        gen.mResult += "\n\n\\newpage\\phantomsection" +
+        "\\addcontentsline{toc}{subsection}{Books index}\\subsection*{Books index}";
+
+        gen.myCounter = 0;
+        books.forEach(gen.FormatIndexGroup, gen)
 
         gen.mResult += DocTail;
         return gen.mResult;
