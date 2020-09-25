@@ -100,9 +100,9 @@ title: Books DB Health Check
                         issues.push('image missing from disk');
                     }
 
-                    let fieldWithSpecialChar = FindBookFieldWithSpecialChar(book);
-                    if (fieldWithSpecialChar != '') {
-                        issues.push('field [' + fieldWithSpecialChar + '] contains special charactar');
+                    let fieldsWithSpecialChar = FindBookFieldWithSpecialChar(book);
+                    for (const [key,value] of Object.entries(fieldsWithSpecialChar)) {
+                        issues.push('special charactar - ' + key + ': ' + value);
                     }
 
                     if (issues.length > 0) {
@@ -122,8 +122,14 @@ title: Books DB Health Check
             }
             else {
                 bookListWithIssue.forEach( item =>  {
-                    html += '<p>&nbsp; Title: <strong>' + item.title + '</strong><br>Issues: ' + 
-                        item.issues.join(', ') + '</i>' + GetEditLink(item.group,item.book) + '</p>';
+                    html += '<strong>' + item.title + '</strong>' + 
+                        GetEditLink(item.group,item.book) + '<ul>';
+                            
+                    item.issues.forEach( issue => {
+                        html += '<li>' + issue + '</li>';
+                    });
+                    
+                    html += '</ul><br>';
                 });
             }
 

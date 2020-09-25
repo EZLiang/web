@@ -21,7 +21,7 @@ title: Edit Books In Group
 
 </style>
 
-<select id="groupListBox" style="margin-left:0.5rem;" onchange="OnGroupSelectionChanged(this.value)"></select>
+<select id="groupListBox" onchange="OnGroupSelectionChanged(this.value)"></select>
 
 <div class="flex-container" style="margin-top:0px;">    
     <div>
@@ -255,7 +255,7 @@ title: Edit Books In Group
             author: document.getElementById('bookAuthor').value,
             comment: document.getElementById('bookComment').value,
             description: document.getElementById('bookDescription').value,
-            image: document.getElementById('bookImageName').value            
+            image: document.getElementById('bookImageName').innerText         
         }
 
         if (newBook.title == '') {
@@ -263,9 +263,13 @@ title: Edit Books In Group
             return;
         }
 
-        let fieldWithSpecialChar = FindBookFieldWithSpecialChar(newBook);
-        if (fieldWithSpecialChar != '') {
-            alert('[' + fieldWithSpecialChar + '] contains special charactar');
+        let fieldsWithSpecialChar = FindBookFieldWithSpecialChar(newBook);
+        let errors = '';
+        for (const [key,value] of Object.entries(fieldsWithSpecialChar)) {
+            errors += '\n  ' + key + ': ' + value;
+        }
+        if (errors != '') {
+            alert('Special charactar(s) found:' + errors);
             return;
         }
 

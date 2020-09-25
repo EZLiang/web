@@ -47,20 +47,23 @@ function FormatBook(book, groupIndex = -1, bookIndex = -1)
 
 function FindBookFieldWithSpecialChar(book)
 {
-    function FindSpecialCharactar(tag, string)
+    function FindSpecialCharactar(string)
     {
+        let result = [];
+
         if (string === undefined) {
-            return '';
+            return result;
         }
+
 
         for (let i = 0; i < string.length; i++) {
             var charCode = string.charCodeAt(i);
             if (charCode < 10 || charCode > 126) {
-                return tag + '[' + string.charAt(i) + '/' + charCode + '@' + i + ']';
+                result.push('[' + string.charAt(i) + '/' + charCode + '@' + i + ']');
             }
         }
 
-        return '';
+        return result;
     }
 
     let fieldList = {
@@ -70,12 +73,14 @@ function FindBookFieldWithSpecialChar(book)
         description: book.description
     };
 
+    let result = {};
+
     for (const [key,value] of Object.entries(fieldList)) {
-        let f = FindSpecialCharactar(key, value);
-        if (f != '') {
-            return f;
+        let f = FindSpecialCharactar(value);
+        if (f.length > 0) {
+            result[key] = f.join(',');
         }
     }
 
-    return '';
+    return result;
 }

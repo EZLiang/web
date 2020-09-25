@@ -711,14 +711,16 @@ var books =
     "title": "The Best Writing on Mathematics 2020",
     "author": "Mircea Pitici",
     "bought": "2020.09.03 - pre-order",
-    "description": "This annual anthology brings together the year’s finest mathematics writing from around the world. Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else―and you don’t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday aspects of math, and take readers behind the scenes of today’s hottest mathematical debates."
+    "description": "This annual anthology brings together the year&#39;s finest mathematics writing from around the world. Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else-and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday aspects of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
+    "comment": ""
    },
    {
     "image": "books-00116.jpg",
     "title": "How to Solve It: A New Aspect of Mathematical Method",
     "author": "G. Polya, John H. Conway",
     "bought": "2020.09.03",
-    "description": "A perennial bestseller by eminent mathematician G. Polya, How to Solve It will show anyone in any field how to think straight. In lucid and appealing prose, Polya reveals how the mathematical method of demonstrating a proof or finding an unknown can be of help in attacking any problem that can be \"reasoned\" out―from building a bridge to winning a game of anagrams. Generations of readers have relished Polya's deft―indeed, brilliant―instructions on stripping away irrelevancies and going straight to the heart of the problem."
+    "description": "A perennial bestseller by eminent mathematician G. Polya, How to Solve It will show anyone in any field how to think straight. In lucid and appealing prose, Polya reveals how the mathematical method of demonstrating a proof or finding an unknown can be of help in attacking any problem that can be \"reasoned\" out-from building a bridge to winning a game of anagrams. Generations of readers have relished Polya's deft-indeed, brilliant-instructions on stripping away irrelevancies and going straight to the heart of the problem.",
+    "comment": ""
    },
    {
     "image": "books-00117.jpg",
