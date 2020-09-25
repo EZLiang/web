@@ -235,17 +235,7 @@ function GeneratePdf(latexFile, outputDir)
         latexFile
     ];
 
-    /* this fails w/ error:
-    Uncaught Error: EPIPE: broken pipe, write
-    Process exited with code 1
-
-    const execFileSync = require('child_process').execFileSync;
-    execFileSync('pdflatex.exe', args);
-    console.log("Pdf generated.");
-    */
-
-
-   let promise = new Promise((resolve, reject) => {
+    let promise = new Promise((resolve, reject) => {
         const execFile = require('child_process').execFile;
         const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
             if (error) {
@@ -293,10 +283,10 @@ if (process.argv.length > 2)
         case 'pdf':
         {
             let promise = GeneratePdf(LatexFile, OutputFolder);
-            promise.then(console.log('returned from GeneratePdf'));
-            promise.catch(errors => {
-                console.log(JSON.stringify(errors,null,2));
-            });
+            promise
+            .then(console.log('returned from GeneratePdf'))
+            .catch(errors => console.log(JSON.stringify(errors,null,2)));
+
             break;
         }
     }

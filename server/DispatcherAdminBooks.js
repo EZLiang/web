@@ -208,15 +208,12 @@ class AdminReadingList
 
             promisePdf.then( () => {
                 AdminReadingList._LastPdfErrors = null;
-            });
-            promisePdf.catch(error => {
+            }).catch(error => {
                 AdminReadingList._LastPdfErrors = error;
-            })
-            promisePdf.finally(() => {
+            }).finally(() => {
                 AdminReadingList._IsEngineBusy = false;
             });
-        });
-        promiseLatex.finally( () => {
+        }).finally( () => {
             if (!pdfConvertStarted) {
                 AdminReadingList._IsEngineBusy = false;
             }
