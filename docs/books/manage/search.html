@@ -9,7 +9,14 @@ title: Search Books
 
 <button onclick="OnBookSearch()">Search</button>
 <input id="searchText" type="text" size="60">
-<i>(RegExp Supported)</i>
+<i>(RegExp Supported)</i><br>
+
+Search From: 
+<input id="searchTitle" type="checkbox" checked>Title</checkbox>
+<input id="searchAuthor" type="checkbox" checked>Author</checkbox>
+<input id="searchComment" type="checkbox" checked>Comment</checkbox>
+<input id="searchDescription" type="checkbox" checked>Description</checkbox>
+
 <hr>
 <div id="resultList"></div>
 
@@ -29,38 +36,60 @@ title: Search Books
 
     function OnBookSearch()
     {
-        function SearchTextInBookGroup(bookGroup, groupIndex, regExp)
+        class BookSearcher
         {
-            var result = [];
-            
-            for (var i = 0; i < bookGroup.list.length; i++) {
-                var book = bookGroup.list[i];
+            _regExpWhat = null;
+            _fromTitle = false;
+            _fromAuthor = false;
+            _fromComment = false;
+            _fromDescription = false;
 
-                if ((book.title.search(regExp) >= 0) ||
-                    (book.author.search(regExp) >= 0) ||
-                    (book.comment === undefined ? false : book.comment.search(regExp) >= 0) ||
-                    (book.description.search(regExp) >= 0))
-                {
-                    result.push({book:book, groupIndex:groupIndex, bookIndex:i})
+            Initialize() {
+                let searchText = document.getElementById("searchText").value;
+                if (searchText == "") {
+                    alert("no text input for search");
+                    return false;
                 }
+                this._regExpWhat = new RegExp(searchText, 'i');
+
+                
+                this._fromTitle = document.getElementById('searchTitle').checked;
+                this._fromAuthor = document.getElementById('searchAuthor').checked;
+                this._fromComment = document.getElementById('searchComment').checked;
+                this._fromDescription = document.getElementById('searchDescription').checked;
+
+                if (!this._fromTitle && !this._fromAuthor && !this._fromComment && !this._fromDescription) {
+                    alert('no field selected to search');
+                    return false;
+                }
+
+                return true;
             }
 
-            return result;
+            IsMatch(book) {
+                return (this._fromTitle && book.title.search(this._regExpWhat) >= 0) ||
+                    (this._fromAuthor && book.author.search(this._regExpWhat) >= 0) ||
+                    (this._fromComment && book.comment !== undefined && book.comment.search(this._regExpWhat) >= 0) ||
+                    (this._fromDescription && book.description.search(this._regExpWhat) >= 0);
+            }
         }
 
-        var text = document.getElementById("searchText").value;
-        if (text == "") {
-            alert("no text input for search");
+        let searcher = new BookSearcher();
+        if (!searcher.Initialize()) {
             return;
         }
-        var regExp = new RegExp(text, 'i');
 
-        var booksFound = [];
+        let booksFound = [];
         books.forEach( (bookGroup, groupIndex) => {
-            booksFound = booksFound.concat(SearchTextInBookGroup(bookGroup, groupIndex, regExp));
+            bookGroup.list.forEach( (book, bookIndex) => {
+                if (searcher.IsMatch(book)) {
+                    booksFound.push({book:book, groupIndex:groupIndex, bookIndex:bookIndex});
+                }
+            });
         });
 
-        var resultHtml = '<string>' + booksFound.length + ' books found</strong>';
+
+        let resultHtml = '<string>' + booksFound.length + ' books found</strong>';
 
         booksFound.forEach( bookFound => {
             resultHtml += '<hr>' + FormatBook(bookFound.book, bookFound.groupIndex, bookFound.bookIndex);
