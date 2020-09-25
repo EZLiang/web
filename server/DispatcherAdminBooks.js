@@ -128,7 +128,7 @@ class AdminImage
 
 class AdminReadingList
 {
-    _LastPdfError = [];
+    _LastPdfErrors = null;
 
     static SaveList(request, response, url, paths)
     {
@@ -173,8 +173,6 @@ class AdminReadingList
             return new Promise(resolve => setTimeout(resolve, WaitIntervalMs));
         }
 
-        console.log('wait begin: engine is busy: ' + AdminReadingList._IsEngineBusy);
-
         for (let i = 1; AdminReadingList._IsEngineBusy && i <= WaitCount; i++)
         {
             if (i%4 == 0) {
@@ -187,8 +185,6 @@ class AdminReadingList
         if (AdminReadingList._IsEngineBusy) {
             throw "Waiting for LaTeX/Pdf engine timed out";
         }
-    
-        console.log('wait ends');
     }
 
     static async MakeLatex(request, response, url, paths)
@@ -211,10 +207,10 @@ class AdminReadingList
             pdfConvertStarted = true;
 
             promisePdf.then( () => {
-                AdminReadingList._LastPdfError = [];
+                AdminReadingList._LastPdfErrors = null;
             });
             promisePdf.catch(error => {
-                AdminReadingList._LastPdfError = latexPdf.PdfTeXLog.ParseLog(fs.readFileSync("./tmp/ReadingList.log"));
+                AdminReadingList._LastPdfErrors = error;
             })
             promisePdf.finally(() => {
                 AdminReadingList._IsEngineBusy = false;
@@ -231,7 +227,7 @@ class AdminReadingList
     {
         await AdminReadingList._WaitEngineAvailable();
 
-        if (AdminReadingList._LastPdfError.length == 0) {
+        if (AdminReadingList._LastPdfErrors == null) {
             let pdf = fs.readFileSync(sPdfFile);    // read as binary, but, 'binary' option means latin1
             
             response.writeHead(200, { 'Content-Type': 'application/pdf' });
@@ -240,7 +236,7 @@ class AdminReadingList
         }
         else {
             response.writeHead(200, { 'Content-Type': 'text/plain' });
-            response.write(AdminReadingList._LastPdfError.join('\n'));
+            response.write(JSON.stringify(AdminReadingList._LastPdfErrors, null, 2));
             response.end();
         }
     }

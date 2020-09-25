@@ -4,30 +4,38 @@ title: Generate LaTeX/Pdf Book List
 ---
 
 <style>
-    .flex1, .flex2 {
-        min-height: 40rem;
+    .flexLatex, .flexPdf {
+        
         padding: 0.1rem;
     }
-    .flex1 {
+    .flexLatex {
         flex: 1;
     }
-    .flex2 {
+    .flexPdf {
         flex: 2;
     }
 
-    textarea, iframe {
+    .srcBox, iframe {
         width: 100%;
-        height: 100%;        
+        height: 40rem; 
     }
+
+    .srcBox {
+        overflow: scroll;
+        border: 1px solid darkgray;
+        font-family: monospace;
+        font-size: 0.9rem;
+    }
+
 </style>
 
 <div class="flex-container">
-    <div class="flex1">
+    <div class="flexLatex">
         <button onclick="GenerateLatex()">Generate LaTeX</button>&nbsp;
         <button onclick="CopyLatex()">Copy To Clipboard</button><br>
-        <textarea id="latexCode" readonly></textarea>
+        <div id="latexCode" class="srcBox"></div>
     </div>
-    <div class="flex2">
+    <div class="flexPdf">
         <button onclick="RefreshPdf()">Refresh Pdf</button><br>      
         <iframe id="pdfPreview" name="pdfPreview"></iframe>
     </div>
@@ -41,16 +49,35 @@ title: Generate LaTeX/Pdf Book List
         request.responseType = 'text';
 
         request.onload = function() {
-            document.getElementById('latexCode').value = request.response;
+            let lines = request.response.split('\n');
+            let html = '<ol>';
+            lines.forEach(line => {
+                html += '<li>' + line + '</li>';
+            });
+            html += '</ol>';
+            document.getElementById('latexCode').innerHTML = html;
         };
         request.send();
     }
 
     function CopyLatex() {
+        /*
         var texBox = document.getElementById("latexCode");
         texBox.select();
-        // texBox.setSelectionRange(0, 99999); /*For mobile devices*/
+        // texBox.setSelectionRange(0, 99999); // For mobile devices
         document.execCommand("copy");
+        */
+
+        let tex = document.getElementById("latexCode").innerText;
+
+        function listener(e) {
+            //e.clipboardData.setData("text/html", str);
+            e.clipboardData.setData("text/plain", tex);
+            e.preventDefault();
+        }
+        document.addEventListener("copy", listener);
+        document.execCommand("copy");
+        document.removeEventListener("copy", listener);                
     }
 
     function RefreshPdf() {

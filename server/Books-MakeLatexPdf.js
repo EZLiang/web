@@ -36,7 +36,7 @@ class LatexGenerator
 {
     mResult = "";
 
-    myCounter = 0;
+    mCounter = 0;
 
     FormatBookImage(book)
     {
@@ -66,7 +66,7 @@ class LatexGenerator
                 "\\hdashrule[0ex]{\\textwidth}{0.5pt}{1mm 3mm}\n" +
                 "\\strut\\vspace*{-\\baselineskip}\\newline\n\n";
 
-        this.mResult += "\\hypertarget{book-" + this.myCounter + "}{}\\begin{minipage}{\\textwidth}\n";
+        this.mResult += "\\hypertarget{book-" + this.mCounter + "}{}\\begin{minipage}{\\textwidth}\n";
 
         if (index%2 == 0)
         {
@@ -82,7 +82,7 @@ class LatexGenerator
         }
 
         this.mResult += "\\end{minipage}\n";
-        this.myCounter++;
+        this.mCounter++;
     }
 
     FormatBookGroup(bookGroup, index)
@@ -105,9 +105,9 @@ class LatexGenerator
 
     FormatBookIndex(book)
     {
-        this.mResult += "\\item \\hyperlink{book-" + this.myCounter + "}{" +
-        LaTeXEscaper.Escape(book.title) + "}\n"
-        this.myCounter++
+        this.mResult += "\\item \\hyperlink{book-" + this.mCounter + "}{" +
+            LaTeXEscaper.Escape(book.title) + "}\n";
+        this.mCounter++;
     }
 
     FormatIndexGroup(bookGroup)
@@ -116,10 +116,9 @@ class LatexGenerator
             return;
         }
 
-        this.mResult += "\\subsection*{" + bookGroup.group +
-        "}\n\\begin{enumerate}\n";
-        bookGroup.list.forEach(this.FormatBookIndex, this)
-        this.mResult += "\\end{enumerate}\n\n"
+        this.mResult += "\\subsubsection*{" + bookGroup.group + "}\n\\begin{enumerate}\n";
+        bookGroup.list.forEach(this.FormatBookIndex, this);
+        this.mResult += "\\end{enumerate}\n\n";
     }
 
     static Generate(books, imgRoot)
@@ -134,15 +133,18 @@ class LatexGenerator
 `\\documentclass[letterpaper]{article}
 \\usepackage[top=1.25in, bottom=0.75in, left=1in, right=1in]{geometry}
 \\usepackage{xcolor}
-\\definecolor{sectionColor}{rgb}{0,0.1,1}
+\\definecolor{sectionColor}{rgb}{0,0.1,0.5}
 \\usepackage{sectsty}
 \\subsectionfont{\\color{sectionColor}}
 \\usepackage{dashrule}
 \\usepackage{graphicx}
 \\usepackage{hyperref}
-\\hypersetup{colorlinks=true,linkcolor={blue!50!black},urlcolor=green,citecolor=red}
+\\definecolor{linkColor}{rgb}{0,0,0.25}
+\\hypersetup{colorlinks=true,linkcolor=linkColor,urlcolor=green,citecolor=red}
 \\setlength{\\parindent}{0pt}
 \\setlength\\intextsep{0pt}
+\\usepackage{enumitem}
+\\setlist[enumerate]{nosep}
 \\graphicspath{{` + imgRoot + `}}
 
 \\begin{document}
@@ -157,16 +159,16 @@ class LatexGenerator
 
         var gen = new LatexGenerator();
         gen.mResult = DocHead;
-        gen.myCounter = 0;
+        gen.mCounter = 0;
         
         //gen.FormatBookGroup(books[0], 0);
         books.forEach(gen.FormatBookGroup, gen);
 
-        gen.mResult += "\n\n\\newpage\\phantomsection" +
-        "\\addcontentsline{toc}{subsection}{Books index}\\subsection*{Books index}";
+        // index
+        gen.mResult += '\n\n\\newpage\n\\phantomsection\n\\addcontentsline{toc}{subsection}{Books Index}\n\\subsection*{Books Index}\n\n';
 
-        gen.myCounter = 0;
-        books.forEach(gen.FormatIndexGroup, gen)
+        gen.mCounter = 0;
+        books.forEach(gen.FormatIndexGroup, gen);
 
         gen.mResult += DocTail;
         return gen.mResult;
@@ -187,42 +189,40 @@ function GenerateLatex(books, imgRoot, latexFile)
 
 class PdfTeXLog
 {
-    LatexErrors = [];
+    _LatexErrors = [];
+    _logContent = "";
 
-    log = "";
-
-    ReadLine()
+    _ReadLine()
     {
-        if (this.log == "") {
+        if (this._logContent == "") {
             return false;
         }
-        var result = this.log.substring(0, this.log.indexOf("\n"));
-        this.log = this.log.substring(this.log.indexOf("\n") + 1);
-        return result
+        var result = this._logContent.substring(0, this._logContent.indexOf("\n"));
+        this._logContent = this._logContent.substring(this._logContent.indexOf("\n") + 1);
+        return result;
     }
 
     _ParseLog()
     {
         while (true) {
-            let line = this.ReadLine();
+            let line = this._ReadLine();
             if (line === false) {
-                return
+                return;
             }
-            if (line.startsWith("! LaTeX Error:")) {
-                for (var lineNum = this.ReadLine(); !lineNum.startsWith("l.");
-                lineNum = this.ReadLine()) {}
-                lineNum = lineNum.split(".")[1].split(" ")[0];
-                this.LatexErrors.push(line + " on " + lineNum);
+            if (line.startsWith("!")) {
+                for (var nextLine = this._ReadLine(); !nextLine.startsWith("l."); nextLine = this._ReadLine()) {}
+
+                this._LatexErrors.push({error: line, details: nextLine});
             }
         }
     }
 
-    static ParseLog(logFile)
+    static ParseLog(logContent)
     {
         var parse = new PdfTeXLog();
-        parse.log = logFile;
+        parse._logContent = logContent;
         parse._ParseLog();
-        return parse.LatexErrors;
+        return parse._LatexErrors;
     }
 }
 
@@ -250,7 +250,7 @@ function GeneratePdf(latexFile, outputDir)
         const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
             if (error) {
                 console.error('stderr', stderr);
-                let e = PdfTeXLog.ParseLog(fs.readFileSync("./tmp/ReadingList.log", "utf-8"));
+                let e = PdfTeXLog.ParseLog(fs.readFileSync(outputDir + "\\ReadingList.log", "utf-8"));
                 reject(e);
             }
 
@@ -286,19 +286,17 @@ if (process.argv.length > 2)
         {    
             const bookList = require(BookListFile);
             let promise = GenerateLatex(bookList, BookImageFolder, LatexFile);
-            promise.then( texSrc => {
-                console.log(texSrc.substr(0, 200));
-            });
+            promise.then( texSrc => console.log(texSrc.substr(0, 200)));
             break;
         }
 
         case 'pdf':
         {
             let promise = GeneratePdf(LatexFile, OutputFolder);
-            promise.then( () => {
-                console.log('returned from GeneratePdf');
+            promise.then(console.log('returned from GeneratePdf'));
+            promise.catch(errors => {
+                console.log(JSON.stringify(errors,null,2));
             });
-            promise.catch((x) => console.log(x.length==0 ? '(none)' : x.join('\n')));
             break;
         }
     }
