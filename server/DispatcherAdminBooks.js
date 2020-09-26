@@ -59,22 +59,34 @@ class AdminImage
     {
         function CopyImageFile(imgPath)
         {
-            let sn = 0;
-            
-            // find largest file number
+            let snList = [];
+
+            // find available file number
             let regName = new RegExp('books-\\d+\.*', 'i');
             let regNumber = new RegExp('\\d+');
             let onDiskImgList = fs.readdirSync(sImgFolder);
             onDiskImgList.forEach(name => {
                 if (regName.test(name)) {
-                    let n = parseInt(regNumber.exec(name)[0])
-                    if (n > sn) {
-                        sn = n;
-                    }
+                    let n = regNumber.exec(name)[0];
+                    snList.push(n);
                 }
             });
 
-            sn++;
+            let sn = -1;
+            snList.sort();
+            for (let n = 0; n < snList.length; n++) {
+                let i = parseInt(snList[n]);
+                if (i != n) {
+                    sn = n;
+                    break;
+                }
+            }
+
+            if (sn < 0) {
+                // no gap found
+                sn = snList.length;
+            }
+
             const zeroPad = (num, places) => String(num).padStart(places, '0');
             let newImgFile = zeroPad(sn, 5);
             let imgExtension = imgPath.substring(imgPath.lastIndexOf('.'));
