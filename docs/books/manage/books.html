@@ -47,7 +47,7 @@ title: Edit Books In Group
         <button onclick='OnBookAddNew()'>Add New</button><br>
         <button onclick='OnBookDelete()' style="background-color: red;">Delete</button><br>
         <br><br><br><br>
-        <button onclick='OnBookSave()'>Save</button>
+        <button id='saveButton'>Save</button>
     </div>    
 </div>
 
@@ -93,7 +93,7 @@ title: Edit Books In Group
     // several other function need this, to avoid re-query index...
     var selectedGroupIndex = 0;
     var selectedBookIndex = -1;
-    
+
     function GetSelectedBookList()
     {
         if (selectedGroupIndex < 0)
@@ -189,6 +189,7 @@ title: Edit Books In Group
         [list[selectedBookIndex-1], list[selectedBookIndex]] = [list[selectedBookIndex], list[selectedBookIndex-1]];
         selectedBookIndex--;
         RefreshBookList();
+        BooksSaver.OnChanged();
     }
 
     function OnBookMoveDown()
@@ -200,6 +201,7 @@ title: Edit Books In Group
         [list[selectedBookIndex+1], list[selectedBookIndex]] = [list[selectedBookIndex], list[selectedBookIndex+1]];
         selectedBookIndex++;
         RefreshBookList();
+        BooksSaver.OnChanged();
     }
 
     function OnChangeGroup(newGroupIndex)
@@ -227,6 +229,7 @@ title: Edit Books In Group
         selectedBookIndex = -1;
         RefreshBookList();
         OnBookSelectionChanged(-1);
+        BooksSaver.OnChanged();
     }
 
     function OnBookPickUpImage(method)
@@ -281,6 +284,7 @@ title: Edit Books In Group
 
         RefreshBookList();
         document.getElementById("preview").innerHTML = FormatBook(book);
+        BooksSaver.OnChanged();
     }
 
     function OnBookAddNew()
@@ -301,6 +305,7 @@ title: Edit Books In Group
 
         RefreshBookList();
         OnBookSelectionChanged(selectedBookIndex);
+        BooksSaver.OnChanged();
     }
 
     function OnBookDelete()
@@ -320,15 +325,13 @@ title: Edit Books In Group
         RefreshBookList();
 
         OnBookSelectionChanged(-1);
-    }
-
-    function OnBookSave()
-    {
-        SaveBookList(books);
+        BooksSaver.OnChanged();
     }
 
     selectedGroupIndex = getURLParameterAsInt('group', selectedGroupIndex);
     selectedBookIndex = getURLParameterAsInt('book', selectedBookIndex);
+    
+    BooksSaver.Initialize(books, 'saveButton');
     
     RefreshGroupList();
     RefreshBookList();

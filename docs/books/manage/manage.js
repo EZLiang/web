@@ -1,19 +1,61 @@
 
-function SaveBookList(newBookList)
-{
-    var payload = JSON.stringify(newBookList, null, 1);
+class BooksSaver
+{    
+    static _instance = null;
 
-    var request = new XMLHttpRequest();
-    request.open('POST', '/admin/books/readingList', true);
-    request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
-    request.responseType = 'text';
+    _bookList = null;
+    _saveButton = null;
+    _colorNoChange = null;
+    _colorChanged = 'green';
+    _colorSaveError = 'yellow';
 
-    request.onload = function() {
-        alert(request.response);
-    };
+    static Initialize(bookList, saveButtonId) {
+        BooksSaver._instance = new BooksSaver(bookList, saveButtonId);
+    }
 
-    request.send(payload);
-}
+    constructor(bookList, saveButtonId) {
+        this._bookList = bookList;
+        this._saveButton = document.getElementById(saveButtonId);
+        this._saveButton.onclick = this._OnSave;
+        this._colorNoChange = this._saveButton.style.backgroundColor;
+
+        window.onbeforeunload = () => {
+            if (this._saveButton.style.backgroundColor != this._colorNoChange) {
+                return 'The changes have not been saved yet, are you sure to discard the chagnes?';
+            }
+            return undefined;
+        };
+    }
+
+    static OnChanged() {
+        BooksSaver._instance._saveButton.style.backgroundColor = BooksSaver._instance._colorChanged;
+    }
+
+    _OnSave()
+    {
+        // this == button
+
+        if (BooksSaver._instance._saveButton.style.backgroundColor == BooksSaver._instance._colorNoChange) {
+            return;
+        } 
+
+        var payload = JSON.stringify(BooksSaver._instance._bookList, null, 1);
+
+        var request = new XMLHttpRequest();
+        request.open('POST', '/admin/books/readingList', true);
+        request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+        request.responseType = 'text';
+
+        request.onload = function() {
+            // this == XMLHttpRequest
+            let bgColor = (request.status == 200) ? BooksSaver._instance._colorNoChange : BooksSaver._instance._colorSaveError;
+            BooksSaver._instance._saveButton.style.backgroundColor = bgColor;
+            alert(request.response);
+        };
+
+        request.send(payload);
+    }
+};
 
 function GetEditLink(groupIndex, bookIndex)
 {

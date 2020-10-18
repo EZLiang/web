@@ -40,7 +40,7 @@ title: Edit Books Groups
             <br>
             <input id='groupHidden' type="checkbox" style="width:initial;" onclick="OnGroupHiddenChanged(this.checked)"> Hidden<br>
     
-            <button style="vertical-align: bottom; margin-top:8rem;" onclick='OnGroupSave()'>Save</button>
+            <button id='saveButton' style="vertical-align: bottom; margin-top:8rem;">Save</button>
         </td>
     </tr>
     <tr>
@@ -78,6 +78,7 @@ title: Edit Books Groups
         groupBox.innerHTML = groupHtml;
     }
 
+    BooksSaver.Initialize(books, 'saveButton');
     // initial populating the list
     RefreshGroupList();
 
@@ -116,6 +117,7 @@ title: Edit Books Groups
             return;
 
         books[selectedGroup].hidden = bHidden;
+        BooksSaver.OnChanged();
     }
 
     function OnGroupMoveUp()
@@ -126,6 +128,7 @@ title: Edit Books Groups
         [books[selectedGroup-1], books[selectedGroup]] = [books[selectedGroup], books[selectedGroup-1]];
         selectedGroup--;
         RefreshGroupList();
+        BooksSaver.OnChanged();
     }
 
     function OnGroupMoveDown()
@@ -136,6 +139,7 @@ title: Edit Books Groups
         [books[selectedGroup+1], books[selectedGroup]] = [books[selectedGroup], books[selectedGroup+1]];
         selectedGroup++;
         RefreshGroupList();
+        BooksSaver.OnChanged();
     }
 
     function OnGroupRename()
@@ -155,6 +159,7 @@ title: Edit Books Groups
         books[selectedGroup].group = groupNameBox.value;
 
         RefreshGroupList();
+        BooksSaver.OnChanged();
     }
 
     function OnGroupCreate()
@@ -172,11 +177,7 @@ title: Edit Books Groups
         })
 
         RefreshGroupList();
-    }
-
-    function OnGroupSave()
-    {
-        SaveBookList(books);
+        BooksSaver.OnChanged();
     }
 
 </script>
