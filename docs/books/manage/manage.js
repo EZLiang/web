@@ -77,9 +77,13 @@ function FormatBook(book, groupIndex = -1, bookIndex = -1)
         html = '<img align="left" style="width: 8rem; padding: 0.5rem;" src="../images/' + book.image + '">';
     }
 
+
     html +=
         '<strong>' + book.title + '</strong><br>' +
         'Author(s): <i>' + book.author + '</i><br>' +
+    
+        ((book.note == undefined || book.note == '') ? '' : 'Note: ' + book.note + '<br>') +
+
         book.description + GetEditLink(groupIndex, bookIndex) +
         '<br clear="all"><br clear="all">';
 
@@ -111,7 +115,7 @@ function FindBookFieldWithSpecialChar(book)
     let fieldList = {
         title: book.title,
         author: book.author,
-        comment: book.comment,
+        note: book.note,
         description: book.description
     };
 

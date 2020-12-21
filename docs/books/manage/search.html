@@ -14,7 +14,7 @@ title: Search Books
 Search From: 
 <input id="searchTitle" type="checkbox" checked>Title</checkbox>
 <input id="searchAuthor" type="checkbox" checked>Author</checkbox>
-<input id="searchComment" type="checkbox" checked>Comment</checkbox>
+<input id="searchNote" type="checkbox" checked>Note</checkbox>
 <input id="searchDescription" type="checkbox" checked>Description</checkbox>
 
 <hr>
@@ -41,7 +41,7 @@ Search From:
             _regExpWhat = null;
             _fromTitle = false;
             _fromAuthor = false;
-            _fromComment = false;
+            _fromNote = false;
             _fromDescription = false;
 
             Initialize() {
@@ -55,10 +55,10 @@ Search From:
                 
                 this._fromTitle = document.getElementById('searchTitle').checked;
                 this._fromAuthor = document.getElementById('searchAuthor').checked;
-                this._fromComment = document.getElementById('searchComment').checked;
+                this._fromNote = document.getElementById('searchNote').checked;
                 this._fromDescription = document.getElementById('searchDescription').checked;
 
-                if (!this._fromTitle && !this._fromAuthor && !this._fromComment && !this._fromDescription) {
+                if (!this._fromTitle && !this._fromAuthor && !this._fromNote && !this._fromDescription) {
                     alert('no field selected to search');
                     return false;
                 }
@@ -69,7 +69,7 @@ Search From:
             IsMatch(book) {
                 return (this._fromTitle && book.title.search(this._regExpWhat) >= 0) ||
                     (this._fromAuthor && book.author.search(this._regExpWhat) >= 0) ||
-                    (this._fromComment && book.comment !== undefined && book.comment.search(this._regExpWhat) >= 0) ||
+                    (this._fromNote && book.note !== undefined && book.note.search(this._regExpWhat) >= 0) ||
                     (this._fromDescription && book.description.search(this._regExpWhat) >= 0);
             }
         }

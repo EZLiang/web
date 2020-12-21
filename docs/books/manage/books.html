@@ -64,8 +64,8 @@ title: Edit Books In Group
         <textarea id="bookAuthor" rows="2" cols="50"></textarea><br>
         <div class="flex-container">
             <div>
-                Comment:<br>
-                <textarea id="bookComment" rows="4" cols="35"></textarea><br>
+                Note:<br>
+                <textarea id="bookNote" rows="4" cols="35"></textarea><br>
                 Image: <label id="bookImageName"></label><br>
                 <button style="width: 8rem;" onclick="OnBookPickUpImage('GET')">Pick From BookImages</button>
                 <button style="width: 8rem;" onclick="OnBookPickUpImage('PUT')">Pick From Downloads</button>
@@ -163,7 +163,7 @@ title: Edit Books In Group
         if (book == null) {
             document.getElementById("bookTitle").value = "";
             document.getElementById("bookAuthor").value = "";
-            document.getElementById("bookComment").value = "";
+            document.getElementById("bookNote").value = "";
             document.getElementById("bookDescription").value = "";            
             RefreshBookImageField("");
 
@@ -172,7 +172,7 @@ title: Edit Books In Group
         else {
             document.getElementById("bookTitle").value = book.title;
             document.getElementById("bookAuthor").value = book.author;
-            document.getElementById("bookComment").value = book.comment === undefined ? "" : book.comment;
+            document.getElementById("bookNote").value = book.note === undefined ? "" : book.note;
             document.getElementById("bookDescription").value = book.description;
             RefreshBookImageField(book.image);
 
@@ -256,7 +256,7 @@ title: Edit Books In Group
         let newBook = {
             title: document.getElementById('bookTitle').value,
             author: document.getElementById('bookAuthor').value,
-            comment: document.getElementById('bookComment').value,
+            note: document.getElementById('bookNote').value,
             description: document.getElementById('bookDescription').value,
             image: document.getElementById('bookImageName').innerText         
         }
@@ -278,7 +278,7 @@ title: Edit Books In Group
 
         book.title = newBook.title;
         book.author = newBook.author;
-        book.comment = newBook.comment;
+        book.note = newBook.note;
         book.description = newBook.description;
         book.image = newBook.image;
 
@@ -296,7 +296,7 @@ title: Edit Books In Group
         list.push({
             title: "",
             author: "",
-            comment: "",
+            note: "",
             description: "",
             image: ""
         });

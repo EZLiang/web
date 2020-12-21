@@ -54,8 +54,13 @@ class LatexGenerator
     {
         this.mResult += "\\begin{minipage}[t]{0.83\\textwidth}\n" +
             "\\textbf{" + LaTeXEscaper.Escape(book.title) + "}\\par\n" +
-            "\\textit{" + LaTeXEscaper.Escape(book.author) + "}\\par\n" +
-            LaTeXEscaper.Escape(book.description) + "\n" +
+            "\\textit{" + LaTeXEscaper.Escape(book.author) + "}\\par\n";
+
+        if (book.note != undefined && book.note != "") {
+            this.mResult += "(Note: " + LaTeXEscaper.Escape(book.note) + ")\\par\n";
+        }
+
+        this.mResult += LaTeXEscaper.Escape(book.description) + "\n" +
             "\\end{minipage}\n";
     }
 
@@ -239,6 +244,7 @@ function GeneratePdf(latexFile, outputDir)
         const execFile = require('child_process').execFile;
         const child = execFile('pdflatex.exe', args, (error, stdout, stderr) => {
             if (error) {
+                console.error('error', error);
                 console.error('stderr', stderr);
                 let e = PdfTeXLog.ParseLog(fs.readFileSync(outputDir + "\\ReadingList.log", "utf-8"));
                 reject(e);
