@@ -135,6 +135,54 @@ class AdminImage
         AdminImage._PickUp(response, '');
     }
 
+    static NewImage(request, response, url, paths)
+    {
+        function GetNextAvailableImageName()
+        {
+            let snList = [];
+
+            let regName = new RegExp('books-\\d+\.*', 'i');
+            let regNumber = new RegExp('\\d+');
+
+            let onDiskImgList = fs.readdirSync(sImgFolder);
+            onDiskImgList.forEach(name => {
+                if (regName.test(name)) {
+                    let n = regNumber.exec(name)[0];
+                    snList.push(n);
+                }
+            });
+
+            let sn = -1;
+            snList.sort();
+            for (let n = 0; n < snList.length; n++) {
+                let i = parseInt(snList[n]);
+                if (i != n) {
+                    sn = n;
+                    break;
+                }
+            }
+
+            if (sn < 0) {
+                // no gap found
+                sn = snList.length;
+            }
+
+            const zeroPad = (num, places) => String(num).padStart(places, '0');
+            let newImgFile = 'books-' + zeroPad(sn, 5);
+            return newImgFile;
+        }
+         
+        let imgFileName = GetNextAvailableImageName();
+        let imgExtensionName = '.jpg'; // to-do: from request
+        imgFileName += imgExtensionName;
+        let newImgPath = sImgFolder + imgFileName + imgExtensionName;
+
+        // to-do: save
+
+        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.write(imgFileName);
+        response.end();
+    }
 }   // AdminImage
 
 
@@ -276,6 +324,10 @@ class Dispatcher
                     path: 'picker',
                     method: 'PUT',
                     action: AdminImage.PickUpNew
+                }, {
+                    path: 'new',
+                    method: 'PUT',
+                    action: AdminImage.NewImage
                 }
             ]
         }, {
