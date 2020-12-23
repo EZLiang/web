@@ -71,10 +71,7 @@ title: Edit Books In Group
             <div>
                 Note:<br>
                 <textarea id="bookNote" rows="4" cols="35"></textarea><br>
-                Image: <label id="bookImageName"></label><br>
-                <button style="width: 8rem;" onclick="OnBookPickUpImage('GET')">Pick From BookImages</button>
-                <button style="width: 8rem;" onclick="OnBookPickUpImage('PUT')">Pick From Downloads</button>
-                <textarea id="imagetarget">Click here then paste image</textarea>
+                Image: <input type="text" size="28" id="bookImageName" readonly placeholder="paste image">
             </div>
             <div style="display: flex;">
                 <img id="bookImage" style="width: 6rem; padding-left: 0.5rem; align-self: flex-end;" />
@@ -100,15 +97,18 @@ title: Edit Books In Group
     var selectedGroupIndex = 0;
     var selectedBookIndex = -1;
 
-    document.getElementById("imagetarget").addEventListener("paste", function(e) {
+    document.getElementById("bookImageName").addEventListener("paste", function(e) {
         var file = e.clipboardData.files[0];
         console.log(file);
         var oReq = new XMLHttpRequest();
         oReq.open("POST", "/admin/books/image/new", true);
         oReq.send(file);
         oReq.onload = function() {
-            if (oReq.response != '') {
-                RefreshBookImageField(oReq.response);
+            if (oReq.status == 200) {
+                RefreshBookImageField(oReq.responseText);
+            }
+            else {
+                document.getElementById("bookImageName").value = oReq.status + ': ' + oReq.responseText;
             }
         };
     });
@@ -161,7 +161,7 @@ title: Edit Books In Group
 
     function RefreshBookImageField(imgName)
     {
-        document.getElementById("bookImageName").innerText = imgName;
+        document.getElementById("bookImageName").value = imgName;
         document.getElementById("bookImage").src = '../images/' + imgName;
     }
 
@@ -251,21 +251,6 @@ title: Edit Books In Group
         BooksSaver.OnChanged();
     }
 
-    function OnBookPickUpImage(method)
-    {
-        var request = new XMLHttpRequest();
-        request.open(method, '/admin/books/image/picker', true);
-        request.responseType = 'text';
-
-        request.onload = function() {
-            if (request.response != '') {
-                RefreshBookImageField(request.response);
-            }
-        };
-
-        request.send();
-    }
-
     function OnBookApplyChange()
     {
         var book = GetSelectedBook();
@@ -277,7 +262,7 @@ title: Edit Books In Group
             author: document.getElementById('bookAuthor').value,
             note: document.getElementById('bookNote').value,
             description: document.getElementById('bookDescription').value,
-            image: document.getElementById('bookImageName').innerText         
+            image: document.getElementById('bookImageName').value         
         }
 
         if (newBook.title == '') {

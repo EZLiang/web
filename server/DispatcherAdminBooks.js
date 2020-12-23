@@ -55,85 +55,6 @@ class AdminImage
         response.end();
     }
 
-    static _PickUp(response, initialFolder)
-    {
-        function CopyImageFile(imgPath)
-        {
-            let snList = [];
-
-            // find available file number
-            let regName = new RegExp('books-\\d+\.*', 'i');
-            let regNumber = new RegExp('\\d+');
-            let onDiskImgList = fs.readdirSync(sImgFolder);
-            onDiskImgList.forEach(name => {
-                if (regName.test(name)) {
-                    let n = regNumber.exec(name)[0];
-                    snList.push(n);
-                }
-            });
-
-            let sn = -1;
-            snList.sort();
-            for (let n = 0; n < snList.length; n++) {
-                let i = parseInt(snList[n]);
-                if (i != n) {
-                    sn = n;
-                    break;
-                }
-            }
-
-            if (sn < 0) {
-                // no gap found
-                sn = snList.length;
-            }
-
-            const zeroPad = (num, places) => String(num).padStart(places, '0');
-            let newImgFile = zeroPad(sn, 5);
-            let imgExtension = imgPath.substring(imgPath.lastIndexOf('.'));
-            newImgFile = 'books-' + newImgFile + imgExtension;
-
-            let newImgPath = sImgFolder + newImgFile;
-            fs.copyFileSync(imgPath, newImgPath);
-            return newImgFile;
-        }
-
-        function ProcessPickedUpImage(imgFile, imgPath)
-        {
-            if (! imgPath.toLowerCase().startsWith(sImgFolder.toLowerCase())) {
-                // only make a copy and get a new name if picking from outside of books' image folder
-                imgFile = CopyImageFile(imgPath);
-            }
-
-            response.writeHead(200, { 'Content-Type': 'text/plain' });
-            response.write(imgFile);
-            response.end();
-        }
-
-        const execFile = require('child_process').execFile;
-        const child = execFile('powershell.exe', [sImgPickerPs, initialFolder], (error, stdout, stderr) => {
-            if (error) {
-                console.error('stderr', stderr);
-                throw error;
-            }
-
-            let imgPicker = JSON.parse(stdout);
-            if (imgPicker.ImageFile === undefined) {
-                response.end();
-                return;
-            }
-
-            ProcessPickedUpImage(imgPicker.ImageFile, imgPicker.ImagePath);
-        });
-    }
-
-    static PickUpExisting(request, response, url, paths)
-    {
-        AdminImage._PickUp(response, sImgFolder);
-    }
-    static PickUpNew(request, response, url, paths)
-    {
-        AdminImage._PickUp(response, '');
-    }
 
     static NewImage(request, response, url, paths)
     {
@@ -171,15 +92,11 @@ class AdminImage
             let newImgFile = 'books-' + zeroPad(sn, 5);
             return newImgFile;
         }
-         
-        var blobparts = []
-        request.on('data', function (chunk) {
-            blobparts.push(chunk);
-        });
-        request.on('end', function () {
-            let imgFileName = GetNextAvailableImageName();
-            var extension;
-            switch (request.headers['content-type']) {
+
+        function SaveImage(mimeType, imgParts)
+        {
+            let extension = '';
+            switch (mimeType) {
                 case 'image/png':
                     extension = '.png'
                     break;
@@ -188,20 +105,34 @@ class AdminImage
                     extension = '.jpg'
                     break
                 default:
-                    response.writeHead(400);
+                    if (mimeType == undefined ) {
+                        mimeType = '(none)';
+                    }
+                    response.writeHead(400, { 'Content-Type': 'text/plain' });
+                    response.write('Invalid mime: ' + mimeType);
                     response.end()
                     return;
             }
+
+            let imgFileName = GetNextAvailableImageName();
             imgFileName += extension;
             let newImgPath = sImgFolder + imgFileName;
 
-            var fd = fs.openSync(newImgPath, 'w');
-            blobparts.forEach(blob => fs.writeSync(fd, blob));
+            let fd = fs.openSync(newImgPath, 'w');
+            imgParts.forEach(part => fs.writeSync(fd, part));
             fs.closeSync(fd);
 
             response.writeHead(200, { 'Content-Type': 'text/plain' });
             response.write(imgFileName);
             response.end();
+        }
+         
+        var blobParts = []
+        request.on('data', function (chunk) {
+            blobParts.push(chunk);
+        });
+        request.on('end', function () {
+            SaveImage(request.headers['content-type'], blobParts);
         });
     }
 }   // AdminImage
@@ -337,14 +268,6 @@ class Dispatcher
                     path: 'list',
                     method: 'GET',
                     action: AdminImage.GetList
-                }, {
-                    path: 'picker',
-                    method: 'GET',
-                    action: AdminImage.PickUpExisting
-                }, {
-                    path: 'picker',
-                    method: 'PUT',
-                    action: AdminImage.PickUpNew
                 }, {
                     path: 'new',
                     method: 'POST',
