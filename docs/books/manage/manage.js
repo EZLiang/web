@@ -2,6 +2,7 @@
 class BooksSaver
 {    
     static _instance = null;
+    static _autoSaveInterval = 1000 * 60 * 5;
 
     _bookList = null;
     _saveButton = null;
@@ -11,6 +12,9 @@ class BooksSaver
 
     static Initialize(bookList, saveButtonId) {
         BooksSaver._instance = new BooksSaver(bookList, saveButtonId);
+        setInterval( () => {
+            BooksSaver._instance._OnSave();
+        }, BooksSaver._autoSaveInterval);
     }
 
     constructor(bookList, saveButtonId) {
@@ -48,9 +52,13 @@ class BooksSaver
 
         request.onload = function() {
             // this == XMLHttpRequest
-            let bgColor = (request.status == 200) ? BooksSaver._instance._colorNoChange : BooksSaver._instance._colorSaveError;
-            BooksSaver._instance._saveButton.style.backgroundColor = bgColor;
-            alert(request.response);
+            if (request.status == 200) {
+                BooksSaver._instance._saveButton.style.backgroundColor = BooksSaver._instance._colorNoChange;
+            }
+            else {
+                BooksSaver._instance._saveButton.style.backgroundColor = BooksSaver._instance._colorSaveError;
+                alert(request.status + '/' + request.statusText + ': ' + request.responseText);
+            }
         };
 
         request.send(payload);
