@@ -19,6 +19,11 @@ title: Edit Books In Group
         width: 8rem;
     }
 
+    #imagetarget {
+        border-radius: 1rem;
+        border: 0.2rem solid black;
+    }
+
 </style>
 
 <select id="groupListBox" onchange="OnGroupSelectionChanged(this.value)"></select>
@@ -69,6 +74,7 @@ title: Edit Books In Group
                 Image: <label id="bookImageName"></label><br>
                 <button style="width: 8rem;" onclick="OnBookPickUpImage('GET')">Pick From BookImages</button>
                 <button style="width: 8rem;" onclick="OnBookPickUpImage('PUT')">Pick From Downloads</button>
+                <textarea id="imagetarget">Click here then paste image</textarea>
             </div>
             <div style="display: flex;">
                 <img id="bookImage" style="width: 6rem; padding-left: 0.5rem; align-self: flex-end;" />
@@ -93,6 +99,14 @@ title: Edit Books In Group
     // several other function need this, to avoid re-query index...
     var selectedGroupIndex = 0;
     var selectedBookIndex = -1;
+
+    document.getElementById("imagetarget").addEventListener("paste", function(e) {
+        var file = e.clipboardData.files[0];
+        console.log(file);
+        var oReq = new XMLHttpRequest();
+        oReq.open("POST", "/admin/books/image/new", true);
+        oReq.send(file);
+    });
 
     function GetSelectedBookList()
     {

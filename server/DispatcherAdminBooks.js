@@ -276,6 +276,9 @@ class Dispatcher
                     path: 'picker',
                     method: 'PUT',
                     action: AdminImage.PickUpNew
+                }, {
+                    path: 'new',
+                    method: 'POST'
                 }
             ]
         }, {

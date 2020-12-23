@@ -79,7 +79,8 @@ var books =
     "image": "books-00016.jpg",
     "title": "The Math Book",
     "author": "Clifford Pickover",
-    "description": "Math&#39;s infinite mysteries unfold in this paperback edition of the bestselling TheMath Book. Beginning millions of years ago with ancient &ldquo;ant odometers&rdquo; and moving through time to our modern-day quest for new dimensions, prolific polymath Clifford Pickover covers 250 milestones in mathematical history"
+    "description": "Math&#39;s infinite mysteries unfold in this paperback edition of the bestselling TheMath Book. Beginning millions of years ago with ancient &ldquo;ant odometers&rdquo; and moving through time to our modern-day quest for new dimensions, prolific polymath Clifford Pickover covers 250 milestones in mathematical history",
+    "note": ""
    },
    {
     "image": "books-00017.jpg",
@@ -490,6 +491,15 @@ var books =
     "title": "A Walk Through Combinatorics: An Introduction to Enumeration and Graph Theory (Second Edition)",
     "author": "Mikl&oacute;s B&oacute;na",
     "description": "This is a textbook for an introductory combinatorics course that can take up one or two semesters. An extensive list of problems, ranging from routine exercises to research questions, is included. In each section, there are also exercises that contain material not explicitly discussed in the preceding text, so as to provide instructors with extra choices if they want to shift the emphasis of their course."
+   },
+   {
+    "image": "books-00115.jpg",
+    "title": "The Best Writing on Mathematics 2020gg  g",
+    "author": "Mircea Pitici",
+    "bought": "2020.09.03 - pre-order",
+    "description": "This annual anthology brings together the year&#39;s finest mathematics writing from around the world. Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else-and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday aspects of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
+    "comment": "",
+    "note": ""
    }
   ]
  },
@@ -707,14 +717,6 @@ var books =
     "description": "This book is about differential geometry of space curves and surfaces. The formulation and presentation are largely based on a tensor calculus approach. It can be used as part of a course on tensor calculus as well as a textbook or a reference for an intermediate-level course on differential geometry of curves and surfaces. The book is furnished with an index, extensive sets of exercises and many cross references, which are hyperlinked for the ebook users, to facilitate linking related concepts and sections. The book also contains a considerable number of 2D and 3D graphic illustrations to help the readers and users to visualize the ideas and understand the abstract concepts. We also provided an introductory chapter where the main concepts and techniques needed to understand the offered materials of differential geometry are outlined to make the book fairly self-contained and reduce the need for external references."
    },
    {
-    "image": "books-00115.jpg",
-    "title": "The Best Writing on Mathematics 2020",
-    "author": "Mircea Pitici",
-    "bought": "2020.09.03 - pre-order",
-    "description": "This annual anthology brings together the year&#39;s finest mathematics writing from around the world. Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else-and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday aspects of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
-    "comment": ""
-   },
-   {
     "image": "books-00116.jpg",
     "title": "How to Solve It: A New Aspect of Mathematical Method",
     "author": "G. Polya, John H. Conway",
@@ -734,7 +736,8 @@ var books =
     "title": "A Decade of the Berkeley Math Circle: The American Experience",
     "author": "Zvezdelina Stankova, Tom Rike",
     "bought": "2020.09.09",
-    "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics."
+    "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics.",
+    "note": ""
    }
   ]
  },
