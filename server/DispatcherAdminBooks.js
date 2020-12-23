@@ -172,16 +172,37 @@ class AdminImage
             return newImgFile;
         }
          
-        let imgFileName = GetNextAvailableImageName();
-        let imgExtensionName = '.jpg'; // to-do: from request
-        imgFileName += imgExtensionName;
-        let newImgPath = sImgFolder + imgFileName + imgExtensionName;
+        var blobparts = []
+        request.on('data', function (chunk) {
+            blobparts.push(chunk);
+        });
+        request.on('end', function () {
+            let imgFileName = GetNextAvailableImageName();
+            var extension;
+            switch (request.headers['content-type']) {
+                case 'image/png':
+                    extension = '.png'
+                    break;
+                case 'image/jpg':
+                case 'image/jpeg':
+                    extension = '.jpg'
+                    break
+                default:
+                    response.writeHead(400);
+                    response.end()
+                    return;
+            }
+            imgFileName += extension;
+            let newImgPath = sImgFolder + imgFileName;
 
-        // to-do: save
+            var fd = fs.openSync(newImgPath, 'w');
+            blobparts.forEach(blob => fs.writeSync(fd, blob));
+            fs.closeSync(fd);
 
-        response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.write(imgFileName);
-        response.end();
+            response.writeHead(200, { 'Content-Type': 'text/plain' });
+            response.write(imgFileName);
+            response.end();
+        });
     }
 }   // AdminImage
 
@@ -326,12 +347,8 @@ class Dispatcher
                     action: AdminImage.PickUpNew
                 }, {
                     path: 'new',
-<<<<<<< HEAD
-                    method: 'POST'
-=======
-                    method: 'PUT',
+                    method: 'POST',
                     action: AdminImage.NewImage
->>>>>>> d0566f4a109fbbe79c46a4b601023d9cf94220d3
                 }
             ]
         }, {
