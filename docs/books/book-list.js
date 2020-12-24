@@ -738,6 +738,20 @@ var books =
     "bought": "2020.09.09",
     "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics.",
     "note": ""
+   },
+   {
+    "title": "Linear Optimization and Duality - A Modern Exposition",
+    "author": "Craig A. Tovey",
+    "note": "",
+    "description": "Linear Optimization and Dualiyy: A Modern Exposition departs from convention in significant ways. Standard linear programming textbooks present the material in the order in which it was discovered. Duality is treated as a difficult add-on after coverage of formulation, the simplex method, and polyhedral theory. Students end up without knowing duality in their bones.",
+    "image": "books-00126.png"
+   },
+   {
+    "title": "Twists, Tilings, and Tessellations - \nMathematical Methods for Geometric Origami",
+    "author": "Robert J. Lang",
+    "note": "",
+    "description": "Twists, Tilings, and Tessellation describes the underlying principles and mathematics of the broad and exciting field of abstract and mathematical origami, most notably the field of origami tessellations. It contains folding instructions, underlying principles, mathematical concepts, and many beautiful photos of the latest work in this fast-expanding field.",
+    "image": "books-00127.png"
    }
   ]
  },

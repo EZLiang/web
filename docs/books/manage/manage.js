@@ -2,7 +2,7 @@
 class BooksSaver
 {    
     static _instance = null;
-    static _autoSaveInterval = 1000 * 60 * 5;
+    static _autoSaveInterval = 1000 * 60 * 2;
 
     _bookList = null;
     _saveButton = null;
