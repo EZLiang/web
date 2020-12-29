@@ -857,6 +857,55 @@ var books =
     "note": "",
     "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.\n<br>\nGroup Theory in a Nutshell for Physicists fills this gap, providing a user-friendly and classroom-tested text that focuses on those aspects of group theory physicists most need to know. From the basic intuitive notion of a group, A. Zee takes readers all the way up to how theories based on gauge groups could unify three of the four fundamental forces. He also includes a concise review of the linear algebra needed for group theory, making the book ideal for self-study.\n<br>\n<ul>\n<li>Provides physicists with a modern and accessible introduction to group theory</li>\n<li>Covers applications to various areas of physics, including field theory, particle physics, relativity, and much more</li>\n<li>Topics include finite group and character tables; real, pseudoreal, and complex representations; Weyl, Dirac, and Majorana equations; the expanding universe and group theory; grand unification; and much more</li>\n<li>The essential textbook for students and an invaluable resource for researchers</li>\n<li>Features a brief, self-contained treatment of linear algebra</li>\n<li>An online illustration package is available to professors</li>\n<li>Solutions manual (available only to professors)</li>\n</ol>",
     "image": "books-00131.png"
+   },
+   {
+    "title": "Abstract Algebra for Beginners: A Rigorous Introduction to Groups, Rings, Fields, Vector Spaces, Modules, Substructures, Homomorphisms, Quotients, ... Group Actions, Polynomials, and Galois Theory",
+    "author": "Steve Warner",
+    "note": "",
+    "description": "\"Abstract Algebra for Beginners\" consists of a series of basic to intermediate lessons in abstract algebra. In addition, all the proofwriting skills that are essential for advanced study in mathematics are covered and reviewed extensively. Abstract Algebra for Beginners is perfect for:\n<ul>\n<li>professors teaching an undergraduate course or basic graduate course in abstract algebra.</li>\n<li>high school teachers working with advanced math students.</li>\n<li>students wishing to see the type of mathematics they would be exposed to as a math major.</li>\n</ul>",
+    "image": "books-00132.png"
+   },
+   {
+    "title": "Tales of Impossibility: The 2000-Year Quest to Solve the Mathematical Problems of Antiquity",
+    "author": "David S. Richeson",
+    "note": "",
+    "description": "A comprehensive look at four of the most famous problems in mathematics\n<br>\n\n<i>Tales of Impossibility</i> recounts the intriguing story of the so-called problems of antiquity, four of the most famous and studied questions in the history of mathematics. First posed by the ancient Greeks, these compass and straightedge problems-squaring the circle, trisecting an angle, doubling the cube, and inscribing regular polygons in a circle-have served as ever-present muses for mathematicians for more than two millennia. David Richeson follows the trail of these problems to show that ultimately, their proofs-demonstrating the impossibility of solving them using only a compass and straightedge-depended upon and resulted in the growth of mathematics.",
+    "image": "books-00133.png"
+   },
+   {
+    "title": "Curves for the Mathematically Curious: An Anthology of the Unpredictable, Historical, Beautiful, and Romantic",
+    "author": "Julian Havil",
+    "note": "",
+    "description": "<i>Curves for the Mathematically Curious</i> is a thoughtfully curated collection of ten mathematical curves, selected by Julian Havil for their significance, mathematical interest, and beauty. Each chapter gives an account of the history and definition of a curve, providing a glimpse into the elegant and often surprising mathematics involved in its creation and evolution. In telling the ten stories, Havil introduces many mathematicians and other innovators, some whose fame has withstood the passing of years and others who have slipped into comparative obscurity. You will meet Pierre B&eacute;zier, who is known for his ubiquitous and eponymous curves, and Adolphe Quetelet, who trumpeted the ubiquity of the normal curve but whose name now hides behind the modern body mass index. These and other ingenious thinkers engaged with the challenges, incongruities, and insights to be found in these remarkable curves - and now you can share in this adventure.\n<br>\n<i>Curves for the Mathematically Curious</i> is a rigorous and enriching mathematical experience for anyone interested in curves, and the book is designed so that readers who choose can follow the details with pencil and paper. Every curve has a story worth telling.",
+    "image": "books-00134.png"
+   },
+   {
+    "title": "Math Puzzles Volume 2: More Riddles And Brain Teasers In Counting, Geometry, Probability, And Game Theory",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "What is a better fit: a square peg in a round hole, or a round peg in a square hole? Your music player seems to be playing the same songs over again. Is there something wrong with the shuffle feature, or might the songs be playing randomly? You have 100 dimes, and I have 99 pennies. At the same time, we will toss our coins in the air and let them fall on the floor. Then we meticulously count the outcomes of our tosses. You win if you show more heads than I do. What's the probability that you will win? The YouTube channel and blog Mind Your Decisions has blog posts and original videos about math that have been viewed millions of times. The problems in this book are based on some of the best puzzles in counting, geometry, and probability and game theory.",
+    "image": "books-00135.png"
+   },
+   {
+    "title": "Math Puzzles Volume 3: Even More Riddles And Brain Teasers In Geometry, Logic, Number Theory, And Probability",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "You have two ropes that each burn in 1 hour but not at a uniform rate. How can you measure 45 minutes? How can you make 6 equal triangles from 4 match sticks? How many digits are in the number 125^100? The YouTube channel and blog Mind Your Decisions has millions of views for math videos and posts. This book contains 70 puzzles divided into easy, medium, and hard puzzles in the areas of geometry, logic, number theory, and probability.",
+    "image": "books-00136.png"
+   },
+   {
+    "title": "Advanced Calculus - 2nd Edition",
+    "author": "David V. Widder",
+    "note": "",
+    "description": "This classic text by a distinguished mathematician and former Professor of Mathematics at Harvard University, leads students familiar with elementary calculus into confronting and solving more theoretical problems of advanced calculus. In his preface to the first edition, Professor Widder also recommends various ways the book may be used as a text in both applied mathematics and engineering.<br>\nBelieving that clarity of exposition depends largely on precision of statement, the author has taken pains to state exactly what is to be proved in every case. Each section consists of definitions, theorems, proofs, examples and exercises. An effort has been made to make the statement of each theorem so concise that the student can see at a glance the essential hypotheses and conclusions.<br>\nFor this second edition, the author has improved the treatment of Stieltjes integrals to make it more useful to the reader less than familiar with the basic facts about the Riemann integral. In addition the material on series has been augmented by the inclusion of the method of partial summation of the Schwarz-Holder inequalities, and of additional results about power series. Carefully selected exercises, graded in difficulty, are found in abundance throughout the book; answers to many of them are contained in a final section.",
+    "image": "books-00137.png"
+   },
+   {
+    "title": "The Art of Computer Programming, Volumes 1-4A Boxed Set - 1st Edition",
+    "author": "Donald Knuth",
+    "note": "",
+    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf.\n<br><br>\n\nThe bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.<br>\n--- <i>Byte</i>, September 1995\n<br><br>\n\nPrimarily written as a reference, some people have nevertheless found it possible and interesting to read each volume from beginning to end. A programmer in China even compared the experience to reading a poem.<br>\nIf you think you're a really good programmer... read [Knuth's] Art of Computer Programming... You should definitely send me a r&eacute;sum&eacute; if you can read the whole thing.<br>\n--- <i>Bill Gates</i>",
+    "image": "books-00138.png"
    }
   ]
  },
