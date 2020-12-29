@@ -500,6 +500,70 @@ var books =
     "description": "This annual anthology brings together the year&#39;s finest mathematics writing from around the world. Featuring promising new voices alongside some of the foremost names in the field, The Best Writing on Mathematics 2020 makes available to a wide audience many articles not easily found anywhere else-and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday aspects of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
     "comment": "",
     "note": ""
+   },
+   {
+    "image": "books-00117.jpg",
+    "title": "The Art and Craft of Problem Solving - 2nd Edition",
+    "author": "Paul Zeitz",
+    "bought": "2020.09.09",
+    "description": "The newly revised Second Edtion of this distinctive text uniquely blends interesting problems with strategies, tools, and techniques to develop mathematical skill and intuition necessary for problem solving. Readers are encouraged to do math rather than just study it. The author draws upon his experience as a coach for the International Mathematics Olympiad to give students an enhanced sense of mathematics and the ability to investigate and solve problems."
+   },
+   {
+    "image": "books-00118.jpg",
+    "title": "A Decade of the Berkeley Math Circle: The American Experience",
+    "author": "Zvezdelina Stankova, Tom Rike",
+    "bought": "2020.09.09",
+    "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics.",
+    "note": ""
+   },
+   {
+    "title": "Reflections on Relativity",
+    "author": "Kevin Brown",
+    "note": "",
+    "description": "\"Reflections on Relativity\" is a comprehensive presentation of the classical, special, and general theories of relativity, including in-depth historical perspectives, showing how the relativity principle has repeatedly inspired advances in our understanding of the physical world.",
+    "image": "books-00128.png"
+   },
+   {
+    "title": "Book of Proof",
+    "author": "Richard Hammack",
+    "note": "",
+    "description": "This book is an introduction to the language and standard proof methods of mathematics. It is a bridge from the computational courses (such as calculus or differential equations) that students typically encounter in their first year of college to a more abstract outlook. It lays a foundation for more theoretical courses such as topology, analysis and abstract algebra. Although it may be more meaningful to the student who has had some calculus, there is really no prerequisite other than a measure of mathematical maturity.\n\nTopics include sets, logic, counting, methods of conditional and non-conditional proof, disproof, induction, relations, functions, calculus proofs and infinite cardinality.",
+    "image": "books-00018.png"
+   },
+   {
+    "title": "Mathematics and Plausible Reasoning",
+    "author": "George Polya",
+    "note": "",
+    "description": "2014 Reprint of 1954 American Edition. Full facsimile of the original edition, not reproduced with Optical Recognition Software. This two volume classic comprises two titles: \"Patterns of Plausible Inference\" and \"Induction and Analogy in Mathematics\". This is a guide to the practical art of plausible reasoning, particularly in mathematics, but also in every field of human activity. Using mathematics as the example par excellence, Polya shows how even the most rigorous deductive discipline is heavily dependent on techniques of guessing, inductive reasoning, and reasoning by analogy. In solving a problem, the answer must be guessed at before a proof can be given, and guesses are usually made from a knowledge of facts, experience, and hunches. The truly creative mathematician must be a good guesser first and a good prover afterward; many important theorems have been guessed but no proved until much later. In the same way, solutions to problems can be guessed, and a good guesser is much more likely to find a correct solution. This work might have been called \"How to Become a Good Guesser.\"-From the Dust Jacket.",
+    "image": "books-00060.png"
+   },
+   {
+    "title": "The Stanford Mathematics Problem Book: With Hints and Solutions",
+    "author": "George Polya, Jeremy Kilpatrick",
+    "note": "",
+    "description": "This volume features a complete set of problems, hints, and solutions based on Stanford University's well-known competitive examination in mathematics. It offers high school and college students an excellent mathematics workbook of rigorous problems that will assist in developing and cultivating their logic and probability skills. These 20 sets of intriguing problems test originality and insight rather than routine competence. They involve theorizing and verifying mathematical facts; examining the results of general statements; discovering that highly plausible conjectures can be incorrect; solving sequences of subproblems to reveal theory construction; and recognizing \"red herrings,\" in which obvious relationships among the data prove irrelevant to solutions. Hints for each problem appear in a separate section, and a final section features solutions that outline the appropriate procedures. Ideal for teachers seeking challenging practice math problems for their gifted students, this book will also help students prepare for mathematics, science, and engineering programs. Mathematics buffs of all ages will also find it a source of captivating challenges.",
+    "image": "books-00061.png"
+   },
+   {
+    "title": "Cellular Automata",
+    "author": "Edgar F Codd",
+    "note": "",
+    "description": "",
+    "image": "books-00079.png"
+   },
+   {
+    "title": "Math Puzzles Volume 1: Classic Riddles and Brain Teasers In Counting, Geometry, Probability, And Game Theory",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "You want to cut a tortilla into 8 pieces. What's the minimum number of cuts you need to make? Is it statistically harder to guess an iPhone password that uses 3-digits or one that uses 4 unique digits? Two friends agree to meet up in a bar between midnight and 1 am. Each arrives at a random time and will wait 10 minutes for the other to show before leaving. What is the probability the two will meet at the bar? What if they are playing strategically? The YouTube channel and blog Mind Your Decisions has millions of views for math videos and posts. This book is a compilation of 70 of the best puzzles, divided into 25 classic puzzles in counting and geometry, 25 probability puzzles, and 20 game theory puzzles.",
+    "image": "books-00123.png"
+   },
+   {
+    "title": "A Friendly Introduction to Group Theory",
+    "author": "David A Nash",
+    "note": "",
+    "description": "This book is an attempt at creating a friendlier, more colloquial textbook for a one-semester course in Abstract Algebra in a liberal arts setting. The textbook covers introductory group theory -- starting with basic notions and examples and moving through subgroups, quotient groups, group homomorphisms, and isomorphisms. For more information, including sample pages, a complete table of contents, and a comparison to the second edition, please see: https://web.lemoyne.edu/nashd/textbook.html",
+    "image": "books-00125.png"
    }
   ]
  },
@@ -725,21 +789,6 @@ var books =
     "comment": ""
    },
    {
-    "image": "books-00117.jpg",
-    "title": "The Art and Craft of Problem Solving - 2nd Edition",
-    "author": "Paul Zeitz",
-    "bought": "2020.09.09",
-    "description": "The newly revised Second Edtion of this distinctive text uniquely blends interesting problems with strategies, tools, and techniques to develop mathematical skill and intuition necessary for problem solving. Readers are encouraged to do math rather than just study it. The author draws upon his experience as a coach for the International Mathematics Olympiad to give students an enhanced sense of mathematics and the ability to investigate and solve problems."
-   },
-   {
-    "image": "books-00118.jpg",
-    "title": "A Decade of the Berkeley Math Circle: The American Experience",
-    "author": "Zvezdelina Stankova, Tom Rike",
-    "bought": "2020.09.09",
-    "description": "Many mathematicians have been drawn to mathematics through their experience with math circles: extracurricular programs exposing teenage students to advanced mathematical topics and a myriad of problem solving techniques and inspiring in them a lifelong love for mathematics.",
-    "note": ""
-   },
-   {
     "title": "Linear Optimization and Duality - A Modern Exposition",
     "author": "Craig A. Tovey",
     "note": "",
@@ -752,6 +801,62 @@ var books =
     "note": "",
     "description": "Twists, Tilings, and Tessellation describes the underlying principles and mathematics of the broad and exciting field of abstract and mathematical origami, most notably the field of origami tessellations. It contains folding instructions, underlying principles, mathematical concepts, and many beautiful photos of the latest work in this fast-expanding field.",
     "image": "books-00127.png"
+   },
+   {
+    "title": "The Art of Computer Programming, Volume 4, Fascicle 5: Mathematical Preliminaries Redux; Introduction to Backtracking; Dancing Links",
+    "author": "Donald Knuth",
+    "note": "",
+    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. All have admired Knuth for the breadth, clarity, accuracy, and good humor found in his books.\n<br />\nTo continue the fourth and later volumes of the set, and to update parts of the existing volumes, Knuth has created a series of small books called fascicles, which are published at regular intervals. Each fascicle encompasses a section or more of wholly new or revised material. Ultimately, the content of these fascicles will be rolled up into the comprehensive, final versions of each volume, and the enormous undertaking that began in 1962 will be complete.\n<br />\nThis fascicle covers three separate topics:\n<ol>\n<li>Mathematical Preliminaries.  Knuth writes that this portion of fascicle 5 \"extends the 'Mathematical Preliminaries' of Section 1.2 in Volume 1 to things that I didn't know about in the 1960s. Most of this new material deals with probabilities and expectations of random events; there's also an introduction to the theory of martingales.\"</li>\n<li>Backtracking: this section is the counterpart to section 7.2.1 which covered the generation of basic combinatorial patterns.  This section covers non-basic patterns, ones where the developer needs to make tentative choices and then may need to backtrack when those choices need revision.</li>\n<li>Dancing Links: this section is related to 2 above.  It develops an important data structure technique that is suitable for backtrack programming described above.</li>\n</ol>",
+    "image": "books-00078.png"
+   },
+   {
+    "title": "Number Theory",
+    "author": "George E Andrews",
+    "note": "",
+    "description": "Although mathematics majors are usually conversant with number theory by the time they have completed a course in abstract algebra, other undergraduates, especially those in education and the liberal arts, often need a more basic introduction to the topic.\nIn this book the author solves the problem of maintaining the interest of students at both levels by offering a combinatorial approach to elementary number theory. In studying number theory from such a perspective, mathematics majors are spared repetition and provided with new insights, while other students benefit from the consequent simplicity of the proofs for many theorems.\nAmong the topics covered in this accessible, carefully designed introduction are multiplicativity-divisibility, including the fundamental theorem of arithmetic, combinatorial and computational number theory, congruences, arithmetic functions, primitive roots and prime numbers. Later chapters offer lucid treatments of quadratic congruences, additivity (including partition theory) and geometric number theory.\nOf particular importance in this text is the author's emphasis on the value of numerical examples in number theory and the role of computers in obtaining such examples. Exercises provide opportunities for constructing numerical tables with or without a computer. Students can then derive conjectures from such numerical tables, after which relevant theorems will seem natural and well-motivated.",
+    "image": "books-00120.png"
+   },
+   {
+    "title": "Fourier Series",
+    "author": "Georgi P Tolstov",
+    "note": "",
+    "description": "Richard A. Silverman's series of translations of outstanding Russian textbooks and monographs is well-known to people in the fields of mathematics, physics, and engineering. The present book is another excellent text from this series, a valuable addition to the English-language literature on Fourier series.\nThis edition is organized into nine well-defined chapters: Trigonometric Fourier Series, Orthogonal Systems, Convergence of Trigonometric Fourier Series, Trigonometric Series with Decreasing Coefficients, Operations on Fourier Series, Summation of Trigonometric Fourier Series, Double Fourier Series and the Fourier Integral, Bessel Functions and Fourier-Bessel Series, and the Eigenfunction Method and its Applications to Mathematical Physics. Every chapter moves clearly from topic to topic and theorem to theorem, with many theorem proofs given. A total of 107 problems will be found at the ends of the chapters, including many specially added to this English-language edition, and answers are given at the end of the text.\nRichard Silverman's excellent translation makes this book readily accessible to mathematicians and math students, as well as workers and students in the fields of physics and engineering. He has also added a bibliography, containing suggestions for collateral and supplementary reading. 1962 edition.",
+    "image": "books-00121.png"
+   },
+   {
+    "title": "Introduction to Graph Theory",
+    "author": "Richard J Trudeau",
+    "note": "",
+    "description": "A stimulating excursion into pure mathematics aimed at \"the mathematically traumatized,\" but great fun for mathematical hobbyists and serious mathematicians as well. Requiring only high school algebra as mathematical background, the book leads the reader from simple graphs through planar graphs, Euler's formula, Platonic graphs, coloring, the genus of a graph, Euler walks, Hamilton walks, and a discussion of The Seven Bridges of Konigsberg. Exercises are included at the end of each chapter. \"The topics are so well motivated, the exposition so lucid and delightful, that the book's appeal should be virtually universal . . . Every library should have several copies\" -- Choice. 1976 edition.",
+    "image": "books-00122.png"
+   },
+   {
+    "title": "Introduction to Topology",
+    "author": "Bert Mendelson",
+    "note": "",
+    "description": "Highly regarded for its exceptional clarity, imaginative and instructive exercises, and fine writing style, this concise book offers an ideal introduction to the fundamentals of topology. Originally conceived as a text for a one-semester course, it is directed to undergraduate students whose studies of calculus sequence have included definitions and proofs of theorems. The book's principal aim is to provide a simple, thorough survey of elementary topics in the study of collections of objects, or sets, that possess a mathematical structure.\nThe author begins with an informal discussion of set theory in Chapter 1, reserving coverage of countability for Chapter 5, where it appears in the context of compactness. In the second chapter Professor Mendelson discusses metric spaces, paying particular attention to various distance functions which may be defined on Euclidean n-space and which lead to the ordinary topology.\nChapter 3 takes up the concept of topological space, presenting it as a generalization of the concept of a metric space. Chapters 4 and 5 are devoted to a discussion of the two most important topological properties: connectedness and compactness. Throughout the text, Dr. Mendelson, a former Professor of Mathematics at Smith College, has included many challenging and stimulating exercises to help students develop a solid grasp of the material presented.",
+    "image": "books-00124.png"
+   },
+   {
+    "title": "Symmetry: An Introduction to Group Theory and Its Applications",
+    "author": "Roy McWeeny",
+    "note": "",
+    "description": "The crucial significance of symmetry to the development of group theory and in the fields of physics and chemistry cannot be overstated, and this well-organized volume provides an excellent introduction to the topic.\nThe text develops the elementary ideas of both group theory and representation theory in a progressive and thorough fashion, leading students to a point from which they can proceed easily to more elaborate applications. The finite groups describing the symmetry of regular polyhedral and of repeating patterns are emphasized, and geometric illustrations of all main processes appear here -- including more than 100 fully worked examples.\nDesigned to be read at a variety of levels and to allow students to focus on any of the main fields of application, this volume is geared toward advanced undergraduate and graduate physics and chemistry students with the requisite mathematical background.",
+    "image": "books-00129.png"
+   },
+   {
+    "title": "A Course on Group Theory",
+    "author": "John S Rose",
+    "note": "",
+    "description": "This textbook for advanced courses in group theory focuses on finite groups, with emphasis on the idea of group actions. Early chapters summarize presupposed facts, identify important themes, and establish the notation used throughout the book. Subsequent chapters explore the normal and arithmetical structures of groups as well as applications.\nTopics include the normal structure of groups: subgroups; homomorphisms and quotients; series; direct products and the structure of finitely generated Abelian groups; and group action on groups. Additional subjects range from the arithmetical structure of groups to classical notions of transfer and splitting by means of group action arguments. More than 675 exercises, many accompanied by hints, illustrate and extend the material.",
+    "image": "books-00130.png"
+   },
+   {
+    "title": "Group Theory in a Nutshell for Physicists",
+    "author": "A Zee",
+    "note": "",
+    "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.\n<br>\nGroup Theory in a Nutshell for Physicists fills this gap, providing a user-friendly and classroom-tested text that focuses on those aspects of group theory physicists most need to know. From the basic intuitive notion of a group, A. Zee takes readers all the way up to how theories based on gauge groups could unify three of the four fundamental forces. He also includes a concise review of the linear algebra needed for group theory, making the book ideal for self-study.\n<br>\n<ul>\n<li>Provides physicists with a modern and accessible introduction to group theory</li>\n<li>Covers applications to various areas of physics, including field theory, particle physics, relativity, and much more</li>\n<li>Topics include finite group and character tables; real, pseudoreal, and complex representations; Weyl, Dirac, and Majorana equations; the expanding universe and group theory; grand unification; and much more</li>\n<li>The essential textbook for students and an invaluable resource for researchers</li>\n<li>Features a brief, self-contained treatment of linear algebra</li>\n<li>An online illustration package is available to professors</li>\n<li>Solutions manual (available only to professors)</li>\n</ol>",
+    "image": "books-00131.png"
    }
   ]
  },
