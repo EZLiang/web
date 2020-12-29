@@ -792,7 +792,7 @@ var books =
     "title": "Linear Optimization and Duality - A Modern Exposition",
     "author": "Craig A. Tovey",
     "note": "",
-    "description": "Linear Optimization and Dualiyy: A Modern Exposition departs from convention in significant ways. Standard linear programming textbooks present the material in the order in which it was discovered. Duality is treated as a difficult add-on after coverage of formulation, the simplex method, and polyhedral theory. Students end up without knowing duality in their bones.",
+    "description": "Linear Optimization and Duality: A Modern Exposition departs from convention in significant ways. Standard linear programming textbooks present the material in the order in which it was discovered. Duality is treated as a difficult add-on after coverage of formulation, the simplex method, and polyhedral theory. Students end up without knowing duality in their bones.",
     "image": "books-00126.png"
    },
    {
