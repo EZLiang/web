@@ -154,6 +154,16 @@ function LoadAndParseJekyllLayouts(pathName)
     }
 }
 
+// mathjax uses '$$' as indicator of its content, which will be transferred to single '$' by javascript's string.replace() method
+function StringSafeReplace(s, pattern, value)
+{
+    let idx = s.indexOf(pattern);
+    if (idx < 0) {
+        return s;
+    }
+
+    return s.substring(0, idx) + value + s.substring(idx + pattern.length);
+}
 
 function HandleRequest(pathName, response)
 {
@@ -164,7 +174,7 @@ function HandleRequest(pathName, response)
 
     for (var page of layoutList.pages)
     {
-        result = result.replace("{{ content }}", page.content);
+        result = StringSafeReplace(result, "{{ content }}", page.content);
 
         Object.entries(page.tags).forEach( ([key, value]) => {
             var regExReplace = new RegExp("{{ page." + key + " }}", "gi");
