@@ -6,69 +6,73 @@ mathjax: true
 ---
 
 The question is from "Math Puzzles, Volume 3" by <i>Presh Talwalkar</i>:<br>
-<div style="border: 1px;">
+<div class="quotation">
 One by one straws are placed on a mathematical camel's back. The straws have random weight, being drawn independently from the 
     uniform distribution 0 to 1. The camel's back breaks when the total weight of the straws exceeds 1.<br>
 Is the final straw really the same as any other straw? What's the expected weight of the straw that breaks the camel's back?
-<div>
+</div>
 <i>The following solution is different from the solution the book supplied, but the results are the same.</i>
 <hr>
 
-$$f(x) = \int^1_0 \Big\{^{y,\ \text{if}\ x+y>1}_{f(x+y)} dy$$
+<table><tr><td>$$
+The question could be presented as:
+\[f(x) = \int^1_0 \Big\{^{y,\ \text{if}\ x+y>1}_{f(x+y)} dy\]
+<br>
 
-$$\begin{split}
+let's solve the puzzle:
+
+\begin{split}
 f(x) & = \int^1_0 \Big\{^{y,\ \text{if}\ x+y>1}_{f(x+y)} dy \\
      & = \int^{1-x}_0 f(x+y)dy + \int^1_{1-x} ydy \\
      & = \int^{1-x}_0 f(x+y)dy + x - \frac{x^2}2 \\
      & = \int^1_x f(y)dy + x - \frac{x^2}2 \\
-\end{split}$$
+\end{split}
 
-Then differentiate the above:<br>
-$$f'(x) = -f(x) + 1-x$$
-then:<br>
+then differentiate the above:
+\[f'(x) = -f(x) + 1-x\]
 
-$$\begin{split}
-f'(x) + f(x) & = 1 - x
-\end{split}$$
+then:
+\[f'(x) + f(x) = 1 - x\]
 
-<br>
-Substitute:
-
-$$f(x)=g(x)e^{-x}$$
-
-$$f'(x) = g'(x)e^{-x} - g(x)e^{-x}$$
-
-$$\begin{split}
+substitute:
+\begin{split}
+ f(x) & =g(x)e^{-x} \\
+f'(x) & = g'(x)e^{-x} - g(x)e^{-x}
+\end{split}
+\begin{split}
 f'(x) + f(x) & = g'(x)e^{-x} - g(x)e^{-x} + g(x)e^{-x} \\
              & = g'(x)e^{-x} \\
              & = 1 - x
-\end{split}$$
-
-$$\begin{split}g'(x) & = e^x(1-x) \\
-                         & = e^x - xe^x
-\end{split}$$
-
-$$\begin{split}
+\end{split}
+\begin{split}
+g'(x) & = e^x(1-x) \\
+      & = e^x - xe^x
+\end{split}
+hello
+\begin{split}
 g(x) & = e^x - e^x(x-1) + c \\
      & = (2-x)e^x + c
-\end{split}$$
+\end{split}
 
-Solve for c:
-
+solve for c:
 $$\begin{split}
 f(x) & = 2 - x + ce^{-x} \\
 f(1) & = \frac12 \\
      & = 2 - 1 + \frac{c}{e}
-\end{split}$$
-Got $$c = -\frac{e}2$$
+\end{split}
+
+got:
+\[c = -\frac{e}2\]
 
 finally:
-$$\begin{split}
+\begin{split}
 f(0) & = 2 - 0 - \frac{e}2 \\
      & = 2 - \frac{e}2 \\
 f(x) & = 2 - x - \frac{e^{1-x}}2
-\end{split}$$
-</p>
+\end{split}
+
+$$
+</td></tr></table>
 
 <br><br>
 Draft:<br>

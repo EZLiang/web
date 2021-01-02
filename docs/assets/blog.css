@@ -73,3 +73,10 @@ abbr {
   border: 1px solid gray;
   font-size: 1rem;
 }
+
+.quotation {
+  border: 1px outset lightgreen;
+  border-radius: 0.5rem;
+  background-color: #f0ffff; 
+  padding: 0.5rem;
+}

@@ -1,6 +1,11 @@
 ---
 layout: blog
 ---
+{% if page.mathjax %}
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
+
 {% if page.draft %}
 <p><em>This is a draft. The author may improve from time to time.</em></p>
 {% endif %}
@@ -17,11 +22,6 @@ layout: blog
 <div class="post">
   {{ content }}
 </div>
-
-{% if page.mathjax %}
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-{% endif %}
 
 <br clear="all" />
 <div>
