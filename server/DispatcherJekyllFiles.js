@@ -33,29 +33,24 @@ function Initialize(webRoot)
 
     function LoadConfig()
     {
-        try {
-            const cfgString = fs.readFileSync(sConfig.WebRoot + '/_config.yml', 'utf8');
-            const cfg = yaml.safeLoad(cfgString);
+        const cfgString = fs.readFileSync(sConfig.WebRoot + '/_config.yml', 'utf8');
+        const cfg = yaml.load(cfgString);
 
-            if (cfg.name == 'Evin Liang') {
-                sConfig.ExtraMenus = sConfig.ExtraMenus.replace(sConfig.ExtraMenuTag, sConfig.ExtraMenus_Evin);
-            }
+        if (cfg.name == 'Evin Liang') {
+            sConfig.ExtraMenus = sConfig.ExtraMenus.replace(sConfig.ExtraMenuTag, sConfig.ExtraMenus_Evin);
+        }
 
-            if (cfg.defaults === undefined)
+        if (cfg.defaults === undefined)
+            return;
+
+        cfg.defaults.forEach(entry => {
+            if (entry.scope === undefined || entry.scope.type === undefined || 
+                entry.values == undefined || entry.values.layout === undefined)
                 return;
 
-            cfg.defaults.forEach(entry => {
-                if (entry.scope === undefined || entry.scope.type === undefined || 
-                    entry.values == undefined || entry.values.layout === undefined)
-                    return;
-
-                sConfig.DefaultLayouts[entry.scope.type] = entry.values.layout;
-                console.log('default layout override by config: ' +  entry.scope.type + ' = ' + entry.values.layout);
-            });
-        }
-        catch (e) {
-            console.log(e);            
-        }
+            sConfig.DefaultLayouts[entry.scope.type] = entry.values.layout;
+            console.log('default layout override by config: ' +  entry.scope.type + ' = ' + entry.values.layout);
+        });
     }
 
     LoadConfig();

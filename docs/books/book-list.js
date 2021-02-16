@@ -564,6 +564,41 @@ var books =
     "note": "",
     "description": "This book is an attempt at creating a friendlier, more colloquial textbook for a one-semester course in Abstract Algebra in a liberal arts setting. The textbook covers introductory group theory -- starting with basic notions and examples and moving through subgroups, quotient groups, group homomorphisms, and isomorphisms. For more information, including sample pages, a complete table of contents, and a comparison to the second edition, please see: https://web.lemoyne.edu/nashd/textbook.html",
     "image": "books-00125.png"
+   },
+   {
+    "title": "Tales of Impossibility: The 2000-Year Quest to Solve the Mathematical Problems of Antiquity",
+    "author": "David S. Richeson",
+    "note": "",
+    "description": "A comprehensive look at four of the most famous problems in mathematics\n<br>\n\n<i>Tales of Impossibility</i> recounts the intriguing story of the so-called problems of antiquity, four of the most famous and studied questions in the history of mathematics. First posed by the ancient Greeks, these compass and straightedge problems-squaring the circle, trisecting an angle, doubling the cube, and inscribing regular polygons in a circle-have served as ever-present muses for mathematicians for more than two millennia. David Richeson follows the trail of these problems to show that ultimately, their proofs-demonstrating the impossibility of solving them using only a compass and straightedge-depended upon and resulted in the growth of mathematics.",
+    "image": "books-00133.png"
+   },
+   {
+    "title": "Curves for the Mathematically Curious: An Anthology of the Unpredictable, Historical, Beautiful, and Romantic",
+    "author": "Julian Havil",
+    "note": "",
+    "description": "<i>Curves for the Mathematically Curious</i> is a thoughtfully curated collection of ten mathematical curves, selected by Julian Havil for their significance, mathematical interest, and beauty. Each chapter gives an account of the history and definition of a curve, providing a glimpse into the elegant and often surprising mathematics involved in its creation and evolution. In telling the ten stories, Havil introduces many mathematicians and other innovators, some whose fame has withstood the passing of years and others who have slipped into comparative obscurity. You will meet Pierre B&eacute;zier, who is known for his ubiquitous and eponymous curves, and Adolphe Quetelet, who trumpeted the ubiquity of the normal curve but whose name now hides behind the modern body mass index. These and other ingenious thinkers engaged with the challenges, incongruities, and insights to be found in these remarkable curves - and now you can share in this adventure.\n<br>\n<i>Curves for the Mathematically Curious</i> is a rigorous and enriching mathematical experience for anyone interested in curves, and the book is designed so that readers who choose can follow the details with pencil and paper. Every curve has a story worth telling.",
+    "image": "books-00134.png"
+   },
+   {
+    "title": "Math Puzzles Volume 2: More Riddles And Brain Teasers In Counting, Geometry, Probability, And Game Theory",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "What is a better fit: a square peg in a round hole, or a round peg in a square hole? Your music player seems to be playing the same songs over again. Is there something wrong with the shuffle feature, or might the songs be playing randomly? You have 100 dimes, and I have 99 pennies. At the same time, we will toss our coins in the air and let them fall on the floor. Then we meticulously count the outcomes of our tosses. You win if you show more heads than I do. What's the probability that you will win? The YouTube channel and blog Mind Your Decisions has blog posts and original videos about math that have been viewed millions of times. The problems in this book are based on some of the best puzzles in counting, geometry, and probability and game theory.",
+    "image": "books-00135.png"
+   },
+   {
+    "title": "Math Puzzles Volume 3: Even More Riddles And Brain Teasers In Geometry, Logic, Number Theory, And Probability",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "You have two ropes that each burn in 1 hour but not at a uniform rate. How can you measure 45 minutes? How can you make 6 equal triangles from 4 match sticks? How many digits are in the number 125^100? The YouTube channel and blog Mind Your Decisions has millions of views for math videos and posts. This book contains 70 puzzles divided into easy, medium, and hard puzzles in the areas of geometry, logic, number theory, and probability.",
+    "image": "books-00136.png"
+   },
+   {
+    "title": "Asymptotic Methods in Analysis",
+    "author": "N. G. de Bruijn",
+    "note": "",
+    "description": "Asymptotics is not new. Its importance in many areas of pure and applied mathematics has been recognized since the days of Laplace. Asymptotic estimates of series, integrals, and other expressions are commonly needed in physics, engineering, and other fields.",
+    "image": "books-00141.png"
    }
   ]
  },
@@ -866,34 +901,6 @@ var books =
     "image": "books-00132.png"
    },
    {
-    "title": "Tales of Impossibility: The 2000-Year Quest to Solve the Mathematical Problems of Antiquity",
-    "author": "David S. Richeson",
-    "note": "",
-    "description": "A comprehensive look at four of the most famous problems in mathematics\n<br>\n\n<i>Tales of Impossibility</i> recounts the intriguing story of the so-called problems of antiquity, four of the most famous and studied questions in the history of mathematics. First posed by the ancient Greeks, these compass and straightedge problems-squaring the circle, trisecting an angle, doubling the cube, and inscribing regular polygons in a circle-have served as ever-present muses for mathematicians for more than two millennia. David Richeson follows the trail of these problems to show that ultimately, their proofs-demonstrating the impossibility of solving them using only a compass and straightedge-depended upon and resulted in the growth of mathematics.",
-    "image": "books-00133.png"
-   },
-   {
-    "title": "Curves for the Mathematically Curious: An Anthology of the Unpredictable, Historical, Beautiful, and Romantic",
-    "author": "Julian Havil",
-    "note": "",
-    "description": "<i>Curves for the Mathematically Curious</i> is a thoughtfully curated collection of ten mathematical curves, selected by Julian Havil for their significance, mathematical interest, and beauty. Each chapter gives an account of the history and definition of a curve, providing a glimpse into the elegant and often surprising mathematics involved in its creation and evolution. In telling the ten stories, Havil introduces many mathematicians and other innovators, some whose fame has withstood the passing of years and others who have slipped into comparative obscurity. You will meet Pierre B&eacute;zier, who is known for his ubiquitous and eponymous curves, and Adolphe Quetelet, who trumpeted the ubiquity of the normal curve but whose name now hides behind the modern body mass index. These and other ingenious thinkers engaged with the challenges, incongruities, and insights to be found in these remarkable curves - and now you can share in this adventure.\n<br>\n<i>Curves for the Mathematically Curious</i> is a rigorous and enriching mathematical experience for anyone interested in curves, and the book is designed so that readers who choose can follow the details with pencil and paper. Every curve has a story worth telling.",
-    "image": "books-00134.png"
-   },
-   {
-    "title": "Math Puzzles Volume 2: More Riddles And Brain Teasers In Counting, Geometry, Probability, And Game Theory",
-    "author": "Presh Talwalkar",
-    "note": "",
-    "description": "What is a better fit: a square peg in a round hole, or a round peg in a square hole? Your music player seems to be playing the same songs over again. Is there something wrong with the shuffle feature, or might the songs be playing randomly? You have 100 dimes, and I have 99 pennies. At the same time, we will toss our coins in the air and let them fall on the floor. Then we meticulously count the outcomes of our tosses. You win if you show more heads than I do. What's the probability that you will win? The YouTube channel and blog Mind Your Decisions has blog posts and original videos about math that have been viewed millions of times. The problems in this book are based on some of the best puzzles in counting, geometry, and probability and game theory.",
-    "image": "books-00135.png"
-   },
-   {
-    "title": "Math Puzzles Volume 3: Even More Riddles And Brain Teasers In Geometry, Logic, Number Theory, And Probability",
-    "author": "Presh Talwalkar",
-    "note": "",
-    "description": "You have two ropes that each burn in 1 hour but not at a uniform rate. How can you measure 45 minutes? How can you make 6 equal triangles from 4 match sticks? How many digits are in the number 125^100? The YouTube channel and blog Mind Your Decisions has millions of views for math videos and posts. This book contains 70 puzzles divided into easy, medium, and hard puzzles in the areas of geometry, logic, number theory, and probability.",
-    "image": "books-00136.png"
-   },
-   {
     "title": "Advanced Calculus - 2nd Edition",
     "author": "David V. Widder",
     "note": "",
@@ -906,6 +913,41 @@ var books =
     "note": "",
     "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf.\n<br><br>\n\nThe bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.<br>\n--- <i>Byte</i>, September 1995\n<br><br>\n\nPrimarily written as a reference, some people have nevertheless found it possible and interesting to read each volume from beginning to end. A programmer in China even compared the experience to reading a poem.<br>\nIf you think you're a really good programmer... read [Knuth's] Art of Computer Programming... You should definitely send me a r&eacute;sum&eacute; if you can read the whole thing.<br>\n--- <i>Bill Gates</i>",
     "image": "books-00138.png"
+   },
+   {
+    "title": "Asymptotic Expansions",
+    "author": "A. Erdelyi",
+    "note": "",
+    "description": "Originally prepared for the Office of Naval Research, this important monograph introduces various methods for the asymptotic evaluation of integrals containing a large parameter, and solutions of ordinary linear differential equations by means of asymptotic expansions.",
+    "image": "books-00140.png"
+   },
+   {
+    "title": "A First Look at Perturbation Theory",
+    "author": "James G. Simmonds, James E. Mann Jr.",
+    "note": "",
+    "description": "Undergraduates in engineering and the physical sciences receive a thorough introduction to perturbation theory in this useful and accessible text. Students discover methods for obtaining an approximate solution of a mathematical problem by exploiting the presence of a small, dimensionless parameter - the smaller the parameter, the more accurate the approximate solution. Knowledge of perturbation theory offers a twofold benefit: approximate solutions often reveal the exact solution's essential dependence on specified parameters; also, some problems resistant to numerical solutions may yield to perturbation methods. In fact, numerical and perturbation methods can be combined in a complementary way.",
+    "image": "books-00142.png"
+   },
+   {
+    "title": "Perturbations: Theory and Methods",
+    "author": "James A. Murdock",
+    "note": "",
+    "description": "A textbook for a concise graduate course in perturbation theory for the solution of algebraic and differential equations. It emphasizes ordinary differential equations, and covers all the methods commonly used in both regular and singular perturbations.",
+    "image": "books-00143.png"
+   },
+   {
+    "title": "Uncommon Mathematical Excursions: Polynomia and Related Realms",
+    "author": "Dan Kalman",
+    "note": "",
+    "description": "This text serves as a tour guide to little known corners of the mathematical landscape, not far from the main byways of algebra, geometry, and calculus. It is for the seasoned mathematical traveller who has visited these subjects many times and, familiar with the main attractions, is ready to venture abroad off the beaten track. For the old hand and new devotee alike, this book will surprise, intrigue, and delight readers with unexpected aspects of old and familiar subjects. In the first part of the book all of the topics are related to polynomials: properties and applications of Horner form, reverse and palindromic polynomials and identities linking roots and coefficients, among others. Topics in the second part are all connected in some way with maxima and minima. In the final part calculus is the focus.",
+    "image": "books-00144.png"
+   },
+   {
+    "title": "The Riemann Hypothesis",
+    "author": "Roland van der Veen, Jan van de Craats",
+    "note": "",
+    "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859. As an aside in his article, Riemann formulated his now famous hypothesis that so far no one has come close to proving: All nontrivial zeroes of the zeta function lie on the critical line. Hidden behind this at first mysterious phrase lies a whole mathematical universe of prime numbers, infinite sequences, infinite products, and complex functions.",
+    "image": "books-00145.png"
    }
   ]
  },
