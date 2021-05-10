@@ -80,3 +80,7 @@ abbr {
   background-color: #f0ffff; 
   padding: 0.5rem;
 }
+
+.stk {
+  text-decoration: line-through;
+}
