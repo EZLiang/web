@@ -599,6 +599,111 @@ var books =
     "note": "",
     "description": "Asymptotics is not new. Its importance in many areas of pure and applied mathematics has been recognized since the days of Laplace. Asymptotic estimates of series, integrals, and other expressions are commonly needed in physics, engineering, and other fields.",
     "image": "books-00141.png"
+   },
+   {
+    "title": "Asymptotic Expansions",
+    "author": "A. Erdelyi",
+    "note": "",
+    "description": "Originally prepared for the Office of Naval Research, this important monograph introduces various methods for the asymptotic evaluation of integrals containing a large parameter, and solutions of ordinary linear differential equations by means of asymptotic expansions. Author's preface. Bibliography.",
+    "image": "books-00147.png"
+   },
+   {
+    "title": "A First Look at Pertubation Theory",
+    "author": "James G. Simmonds, James E. Mann Jr.",
+    "note": "",
+    "description": "Undergraduates in engineering and the physical sciences receive a thorough introduction to perturbation theory in this useful and accessible text. Students discover methods for obtaining an approximate solution of a mathematical problem by exploiting the presence of a small, dimensionless parameter - the smaller the parameter, the more accurate the approximate solution. Knowledge of perturbation theory offers a twofold benefit: approximate solutions often reveal the exact solution's essential dependence on specified parameters; also, some problems resistant to numerical solutions may yield to perturbation methods. In fact, numerical and perturbation methods can be combined in a complementary way.\nThe text opens with a well-defined treatment of finding the roots of polynomials whose coefficients contain a small parameter. Proceeding to differential equations, the authors explain many techniques for handling perturbations that reorder the equations or involve an unbounded independent variable. Two disparate practical problems that can be solved efficiently with perturbation methods conclude the volume.\nWritten in an informal style that moves from specific examples to general principles, this elementary text emphasizes the \"why\" along with the \"how\"; prerequisites include a knowledge of one-variable calculus and ordinary differential equations. This newly revised second edition features an additional appendix concerning the approximate evaluation of integrals.",
+    "image": "books-00148.png"
+   },
+   {
+    "title": "Perturbations: Theory and Methods",
+    "author": "James A. Murdock",
+    "note": "",
+    "description": "A textbook for a concise graduate course in perturbation theory for the solution of algebraic and differential equations. It emphasizes ordinary differential equations, and covers all the methods commonly used in both regular and singular perturbations. Annotation copyright Book News, Inc. Portland, Or.",
+    "image": "books-00149.png"
+   },
+   {
+    "title": "Fourier Series",
+    "author": "Georgi P Tolstov",
+    "note": "",
+    "description": "Richard A. Silverman's series of translations of outstanding Russian textbooks and monographs is well-known to people in the fields of mathematics, physics, and engineering. The present book is another excellent text from this series, a valuable addition to the English-language literature on Fourier series.\nThis edition is organized into nine well-defined chapters: Trigonometric Fourier Series, Orthogonal Systems, Convergence of Trigonometric Fourier Series, Trigonometric Series with Decreasing Coefficients, Operations on Fourier Series, Summation of Trigonometric Fourier Series, Double Fourier Series and the Fourier Integral, Bessel Functions and Fourier-Bessel Series, and the Eigenfunction Method and its Applications to Mathematical Physics. Every chapter moves clearly from topic to topic and theorem to theorem, with many theorem proofs given. A total of 107 problems will be found at the ends of the chapters, including many specially added to this English-language edition, and answers are given at the end of the text.\nRichard Silverman's excellent translation makes this book readily accessible to mathematicians and math students, as well as workers and students in the fields of physics and engineering. He has also added a bibliography, containing suggestions for collateral and supplementary reading. 1962 edition.",
+    "image": "books-00121.png"
+   },
+   {
+    "image": "books-00116.jpg",
+    "title": "How to Solve It: A New Aspect of Mathematical Method",
+    "author": "G. Polya, John H. Conway",
+    "bought": "2020.09.03",
+    "description": "A perennial bestseller by eminent mathematician G. Polya, How to Solve It will show anyone in any field how to think straight. In lucid and appealing prose, Polya reveals how the mathematical method of demonstrating a proof or finding an unknown can be of help in attacking any problem that can be \"reasoned\" out-from building a bridge to winning a game of anagrams. Generations of readers have relished Polya's deft-indeed, brilliant-instructions on stripping away irrelevancies and going straight to the heart of the problem.",
+    "comment": ""
+   },
+   {
+    "title": "Introduction to Topology",
+    "author": "Bert Mendelson",
+    "note": "",
+    "description": "Highly regarded for its exceptional clarity, imaginative and instructive exercises, and fine writing style, this concise book offers an ideal introduction to the fundamentals of topology. Originally conceived as a text for a one-semester course, it is directed to undergraduate students whose studies of calculus sequence have included definitions and proofs of theorems. The book's principal aim is to provide a simple, thorough survey of elementary topics in the study of collections of objects, or sets, that possess a mathematical structure.\nThe author begins with an informal discussion of set theory in Chapter 1, reserving coverage of countability for Chapter 5, where it appears in the context of compactness. In the second chapter Professor Mendelson discusses metric spaces, paying particular attention to various distance functions which may be defined on Euclidean n-space and which lead to the ordinary topology.\nChapter 3 takes up the concept of topological space, presenting it as a generalization of the concept of a metric space. Chapters 4 and 5 are devoted to a discussion of the two most important topological properties: connectedness and compactness. Throughout the text, Dr. Mendelson, a former Professor of Mathematics at Smith College, has included many challenging and stimulating exercises to help students develop a solid grasp of the material presented.",
+    "image": "books-00124.png"
+   },
+   {
+    "title": "Group Theory in a Nutshell for Physicists",
+    "author": "A Zee",
+    "note": "",
+    "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.\n<br>\nGroup Theory in a Nutshell for Physicists fills this gap, providing a user-friendly and classroom-tested text that focuses on those aspects of group theory physicists most need to know. From the basic intuitive notion of a group, A. Zee takes readers all the way up to how theories based on gauge groups could unify three of the four fundamental forces. He also includes a concise review of the linear algebra needed for group theory, making the book ideal for self-study.\n<br>\n<ul>\n<li>Provides physicists with a modern and accessible introduction to group theory</li>\n<li>Covers applications to various areas of physics, including field theory, particle physics, relativity, and much more</li>\n<li>Topics include finite group and character tables; real, pseudoreal, and complex representations; Weyl, Dirac, and Majorana equations; the expanding universe and group theory; grand unification; and much more</li>\n<li>The essential textbook for students and an invaluable resource for researchers</li>\n<li>Features a brief, self-contained treatment of linear algebra</li>\n<li>An online illustration package is available to professors</li>\n<li>Solutions manual (available only to professors)</li>\n</ol>",
+    "image": "books-00131.png"
+   },
+   {
+    "title": "Abstract Algebra for Beginners: A Rigorous Introduction to Groups, Rings, Fields, Vector Spaces, Modules, Substructures, Homomorphisms, Quotients, ... Group Actions, Polynomials, and Galois Theory",
+    "author": "Steve Warner",
+    "note": "",
+    "description": "\"Abstract Algebra for Beginners\" consists of a series of basic to intermediate lessons in abstract algebra. In addition, all the proofwriting skills that are essential for advanced study in mathematics are covered and reviewed extensively. Abstract Algebra for Beginners is perfect for:\n<ul>\n<li>professors teaching an undergraduate course or basic graduate course in abstract algebra.</li>\n<li>high school teachers working with advanced math students.</li>\n<li>students wishing to see the type of mathematics they would be exposed to as a math major.</li>\n</ul>",
+    "image": "books-00132.png"
+   },
+   {
+    "title": "The Art of Computer Programming, Volumes 1-4A Boxed Set - 1st Edition",
+    "author": "Donald Knuth",
+    "note": "",
+    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf.\n<br><br>\n\nThe bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.<br>\n--- <i>Byte</i>, September 1995\n<br><br>\n\nPrimarily written as a reference, some people have nevertheless found it possible and interesting to read each volume from beginning to end. A programmer in China even compared the experience to reading a poem.<br>\nIf you think you're a really good programmer... read [Knuth's] Art of Computer Programming... You should definitely send me a r&eacute;sum&eacute; if you can read the whole thing.<br>\n--- <i>Bill Gates</i>",
+    "image": "books-00138.png"
+   },
+   {
+    "title": "Uncommon Mathematical Excursions: Polynomia and Related Realms",
+    "author": "Dan Kalman",
+    "note": "",
+    "description": "This text serves as a tour guide to little known corners of the mathematical landscape, not far from the main byways of algebra, geometry, and calculus. It is for the seasoned mathematical traveller who has visited these subjects many times and, familiar with the main attractions, is ready to venture abroad off the beaten track. For the old hand and new devotee alike, this book will surprise, intrigue, and delight readers with unexpected aspects of old and familiar subjects. In the first part of the book all of the topics are related to polynomials: properties and applications of Horner form, reverse and palindromic polynomials and identities linking roots and coefficients, among others. Topics in the second part are all connected in some way with maxima and minima. In the final part calculus is the focus.",
+    "image": "books-00144.png"
+   },
+   {
+    "title": "The Riemann Hypothesis",
+    "author": "Roland van der Veen, Jan van de Craats",
+    "note": "",
+    "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859. As an aside in his article, Riemann formulated his now famous hypothesis that so far no one has come close to proving: All nontrivial zeroes of the zeta function lie on the critical line. Hidden behind this at first mysterious phrase lies a whole mathematical universe of prime numbers, infinite sequences, infinite products, and complex functions.",
+    "image": "books-00145.png"
+   }
+  ]
+ },
+ {
+  "group": "Mathematics, 8th  grade. 2021 fall - 2022 summer",
+  "hidden": false,
+  "list": [
+   {
+    "title": "An Introduction to the Geometry of N Dimensions",
+    "author": "D. M. Y. Sommerville",
+    "note": "",
+    "description": "For many years, this was the only English-language book devoted to the subject of higher-dimensional geometry. While that is no longer the case, it remains a significant contribution to the literature, exploring topics of perennial interest to geometers.\nIn the first four chapters, author D. M. Y. Sommerville explains the fundamental ideas of incidence, parallelism, perpendicularity, and angles between linear spaces. Chapter V presents analytical geometry from the projective point of view, exploring some of the simplest ideas relating to algebraic varieties and offering a more detailed account of quadratics. Chapter VI examines analytic geometry of n dimensions from the metric point of view. The remaining four chapters deal with polytopes and address some of the elementary ideas in analysis situs. Chapter VIII treats the content of hyper-special figures, and the final chapter establishes the regular polytope.\nFor advanced undergraduate and graduate students in mathematics as well as historians of mathematics",
+    "image": "books-00156.png"
+   },
+   {
+    "title": "Bayesian Statistics The Fun Way: Understanding Statistics And Probability With Star Wars, Lego, And Rubber Ducks",
+    "author": "Will Kurt",
+    "note": "",
+    "description": "",
+    "image": "books-00157.png"
+   },
+   {
+    "title": "Genius At Play: The Curious Mind of John Horton Conway",
+    "author": "Siobhan Roberts",
+    "note": "",
+    "description": "John Horton Conway is a singular mathematician with a lovely loopy brain. He is Archimedes, Mick Jagger, Salvador Dali, and Richard Feynman all rolled into one--he boasts a rock star's charisma, a slyly bent sense of humor, a polymath's promiscuous curiosity, and an insatiable compulsion to explain everything about the world to everyone in it. At Cambridge, Conway wrestled with \"Monstrous Moonshine,\" discovered the aptly named surreal numbers, and invented the cult classic Game of Life--more than just a cool fad, Life demonstrates how simplicity generates complexity and provides an analogy for mathematics and the entire universe. As a \"mathemagician\" at Princeton, he used ropes, dice, pennies, coat hangers, even the occasional Slinky, as props to extend his winning imagination and share his many nerdish delights. He granted Roberts full access to his idiosyncrasies and intellect both, though not without the occasional grumble: \"Oh hell,\" he'd say. \"You're not going to put that in the book. Are you?!?\"",
+    "image": "books-00159.png"
    }
   ]
  },
@@ -801,6 +906,34 @@ var books =
     "title": "A short introduction to LaTeX: A book for beginners",
     "author": "Firuza Karmali Aibara",
     "description": "Learn the basics of LaTeX, explore it, and start creating beautiful documents"
+   },
+   {
+    "title": "My System: 21st century edition",
+    "author": "Aron Nimzowitch",
+    "note": "",
+    "description": "This is the all-time chess classic of Aron Nimzowitsch, now provided in algebraic notation and updated to modern understandable English. One of the three or four best selling chess books of all time. Contains 419 diagrams. Recommended by Grandmasters and masters for 75 years! Completely modernized in this 1991 edition.",
+    "image": "books-00146.png"
+   },
+   {
+    "title": "Fundamentals of Physics, Volume 1",
+    "author": "David Halliday, Robert Resnick, Jearl Walker",
+    "note": "",
+    "description": "Fundamentals of Physics, 10th Edition, Volume 1 contains Chapters 1 - 20. Access to WileyPLUS is not included with this textbook. The 10th edition of Halliday, Resnick and Walkers Fundamentals of Physics provides the perfect solution for teaching a 2 or 3 semester calc-based physics course, providing instructors with a tool by which they can teach students how to effectively read scientific material, identify fundamental concepts, reason through scientific questions, and solve quantitative problems. The 10th edition builds upon previous editions by offering new features designed to better engage students and support critical thinking. These include NEW Video Illustrations that bring the subject matter to life, NEW Vector Drawing Questions that test student's conceptual understanding, and additional multimedia resources (videos and animations) that provide an alternative pathway through the material for those who struggle with reading scientific exposition.",
+    "image": "books-00150.png"
+   },
+   {
+    "title": "A History of the Universe in 21 Stars (and 3 Impostors)",
+    "author": "Giles Sparrow",
+    "note": "",
+    "description": "On a clear evening, if you look up you can see thousands of stars shining in the dark sky, each with a story of their own. Taking 21 stars (and three imposters, that cheekily aren't technically stars), expert science writer Giles Sparrow offers a complete introduction to what is happening up in the night sky. Sparrow draws 'star maps' to help you easily identify the celestial bodies and then explains (for anyone not an astronomer themselves) what this particular pinprick of light can tell us about the birth, life and death of our universe.\n\nFrom red giants, quasars and supernovae to black holes, multiple stars and even our own Sun, this fascinating book tells the intriguing, inspiring and sometimes incredible story of how we came to unravel the mysteries of the cosmos, and what we learnt along the way. So look up at the sky and marvel at its wonders with this exciting new book.",
+    "image": "books-00152.png"
+   },
+   {
+    "title": "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race",
+    "author": "Walter Isaacson",
+    "note": "",
+    "description": "When Jennifer Doudna was in sixth grade, she came home one day to find that her dad had left a paperback titled The Double Helix on her bed. She put it aside, thinking it was one of those detective tales she loved. When she read it on a rainy Saturday, she discovered she was right, in a way. As she sped through the pages, she became enthralled by the intense drama behind the competition to discover the code of life. Even though her high school counselor told her girls didn't become scientists, she decided she would.\n\nDriven by a passion to understand how nature works and to turn discoveries into inventions, she would help to make what the book's author, James Watson, told her was the most important biological advance since his co-discovery of the structure of DNA. She and her collaborators turned a curiosity of nature into an invention that will transform the human race: an easy-to-use tool that can edit DNA. Known as CRISPR, it opened a brave new world of medical miracles and moral questions.\n\nThe development of CRISPR and the race to create vaccines for coronavirus will hasten our transition to the next great innovation revolution. The past half-century has been a digital age, based on the microchip, computer, and internet. Now we are entering a life-science revolution. Children who study digital coding will be joined by those who study genetic code.\n\nShould we use our new evolution-hacking powers to make us less susceptible to viruses? What a wonderful boon that would be! And what about preventing depression? Hmmm...Should we allow parents, if they can afford it, to enhance the height or muscles or IQ of their kids?\n\nAfter helping to discover CRISPR, Doudna became a leader in wrestling with these moral issues and, with her collaborator Emmanuelle Charpentier, won the Nobel Prize in 2020. Her story is a thrilling detective tale that involves the most profound wonders of nature, from the origins of life to the future of our species.",
+    "image": "books-00160.png"
    }
   ]
  },
@@ -814,14 +947,6 @@ var books =
     "author": "Taha Sochi",
     "bought": "2019.11.21",
     "description": "This book is about differential geometry of space curves and surfaces. The formulation and presentation are largely based on a tensor calculus approach. It can be used as part of a course on tensor calculus as well as a textbook or a reference for an intermediate-level course on differential geometry of curves and surfaces. The book is furnished with an index, extensive sets of exercises and many cross references, which are hyperlinked for the ebook users, to facilitate linking related concepts and sections. The book also contains a considerable number of 2D and 3D graphic illustrations to help the readers and users to visualize the ideas and understand the abstract concepts. We also provided an introductory chapter where the main concepts and techniques needed to understand the offered materials of differential geometry are outlined to make the book fairly self-contained and reduce the need for external references."
-   },
-   {
-    "image": "books-00116.jpg",
-    "title": "How to Solve It: A New Aspect of Mathematical Method",
-    "author": "G. Polya, John H. Conway",
-    "bought": "2020.09.03",
-    "description": "A perennial bestseller by eminent mathematician G. Polya, How to Solve It will show anyone in any field how to think straight. In lucid and appealing prose, Polya reveals how the mathematical method of demonstrating a proof or finding an unknown can be of help in attacking any problem that can be \"reasoned\" out-from building a bridge to winning a game of anagrams. Generations of readers have relished Polya's deft-indeed, brilliant-instructions on stripping away irrelevancies and going straight to the heart of the problem.",
-    "comment": ""
    },
    {
     "title": "Linear Optimization and Duality - A Modern Exposition",
@@ -852,25 +977,11 @@ var books =
     "image": "books-00120.png"
    },
    {
-    "title": "Fourier Series",
-    "author": "Georgi P Tolstov",
-    "note": "",
-    "description": "Richard A. Silverman's series of translations of outstanding Russian textbooks and monographs is well-known to people in the fields of mathematics, physics, and engineering. The present book is another excellent text from this series, a valuable addition to the English-language literature on Fourier series.\nThis edition is organized into nine well-defined chapters: Trigonometric Fourier Series, Orthogonal Systems, Convergence of Trigonometric Fourier Series, Trigonometric Series with Decreasing Coefficients, Operations on Fourier Series, Summation of Trigonometric Fourier Series, Double Fourier Series and the Fourier Integral, Bessel Functions and Fourier-Bessel Series, and the Eigenfunction Method and its Applications to Mathematical Physics. Every chapter moves clearly from topic to topic and theorem to theorem, with many theorem proofs given. A total of 107 problems will be found at the ends of the chapters, including many specially added to this English-language edition, and answers are given at the end of the text.\nRichard Silverman's excellent translation makes this book readily accessible to mathematicians and math students, as well as workers and students in the fields of physics and engineering. He has also added a bibliography, containing suggestions for collateral and supplementary reading. 1962 edition.",
-    "image": "books-00121.png"
-   },
-   {
     "title": "Introduction to Graph Theory",
     "author": "Richard J Trudeau",
     "note": "",
     "description": "A stimulating excursion into pure mathematics aimed at \"the mathematically traumatized,\" but great fun for mathematical hobbyists and serious mathematicians as well. Requiring only high school algebra as mathematical background, the book leads the reader from simple graphs through planar graphs, Euler's formula, Platonic graphs, coloring, the genus of a graph, Euler walks, Hamilton walks, and a discussion of The Seven Bridges of Konigsberg. Exercises are included at the end of each chapter. \"The topics are so well motivated, the exposition so lucid and delightful, that the book's appeal should be virtually universal . . . Every library should have several copies\" -- Choice. 1976 edition.",
     "image": "books-00122.png"
-   },
-   {
-    "title": "Introduction to Topology",
-    "author": "Bert Mendelson",
-    "note": "",
-    "description": "Highly regarded for its exceptional clarity, imaginative and instructive exercises, and fine writing style, this concise book offers an ideal introduction to the fundamentals of topology. Originally conceived as a text for a one-semester course, it is directed to undergraduate students whose studies of calculus sequence have included definitions and proofs of theorems. The book's principal aim is to provide a simple, thorough survey of elementary topics in the study of collections of objects, or sets, that possess a mathematical structure.\nThe author begins with an informal discussion of set theory in Chapter 1, reserving coverage of countability for Chapter 5, where it appears in the context of compactness. In the second chapter Professor Mendelson discusses metric spaces, paying particular attention to various distance functions which may be defined on Euclidean n-space and which lead to the ordinary topology.\nChapter 3 takes up the concept of topological space, presenting it as a generalization of the concept of a metric space. Chapters 4 and 5 are devoted to a discussion of the two most important topological properties: connectedness and compactness. Throughout the text, Dr. Mendelson, a former Professor of Mathematics at Smith College, has included many challenging and stimulating exercises to help students develop a solid grasp of the material presented.",
-    "image": "books-00124.png"
    },
    {
     "title": "Symmetry: An Introduction to Group Theory and Its Applications",
@@ -887,20 +998,6 @@ var books =
     "image": "books-00130.png"
    },
    {
-    "title": "Group Theory in a Nutshell for Physicists",
-    "author": "A Zee",
-    "note": "",
-    "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.\n<br>\nGroup Theory in a Nutshell for Physicists fills this gap, providing a user-friendly and classroom-tested text that focuses on those aspects of group theory physicists most need to know. From the basic intuitive notion of a group, A. Zee takes readers all the way up to how theories based on gauge groups could unify three of the four fundamental forces. He also includes a concise review of the linear algebra needed for group theory, making the book ideal for self-study.\n<br>\n<ul>\n<li>Provides physicists with a modern and accessible introduction to group theory</li>\n<li>Covers applications to various areas of physics, including field theory, particle physics, relativity, and much more</li>\n<li>Topics include finite group and character tables; real, pseudoreal, and complex representations; Weyl, Dirac, and Majorana equations; the expanding universe and group theory; grand unification; and much more</li>\n<li>The essential textbook for students and an invaluable resource for researchers</li>\n<li>Features a brief, self-contained treatment of linear algebra</li>\n<li>An online illustration package is available to professors</li>\n<li>Solutions manual (available only to professors)</li>\n</ol>",
-    "image": "books-00131.png"
-   },
-   {
-    "title": "Abstract Algebra for Beginners: A Rigorous Introduction to Groups, Rings, Fields, Vector Spaces, Modules, Substructures, Homomorphisms, Quotients, ... Group Actions, Polynomials, and Galois Theory",
-    "author": "Steve Warner",
-    "note": "",
-    "description": "\"Abstract Algebra for Beginners\" consists of a series of basic to intermediate lessons in abstract algebra. In addition, all the proofwriting skills that are essential for advanced study in mathematics are covered and reviewed extensively. Abstract Algebra for Beginners is perfect for:\n<ul>\n<li>professors teaching an undergraduate course or basic graduate course in abstract algebra.</li>\n<li>high school teachers working with advanced math students.</li>\n<li>students wishing to see the type of mathematics they would be exposed to as a math major.</li>\n</ul>",
-    "image": "books-00132.png"
-   },
-   {
     "title": "Advanced Calculus - 2nd Edition",
     "author": "David V. Widder",
     "note": "",
@@ -908,46 +1005,32 @@ var books =
     "image": "books-00137.png"
    },
    {
-    "title": "The Art of Computer Programming, Volumes 1-4A Boxed Set - 1st Edition",
-    "author": "Donald Knuth",
+    "title": "Extremal Problems for Finite Sets",
+    "author": "Peter Frankl, Norihide Tokushige",
     "note": "",
-    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf.\n<br><br>\n\nThe bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.<br>\n--- <i>Byte</i>, September 1995\n<br><br>\n\nPrimarily written as a reference, some people have nevertheless found it possible and interesting to read each volume from beginning to end. A programmer in China even compared the experience to reading a poem.<br>\nIf you think you're a really good programmer... read [Knuth's] Art of Computer Programming... You should definitely send me a r&eacute;sum&eacute; if you can read the whole thing.<br>\n--- <i>Bill Gates</i>",
-    "image": "books-00138.png"
+    "description": "One of the great appeals of Extremal Set Theory as a subject is that the statements are easily accessible without a lot of mathematical background, yet the proofs and ideas have applications in a wide range of fields including combinatorics, number theory, and probability theory. Written by two of the leading researchers in the subject, this book is aimed at mathematically mature undergraduates, and highlights the elegance and power of this field of study. The first half of the book provides classic results with some new proofs including a complete proof of the Ahlswede Khachatrian theorem as well as some recent progress on the Erdos matching conjecture. The second half presents some combinatorial structural results and linear algebra methods including the Deza Erdos Frankl theorem, application of Rodl's packing theorem, application of semidefinite programming, and very recent progress (obtained in 2016) on the Erdos Szemeredi sunflower conjecture and capset problem. The book concludes with a collection of challenging open problems.",
+    "image": "books-00139.png"
    },
    {
-    "title": "Asymptotic Expansions",
-    "author": "A. Erdelyi",
+    "title": "The Best Writing on Mathematics 2021",
+    "author": "Mircea Pitici",
     "note": "",
-    "description": "Originally prepared for the Office of Naval Research, this important monograph introduces various methods for the asymptotic evaluation of integrals containing a large parameter, and solutions of ordinary linear differential equations by means of asymptotic expansions.",
-    "image": "books-00140.png"
+    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
+    "image": "books-00154.png"
    },
    {
-    "title": "A First Look at Perturbation Theory",
-    "author": "James G. Simmonds, James E. Mann Jr.",
+    "title": "A Mathematical Orchard: Problems and Solutions",
+    "author": "Mark I. Krusemeyer, George T. Gilbert, Loren C. Larson",
     "note": "",
-    "description": "Undergraduates in engineering and the physical sciences receive a thorough introduction to perturbation theory in this useful and accessible text. Students discover methods for obtaining an approximate solution of a mathematical problem by exploiting the presence of a small, dimensionless parameter - the smaller the parameter, the more accurate the approximate solution. Knowledge of perturbation theory offers a twofold benefit: approximate solutions often reveal the exact solution's essential dependence on specified parameters; also, some problems resistant to numerical solutions may yield to perturbation methods. In fact, numerical and perturbation methods can be combined in a complementary way.",
-    "image": "books-00142.png"
+    "description": "This volume is a republication and expansion of the much-loved Wohascum County Problem Book, published in 1993. The original 130 problems have been retained and supplemented by an additional 78 problems. The puzzles contained within, which are accessible but never routine, have been specially selected for their mathematical appeal, and detailed solutions are provided. The reader will encounter puzzles involving calculus, algebra, discrete mathematics, geometry and number theory, and the volume includes an appendix identifying the prerequisite knowledge for each problem. A second appendix organises the problems by subject matter so that readers can focus their attention on particular types of problems if they wish. This collection will provide enjoyment for seasoned problem solvers and for those who wish to hone their skills.",
+    "image": "books-00155.png"
    },
    {
-    "title": "Perturbations: Theory and Methods",
-    "author": "James A. Murdock",
+    "title": "Challenging Problems in Geometry",
+    "author": "Alfred S. Posamentier, Charles T. Salkind",
     "note": "",
-    "description": "A textbook for a concise graduate course in perturbation theory for the solution of algebraic and differential equations. It emphasizes ordinary differential equations, and covers all the methods commonly used in both regular and singular perturbations.",
-    "image": "books-00143.png"
-   },
-   {
-    "title": "Uncommon Mathematical Excursions: Polynomia and Related Realms",
-    "author": "Dan Kalman",
-    "note": "",
-    "description": "This text serves as a tour guide to little known corners of the mathematical landscape, not far from the main byways of algebra, geometry, and calculus. It is for the seasoned mathematical traveller who has visited these subjects many times and, familiar with the main attractions, is ready to venture abroad off the beaten track. For the old hand and new devotee alike, this book will surprise, intrigue, and delight readers with unexpected aspects of old and familiar subjects. In the first part of the book all of the topics are related to polynomials: properties and applications of Horner form, reverse and palindromic polynomials and identities linking roots and coefficients, among others. Topics in the second part are all connected in some way with maxima and minima. In the final part calculus is the focus.",
-    "image": "books-00144.png"
-   },
-   {
-    "title": "The Riemann Hypothesis",
-    "author": "Roland van der Veen, Jan van de Craats",
-    "note": "",
-    "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859. As an aside in his article, Riemann formulated his now famous hypothesis that so far no one has come close to proving: All nontrivial zeroes of the zeta function lie on the critical line. Hidden behind this at first mysterious phrase lies a whole mathematical universe of prime numbers, infinite sequences, infinite products, and complex functions.",
-    "image": "books-00145.png"
+    "description": "Designed for high school students and teachers with an interest in mathematical problem-solving, this volume offers a wealth of nonroutine problems in geometry that stimulate students to explore unfamiliar or little-known aspects of mathematics.\nIncluded are nearly 200 problems dealing with congruence and parallelism, the Pythagorean theorem, circles, area relationships, Ptolemy and the cyclic quadrilateral, collinearity and concurrency, and many other subjects. Within each topic, the problems are arranged in approximate order of difficulty. Detailed solutions (as well as hints) are provided for all problems, and specific answers for most.\nInvaluable as a supplement to a basic geometry textbook, this volume offers both further explorations on specific topics and practice in developing problem-solving techniques.",
+    "image": "books-00153.png"
    }
   ]
  },
