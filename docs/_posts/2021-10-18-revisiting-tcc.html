@@ -1,0 +1,44 @@
+---
+layout: post
+title: Revisiting the transfinite combinator calculus
+categories: math ordinals googology
+mathjax: true
+---
+
+<h1>A problem</h1>
+
+<p>I may need to rectract the results of the previous blog post because the transfinitary combinator calculus is <em>way</em> too strong.</p>
+
+<p>Let's take a certain combinator.
+This maps an ordered pair \((a,b)\) where \(b\) is a representation of true or false and \(a\) is a representation of a Turing machine state.
+The combinator takes this to \((c,d)\) where \(c\) is a representation of the next state and \(d\) is the boolean on whether the Turing machine has halted.
+Call this combinator \(C\).
+Then, clearly, \(\omega C (a,false)\), where \(a\) is the Turing machine's starting state solves the halting problem.
+This shows that \(\theta_0(1)>\omega_1^\mathrm{CK}\) and likely beyond.</p>
+
+<h1>The transfinite combinator calculus, revisited</h1>
+
+<p>Since it has already failed its original purpose we can simplify it to make it more usable.
+In particular, it seems that the manipulation of ordinals is heavily unnecessary for strength.
+The modification also agrees more closely with an unpublished system for naming ordinals by me.
+I originally thought its limit was \(\omega_1^\mathrm{CK}\) but in light of this argument will likely need to be reconsidered.</p>
+
+<h2>Redefinition</h2>
+
+<p>Call an expression \(x\) a limit iff \(\operatorname{cof}(x)\) is defined. In addition to the standard beta-reductions, there are limit manipulation rules defined as follows:
+<ul>
+<li>If \(y\) is a limit, \(\operatorname{cof}(xy)=\operatorname{cof}(y)\) and \((xy)[\alpha]=x(y[\alpha])\).</li>
+<li>If \(x\) is a limit but \(y\) is not, then \(\operatorname{cof}(xy)=\operatorname{cof}(x)\) and \((xy)[\alpha]=(x[\alpha])y\).</li>
+</ul></p>
+
+<p>Most of the time we will use the basic combinator calculus. In the basic combinator calculus all limits have cofinality \(\omega\). This is because the basic combinator calculus, in addition to \(S\) and \(K\), has the infinite combinator \(\omega\) with \(\operatorname{cof}(\omega)=\omega\) and \(\omega[n]\) is the Church numeral \(n\).</p>
+
+<h2>Ordinals in transfinite combinator calculus.</h2>
+
+<p>Ordinals can be notated through a natural extension of Church numerals. In our system \(\omega\) is the Church numeral \(\omega\).</p>
+
+<p>If an expression represents the Church numeral \(\alpha\), we say it corresponds to \(\alpha\). This creates a system of notating ordinals at least past \(\omega_1^\mathrm{CK}\). Unlike the related systems TGRx, AREX, SNR, and the L function, where \(\omega\) corresponds to \(G\), \(R\), \(N\), and \(L\), respectively, the transfinite combinator calculus is sufficiently powerful that &ldquo;analyses&rdquo; mainly consist of &ldquo;programming&rdquo; ordinals and then long, tedious conversions of lambda calculus expressions to S-K expressions. For example, it is relatively easy to show that it reaches \(\Gamma_0\), though constructing an explicit representation is extremely time-consuming.</p>
+
+<p>At the moment I don't really have any more to say on the subject so I'll just end the blog post.</p>
+
+<p>UPDATE: My unpublished system for maing ordinals is <a href="https://docs.google.com/spreadsheets/d/1PDxCa-0CuuU3o1yKUETtmDG9P0aZpPeFcmTK4xIWpZQ/edit?usp=sharing">here</a>.</p>

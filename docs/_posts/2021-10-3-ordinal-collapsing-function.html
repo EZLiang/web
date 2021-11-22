@@ -1,0 +1,37 @@
+---
+layout: post
+title: An OCF
+categories: math ordinals googology
+mathjax: true
+---
+
+<p>
+    Hello, I'm back (who could have expected?) with my new OCF (<a href="https://googology.wikia.org/wiki/User_blog:P%E9%80%B2%E5%A4%A7%E5%A5%BD%E3%81%8Dbot/List_of_common_mistakes_in_googology#Is_an_OCF_an_ordinal_notation.3F"><em>Not</em> an ordinal notation.</a>).
+    We follow several conventions from the world of OCFs. First, let
+    $$\Omega_\nu=\begin{cases} 1 &amp; \mbox{if }n=0 \\
+    \aleph_\nu &amp; \mbox{otherwise}\end{cases}$$
+    And let \(\Omega=\Omega_1\).
+</p>
+
+<p>
+    Then we define the function \(\psi_\nu(\alpha)\) as the least ordinal that cannot be constructed by:
+    <ul>
+        <li>All ordinals less that \(\Omega_\nu\)</li>
+        <li>Summing two previously constructed ordinals</li>
+        <li>\(\psi_\beta(\gamma)\) for two previously constructed ordinals \(\beta,\gamma\), subject to \(\gamma&lt;\alpha\)</li>
+        <li>\(\eta_\beta(\gamma)\) for two previously contructed ordinals \(\beta,\gamma\) with \(\gamma&lt;\alpha\)</li>
+    </ul>
+</p>
+
+<p>
+    Here, the \(\eta\) function is a function used to define large cardinals similarly.
+    Let \(\Lambda_0=1\), and otherwise \(\Lambda_\alpha\) be sequence of sufficiently large cardinals (not to be confused with large cardinals, though most large cardinals should work.).
+    Let \(C_\nu(\alpha)\) be the set of ordinals constructible by the folllowing:
+    <ul>
+        <li>All ordinals less than \(\Lambda_\nu\)</li>
+        <li>Summing two previously contructed ordinals</li>
+        <li>\(\psi_\beta(\gamma)\) for two previously constructed ordinals \(\beta,\gamma\), subject to \(\gamma\le\alpha\)</li>
+        <li>\(\eta_\beta(\gamma)\) for two previously contructed ordinals \(\beta,\gamma\) with \(\gamma&lt;\alpha\)</li>
+    </ul>
+    Then \(\eta_\nu(\alpha)\) is the smallest cardinal greater than all of \(C_\nu(\alpha)\cap\Lambda_{\nu+1}\).
+</p>

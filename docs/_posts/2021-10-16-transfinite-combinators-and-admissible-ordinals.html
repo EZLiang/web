@@ -1,0 +1,85 @@
+---
+layout: post
+title: Transfinite combinators and admissible ordinals
+categories: math ordinals googology
+mathjax: true
+---
+
+<p>I'm back with another topic concerning ordinals!</p>
+
+<h1>The transfinite combinator calculus</h1>
+<p>
+    The transfinite combinator calculus is an extension of normal combinator calculus.
+    We define several related concepts as follows:
+    <ul>
+        <li>If an expression \(x\) is beta-reducible, then \(\operatorname{cof}(x)=\operatorname{cof}(\operatorname{reduce}(x))\) and \(x[\alpha]=\operatorname{reduce}(x)[\alpha]\).</li>
+        <li>If \(y\) is a limit, then \(\operatorname{cof}(xy)=\operatorname{cof}(y)\) and \((xy)[\alpha]=x(y[\alpha])\).</li>
+        <li>If \(x\) is a limit, \(y\) is not a limit, and \(xy\) is not beta-reducible, then \(\operatorname{cof}(xy)=\operatorname{cof}(x)\) and \((xy)[\alpha]=(x[\alpha])y\).</li>
+        <li>\(x\) is a limit iff \(\operatorname{cof}(x)\) is defined.</li>
+    </ul>
+    The base of the transfinite combinator calculus are \(S\) and \(K\) which are both not limits.
+    Depending on our application we may choose various infinite combinators to add.
+</p>
+
+<h2>Ordinals in transfinite combinator calculus</h2>
+<p>
+    I've decided for ordinals to be first-class objects due to their importance.
+    (I tried to make one where ordinals are represented by extensions of Church numerals and is rather inelegant and has several problems.)
+    When an ordinal needs to be applied to something else it behaves like its Church numeral.
+    Formally, we can say that \((\alpha+1)xy=\alpha x(xy)\),
+    and the cofinality and fundamental sequences agree with the normal ones.
+    (We assume a system of fundamental sequences exists for all ordinals.)
+    A limit of ordinals agrees with the regular limit.
+    We then introduce two ordinal-based combinators:
+    <ul>
+        <li>\(Ax\) for ordinals is the successor ordinal, and otherwise is the Church numeral successor.</li>
+        <li>\(Exy\) if \(y\) is an ordinal \(&lt;\operatorname{cof}(x)\) and \(x\) is a limit is \(x[y]\), otherwise it is undefined.</li>
+        <li>\(Qxy\) checks for equality between ordinals if both are ordinals, otherwise applies the Church numeral comparison operator to its arguments.</li>
+        <li>
+            \(Px\) is the predecessor ordinal if \(x\) is a successor.
+            If \(x\) is a limit ordinal, it returns \(x\).
+            Otherwise, it applies the Church numeral predecessor operator to \(x\).
+        </li>
+    </ul>
+</p>
+
+<h1>An OCF for admissible ordinals</h1>
+<p>
+    We use the transfinite combinator calculus to construuct an OCF for admissible orrdinals.
+    Like Bachmann's, ours is somewhat cumbersome as it depends on fundamental sequences for all limit ordinals.
+</p>
+<p>
+    For every ordinal \(\alpha\), define a transfinite combinator calculus system \(\mathrm{TCC}_\alpha\) as follows:
+    <ul>
+        <li>The combinator \(S\) is not a limit, and satisfies \(Sxyz=xz(yz)\).</li>
+        <li>The combinator \(K\) is not a limit, and satisfies \(Kxy=x\).</li>
+        <li>The combinators \(A\), \(E\), \(Q\), and \(P\) are not limits.</li>
+        <li>
+            The combinator \(\theta_\alpha\) is a limit.
+            If either \(x\) or \(y\) is not an ordinal, its behavior is undefined.
+            If \(y\ge\alpha\), it returns 0.
+            Otherwise, it returns \(\theta_x(y)\).
+        </li>
+    </ul>
+</p>
+<p>
+    Then let
+    \[\Omega_\nu=\begin{cases}1 &\mbox{if } \nu=0\\ \aleph_\nu &\mbox{otherwise}\end{cases}\]
+    And then \(\theta_\nu(0)=\omega_\nu\), and otherwise,
+    \(\theta_\nu(\alpha)\) is the supremum of ordinals in \(\Omega_{\nu+1}\) that can be calculated in \(\mathrm{TCC}_\alpha\).
+</p>
+<h1>Properties</h1>
+<p>
+    Obviously \(\theta_\nu(\alpha)\) has cardinality \(\aleph_\nu\).
+    It seems like it takes only admissible values.
+    (Hence why I made ordinals first-class objects, otherwise there is no clear way to stop it from taking the value \(\omega_{\omega_1^\mathrm{CK}}^\mathrm{CK}\).)
+    <ul>
+        <li>\(\theta_0(n)=\omega_n^\mathrm{CK}\) for finite \(n\).</li>
+        <li>
+            \(\theta_0(\omega)=\omega_{\omega+1}^\mathrm{CK}\).
+            (It skips over the non-admissible \(\omega_\omega^\mathrm{CK}\).)
+        </li>
+        <li>\(\theta_0(\Omega_1)\) is the first admissible after the fisrt fixed-point of \(\alpha\mapsto\omega_\alpha^\mathrm{CK}\).</li>
+    </ul>
+<span style="color: red;">DISCLAIMER: These values are incorrect.</span>
+</p>

@@ -1,0 +1,45 @@
+---
+layout: post
+title: The arrow OCF
+categories: math ordinals googology
+mathjax: true
+---
+
+<p>
+    Not-so-recently the Knuth arrow notation was extended to infinite ordinals.
+    The definition is <a href="https://docs.google.com/spreadsheets/d/1hZuEWtnl9-ClkBotoqCHiJ5XQCWifTP-ya_KhMI8o90/edit?usp=sharing">here</a>.
+    It's pretty straightforward, and the precise details are unimportant for this post.
+</p>
+
+<p>
+    Anyways, we have an aordinal function.
+    (Conjecturally on par with the two-argument Veblen function.)
+    So, we can <a href="https://googology.wikia.org/wiki/Feferman%27s_theta_function">pull a Solomon Feferman</a> and define an OCF which extends it.
+    Conjecturally, the strength of the OCF is on par with Buchholz's and Feferman's.
+    Also I'm making this post partially because it's quite different from other OCFs and might be of intrest.
+</p>
+
+<p>
+    First we define the sets \(C^\epsilon(\alpha,\beta)\):
+    <ul>
+        <li>\(C^0(\alpha,\beta)=\{\alpha,\omega_1,\omega_2,\ldots,\omega_\omega\}\).</li>
+        <li>\begin{align*}
+            C^{\epsilon+1}(\alpha,\beta) &amp; =C^\epsilon (\alpha,\beta)\\
+            &amp; \cup \{\alpha+\beta:\alpha,\beta\in C^\epsilon (\alpha,\beta)\}\\
+            &amp; \cup \{\alpha\beta:\alpha,\beta\in C^\epsilon (\alpha,\beta)\}\\
+            &amp; \cup \{\alpha\uparrow^\beta\gamma: \alpha,\beta\in C^\epsilon (\alpha,\beta)\land\gamma&lt;\alpha\}
+            \end{align*}</li>
+        <li>If \(\epsilon\) is a limit, \(C^\epsilon(\alpha,\beta)=S\cup \operatorname{limits}(S)\),
+            where \(S=\bigcup_{\zeta&lt;\epsilon}C^\zeta(\alpha,\beta)\)</li>
+    </ul>
+    Then \(\alpha\uparrow^\beta 0=1\) and \(\alpha\uparrow^\beta(1+\gamma)=\sup C^\gamma(\alpha,\beta)\cap N\),
+    where \(N\) is the smallest regular cardinal strictly greater than both \(\alpha\) and \(\beta\), or zero if \(\alpha=0\).
+</p>
+
+<h1>Properties</h1>
+
+<p><ul>
+    <li>If \(\beta\le\Gamma_0\) then probably \(\alpha\uparrow^\beta\gamma=\alpha\downarrow^\beta\gamma\).</li>
+    <li>For all \(\Gamma_0\le\beta\le\Omega\), probably \(\alpha\uparrow^\beta\gamma=\alpha\downarrow^{\Gamma_0}\gamma\).</li>
+    <li>\(\omega\uparrow^{\varepsilon_{\Omega_\omega+1}}\omega\) is probably the Takeuti-Feferman-Buchholz ordinal.</li>
+</ul></p>
