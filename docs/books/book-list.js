@@ -677,6 +677,27 @@ var books =
     "note": "",
     "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859. As an aside in his article, Riemann formulated his now famous hypothesis that so far no one has come close to proving: All nontrivial zeroes of the zeta function lie on the critical line. Hidden behind this at first mysterious phrase lies a whole mathematical universe of prime numbers, infinite sequences, infinite products, and complex functions.",
     "image": "books-00145.png"
+   },
+   {
+    "title": "Bicycle or Unicycle?: A Collection of Intriguing Mathematical Puzzles",
+    "author": "Daniel J. Velleman, Stan Wagon",
+    "note": "",
+    "description": "Bicycle or Unicycle? is a collection of 105 mathematical puzzles whose defining characteristic is the surprise encountered in their solutions. Solvers will be surprised, even occasionally shocked, at those solutions. The problems unfold into levels of depth and generality very unusual in the types of problems seen in contests. In contrast to contest problems, these are problems meant to be savored; many solutions, all beautifully explained, lead to unanswered research questions. At the same time, the mathematics necessary to understand the problems and their solutions is all at the undergraduate level. The puzzles will, nonetheless, appeal to professionals as well as to students and, in fact, to anyone who finds delight in an unexpected discovery.",
+    "image": "books-00167.png"
+   },
+   {
+    "title": "A Course in Cryptography",
+    "author": "Heiko Knospe",
+    "note": "",
+    "description": "This book provides a compact course in modern cryptography. The mathematical foundations in algebra, number theory and probability are presented with a focus on their cryptographic applications. The text provides rigorous definitions and follows the provable security approach. The most relevant cryptographic schemes are covered, including block ciphers, stream ciphers, hash functions, message authentication codes, public-key encryption, key establishment, digital signatures and elliptic curves. The current developments in post-quantum cryptography are also explored, with separate chapters on quantum computing, lattice-based and code-based cryptosystems.",
+    "image": "books-00168.png"
+   },
+   {
+    "title": "The Art of Computer Programming, Volume 4, Fascicle 5: Mathematical Preliminaries Redux; Introduction to Backtracking; Dancing Links",
+    "author": "Donald Knuth",
+    "note": "",
+    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. All have admired Knuth for the breadth, clarity, accuracy, and good humor found in his books.\n<br />\nTo continue the fourth and later volumes of the set, and to update parts of the existing volumes, Knuth has created a series of small books called fascicles, which are published at regular intervals. Each fascicle encompasses a section or more of wholly new or revised material. Ultimately, the content of these fascicles will be rolled up into the comprehensive, final versions of each volume, and the enormous undertaking that began in 1962 will be complete.\n<br />\nThis fascicle covers three separate topics:\n<ol>\n<li>Mathematical Preliminaries.  Knuth writes that this portion of fascicle 5 \"extends the 'Mathematical Preliminaries' of Section 1.2 in Volume 1 to things that I didn't know about in the 1960s. Most of this new material deals with probabilities and expectations of random events; there's also an introduction to the theory of martingales.\"</li>\n<li>Backtracking: this section is the counterpart to section 7.2.1 which covered the generation of basic combinatorial patterns.  This section covers non-basic patterns, ones where the developer needs to make tentative choices and then may need to backtrack when those choices need revision.</li>\n<li>Dancing Links: this section is related to 2 above.  It develops an important data structure technique that is suitable for backtrack programming described above.</li>\n</ol>",
+    "image": "books-00078.png"
    }
   ]
  },
@@ -684,6 +705,13 @@ var books =
   "group": "Mathematics, 8th  grade. 2021 fall - 2022 summer",
   "hidden": false,
   "list": [
+   {
+    "title": "Asymptotic Methods For Integrals",
+    "author": "Temme, Nico M.",
+    "note": "",
+    "description": "This Book Gives Introductory Chapters On The Classical Basic And Standard Methods For Asymptotic Analysis, Such As Watson's Lemma, Laplace's Method, The Saddle Point And Steepest Descent Methods, Stationary Phase And Darboux's Method The Methods, Explained In Great Detail, Will Obtain Asymptotic Approximations Of The Well-Known Special Functions Of Mathematical Physics And Probability Theory After These Introductory Chapters, The Methods Of Uniform Asymptotic Analysis Are Described In Which Several Parameters Have Influence On Typical Phenomena: Turning Points And Transition Points, Coinciding Saddle And Singularities In All These Examples, The Special Functions Are Indicated That Describe The Peculiar Behavior Of The Integrals The Text Extensively Covers The Classical Methods With An Emphasis On How To Obtain Expansions, And How To Use The Results For Numerical Methods, In Particular For Approximating Special Functions In This Way, We Work With A Computational Mind: How Can We Use Certain Expansions In Numerical Analysis And In Computer Programs, How Can We Compute Coefficients, And So On",
+    "image": "books-00166.png"
+   },
    {
     "title": "An Introduction to the Geometry of N Dimensions",
     "author": "D. M. Y. Sommerville",
@@ -704,6 +732,27 @@ var books =
     "note": "",
     "description": "John Horton Conway is a singular mathematician with a lovely loopy brain. He is Archimedes, Mick Jagger, Salvador Dali, and Richard Feynman all rolled into one--he boasts a rock star's charisma, a slyly bent sense of humor, a polymath's promiscuous curiosity, and an insatiable compulsion to explain everything about the world to everyone in it. At Cambridge, Conway wrestled with \"Monstrous Moonshine,\" discovered the aptly named surreal numbers, and invented the cult classic Game of Life--more than just a cool fad, Life demonstrates how simplicity generates complexity and provides an analogy for mathematics and the entire universe. As a \"mathemagician\" at Princeton, he used ropes, dice, pennies, coat hangers, even the occasional Slinky, as props to extend his winning imagination and share his many nerdish delights. He granted Roberts full access to his idiosyncrasies and intellect both, though not without the occasional grumble: \"Oh hell,\" he'd say. \"You're not going to put that in the book. Are you?!?\"",
     "image": "books-00159.png"
+   },
+   {
+    "title": "Mind Your Decisions: Five Book Compilation",
+    "author": "Presh Talwalkar",
+    "note": "",
+    "description": "This is a compilation of five books, \"The Joy of Game Theory: An Introduction to Strategic Thinking\", \"40 Paradoxes in Logic, Probability, and Game Theory\", \"The Irrationality Illusion: How To Make Smart Decisions And Overcome Bias\", \"The Best Mental Math Tricks\", and \"Multiply Numbers By Drawing Lines\".",
+    "image": "books-00164.png"
+   },
+   {
+    "title": "Applications of Fibonacci Numbers: Volume 9: Proceedings of The Tenth International Research Conference on Fibonacci Numbers and Their Applications",
+    "author": "Fredric T. Howard (Editor)",
+    "note": "",
+    "description": "This book contains 28 research articles from among the 49 papers and abstracts presented at the Tenth International Conference on Fibonacci Numbers and Their Applications. These articles have been selected after a careful review by expert referees, and they range over many areas of mathematics. The Fibonacci numbers and recurrence relations are their unifying bond. We note that the article \"Fibonacci, Vern and Dan\" , which follows the Introduction to this volume, is not a research paper. It is a personal reminiscence by Marjorie Bicknell-Johnson, a longtime member of the Fibonacci Association. The editor believes it will be of interest to all readers. It is anticipated that this book, like the eight predecessors, will be useful to research workers and students at all levels who are interested in the Fibonacci numbers and their applications. March 16, 2003 The Editor Fredric T. Howard Mathematics Department Wake Forest University Box 7388 Reynolda Station Winston-Salem, NC 27109 xxi THE ORGANIZING COMMITTEES LOCAL COMMITTEE INTERNATIONAL COMMITTEE Calvin Long, Chairman A. F. Horadam (Australia), Co-Chair Terry Crites A. N. Philippou (Cyprus), Co-Chair Steven Wilson A. Adelberg (U. S. A. ) C. Cooper (U. S. A. ) Jeff Rushal H. Harborth (Germany) Y. Horibe (Japan) M. Bicknell-Johnson (U. S. A. ) P. Kiss (Hungary) J. Lahr (Luxembourg) G. M. Phillips (Scotland) J. 'Thrner (New Zealand) xxiii xxiv LIST OF CONTRlBUTORS TO THE CONFERENCE * ADELBERG, ARNOLD, \"Universal Bernoulli Polynomials and p-adic Congruences. \" *AGRATINI, OCTAVIAN, \"A Generalization of Durrmeyer-Type Polynomials. \" BENJAMIN, ART, \"Mathemagics.",
+    "image": "books-00165.png"
+   },
+   {
+    "title": "The Best Writing on Mathematics 2021",
+    "author": "Mircea Pitici",
+    "note": "",
+    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
+    "image": "books-00154.png"
    }
   ]
  },
@@ -934,6 +983,20 @@ var books =
     "note": "",
     "description": "When Jennifer Doudna was in sixth grade, she came home one day to find that her dad had left a paperback titled The Double Helix on her bed. She put it aside, thinking it was one of those detective tales she loved. When she read it on a rainy Saturday, she discovered she was right, in a way. As she sped through the pages, she became enthralled by the intense drama behind the competition to discover the code of life. Even though her high school counselor told her girls didn't become scientists, she decided she would.\n\nDriven by a passion to understand how nature works and to turn discoveries into inventions, she would help to make what the book's author, James Watson, told her was the most important biological advance since his co-discovery of the structure of DNA. She and her collaborators turned a curiosity of nature into an invention that will transform the human race: an easy-to-use tool that can edit DNA. Known as CRISPR, it opened a brave new world of medical miracles and moral questions.\n\nThe development of CRISPR and the race to create vaccines for coronavirus will hasten our transition to the next great innovation revolution. The past half-century has been a digital age, based on the microchip, computer, and internet. Now we are entering a life-science revolution. Children who study digital coding will be joined by those who study genetic code.\n\nShould we use our new evolution-hacking powers to make us less susceptible to viruses? What a wonderful boon that would be! And what about preventing depression? Hmmm...Should we allow parents, if they can afford it, to enhance the height or muscles or IQ of their kids?\n\nAfter helping to discover CRISPR, Doudna became a leader in wrestling with these moral issues and, with her collaborator Emmanuelle Charpentier, won the Nobel Prize in 2020. Her story is a thrilling detective tale that involves the most profound wonders of nature, from the origins of life to the future of our species.",
     "image": "books-00160.png"
+   },
+   {
+    "title": "Physics, Volume 1",
+    "author": "Robert Resnick, David Halliday, Kenneth S. Krane",
+    "note": "",
+    "description": "Written for the full year or three term Calculus-based University Physics course for science and engineering majors, the publication of the first edition of Physics in 1960 launched the modern era of Physics textbooks. It was a new paradigm at the time and continues to be the dominant model for all texts. Physics is the most realistic option for schools looking to teach a more demanding course.",
+    "image": "books-00162.png"
+   },
+   {
+    "title": "Physics, Volume 2",
+    "author": "David Halliday, Robert Resnick, Kenneth S. Krane",
+    "note": "",
+    "description": "Written for the full year or three term Calculus-based University Physics course for science and engineering majors, the publication of the first edition of Physics in 1960 launched the modern era of Physics textbooks. It was a new paradigm at the time and continues to be the dominant model for all texts. Physics is the most realistic option for schools looking to teach a more demanding course. The entirety of Volume 2 of the 5th edition has been edited to clarify conceptual development in light of recent findings of physics education research. End-of-chapter problem sets are thoroughly over-hauled, new problems are added, outdated references are deleted, and new short-answer conceptual questions are added.",
+    "image": "books-00163.png"
    }
   ]
  },
@@ -961,13 +1024,6 @@ var books =
     "note": "",
     "description": "Twists, Tilings, and Tessellation describes the underlying principles and mathematics of the broad and exciting field of abstract and mathematical origami, most notably the field of origami tessellations. It contains folding instructions, underlying principles, mathematical concepts, and many beautiful photos of the latest work in this fast-expanding field.",
     "image": "books-00127.png"
-   },
-   {
-    "title": "The Art of Computer Programming, Volume 4, Fascicle 5: Mathematical Preliminaries Redux; Introduction to Backtracking; Dancing Links",
-    "author": "Donald Knuth",
-    "note": "",
-    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. All have admired Knuth for the breadth, clarity, accuracy, and good humor found in his books.\n<br />\nTo continue the fourth and later volumes of the set, and to update parts of the existing volumes, Knuth has created a series of small books called fascicles, which are published at regular intervals. Each fascicle encompasses a section or more of wholly new or revised material. Ultimately, the content of these fascicles will be rolled up into the comprehensive, final versions of each volume, and the enormous undertaking that began in 1962 will be complete.\n<br />\nThis fascicle covers three separate topics:\n<ol>\n<li>Mathematical Preliminaries.  Knuth writes that this portion of fascicle 5 \"extends the 'Mathematical Preliminaries' of Section 1.2 in Volume 1 to things that I didn't know about in the 1960s. Most of this new material deals with probabilities and expectations of random events; there's also an introduction to the theory of martingales.\"</li>\n<li>Backtracking: this section is the counterpart to section 7.2.1 which covered the generation of basic combinatorial patterns.  This section covers non-basic patterns, ones where the developer needs to make tentative choices and then may need to backtrack when those choices need revision.</li>\n<li>Dancing Links: this section is related to 2 above.  It develops an important data structure technique that is suitable for backtrack programming described above.</li>\n</ol>",
-    "image": "books-00078.png"
    },
    {
     "title": "Number Theory",
@@ -1012,13 +1068,6 @@ var books =
     "image": "books-00139.png"
    },
    {
-    "title": "The Best Writing on Mathematics 2021",
-    "author": "Mircea Pitici",
-    "note": "",
-    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
-    "image": "books-00154.png"
-   },
-   {
     "title": "A Mathematical Orchard: Problems and Solutions",
     "author": "Mark I. Krusemeyer, George T. Gilbert, Loren C. Larson",
     "note": "",
@@ -1031,6 +1080,13 @@ var books =
     "note": "",
     "description": "Designed for high school students and teachers with an interest in mathematical problem-solving, this volume offers a wealth of nonroutine problems in geometry that stimulate students to explore unfamiliar or little-known aspects of mathematics.\nIncluded are nearly 200 problems dealing with congruence and parallelism, the Pythagorean theorem, circles, area relationships, Ptolemy and the cyclic quadrilateral, collinearity and concurrency, and many other subjects. Within each topic, the problems are arranged in approximate order of difficulty. Detailed solutions (as well as hints) are provided for all problems, and specific answers for most.\nInvaluable as a supplement to a basic geometry textbook, this volume offers both further explorations on specific topics and practice in developing problem-solving techniques.",
     "image": "books-00153.png"
+   },
+   {
+    "title": "Function Theory and l^p Spaces",
+    "author": "Raymond Cheng, Javad Mashreghi, William T. Ross",
+    "note": "",
+    "description": "The classical lp sequence spaces have been a mainstay in Banach spaces. This book reviews some of the foundational results in this area (the basic inequalities, duality, convexity, geometry) as well as connects them to the function theory (boundary growth conditions, zero sets, extremal functions, multipliers, operator theory) of the associated spaces lpA of analytic functions whose Taylor coefficients belong to lp. Relations between the Banach space lp and its associated function space are uncovered using tools from Banach space geometry, including Birkhoff-James orthogonality and the resulting Pythagorean inequalities. The authors survey the literature on all of this material, including a discussion of the multipliers of lpA and a discussion of the Wiener algebra l1A.",
+    "image": "books-00169.png"
    }
   ]
  },
