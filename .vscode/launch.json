@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "WebServer",
-            "program": "${workspaceFolder}/server/WebServer.js",
+            "program": "${workspaceFolder}/web.server/WebServer.js",
             "request": "launch",
             "skipFiles": [
                 "<node_internals>/**"
