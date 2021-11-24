@@ -746,13 +746,6 @@ var books =
     "note": "",
     "description": "This book contains 28 research articles from among the 49 papers and abstracts presented at the Tenth International Conference on Fibonacci Numbers and Their Applications. These articles have been selected after a careful review by expert referees, and they range over many areas of mathematics. The Fibonacci numbers and recurrence relations are their unifying bond. We note that the article \"Fibonacci, Vern and Dan\" , which follows the Introduction to this volume, is not a research paper. It is a personal reminiscence by Marjorie Bicknell-Johnson, a longtime member of the Fibonacci Association. The editor believes it will be of interest to all readers. It is anticipated that this book, like the eight predecessors, will be useful to research workers and students at all levels who are interested in the Fibonacci numbers and their applications. March 16, 2003 The Editor Fredric T. Howard Mathematics Department Wake Forest University Box 7388 Reynolda Station Winston-Salem, NC 27109 xxi THE ORGANIZING COMMITTEES LOCAL COMMITTEE INTERNATIONAL COMMITTEE Calvin Long, Chairman A. F. Horadam (Australia), Co-Chair Terry Crites A. N. Philippou (Cyprus), Co-Chair Steven Wilson A. Adelberg (U. S. A. ) C. Cooper (U. S. A. ) Jeff Rushal H. Harborth (Germany) Y. Horibe (Japan) M. Bicknell-Johnson (U. S. A. ) P. Kiss (Hungary) J. Lahr (Luxembourg) G. M. Phillips (Scotland) J. 'Thrner (New Zealand) xxiii xxiv LIST OF CONTRlBUTORS TO THE CONFERENCE * ADELBERG, ARNOLD, \"Universal Bernoulli Polynomials and p-adic Congruences. \" *AGRATINI, OCTAVIAN, \"A Generalization of Durrmeyer-Type Polynomials. \" BENJAMIN, ART, \"Mathemagics.",
     "image": "books-00165.png"
-   },
-   {
-    "title": "The Best Writing on Mathematics 2021",
-    "author": "Mircea Pitici",
-    "note": "",
-    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
-    "image": "books-00154.png"
    }
   ]
  },
@@ -1087,6 +1080,13 @@ var books =
     "note": "",
     "description": "The classical lp sequence spaces have been a mainstay in Banach spaces. This book reviews some of the foundational results in this area (the basic inequalities, duality, convexity, geometry) as well as connects them to the function theory (boundary growth conditions, zero sets, extremal functions, multipliers, operator theory) of the associated spaces lpA of analytic functions whose Taylor coefficients belong to lp. Relations between the Banach space lp and its associated function space are uncovered using tools from Banach space geometry, including Birkhoff-James orthogonality and the resulting Pythagorean inequalities. The authors survey the literature on all of this material, including a discussion of the multipliers of lpA and a discussion of the Wiener algebra l1A.",
     "image": "books-00169.png"
+   },
+   {
+    "title": "The Best Writing on Mathematics 2021",
+    "author": "Mircea Pitici",
+    "note": "",
+    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
+    "image": "books-00154.png"
    }
   ]
  },
