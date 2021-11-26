@@ -1,0 +1,131 @@
+---
+layout: post
+title: How to make an OCF
+categories: math ordinals googology
+mathjax: true
+---
+
+<p>Making an OCF is easy.</p>
+<p>
+    The idea of pre-inaccessible OCFs (OCFs without inaccessibles) are easy to grasp.
+    Let's define a function \(\psi(\alpha)\) as the smallest ordinal you can't name with 0, addition, and \(\psi\) to smaller arguments.
+    The idea is when we run out of names, we just give a name to the next ordinal and keep going.
+</p>
+<p>
+    This post isn't about the basics of OCFs, but it's important to see how we get past the limit.
+    We introduce an enormous ordinal \(\Omega_1\), and add that to the set of ordinals we can use to name ordinals.
+    After this, we can add an even larger ordinal \(\Omega_2\) to name enormous ordinals, and keep going.
+</p>
+<p>
+    A sample OCF looks like:
+    <ul>
+        <li>\(C_\nu(\alpha)\) is the closure of \(\Omega_\nu\) under addition and \(\psi\) if the argument is less that \(\alpha\).</li>
+        <li>\(\psi_\nu(\alpha)\) is the supremum of \(C_\nu(\alpha)\cap\Omega_{\nu+1}\).</li>
+        <li>\(\Omega_0=1\), and otherwise \(\Omega_\nu\) is the least ordinal of cardinality \(\aleph_\nu\).</li>
+    </ul>
+    This looks like extended Buchholz but slightly different. We'll see why shortly...
+</p>
+
+
+<h1>Adding inaccessibles</h1>
+<p>
+    The limit of the previous OCF is \(\psi_0(\Omega_{\Omega_\ldots})=\psi_0(\Lambda)\) where \(\Lambda\) is the first omega fixed point.
+    This is a familiar situation...
+</p>
+<p>
+    A good candidate for a huge ordinal to add is the least inaccessible, \(I\).
+    Ideally, we would like \(\psi_I(0)=\Lambda\).
+    It turns out that it is more convenient to have \(\psi_I(1)=\Lambda\), while \(\psi_I(0)=1\).
+</p>
+<p>
+    If we want \(\psi_I(1)=\lambda\), it is easy to show that we can achieve this by just setting \(\Omega_I=1\).
+    (With the old definition \(\Omega_I=I\)).
+    Then \(\psi_I(2)\) is the second fixed point, and so on.
+    Adding \(I\) also allows us to use functions like \(\psi_{I+1}\), \(\psi_{I^I}\) (challenge: figure out how), \(\psi_{\Omega_{I+1}}\), and so on.
+    The limit is \(\psi_0(\Omega_{\Omega_{\ldots_{I+1}}})\), the next omega fixed point after \(I\).
+</p>
+
+<h2>More inaccessibles!</h2>
+<p>
+    To get past the limit, just add another inaccessible!
+    If \(I_2\) is the second inaccessible, then setting \(\Omega_{I_2}=I\) makes \(\psi_{I_2}(1)\) the first omega fixed point after \(I\).
+    We can then add the function \(\alpha\mapsto I_\alpha\), the enumeration function of the inaccessibles, into the allowed functions.
+    If \(\kappa=I_{\alpha+1}\), define \(\kappa^-=I_\alpha\), and otherwise \(\kappa^-=1\).
+    We define:
+    <ul>
+        <li>\(\Omega_0=1\).</li>
+        <li>If \(\nu\) is inacessible, \(\Omega_\nu=\nu^-\).</li>
+        <li>Otherwise \(\Omega_\nu\) is the least ordinal of cardinality \(\aleph_\nu\).</li>
+    </ul>
+    The limit so far is \(\psi_0(I_{I_{\ldots}})\).
+    I <em>wonder</em> how we can get past that...
+</p>
+
+<h2>\(\alpha\)-inaccessibles</h3>
+<p>
+    A good choice of diagonalizer is \(I(1,0)\), the first 1-inaccessible.
+    A 1-inaccessible is an inaccessible limit of inaccessibles.
+    We already know that it's much better to have \(\psi_{I(1,0)}(1)=I_{I_\ldots}\).
+    We can achieve this by setting \(\Omega_{I(1,0)}=1\).
+</p>
+<p>
+    By now we should know to add the enumeration function of the 1-inaccessibles.
+    To deal with 1-inaccessibles in subscripts, we just let \(\kappa^-=I(1,\alpha)\) if \(\kappa=I(1,\alpha+1)\), and \(\kappa^-1=1\) for other 1-inaccessibles.
+</p>
+<p>
+    Now to diagonalize over the 1-inaccessibles, we introduce (surprise!) a 2-inaccessible.
+    The process of adding a 2-inaccessible is nearly identical.
+    Add the function \(\alpha\mapsto I(2,\alpha)\), and set \(I(2,\alpha+1)^-=I(2,\alpha)\) and otherwise \(I(2,\alpha)^-=1\).
+</p>
+<p>
+    Adding \(\alpha\)-inaccessibles is essentially identical.
+    We just add the two-argument \(I\) function itself to the allowed functions.
+    Also, \(I(\alpha,\beta+1)^-=I(\alpha,\beta)\) and otherwise \(I(\alpha,\beta)^-=1\).
+</p>
+<p>
+    We could go on and add a third argument to \(I\), but there's a better way...
+</p>
+
+<h1>Mahlo cardinals</h1>
+<p>
+    We introduce a Mahlo cardinal, \(M\).
+    Similarly, if we let \(\Omega_M=1\), then our OCF gives \(\psi_M(1)\) as the first fixed point of \(\alpha\mapsto I(\alpha,0)\).
+    The process of adding the other Mahlos is virtually identical to that of adding the inaccessibles.
+</p>
+
+<h1>Weakly compacts</h1>
+<p>
+    Roses are red, violets are blue, I'm so bored, and so are you.
+    So let's just skip ahead.
+    Also, note that the deagonalizer of the weakly compacts, also called \(\Pi^1_1\)-indescribables, is a \(\Pi^1_2\)-indescribable.
+    I trust you to be able to understand the rest.
+</p>
+
+<h1>The final OCF</h1>
+<p>
+    A 0-inaccessible is a regular limit of regulars.
+    A \(\alpha\)-inaccessible is a regular limit of \(\beta\)-inaccessibles for \(\beta&lt;\alpha\).
+    A 0-Mahlo is a cardinal such that the inaccessibles are stationary in itself.
+    A \(\alpha\)-Mahlo is a cardinal such that the \(\beta\)-Mahlos are stationary in itself for \(\beta&lt;\alpha\).
+    Look on Wikipedia for the definition of a \(\Pi^1_n\)-indescribable.
+    A 0-\(\Pi^1_n\)-indescribable is a \(\Pi^1_n\)-indescribable.
+    A \(\alpha\)-\(\Pi^1_n\)-indescribable is a cardinal that's \(\Pi^1_n\)-indescribable on the set of \(\beta\)-\(\Pi^1_n\)-indescribables for \(\beta&lt;\alpha\).
+</p>
+<p>
+    \(\Xi(0,\alpha,\beta)\) enumerates the \(\alpha\)-inaccessibles.
+    \(\Xi(1,\alpha,\beta)\) enumerates the \(\alpha\)-Mahlos.
+    \(\Xi(n+1,\alpha,\beta)\) if \(n>0\) enumerates the \(\alpha\)-\(\Pi^1_n\)-indescribables.
+</p>
+<p>
+    If \(\kappa=\Xi(\alpha,\beta,\gamma+1)\) for some \(\alpha,\beta,\gamma\), then \(\kappa^-=\Xi(\alpha,\beta,\gamma)\).
+    Otherwise, \(\kappa^-=1\).
+</p>
+<p>
+    If \(\nu\) is inaccessible, set \(\Omega_\nu=\nu^-\).
+    If \(\nu=0\), set \(\Omega_\nu=1\).
+    Else, set \(\Omega_\nu\) to be the least ordinal of cardinality \(\aleph_\nu\).
+</p>
+<p>
+    \(C_\nu(\alpha)\) is the closure of \(\Omega_\nu\) under addition, \(\Xi\), and \(\psi\) if the argument is less than \(\alpha\).
+    \(\psi_\nu(\alpha)\) is the supremum of \(C_\nu(\alpha)\cap\Omega_{\nu+1}\).
+</p>
