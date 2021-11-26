@@ -38,7 +38,7 @@ mathjax: true
     It turns out that it is more convenient to have \(\psi_I(1)=\Lambda\), while \(\psi_I(0)=1\).
 </p>
 <p>
-    If we want \(\psi_I(1)=\Lambda\), it is easy to show that we can achieve this by just setting \(\Omega_I=1\).
+    If we want \(\psi_I(1)=\Lambda\), it is easy to show that we can achieve this by just setting \(\Omega_I=1\) and \(\Omega_{I+1}=I\).
     (With the old definition \(\Omega_I=I\)).
     Then \(\psi_I(2)\) is the second fixed point, and so on.
     Adding \(I\) also allows us to use functions like \(\psi_{I+1}\), \(\psi_{I^I}\) (challenge: figure out how), \(\psi_{\Omega_{I+1}}\), and so on.
@@ -48,13 +48,14 @@ mathjax: true
 <h2>More inaccessibles!</h2>
 <p>
     To get past the limit, just add another inaccessible!
-    If \(I_2\) is the second inaccessible, then setting \(\Omega_{I_2}=I\) makes \(\psi_{I_2}(1)\) the first omega fixed point after \(I\).
+    If \(I_2\) is the second inaccessible, then setting \(\Omega_{I_2}=I\) and \(\Omega_{I_2+1}=I_2\) makes \(\psi_{I_2}(1)\) the first omega fixed point after \(I\).
     We can then add the function \(\alpha\mapsto I_\alpha\), the enumeration function of the inaccessibles, into the allowed functions.
     If \(\kappa=I_{\alpha+1}\), define \(\kappa^-=I_\alpha\), and otherwise \(\kappa^-=1\).
     We define:
     <ul>
         <li>\(\Omega_0=1\).</li>
         <li>If \(\nu\) is inacessible, \(\Omega_\nu=\nu^-\).</li>
+        <li>If \(\nu\) is the successor of an inaccessible, \(\Omega_\nu=\nu-1\).</li>
         <li>Otherwise \(\Omega_\nu\) is the least ordinal of cardinality \(\aleph_\nu\).</li>
     </ul>
     The limit so far is \(\psi_0(I_{I_{\ldots}})\).
@@ -65,7 +66,7 @@ mathjax: true
 <p>
     A good choice of diagonalizer is \(I(1,0)\), the first 1-inaccessible.
     A 1-inaccessible is an inaccessible limit of inaccessibles.
-    However, setting \(\Omega_{I(1,0)}=1\) makes \(\psi_{I(1,0)}(0)\) the fixed point instead.
+    However, setting \(\Omega_{I(1,0)}=1\) and \(\Omega_{I(1,0)+1}=I(1,0)\) now makes \(\psi_{I(1,0)}(0)\) the fixed point.
 </p>
 <p>
     By now we should know to add the enumeration function of the 1-inaccessibles.
@@ -89,7 +90,7 @@ mathjax: true
 <p>
     We introduce a Mahlo cardinal, \(M\).
     We replace the two-argument \(I\) by the 1 argument version.
-    Similarly, if we let \(\Omega_M=1\), then our OCF gives \(\psi_M(0)\) as the first 1-inaccessible.
+    Similarly, if we let \(\Omega_M=1\) and \(\Omega_{M+1}=M\), then our OCF gives \(\psi_M(0)\) as the first 1-inaccessible.
     \(\psi_M(Mn)\) will be the first \(n+1\)-inaccessible, and then \(\psi_M(M^2)\) diagonalizes over this and is the fixed point of \(\alpha\mapsto I(\alpha,0)\).
     In fact, \(\psi_M(M\alpha+\beta)\) in our OCF equals \(\chi_{1+\alpha}(\beta)\) in Rathjen's, for some set of values that I can't be bothered to calculate.
     The process of adding the other Mahlos is virtually identical to that of adding the inaccessibles.
@@ -121,6 +122,7 @@ mathjax: true
 <p>
     If \(\nu\) is inaccessible, set \(\Omega_\nu=\nu^-\).
     If \(\nu=0\), set \(\Omega_\nu=1\).
+    If \(\nu=I+1\) for inaccessible \(I\), set \(\Omega_\nu=I\)
     Else, set \(\Omega_\nu\) to be the least ordinal of cardinality \(\aleph_\nu\).
 </p>
 <p>
