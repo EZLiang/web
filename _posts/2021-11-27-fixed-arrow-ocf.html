@@ -1,0 +1,27 @@
+---
+layout: post
+title: Fixed arrow OCF
+categories: math ordinals googology
+mathjax: true
+---
+
+<p>
+    The <a href="{% post_url 2021-11-2-ordinal-arrow-ocf %}">arrow OCF</a> has some issues.
+    So I give a fixed version.
+</p>
+
+<p>
+    Let
+    <ul>
+        <li>\(B_0(\beta)=\{0,\omega_1,\omega_2,\ldots,\omega_\omega\}\).</li>
+        <li>\(B_{n+1}(\beta)=\{x,x+y,xy,x\uparrow^zy:x,y,z\in B_n(\beta)\land z&lt;\beta\}\).</li>
+        <li>\(B(\beta)=\beta\cap\bigcup_{n&lt;\omega} B_n(\beta)\).</li>
+    </ul>
+    and
+    <ul>
+        <li>\(C_0(\alpha,\beta)=\alpha\cup\{\alpha,\omega_1,\omega_2,\ldots,\omega_\omega\}\).</li>
+        <li>\(C_{\epsilon+1}(\alpha,\beta)=\{x,x+y,xy,x\uparrow^zy:x,y\in C_\epsilon(\alpha,\beta)\land z\in B(\beta)\}\).</li>
+        <li>If \(\epsilon\) is a limit, \(C_\epsilon(\alpha,\beta)=S\cup\operatorname{limits}(S)\), where \(S=\bigcup_{\zeta&lt;\epsilon}C_\zeta(\alpha,\beta)\).</li>
+    </ul>
+    Then \(\alpha\uparrow^0\beta=1\) and \(\alpha\uparrow^{1+\gamma}\beta=\sup(C_\gamma(\alpha,\beta))\).
+</p>
