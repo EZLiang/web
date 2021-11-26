@@ -1087,6 +1087,97 @@ var books =
     "note": "",
     "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
     "image": "books-00154.png"
+   },
+   {
+    "title": "Real Analysis: Measure Theory, Integration, and Hilbert Spaces (Princeton Lectures in Analysis)",
+    "author": "Elias M. Stein, Rami Shakarchi",
+    "note": "",
+    "description": "Real Analysis is the third volume in the Princeton Lectures in Analysis, a series of four textbooks that aim to present, in an integrated manner, the core areas of analysis. Here the focus is on the development of measure and integration theory, differentiation and integration, Hilbert spaces, and Hausdorff measure and fractals. This book reflects the objective of the series as a whole: to make plain the organic unity that exists between the various parts of the subject, and to illustrate the wide applicability of ideas of analysis to other fields of mathematics and science.",
+    "image": "books-00140.png"
+   },
+   {
+    "title": "Real Analysis: Modern Techniques and Their Applications",
+    "author": "Gerald B. Folland",
+    "note": "",
+    "description": "An in-depth look at real analysis and its applications-now expanded and revised.\n<br/>\nThis new edition of the widely used analysis book continues to cover real analysis in greater detail and at a more advanced level than most books on the subject. Encompassing several subjects that underlie much of modern analysis, the book focuses on measure and integration theory, point set topology, and the basics of functional analysis. It illustrates the use of the general theories and introduces readers to other branches of analysis such as Fourier analysis, distribution theory, and probability theory.\n<br/>\nThis edition is bolstered in content as well as in scope-extending its usefulness to students outside of pure analysis as well as those interested in dynamical systems. The numerous exercises, extensive bibliography, and review chapter on sets and metric spaces make Real Analysis: Modern Techniques and Their Applications, Second Edition invaluable for students in graduate-level analysis courses. New features include:\n* Revised material on the n-dimensional Lebesgue integral.\n* An improved proof of Tychonoff's theorem.\n* Expanded material on Fourier analysis.\n* A newly written chapter devoted to distributions and differential equations.\n* Updated material on Hausdorff dimension and fractal dimension.",
+    "image": "books-00142.png"
+   },
+   {
+    "title": "Visual Complex Analysis",
+    "author": "Tristan Needham",
+    "note": "",
+    "description": "This radical first course on complex analysis brings a beautiful and powerful subject to life by consistently using geometry (not calculation) as the means of explanation. Aimed at undergraduate students in mathematics, physics, and engineering, the book's intuitive explanations, lack of advanced prerequisites, and consciously user-friendly prose style will help students to master the subject more readily than was previously possible. The key to this is the book's use of new geometric arguments in place of the standard calculational ones. These geometric arguments are communicated with the aid of hundreds of diagrams of a standard seldom encountered in mathematical works. A new approach to a classical topic, this work will be of interest to students in mathematics, physics, and engineering, as well as to professionals in these fields.",
+    "image": "books-00143.png"
+   },
+   {
+    "title": "Visual Differential Geometry and Forms: A Mathematical Drama in Five Acts",
+    "author": "Tristan Needham",
+    "note": "",
+    "description": "An inviting, intuitive, and visual exploration of differential geometry and forms\n<br/>\nVisual Differential Geometry and Forms fulfills two principal goals. In the first four acts, Tristan Needham puts the geometry back into differential geometry. Using 235 hand-drawn diagrams, Needham deploys Newton's geometrical methods to provide geometrical explanations of the classical results. In the fifth act, he offers the first undergraduate introduction to differential forms that treats advanced topics in an intuitive and geometrical manner.\n<br/>\nUnique features of the first four acts include: four distinct geometrical proofs of the fundamentally important Global Gauss-Bonnet theorem, providing a stunning link between local geometry and global topology; a simple, geometrical proof of Gauss's famous Theorema Egregium; a complete geometrical treatment of the Riemann curvature tensor of an n-manifold; and a detailed geometrical treatment of Einstein's field equation, describing gravity as curved spacetime (General Relativity), together with its implications for gravitational waves, black holes, and cosmology. The final act elucidates such topics as the unification of all the integral theorems of vector calculus; the elegant reformulation of Maxwell's equations of electromagnetism in terms of 2-forms; de Rham cohomology; differential geometry via Cartan's method of moving frames; and the calculation of the Riemann tensor using curvature 2-forms. Six of the seven chapters of Act V can be read completely independently from the rest of the book.\n<br/>\nRequiring only basic calculus and geometry, Visual Differential Geometry and Forms provocatively rethinks the way this important area of mathematics should be considered and taught.\n\n",
+    "image": "books-00151.png"
+   },
+   {
+    "title": "The Quantum Dice",
+    "author": "L.I Ponomarev, I.V Kurchatov",
+    "note": "",
+    "description": "\"Real black magic calculus\" is how Albert Einstein described quantum mechanics in a letter in 1925. Quantum mechanics is now rather more widely understood by physicists, but still many \"outsiders\" are unaware of what quantum mechanics is, how it has changed the course of development of physics and how it affects their everyday lives. This book gives a fascinating account of the evolution of the ideas and concepts of quantum theory and modern physics, written by an \"insider\" but aimed specifically at the general science reader. Many anecdotes from famous past physicists give an insight into their work and personalities. The many illustrations are an important and attractive feature of the book.\n<br/>\nLeonid Ponomarev is a leading theoretical physicist. His deep understanding of the subject is allied with his wide knowledge of history, literature and philosophy to produce this history of the development of modern physics and its impact on our lives.",
+    "image": "books-00158.png"
+   },
+   {
+    "title": "Number Theory and Its Applications (Lecture Notes in Pure and Applied Mathematics, Vol. 204)",
+    "author": "Serguei Stepanov, C.Y. Yildirim",
+    "note": "",
+    "description": "\"Addresses contemporary developments in number theory and coding theory, originally presented as lectures at summer school held at Bilkent University, Ankara, Turkey. Includes many results in book form for the first time.\"",
+    "image": "books-00161.png"
+   },
+   {
+    "title": "Fluid Waves",
+    "author": "Richard Manasseh",
+    "note": "",
+    "description": "This book derives the mathematical basis for the most-encountered waves in fluids in science and engineering. It gives professionals in important occupations such as maritime engineering, climate science, urban noise control, and medical diagnostics the key formulae needed for calculations. The book begins with the basis of fluid dynamics and subsequent chapters cover surface gravity waves, sound waves, internal gravity waves, waves in rotating fluids, and introduce some nonlinear wave phenomena. Basic phenomena common to all fluid waves such as refraction are detailed. Thereafter, specialized application chapters describe specific contemporary problems. All concepts are supported by narrative examples, illustrations, and problems.",
+    "image": "books-00170.png"
+   },
+   {
+    "title": "Noncommutative Polynomial Algebras of Solvable Type and Their Modules",
+    "author": "Huishi Li",
+    "note": "Basic Constructive-Computational Theory and Methods",
+    "description": "Noncommutative Polynomial Algebras of Solvable Type and Their Modules is the first book to systematically introduce the basic constructive-computational theory and methods developed for investigating solvable polynomial algebras and their modules. In doing so, this book covers:\n<ul>\n<li>A constructive introduction to solvable polynomial algebras and Grobner basis theory for left ideals of solvable polynomial algebras and submodules of free modules</li>\n<li>The new filtered-graded techniques combined with the determination of the existence of graded monomial orderings</li>\n<li>The elimination theory and methods (for left ideals and submodules of free modules) combining the Grobner basis techniques with the use of Gelfand-Kirillov dimension, and the construction of different kinds of elimination orderings</li>\n<li>The computational construction of finite free resolutions (including computation of syzygies, construction of different kinds of finite minimal free resolutions based on computation of different kinds of minimal generating sets), etc.</li>\nThis book is perfectly suited to researchers and postgraduates researching noncommutative computational algebra and would also be an ideal resource for teaching an advanced lecture course.",
+    "image": "books-00171.png"
+   },
+   {
+    "title": "Random Matrices and Non-Commutative Probability",
+    "author": "Arup Bose",
+    "note": "",
+    "description": "This is an introductory book on Non-Commutative Probability or Free Probability and Large Dimensional Random Matrices. Basic concepts of free probability are introduced by analogy with classical probability in a lucid and quick manner. It then develops the results on the convergence of large dimensional random matrices, with a special focus on the interesting connections to free probability. The book assumes almost no prerequisite for the most part. However, familiarity with the basic convergence concepts in probability and a bit of mathematical maturity will be helpful.",
+    "image": "books-00172.png"
+   },
+   {
+    "title": "Spectral Theory of Multivalued Linear Operators",
+    "author": "Aymen Ammar, Aref Jeribi",
+    "note": "",
+    "description": "The concept of multivalued linear operators - or linear relations - is the one of the most exciting and influential fields of research in modern mathematics. Applications of this theory can be found in economic theory, noncooperative games, artificial intelligence, medicine, and more. This new book focuses on the theory of linear relations, responding to the lack of resources exclusively dealing with the spectral theory of multivalued linear operators.",
+    "image": "books-00173.png"
+   },
+   {
+    "title": "Time & Logic",
+    "author": "Leonard Bolc, Andrzej Szalas",
+    "note": "",
+    "description": "Originally published in 1995 Time and Logic examines understanding and application of temporal logic, presented in computational terms. The emphasis in the book is on presenting a broad range of approaches to computational applications. The techniques used will also be applicable in many cases to formalisms beyond temporal logic alone, and it is hoped that adaptation to many different logics of program will be facilitated. Throughout, the authors have kept implementation-orientated solutions in mind. The book begins with an introduction to the basic ideas of temporal logic. Successive chapters examine particular aspects of the temporal theoretical computing domain, relating their applications to familiar areas of research, such as stochastic process theory, automata theory, established proof systems, model checking, relational logic and classical predicate logic. This is an essential addition to the library of all theoretical computer scientists. It is an authoritative work which will meet the needs both of those familiar with the field and newcomers to it.",
+    "image": "books-00174.png"
+   },
+   {
+    "title": "Abstract Calculus, A Categorical Approach",
+    "author": "Francisco Javier Garcia-Pacheco",
+    "note": "",
+    "description": "Abstract Calculus: A Categorical Approach provides an abstract approach to calculus. It is intended for graduate students pursuing PhDs in pure mathematics but junior and senior researchers in basically any field of mathematics and theoretical physics will also be interested. Any calculus text for undergraduate students majoring in engineering, mathematics or physics deals with the classical concepts of limits, continuity, differentiability, optimization, integrability, summability, and approximation. This book covers the exact same topics, but from a categorical perspective, making the classification of topological modules as the main category involved.",
+    "image": "books-00175.png"
+   },
+   {
+    "title": "Contemporary Abstract Algebra",
+    "author": "Joseph A. Gallian",
+    "note": "",
+    "description": "For more than three decades, this classic text has been widely appreciated by instructors and students alike. The book offers an enjoyable read and conveys and develops enthusiasm for the beauty of the topics presented. It is comprehensive, lively, and engaging.\n<br/>\nThe author presents the concepts and methodologies of contemporary abstract algebra as used by working mathematicians, computer scientists, physicists, and chemists. Students will learn how to do computations and to write proofs. A unique feature of the book are exercises that build the skill of generalizing, a skill that students should develop but rarely do. Applications are included to illustrate the utility of the abstract concepts.",
+    "image": "books-00176.png"
    }
   ]
  },
