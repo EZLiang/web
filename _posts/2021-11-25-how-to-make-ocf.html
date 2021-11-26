@@ -88,7 +88,10 @@ mathjax: true
 <h1>Mahlo cardinals</h1>
 <p>
     We introduce a Mahlo cardinal, \(M\).
-    Similarly, if we let \(\Omega_M=1\), then our OCF gives \(\psi_M(0)\) as the first fixed point of \(\alpha\mapsto I(\alpha,0)\).
+    We replace the two-argument \(I\) by the 1 argument version.
+    Similarly, if we let \(\Omega_M=1\), then our OCF gives \(\psi_M(0)\) as the first 1-inaccessible.
+    \(\psi_M(Mn)\) will be the first \(n+1\)-inaccessible, and then \(\psi_M(M^2)\) diagonalizes over this and is the fixed point of \(\alpha\mapsto I(\alpha,0)\).
+    In fact, \(\psi_M(M\alpha+\beta)\) in our OCF equals \(\chi_{1+\alpha}(\beta)\) in Rathjen's, for some set of values that I can't be bothered to calculate.
     The process of adding the other Mahlos is virtually identical to that of adding the inaccessibles.
 </p>
 
@@ -96,27 +99,23 @@ mathjax: true
 <p>
     Roses are red, violets are blue, I'm so bored, and so are you.
     So let's just skip ahead.
-    Also, note that the deagonalizer of the weakly compacts, also called \(\Pi^1_1\)-indescribables, is a \(\Pi^1_2\)-indescribable.
+    Also, note that the diagonalizer of the weakly compacts, also called \(\Pi^1_1\)-indescribables, is a \(\Pi^1_2\)-indescribable.
     I trust you to be able to understand the rest.
 </p>
 
 <h1>The final OCF</h1>
 <p>
-    A 0-inaccessible is a regular limit of regulars.
-    A \(\alpha\)-inaccessible is a regular limit of \(\beta\)-inaccessibles for \(\beta&lt;\alpha\).
-    A 0-Mahlo is a cardinal such that the inaccessibles are stationary in itself.
-    A \(\alpha\)-Mahlo is a cardinal such that the \(\beta\)-Mahlos are stationary in itself for \(\beta&lt;\alpha\).
+    An inaccessible is a regular limit of regulars.
+    A Mahlo is a cardinal such that the inaccessibles are stationary in itself.
     Look on Wikipedia for the definition of a \(\Pi^1_n\)-indescribable.
-    A 0-\(\Pi^1_n\)-indescribable is a \(\Pi^1_n\)-indescribable.
-    A \(\alpha\)-\(\Pi^1_n\)-indescribable is a cardinal that's \(\Pi^1_n\)-indescribable on the set of \(\beta\)-\(\Pi^1_n\)-indescribables for \(\beta&lt;\alpha\).
 </p>
 <p>
-    \(\Xi(0,\alpha,\beta)\) enumerates the \(\alpha\)-inaccessibles.
-    \(\Xi(1,\alpha,\beta)\) enumerates the \(\alpha\)-Mahlos.
-    \(\Xi(n+1,\alpha,\beta)\) if \(n>0\) enumerates the \(\alpha\)-\(\Pi^1_n\)-indescribables.
+    \(\Xi(0,\beta)\) enumerates the \(\alpha\)-inaccessibles.
+    \(\Xi(1,\beta)\) enumerates the \(\alpha\)-Mahlos.
+    \(\Xi(n+1,\beta)\) if \(n>0\) enumerates the \(\alpha\)-\(\Pi^1_n\)-indescribables.
 </p>
 <p>
-    If \(\kappa=\Xi(\alpha,\beta,\gamma+1)\) for some \(\alpha,\beta,\gamma\), then \(\kappa^-=\Xi(\alpha,\beta,\gamma)\).
+    If \(\kappa=\Xi(\alpha,\beta+1)\) for some \(\alpha,\beta\), then \(\kappa^-=\Xi(\alpha,\beta)\).
     Otherwise, \(\kappa^-=1\).
 </p>
 <p>
@@ -125,6 +124,7 @@ mathjax: true
     Else, set \(\Omega_\nu\) to be the least ordinal of cardinality \(\aleph_\nu\).
 </p>
 <p>
-    \(C_\nu(\alpha)\) is the closure of \(\Omega_\nu\) under addition, \(\lambda\beta.\omega^\beta\), \(\Xi\), and \(\psi\) if the argument is less than \(\alpha\).
+    \(C_\nu(\alpha)\) is the closure of \(\Omega_\nu\) under addition, \(\lambda\beta.\omega_\beta\), \(\Xi\), and \(\psi\) if the argument is less than \(\alpha\).
+    (I've removed \(\lambda\beta.\omega^\beta\) since it doesn't affect the strength, also added \(\lambda\beta.\omega_\beta\) to get rid of an inconvenient offset.)
     \(\psi_\nu(\alpha)\) is the supremum of \(C_\nu(\alpha)\cap\Omega_{\nu+1}\).
 </p>
