@@ -7,6 +7,7 @@ class LaTeXEscaper
     static Escaper = /(&(#39|ndash|ldquo|rdquo|ouml|auml);|&radic;-1|<(ul|li|em|\/em|\/li|\/ul|br)>|                    )/g;
 
     static Escapes = {
+        '^': '\\^',
         '&#39;': '\'',
         '&ndash;': '-',
         '&ldquo;': '``',
@@ -15,10 +16,10 @@ class LaTeXEscaper
         '&ouml;': '\\"{o}',
         '&auml;': '\\"{a}',
         '<ul>': '\\begin{itemize}',
-        '<li>': '\\item ',
-        '<em>': '\\textit{',
         '</ul>': '\\end{itemize}',
+        '<li>': '\\item ',
         '</li>': '',
+        '<em>': '\\textit{',
         '</em>': '}',
         '<br>': '\\newline',
         '                    ': ' '
