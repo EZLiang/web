@@ -23,7 +23,7 @@ var books =
    },
    {
     "image": "books-00003.jpg",
-    "title": "The Best Writing on Mathematics series 2010~2016",
+    "title": "The Best Writing on Mathematics series 2010-2016",
     "author": "Mircea Pitici, ...",
     "description": "This anthology brings together the year&#39;s finest writing on mathematics from around the world. Featuring promising new voices alongside some of the foremost names in mathematics, <em>The Best Writing on Mathematics</em> makes available to a wide audience many articles not easily found anywhere else&ndash;and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday occurrences of math, and take readers behind the scenes of today&#39;s hottest mathematical debates."
    },
@@ -296,6 +296,20 @@ var books =
   "group": "Mathematics, 6th grade, 2019 fall - 2020 summer",
   "list": [
    {
+    "title": "Mathematics Magazine (2019 Oct. - 2020 Jun.)",
+    "author": "Mathematical Association of America (publisher)",
+    "note": "",
+    "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
+    "image": "books-00177.png"
+   },
+   {
+    "title": "Math Horizons",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "Math Horizons publishes content for professionals and enthusiasts of mathematics, exploring the folklore, characters and affairs in mathematical culture.",
+    "image": "books-00180.png"
+   },
+   {
     "image": "books-00051.jpg",
     "title": "Zero: The Biography of a Dangerous Idea",
     "author": "Charles Seife",
@@ -339,7 +353,7 @@ var books =
    },
    {
     "image": "books-00057.jpg",
-    "title": "Mathcounts State Competition Preparation, Volume 1~5",
+    "title": "Mathcounts State Competition Preparation, Volume 1-5",
     "author": "Yongcheng Chen, Sam Chen",
     "description": "The books (Volumes 1 to 5) can be used by 5th to 8th grade students preparing for Mathcounts State and National Competitions. Each chapter consists of (1) basic skill and knowledge section with plenty of examples, (2) exercise problems, and (3) detailed solutions to all problems."
    },
@@ -456,6 +470,27 @@ var books =
  {
   "group": "Mathematics, 7th grade, 2020 fall - 2021 summer",
   "list": [
+   {
+    "title": "Mathematics Magazine (2020 Oct. - 2021 Jun.)",
+    "author": "Mathematical Association of America (publisher)",
+    "note": "",
+    "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
+    "image": "books-00177.png"
+   },
+   {
+    "title": "The American Mathematical Monthly (2020 - 2021)",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The American Mathematical Monthly publishes research on mathematics, mathematical ideas, mathematical problems and solutions.",
+    "image": "books-00178.png"
+   },
+   {
+    "title": "The College Mathematics Journal (2021 Jan. - 2021 May)",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The College Mathematics Journal publishes international research to enhance classroom learning, focused on mathematics curriculum and undergraduates mathematics.",
+    "image": "books-00179.png"
+   },
    {
     "image": "books-00111.jpg",
     "title": "The Higher Arithmetic: An Introduction to the Theory of Numbers 7th Edition",
@@ -706,6 +741,27 @@ var books =
   "hidden": false,
   "list": [
    {
+    "title": "Mathematics Magazine (2021 Oct. - )",
+    "author": "Mathematical Association of America (publisher)",
+    "note": "",
+    "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
+    "image": "books-00177.png"
+   },
+   {
+    "title": "The American Mathematical Monthly (2021 - )",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The American Mathematical Monthly publishes research on mathematics, mathematical ideas, mathematical problems and solutions.",
+    "image": "books-00178.png"
+   },
+   {
+    "title": "The College Mathematics Journal (2021 Sep. - )",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The College Mathematics Journal publishes international research to enhance classroom learning, focused on mathematics curriculum and undergraduates mathematics.",
+    "image": "books-00179.png"
+   },
+   {
     "title": "Asymptotic Methods For Integrals",
     "author": "Temme, Nico M.",
     "note": "",
@@ -757,7 +813,7 @@ var books =
   ]
  },
  {
-  "group": "Other Science/Tech Books, Elementary School, 2016 ~ 2019",
+  "group": "Other Science/Tech Books, Elementary School, 2016 - 2019",
   "list": [
    {
     "image": "books-00080.jpg",
@@ -918,7 +974,7 @@ var books =
   ]
  },
  {
-  "group": "Other Science/Tech Books, Middle School, 2019 ~",
+  "group": "Other Science/Tech Books, Middle School, 2019 -",
   "list": [
    {
     "image": "books-00101.jpg",
