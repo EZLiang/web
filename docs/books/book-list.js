@@ -809,6 +809,13 @@ var books =
     "note": "",
     "description": "An inviting, intuitive, and visual exploration of differential geometry and forms\n<br/>\nVisual Differential Geometry and Forms fulfills two principal goals. In the first four acts, Tristan Needham puts the geometry back into differential geometry. Using 235 hand-drawn diagrams, Needham deploys Newton's geometrical methods to provide geometrical explanations of the classical results. In the fifth act, he offers the first undergraduate introduction to differential forms that treats advanced topics in an intuitive and geometrical manner.\n<br/>\nUnique features of the first four acts include: four distinct geometrical proofs of the fundamentally important Global Gauss-Bonnet theorem, providing a stunning link between local geometry and global topology; a simple, geometrical proof of Gauss's famous Theorema Egregium; a complete geometrical treatment of the Riemann curvature tensor of an n-manifold; and a detailed geometrical treatment of Einstein's field equation, describing gravity as curved spacetime (General Relativity), together with its implications for gravitational waves, black holes, and cosmology. The final act elucidates such topics as the unification of all the integral theorems of vector calculus; the elegant reformulation of Maxwell's equations of electromagnetism in terms of 2-forms; de Rham cohomology; differential geometry via Cartan's method of moving frames; and the calculation of the Riemann tensor using curvature 2-forms. Six of the seven chapters of Act V can be read completely independently from the rest of the book.\n<br/>\nRequiring only basic calculus and geometry, Visual Differential Geometry and Forms provocatively rethinks the way this important area of mathematics should be considered and taught.\n\n",
     "image": "books-00151.png"
+   },
+   {
+    "title": "Contemporary Abstract Algebra",
+    "author": "Joseph A. Gallian",
+    "note": "",
+    "description": "For more than three decades, this classic text has been widely appreciated by instructors and students alike. The book offers an enjoyable read and conveys and develops enthusiasm for the beauty of the topics presented. It is comprehensive, lively, and engaging.\n<br/>\nThe author presents the concepts and methodologies of contemporary abstract algebra as used by working mathematicians, computer scientists, physicists, and chemists. Students will learn how to do computations and to write proofs. A unique feature of the book are exercises that build the skill of generalizing, a skill that students should develop but rarely do. Applications are included to illustrate the utility of the abstract concepts.",
+    "image": "books-00176.png"
    }
   ]
  },
@@ -1227,13 +1234,6 @@ var books =
     "note": "",
     "description": "Abstract Calculus: A Categorical Approach provides an abstract approach to calculus. It is intended for graduate students pursuing PhDs in pure mathematics but junior and senior researchers in basically any field of mathematics and theoretical physics will also be interested. Any calculus text for undergraduate students majoring in engineering, mathematics or physics deals with the classical concepts of limits, continuity, differentiability, optimization, integrability, summability, and approximation. This book covers the exact same topics, but from a categorical perspective, making the classification of topological modules as the main category involved.",
     "image": "books-00175.png"
-   },
-   {
-    "title": "Contemporary Abstract Algebra",
-    "author": "Joseph A. Gallian",
-    "note": "",
-    "description": "For more than three decades, this classic text has been widely appreciated by instructors and students alike. The book offers an enjoyable read and conveys and develops enthusiasm for the beauty of the topics presented. It is comprehensive, lively, and engaging.\n<br/>\nThe author presents the concepts and methodologies of contemporary abstract algebra as used by working mathematicians, computer scientists, physicists, and chemists. Students will learn how to do computations and to write proofs. A unique feature of the book are exercises that build the skill of generalizing, a skill that students should develop but rarely do. Applications are included to illustrate the utility of the abstract concepts.",
-    "image": "books-00176.png"
    }
   ]
  },
