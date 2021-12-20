@@ -2,6 +2,8 @@
     // Use IntelliSense to learn about possible attributes.
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+
+    // mklink /J web.server ..\..\github\web.server
     "version": "0.2.0",
     "configurations": [
         {
@@ -15,7 +17,7 @@
         },
         {
             "name": "Make Latex",
-            "program": "${workspaceFolder}/server/Books-MakeLatexPdf.js",
+            "program": "${workspaceFolder}/web.server/Books-MakeLatexPdf.js",
             "args": ["latex"],
             "request": "launch",
             "skipFiles": [
@@ -25,7 +27,7 @@
         },
         {
             "name": "Make Pdf",
-            "program": "${workspaceFolder}/server/Books-MakeLatexPdf.js",
+            "program": "${workspaceFolder}/web.server/Books-MakeLatexPdf.js",
             "args": ["pdf"],
             "request": "launch",
             "skipFiles": [
@@ -37,7 +39,7 @@
             "name": "PS: PickupImage",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}\\server\\PickupImage.ps1",
+            "script": "${workspaceFolder}\\web.server\\PickupImage.ps1",
             "cwd": "${workspaceFolder}"
         }
     ]
