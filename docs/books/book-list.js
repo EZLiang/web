@@ -816,6 +816,20 @@ var books =
     "note": "",
     "description": "For more than three decades, this classic text has been widely appreciated by instructors and students alike. The book offers an enjoyable read and conveys and develops enthusiasm for the beauty of the topics presented. It is comprehensive, lively, and engaging.\n<br/>\nThe author presents the concepts and methodologies of contemporary abstract algebra as used by working mathematicians, computer scientists, physicists, and chemists. Students will learn how to do computations and to write proofs. A unique feature of the book are exercises that build the skill of generalizing, a skill that students should develop but rarely do. Applications are included to illustrate the utility of the abstract concepts.",
     "image": "books-00176.png"
+   },
+   {
+    "title": "Real Analysis: Measure Theory, Integration, and Hilbert Spaces (Princeton Lectures in Analysis)",
+    "author": "Elias M. Stein, Rami Shakarchi",
+    "note": "",
+    "description": "Real Analysis is the third volume in the Princeton Lectures in Analysis, a series of four textbooks that aim to present, in an integrated manner, the core areas of analysis. Here the focus is on the development of measure and integration theory, differentiation and integration, Hilbert spaces, and Hausdorff measure and fractals. This book reflects the objective of the series as a whole: to make plain the organic unity that exists between the various parts of the subject, and to illustrate the wide applicability of ideas of analysis to other fields of mathematics and science.",
+    "image": "books-00140.png"
+   },
+   {
+    "title": "Random Matrices and Non-Commutative Probability",
+    "author": "Arup Bose",
+    "note": "",
+    "description": "This is an introductory book on Non-Commutative Probability or Free Probability and Large Dimensional Random Matrices. Basic concepts of free probability are introduced by analogy with classical probability in a lucid and quick manner. It then develops the results on the convergence of large dimensional random matrices, with a special focus on the interesting connections to free probability. The book assumes almost no prerequisite for the most part. However, familiarity with the basic convergence concepts in probability and a bit of mathematical maturity will be helpful.",
+    "image": "books-00172.png"
    }
   ]
  },
@@ -1159,13 +1173,6 @@ var books =
     "image": "books-00154.png"
    },
    {
-    "title": "Real Analysis: Measure Theory, Integration, and Hilbert Spaces (Princeton Lectures in Analysis)",
-    "author": "Elias M. Stein, Rami Shakarchi",
-    "note": "",
-    "description": "Real Analysis is the third volume in the Princeton Lectures in Analysis, a series of four textbooks that aim to present, in an integrated manner, the core areas of analysis. Here the focus is on the development of measure and integration theory, differentiation and integration, Hilbert spaces, and Hausdorff measure and fractals. This book reflects the objective of the series as a whole: to make plain the organic unity that exists between the various parts of the subject, and to illustrate the wide applicability of ideas of analysis to other fields of mathematics and science.",
-    "image": "books-00140.png"
-   },
-   {
     "title": "Real Analysis: Modern Techniques and Their Applications",
     "author": "Gerald B. Folland",
     "note": "",
@@ -1206,13 +1213,6 @@ var books =
     "note": "Basic Constructive-Computational Theory and Methods",
     "description": "Noncommutative Polynomial Algebras of Solvable Type and Their Modules is the first book to systematically introduce the basic constructive-computational theory and methods developed for investigating solvable polynomial algebras and their modules. In doing so, this book covers:\n<ul>\n<li>A constructive introduction to solvable polynomial algebras and Grobner basis theory for left ideals of solvable polynomial algebras and submodules of free modules</li>\n<li>The new filtered-graded techniques combined with the determination of the existence of graded monomial orderings</li>\n<li>The elimination theory and methods (for left ideals and submodules of free modules) combining the Grobner basis techniques with the use of Gelfand-Kirillov dimension, and the construction of different kinds of elimination orderings</li>\n<li>The computational construction of finite free resolutions (including computation of syzygies, construction of different kinds of finite minimal free resolutions based on computation of different kinds of minimal generating sets), etc.</li></ul>\nThis book is perfectly suited to researchers and postgraduates researching noncommutative computational algebra and would also be an ideal resource for teaching an advanced lecture course.",
     "image": "books-00171.png"
-   },
-   {
-    "title": "Random Matrices and Non-Commutative Probability",
-    "author": "Arup Bose",
-    "note": "",
-    "description": "This is an introductory book on Non-Commutative Probability or Free Probability and Large Dimensional Random Matrices. Basic concepts of free probability are introduced by analogy with classical probability in a lucid and quick manner. It then develops the results on the convergence of large dimensional random matrices, with a special focus on the interesting connections to free probability. The book assumes almost no prerequisite for the most part. However, familiarity with the basic convergence concepts in probability and a bit of mathematical maturity will be helpful.",
-    "image": "books-00172.png"
    },
    {
     "title": "Spectral Theory of Multivalued Linear Operators",
