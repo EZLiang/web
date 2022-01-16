@@ -1234,6 +1234,13 @@ var books =
     "note": "",
     "description": "Abstract Calculus: A Categorical Approach provides an abstract approach to calculus. It is intended for graduate students pursuing PhDs in pure mathematics but junior and senior researchers in basically any field of mathematics and theoretical physics will also be interested. Any calculus text for undergraduate students majoring in engineering, mathematics or physics deals with the classical concepts of limits, continuity, differentiability, optimization, integrability, summability, and approximation. This book covers the exact same topics, but from a categorical perspective, making the classification of topological modules as the main category involved.",
     "image": "books-00175.png"
+   },
+   {
+    "title": "Admissible Sets and Structures: An Approach to Definability Theory (Perspectives in Mathematical Logic)",
+    "author": "Jon Barwise",
+    "note": "",
+    "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. In this volume, the seventh publication in the Perspectives in Logic series, Jon Barwise presents the basic facts about admissible sets and admissible ordinals in a way that makes them accessible to logic students and specialists alike. It fills the artificial gap between model theory and recursion theory and covers everything the logician should know about admissible sets.",
+    "image": "books-00181.png"
    }
   ]
  },
