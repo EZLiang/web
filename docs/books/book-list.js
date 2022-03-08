@@ -19,7 +19,8 @@ var books =
     "image": "books-00002.jpg",
     "title": "The 15 Minute Mathematician",
     "author": "Anne Rooney",
-    "description": "(2016 spring) Part of the Arcturus series, Ideas to Save Your Life, The 15-Minute Mathematician introduces the reader to the main ideas of mathematics. Mathematics is all around us. It governs how information is presented to us and how we understand it. It underpins all science and has thus been responsible for mankind's incredible progress throughout the ages. This is a fun introduction to the subject of mathematics..."
+    "description": "(2016 spring) Part of the Arcturus series, Ideas to Save Your Life, The 15-Minute Mathematician introduces the reader to the main ideas of mathematics. Mathematics is all around us. It governs how information is presented to us and how we understand it. It underpins all science and has thus been responsible for mankind's incredible progress throughout the ages.",
+    "note": ""
    },
    {
     "image": "books-00003.jpg",
@@ -121,7 +122,8 @@ var books =
     "image": "books-00023.jpg",
     "title": "Invitation to a Mathematical Festival (MSRI Mathematical Circles Library)",
     "author": "Ivan Yashchenko",
-    "description": "Held annually in Moscow since 1990, the Mathematical Festival is a brilliant and fascinating math competition attended by hundreds of middle school students. Participants of the Festival solve interesting mathematical problems and partake in other engaging activities, while cultivating key skills such as intuitive reasoning and quick thinking. This book contains problems presented at the Festival during the years 1990-2011, along with hints and solutions for many of them. Most of the problems are accessible to students with no additional training in mathematics and may be used as supplementary material at school or at home. Other problems, however, are more advanced and will be enjoyed by students with a deeper interest in mathematics."
+    "description": "Held annually in Moscow since 1990, the Mathematical Festival is a brilliant and fascinating math competition attended by hundreds of middle school students. Participants of the Festival solve interesting mathematical problems and partake in other engaging activities, while cultivating key skills such as intuitive reasoning and quick thinking. This book contains problems presented at the Festival during the years 1990-2011, along with hints and solutions for many of them.",
+    "note": ""
    },
    {
     "image": "books-00024.jpg",
@@ -133,7 +135,8 @@ var books =
     "image": "books-00025.jpg",
     "title": "The Circle - A Mathematical Exploration Beyond the Line",
     "author": "Alfred Posamentier & Robert Geretschlager",
-    "description": "The circle has fascinated mathematicians since ancient times. This entertaining book describes in layperson&#39;s terms the many intriguing properties of this fundamental shape. If math has intimidated you, this may be the ideal book to help you appreciate the discipline through one of its most important elements. The authors begin with a brief review of the basic properties of the circle and related figures. They then show the many ways in which the circle manifests itself in the field of geometry&ndash;leading to some amazing relationships and truly important geometric theorems. In addition, they explore remarkable circle constructions and demonstrate how all constructions in geometry that usually require an unmarked straightedge and a compass can also be done with the compass alone."
+    "description": "The circle has fascinated mathematicians since ancient times. This entertaining book describes in layperson&#39;s terms the many intriguing properties of this fundamental shape. If math has intimidated you, this may be the ideal book to help you appreciate the discipline through one of its most important elements. The authors begin with a brief review of the basic properties of the circle and related figures. They then show the many ways in which the circle manifests itself in the field of geometry&ndash;leading to some amazing relationships and truly important geometric theorems. ",
+    "note": ""
    },
    {
     "image": "books-00026.jpg",
@@ -337,19 +340,22 @@ var books =
     "image": "books-00054.jpg",
     "title": "Adventures in Mathematical Reasoning (Dover Books on Mathematics)",
     "author": "Sherman Stein",
-    "description": "Equally appealing to beginners and to the mathematically adept, this book bridges the humanities and sciences to explore applications behind computers, cell phones, measurement of astronomical distance, cell growth, and other areas. Eight fascinating examples show how understanding certain topics in advanced mathematics requires nothing more than arithmetic and common sense. Each chapter begins with a question about strings consisting of nothing more than two letters, and every such question raises intriguing problems to be explored and solved. Author Sherman Stein proceeds at a measured pace that permits readers to move through the chapters in a leisurely fashion, omitting none of the steps. His approach makes complex subjects - from topology to set theory to probability - both accessible and exciting."
+    "description": "Equally appealing to beginners and to the mathematically adept, this book bridges the humanities and sciences to explore applications behind computers, cell phones, measurement of astronomical distance, cell growth, and other areas. Eight fascinating examples show how understanding certain topics in advanced mathematics requires nothing more than arithmetic and common sense. Each chapter begins with a question about strings consisting of nothing more than two letters, and every such question raises intriguing problems to be explored and solved. ",
+    "note": ""
    },
    {
     "image": "books-00055.jpg",
     "title": "The Mathematics of Various Entertaining Subjects: Volume 2: Research in Games, Graphs, Counting, and Complexity",
     "author": "Jennifer Beineke, Jason Rosenhouse",
-    "description": "This latest volume gathers together the top experts in recreational math and presents a compelling look at board games, card games, dice, toys, computer games, and much more. The book is divided into five parts: puzzles and brainteasers, geometry and topology, graph theory, games of chance, and computational complexity. Readers will discover what origami, roulette wheels, and even the game of Trouble can teach about math. Essays contain new results, and the contributors include short expositions on their topic&#39;s background, providing a framework for understanding the relationship between serious mathematics and recreational games. Mathematical areas explored include combinatorics, logic, graph theory, linear algebra, geometry, topology, computer science, operations research, probability, game theory, and music theory."
+    "description": "This latest volume gathers together the top experts in recreational math and presents a compelling look at board games, card games, dice, toys, computer games, and much more. The book is divided into five parts: puzzles and brainteasers, geometry and topology, graph theory, games of chance, and computational complexity. Readers will discover what origami, roulette wheels, and even the game of Trouble can teach about math.",
+    "note": ""
    },
    {
     "image": "books-00056.jpg",
     "title": "The Mathematics of Various Entertaining Subjects: Volume 3: The Magic of Mathematics",
     "author": "Jennifer Beineke, Jason Rosenhouse",
-    "description": "This volume focuses on four areas: puzzles and brainteasers, games, algebra and number theory, and geometry and topology. Readers will create Spiral Galaxies, Japanese symmetric grid puzzles consisting of squares and circles whose solutions are letters and numbers; delve into a paradox in the game of Bingo; examine the card tricks of mathematician-philosopher Charles Sanders Peirce; learn about the mathematics behind Legos; and much more. Elucidating the many connections between mathematics and games, The Mathematics of Various Entertaining Subjects is sure to challenge and inspire mathematicians and math enthusiasts."
+    "description": "This volume focuses on four areas: puzzles and brainteasers, games, algebra and number theory, and geometry and topology. Readers will create Spiral Galaxies, Japanese symmetric grid puzzles consisting of squares and circles whose solutions are letters and numbers; delve into a paradox in the game of Bingo; examine the card tricks of mathematician-philosopher Charles Sanders Peirce; learn about the mathematics behind Legos; and much more. ",
+    "note": ""
    },
    {
     "image": "books-00057.jpg",
@@ -391,13 +397,15 @@ var books =
     "image": "books-00066.jpg",
     "title": "Winning Ways for Your Mathematical Plays, Vol. 2",
     "author": "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
-    "description": "In the quarter of a century since three mathematicians and game theorists collaborated to create Winning Ways for Your Mathematical Plays, the book has become the definitive work on the subject of mathematical games. Now carefully revised and broken down into four volumes to accommodate new developments, the Second Edition retains the original&#39;s wealth of wit and wisdom. The authors&#39; insightful strategies, blended with their witty and irreverent style, make reading a profitable pleasure. In Volume 2, the authors have a Change of Heart, bending the rules established in Volume 1 to apply them to games such as Cut-cake and Loopy Hackenbush. From the Table of Contents: - If You Can&#39;t Beat &#39;Em, Join &#39;Em! - Hot Battles Followed by Cold Wars - Games Infinite and Indefinite - Games Eternal&ndash;Games Entailed - Survival in the Lost World"
+    "description": "In Volume 2, the authors have a Change of Heart, bending the rules established in Volume 1 to apply them to games such as Cut-cake and Loopy Hackenbush. From the Table of Contents: - If You Can&#39;t Beat &#39;Em, Join &#39;Em! - Hot Battles Followed by Cold Wars - Games Infinite and Indefinite - Games Eternal&ndash;Games Entailed - Survival in the Lost World",
+    "note": ""
    },
    {
     "image": "books-00067.jpg",
     "title": "Winning Ways for Your Mathematical Plays, Volume 3 2nd Edition",
     "author": "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
-    "description": "In the quarter of a century since three mathematicians and game theorists collaborated to create Winning Ways for Your Mathematical Plays, the book has become the definitive work on the subject of mathematical games. In Volume 3, the authors examine Games played in Clubs, giving case studies for coin and paper-and-pencil games, such as Dots-and-Boxes and Nimstring. From the Table of Contents: - Turn and Turn About - Chips and Strips - Dots-and-Boxes - Spots and Sprouts - The Emperor and His Money - The King and the Consumer - Fox and Geese; Hare and Hounds - Lines and Squares"
+    "description": "In Volume 3, the authors examine Games played in Clubs, giving case studies for coin and paper-and-pencil games, such as Dots-and-Boxes and Nimstring. From the Table of Contents: - Turn and Turn About - Chips and Strips - Dots-and-Boxes - Spots and Sprouts - The Emperor and His Money - The King and the Consumer - Fox and Geese; Hare and Hounds - Lines and Squares",
+    "note": ""
    },
    {
     "image": "books-00068.jpg",
@@ -409,19 +417,22 @@ var books =
     "image": "books-00069.jpg",
     "title": "The Book of Numbers",
     "author": "Conway, John H., Richard K. Guy",
-    "description": "&ldquo;...the great feature of the book is that anyone can read it without excessive head scratching... You'll find plenty here to keep you occupied, amused, and informed. Buy, dip in, wallow.&rdquo; -IAN STEWART, NEW SCIENTIST<br> &ldquo;...a delightful look at numbers and their roles in everything from language to flowers to the imagination.&rdquo; -SCIENCE NEWS<br> &ldquo;...a fun and fascinating tour of numerical topics and concepts. It will have readers contemplating ideas they might never have thought were understandable or even possible.&rdquo; -WISCONSIN BOOKWATCH<br> &ldquo;This popularization of number theory looks like another classic.&rdquo; -LIBRARY JOURNAL"
+    "description": "&ldquo;...the great feature of the book is that anyone can read it without excessive head scratching... You'll find plenty here to keep you occupied, amused, and informed. Buy, dip in, wallow.&rdquo; -IAN STEWART, NEW SCIENTIST<br> &ldquo;...a delightful look at numbers and their roles in everything from language to flowers to the imagination.&rdquo; -SCIENCE NEWS<br> &ldquo;...a fun and fascinating tour of numerical topics and concepts. It will have readers contemplating ideas they might never have thought were understandable or even possible.&rdquo; -WISCONSIN BOOKWATCH",
+    "note": ""
    },
    {
     "image": "books-00070.jpg",
     "title": "On Numbers and Games",
     "author": "John H. Conway",
-    "description": "ONAG, as the book is commonly known, is one of those rare publications that sprang to life in a moment of creative energy and has remained influential for over a quarter of a century. Originally written to define the relation between the theories of transfinite numbers and mathematical games, the resulting work is a mathematically sophisticated but eminently enjoyable guide to game theory. By defining numbers as the strengths of positions in certain games, the author arrives at a new class, the surreal numbers, that includes both real numbers and ordinal numbers. These surreal numbers are applied in the author&#39;s mathematical analysis of game strategies. The additions to the Second Edition present recent developments in the area of mathematical game theory, with a concentration on surreal numbers and the additive theory of partizan games."
+    "description": "ONAG, as the book is commonly known, is one of those rare publications that sprang to life in a moment of creative energy and has remained influential for over a quarter of a century. Originally written to define the relation between the theories of transfinite numbers and mathematical games, the resulting work is a mathematically sophisticated but eminently enjoyable guide to game theory. By defining numbers as the strengths of positions in certain games, the author arrives at a new class, the surreal numbers, that includes both real numbers and ordinal numbers. These surreal numbers are applied in the author&#39;s mathematical analysis of game strategies.",
+    "note": ""
    },
    {
     "image": "books-00071.jpg",
     "title": "Surreal Numbers",
     "author": "Donald E. Knuth",
-    "description": "Nearly 30 years ago, John Horton Conway introduced a new way to construct numbers. Donald E. Knuth, in appreciation of this revolutionary system, took a week off from work on The Art of Computer Programming to write an introduction to Conway&#39;s method. Never content with the ordinary, Knuth wrote this introduction as a work of fiction&ndash;a novelette. If not a steamy romance, the book nonetheless shows how a young couple turned on to pure mathematics and found total happiness.<br> Surreal Numbers, now in its 13th printing, will appeal to anyone who might enjoy an engaging dialogue on abstract mathematical ideas, and who might wish to experience how new mathematics is created."
+    "description": "Nearly 30 years ago, John Horton Conway introduced a new way to construct numbers. Donald E. Knuth, in appreciation of this revolutionary system, took a week off from work on The Art of Computer Programming to write an introduction to Conway&#39;s method. Never content with the ordinary, Knuth wrote this introduction as a work of fiction&ndash;a novelette. If not a steamy romance, the book nonetheless shows how a young couple turned on to pure mathematics and found total happiness.",
+    "note": ""
    },
    {
     "image": "books-00072.jpg",
@@ -433,7 +444,8 @@ var books =
     "image": "books-00073.jpg",
     "title": "The Art of Computer Programming, Volume 4, Fascicle 6: Satisfiability, 1st Edition",
     "author": "Donald E. Knuth",
-    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his &rdquo;cookbook&ldquo; solutions to their day-to-day problems. Volume 4 Fascicle 6 introduces and surveys &rdquo;Satisfiability,&ldquo; one of the most fundamental problems in all of computer science: Given a Boolean function, can its variables be set to at least one pattern of 0s and 1s that will make the function true? Fascicle 6 presents full details of seven different SAT solvers, ranging from simple algorithms suitable for small problems to state-of-the-art algorithms of industrial strength. Many other significant topics also arise in the course of the discussion, such as bounded model checking, the theory of traces, Las Vegas algorithms, phase changes in random processes, the efficient encoding of problems into conjunctive normal form, and the exploitation of global and local symmetries. More than 500 exercises are provided, arranged carefully for self-instruction, together with detailed answers."
+    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his &rdquo;cookbook&ldquo; solutions to their day-to-day problems. Volume 4 Fascicle 6 introduces and surveys &rdquo;Satisfiability,&ldquo; ...",
+    "note": ""
    },
    {
     "image": "books-00074.jpg",
@@ -445,7 +457,8 @@ var books =
     "image": "books-00075.jpg",
     "title": "Must Know High School Geometry 1st Edition",
     "author": "Allen Ma, Amber Kuang",
-    "description": "The authors, between them, teach high school math courses including geometry, trigonometry, precalculus, calculus, and discrete math. Each chapter makes sure that what you really need to know is clear right off the bat and sees to it that you build on this knowledge. Where other books ask you to memorize stuff, we&#39;re going to show you the must know ideas that will guide you toward success in geometry. You will start each chapter learning what the must know ideas behind a geometry subject are, and these concepts will help you solve the geometry problems that you find in your classwork and on exams."
+    "description": "The authors, between them, teach high school math courses including geometry, trigonometry, precalculus, calculus, and discrete math. Each chapter makes sure that what you really need to know is clear right off the bat and sees to it that you build on this knowledge. Where other books ask you to memorize stuff, we&#39;re going to show you the must know ideas that will guide you toward success in geometry.",
+    "note": ""
    },
    {
     "image": "books-00076.jpg",
@@ -457,13 +470,15 @@ var books =
     "image": "books-00077.jpg",
     "title": "Advanced Algebra Student Edition",
     "author": "Univ. of Chicago School Math Project, James Flanders",
-    "description": "The UCSMP Third Edition curriculum emphasizes problem solving, everyday applications, and the use of technology and reading, while developing and maintaining basic skills. UCSMP Advanced Algebra emphasizes facility with algebraic expressions and forms, especially linear and quadratic forms, powers and roots, and functions based on t hese concepts. Students study logarithmic, trigonometric, polynomial, and other special functions both for their abstract properties and as tools for modeling real-world situations. A geometry course or its equal is a prerequisite. Students who have studied UCSMP Advanced Algebra are prepared for courses commonly found at the senior level, including trigonometry and precalculus courses."
+    "description": "The UCSMP Third Edition curriculum emphasizes problem solving, everyday applications, and the use of technology and reading, while developing and maintaining basic skills. UCSMP Advanced Algebra emphasizes facility with algebraic expressions and forms, especially linear and quadratic forms, powers and roots, and functions based on these concepts. ",
+    "note": ""
    },
    {
     "image": "books-00107.jpg",
     "title": "Geometry: Seeing, Doing, Understanding",
     "author": "Harold R Jacobs",
-    "description": "Jacob's Geometry textbook has guided nearly one million students through the process of developing not just knowledge about Geometry, but a lasting understanding of Geometry concepts, principles, and application. Considered by many to be the authoritative Geometry text, Jacobs' math has solidified its reputation of preparing students for academic & career success and is a highly respected standard for teaching high school Geometry. Harold Jacobs' clear, engaging, conversational approach guides students through practical, real-world Geometry, allowing them to develop a true understanding of deductive reasoning, lines & angles, congruence, inequalities, quadrilaterals, area, triangles, circles, theorems, polygons, geometric solids, and more!"
+    "description": "Jacob's Geometry textbook has guided nearly one million students through the process of developing not just knowledge about Geometry, but a lasting understanding of Geometry concepts, principles, and application. Considered by many to be the authoritative Geometry text, Jacobs' math has solidified its reputation of preparing students for academic & career success and is a highly respected standard for teaching high school Geometry. ",
+    "note": ""
    }
   ]
  },
@@ -507,7 +522,8 @@ var books =
     "image": "books-00114.jpg",
     "title": "Change is the Only Constant",
     "author": "Ben Orlin",
-    "description": "Change is the Only Constant is an engaging and eloquent exploration of the intersection between calculus and daily life, complete with Orlin's sly humor and memorably bad drawings. By spinning 28 engaging mathematical tales, Orlin shows us that calculus is simply another language to express the very things we humans grapple with every day -- love, risk, time, and most importantly, change. Divided into two parts, \"Moments\" and \"Eternities,\" and drawing on everyone from Sherlock Holmes to Mark Twain to David Foster Wallace, Change is the Only Constant unearths connections between calculus, art, literature, and a beloved dog named Elvis. This is not just math for math's sake; it's math for the sake of becoming a wiser and more thoughtful human."
+    "description": "Change is the Only Constant is an engaging and eloquent exploration of the intersection between calculus and daily life, complete with Orlin's sly humor and memorably bad drawings. By spinning 28 engaging mathematical tales, Orlin shows us that calculus is simply another language to express the very things we humans grapple with every day -- love, risk, time, and most importantly, change. Divided into two parts, \"Moments\" and \"Eternities,\" ...",
+    "note": ""
    },
    {
     "image": "books-00108.jpg",
@@ -562,21 +578,21 @@ var books =
     "title": "Book of Proof",
     "author": "Richard Hammack",
     "note": "",
-    "description": "This book is an introduction to the language and standard proof methods of mathematics. It is a bridge from the computational courses (such as calculus or differential equations) that students typically encounter in their first year of college to a more abstract outlook. It lays a foundation for more theoretical courses such as topology, analysis and abstract algebra. Although it may be more meaningful to the student who has had some calculus, there is really no prerequisite other than a measure of mathematical maturity.\n\nTopics include sets, logic, counting, methods of conditional and non-conditional proof, disproof, induction, relations, functions, calculus proofs and infinite cardinality.",
+    "description": "This book is an introduction to the language and standard proof methods of mathematics. It is a bridge from the computational courses (such as calculus or differential equations) that students typically encounter in their first year of college to a more abstract outlook. It lays a foundation for more theoretical courses such as topology, analysis and abstract algebra. Although it may be more meaningful to the student who has had some calculus, there is really no prerequisite other than a measure of mathematical maturity.",
     "image": "books-00018.png"
    },
    {
     "title": "Mathematics and Plausible Reasoning",
     "author": "George Polya",
     "note": "",
-    "description": "2014 Reprint of 1954 American Edition. Full facsimile of the original edition, not reproduced with Optical Recognition Software. This two volume classic comprises two titles: \"Patterns of Plausible Inference\" and \"Induction and Analogy in Mathematics\". This is a guide to the practical art of plausible reasoning, particularly in mathematics, but also in every field of human activity. Using mathematics as the example par excellence, Polya shows how even the most rigorous deductive discipline is heavily dependent on techniques of guessing, inductive reasoning, and reasoning by analogy. In solving a problem, the answer must be guessed at before a proof can be given, and guesses are usually made from a knowledge of facts, experience, and hunches. The truly creative mathematician must be a good guesser first and a good prover afterward; many important theorems have been guessed but no proved until much later. In the same way, solutions to problems can be guessed, and a good guesser is much more likely to find a correct solution. This work might have been called \"How to Become a Good Guesser.\"-From the Dust Jacket.",
+    "description": "2014 Reprint of 1954 American Edition. Full facsimile of the original edition, not reproduced with Optical Recognition Software. This two volume classic comprises two titles: \"Patterns of Plausible Inference\" and \"Induction and Analogy in Mathematics\". This is a guide to the practical art of plausible reasoning, particularly in mathematics, but also in every field of human activity. Using mathematics as the example par excellence, Polya shows how even the most rigorous deductive discipline is heavily dependent on techniques of guessing, inductive reasoning, and reasoning by analogy.",
     "image": "books-00060.png"
    },
    {
     "title": "The Stanford Mathematics Problem Book: With Hints and Solutions",
     "author": "George Polya, Jeremy Kilpatrick",
     "note": "",
-    "description": "This volume features a complete set of problems, hints, and solutions based on Stanford University's well-known competitive examination in mathematics. It offers high school and college students an excellent mathematics workbook of rigorous problems that will assist in developing and cultivating their logic and probability skills. These 20 sets of intriguing problems test originality and insight rather than routine competence. They involve theorizing and verifying mathematical facts; examining the results of general statements; discovering that highly plausible conjectures can be incorrect; solving sequences of subproblems to reveal theory construction; and recognizing \"red herrings,\" in which obvious relationships among the data prove irrelevant to solutions. Hints for each problem appear in a separate section, and a final section features solutions that outline the appropriate procedures. Ideal for teachers seeking challenging practice math problems for their gifted students, this book will also help students prepare for mathematics, science, and engineering programs. Mathematics buffs of all ages will also find it a source of captivating challenges.",
+    "description": "This volume features a complete set of problems, hints, and solutions based on Stanford University's well-known competitive examination in mathematics. It offers high school and college students an excellent mathematics workbook of rigorous problems that will assist in developing and cultivating their logic and probability skills. These 20 sets of intriguing problems test originality and insight rather than routine competence. They involve theorizing and verifying mathematical facts; examining the results of general statements; discovering that highly plausible conjectures can be incorrect; solving sequences of subproblems to reveal theory construction; and recognizing \"red herrings,\" in which...",
     "image": "books-00061.png"
    },
    {
@@ -590,7 +606,7 @@ var books =
     "title": "Math Puzzles Volume 1: Classic Riddles and Brain Teasers In Counting, Geometry, Probability, And Game Theory",
     "author": "Presh Talwalkar",
     "note": "",
-    "description": "You want to cut a tortilla into 8 pieces. What's the minimum number of cuts you need to make? Is it statistically harder to guess an iPhone password that uses 3-digits or one that uses 4 unique digits? Two friends agree to meet up in a bar between midnight and 1 am. Each arrives at a random time and will wait 10 minutes for the other to show before leaving. What is the probability the two will meet at the bar? What if they are playing strategically? The YouTube channel and blog Mind Your Decisions has millions of views for math videos and posts. This book is a compilation of 70 of the best puzzles, divided into 25 classic puzzles in counting and geometry, 25 probability puzzles, and 20 game theory puzzles.",
+    "description": "You want to cut a tortilla into 8 pieces. What's the minimum number of cuts you need to make? Is it statistically harder to guess an iPhone password that uses 3-digits or one that uses 4 unique digits? Two friends agree to meet up in a bar between midnight and 1 am. Each arrives at a random time and will wait 10 minutes for the other to show before leaving. What is the probability the two will meet at the bar? What if they are playing strategically?",
     "image": "books-00123.png"
    },
    {
@@ -604,21 +620,21 @@ var books =
     "title": "Tales of Impossibility: The 2000-Year Quest to Solve the Mathematical Problems of Antiquity",
     "author": "David S. Richeson",
     "note": "",
-    "description": "A comprehensive look at four of the most famous problems in mathematics\n<br>\n\n<i>Tales of Impossibility</i> recounts the intriguing story of the so-called problems of antiquity, four of the most famous and studied questions in the history of mathematics. First posed by the ancient Greeks, these compass and straightedge problems-squaring the circle, trisecting an angle, doubling the cube, and inscribing regular polygons in a circle-have served as ever-present muses for mathematicians for more than two millennia. David Richeson follows the trail of these problems to show that ultimately, their proofs-demonstrating the impossibility of solving them using only a compass and straightedge-depended upon and resulted in the growth of mathematics.",
+    "description": "A comprehensive look at four of the most famous problems in mathematics\n<br>\n<i>Tales of Impossibility</i> recounts the intriguing story of the so-called problems of antiquity, four of the most famous and studied questions in the history of mathematics. First posed by the ancient Greeks, these compass and straightedge problems-squaring the circle, trisecting an angle, doubling the cube, and inscribing regular polygons in a circle-have served as ever-present muses for mathematicians for more than two millennia. ",
     "image": "books-00133.png"
    },
    {
     "title": "Curves for the Mathematically Curious: An Anthology of the Unpredictable, Historical, Beautiful, and Romantic",
     "author": "Julian Havil",
     "note": "",
-    "description": "<i>Curves for the Mathematically Curious</i> is a thoughtfully curated collection of ten mathematical curves, selected by Julian Havil for their significance, mathematical interest, and beauty. Each chapter gives an account of the history and definition of a curve, providing a glimpse into the elegant and often surprising mathematics involved in its creation and evolution. In telling the ten stories, Havil introduces many mathematicians and other innovators, some whose fame has withstood the passing of years and others who have slipped into comparative obscurity. You will meet Pierre B&eacute;zier, who is known for his ubiquitous and eponymous curves, and Adolphe Quetelet, who trumpeted the ubiquity of the normal curve but whose name now hides behind the modern body mass index. These and other ingenious thinkers engaged with the challenges, incongruities, and insights to be found in these remarkable curves - and now you can share in this adventure.\n<br>\n<i>Curves for the Mathematically Curious</i> is a rigorous and enriching mathematical experience for anyone interested in curves, and the book is designed so that readers who choose can follow the details with pencil and paper. Every curve has a story worth telling.",
+    "description": "<i>Curves for the Mathematically Curious</i> is a thoughtfully curated collection of ten mathematical curves, selected by Julian Havil for their significance, mathematical interest, and beauty. Each chapter gives an account of the history and definition of a curve, providing a glimpse into the elegant and often surprising mathematics involved in its creation and evolution. ",
     "image": "books-00134.png"
    },
    {
     "title": "Math Puzzles Volume 2: More Riddles And Brain Teasers In Counting, Geometry, Probability, And Game Theory",
     "author": "Presh Talwalkar",
     "note": "",
-    "description": "What is a better fit: a square peg in a round hole, or a round peg in a square hole? Your music player seems to be playing the same songs over again. Is there something wrong with the shuffle feature, or might the songs be playing randomly? You have 100 dimes, and I have 99 pennies. At the same time, we will toss our coins in the air and let them fall on the floor. Then we meticulously count the outcomes of our tosses. You win if you show more heads than I do. What's the probability that you will win? The YouTube channel and blog Mind Your Decisions has blog posts and original videos about math that have been viewed millions of times. The problems in this book are based on some of the best puzzles in counting, geometry, and probability and game theory.",
+    "description": "What is a better fit: a square peg in a round hole, or a round peg in a square hole? Your music player seems to be playing the same songs over again. Is there something wrong with the shuffle feature, or might the songs be playing randomly? You have 100 dimes, and I have 99 pennies. At the same time, we will toss our coins in the air and let them fall on the floor. Then we meticulously count the outcomes of our tosses. You win if you show more heads than I do. What's the probability that you will win?",
     "image": "books-00135.png"
    },
    {
@@ -646,7 +662,7 @@ var books =
     "title": "A First Look at Pertubation Theory",
     "author": "James G. Simmonds, James E. Mann Jr.",
     "note": "",
-    "description": "Undergraduates in engineering and the physical sciences receive a thorough introduction to perturbation theory in this useful and accessible text. Students discover methods for obtaining an approximate solution of a mathematical problem by exploiting the presence of a small, dimensionless parameter - the smaller the parameter, the more accurate the approximate solution. Knowledge of perturbation theory offers a twofold benefit: approximate solutions often reveal the exact solution's essential dependence on specified parameters; also, some problems resistant to numerical solutions may yield to perturbation methods. In fact, numerical and perturbation methods can be combined in a complementary way.\nThe text opens with a well-defined treatment of finding the roots of polynomials whose coefficients contain a small parameter. Proceeding to differential equations, the authors explain many techniques for handling perturbations that reorder the equations or involve an unbounded independent variable. Two disparate practical problems that can be solved efficiently with perturbation methods conclude the volume.\nWritten in an informal style that moves from specific examples to general principles, this elementary text emphasizes the \"why\" along with the \"how\"; prerequisites include a knowledge of one-variable calculus and ordinary differential equations. This newly revised second edition features an additional appendix concerning the approximate evaluation of integrals.",
+    "description": "Undergraduates in engineering and the physical sciences receive a thorough introduction to perturbation theory in this useful and accessible text. Students discover methods for obtaining an approximate solution of a mathematical problem by exploiting the presence of a small, dimensionless parameter - the smaller the parameter, the more accurate the approximate solution. Knowledge of perturbation theory offers a twofold benefit: approximate solutions often reveal the exact solution's essential dependence on specified parameters; also, some problems resistant to numerical solutions may yield to perturbation methods. In fact, numerical and perturbation methods can be combined in a complementary way.",
     "image": "books-00148.png"
    },
    {
@@ -660,7 +676,7 @@ var books =
     "title": "Fourier Series",
     "author": "Georgi P Tolstov",
     "note": "",
-    "description": "Richard A. Silverman's series of translations of outstanding Russian textbooks and monographs is well-known to people in the fields of mathematics, physics, and engineering. The present book is another excellent text from this series, a valuable addition to the English-language literature on Fourier series.\nThis edition is organized into nine well-defined chapters: Trigonometric Fourier Series, Orthogonal Systems, Convergence of Trigonometric Fourier Series, Trigonometric Series with Decreasing Coefficients, Operations on Fourier Series, Summation of Trigonometric Fourier Series, Double Fourier Series and the Fourier Integral, Bessel Functions and Fourier-Bessel Series, and the Eigenfunction Method and its Applications to Mathematical Physics. Every chapter moves clearly from topic to topic and theorem to theorem, with many theorem proofs given. A total of 107 problems will be found at the ends of the chapters, including many specially added to this English-language edition, and answers are given at the end of the text.\nRichard Silverman's excellent translation makes this book readily accessible to mathematicians and math students, as well as workers and students in the fields of physics and engineering. He has also added a bibliography, containing suggestions for collateral and supplementary reading. 1962 edition.",
+    "description": "Richard A. Silverman's series of translations of outstanding Russian textbooks and monographs is well-known to people in the fields of mathematics, physics, and engineering. The present book is another excellent text from this series, a valuable addition to the English-language literature on Fourier series.\nThis edition is organized into nine well-defined chapters: Trigonometric Fourier Series, Orthogonal Systems, Convergence of Trigonometric Fourier Series, Trigonometric Series with Decreasing Coefficients, Operations on Fourier Series, Summation of Trigonometric Fourier Series, Double Fourier Series and the Fourier Integral, Bessel Functions and Fourier-Bessel Series, and the Eigenfunction Method and its Applications to Mathematical Physics.",
     "image": "books-00121.png"
    },
    {
@@ -675,63 +691,63 @@ var books =
     "title": "Introduction to Topology",
     "author": "Bert Mendelson",
     "note": "",
-    "description": "Highly regarded for its exceptional clarity, imaginative and instructive exercises, and fine writing style, this concise book offers an ideal introduction to the fundamentals of topology. Originally conceived as a text for a one-semester course, it is directed to undergraduate students whose studies of calculus sequence have included definitions and proofs of theorems. The book's principal aim is to provide a simple, thorough survey of elementary topics in the study of collections of objects, or sets, that possess a mathematical structure.\nThe author begins with an informal discussion of set theory in Chapter 1, reserving coverage of countability for Chapter 5, where it appears in the context of compactness. In the second chapter Professor Mendelson discusses metric spaces, paying particular attention to various distance functions which may be defined on Euclidean n-space and which lead to the ordinary topology.\nChapter 3 takes up the concept of topological space, presenting it as a generalization of the concept of a metric space. Chapters 4 and 5 are devoted to a discussion of the two most important topological properties: connectedness and compactness. Throughout the text, Dr. Mendelson, a former Professor of Mathematics at Smith College, has included many challenging and stimulating exercises to help students develop a solid grasp of the material presented.",
+    "description": "Highly regarded for its exceptional clarity, imaginative and instructive exercises, and fine writing style, this concise book offers an ideal introduction to the fundamentals of topology. Originally conceived as a text for a one-semester course, it is directed to undergraduate students whose studies of calculus sequence have included definitions and proofs of theorems. The book's principal aim is to provide a simple, thorough survey of elementary topics in the study of collections of objects, or sets, that possess a mathematical structure.",
     "image": "books-00124.png"
    },
    {
     "title": "Group Theory in a Nutshell for Physicists",
     "author": "A Zee",
     "note": "",
-    "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.\n<br>\nGroup Theory in a Nutshell for Physicists fills this gap, providing a user-friendly and classroom-tested text that focuses on those aspects of group theory physicists most need to know. From the basic intuitive notion of a group, A. Zee takes readers all the way up to how theories based on gauge groups could unify three of the four fundamental forces. He also includes a concise review of the linear algebra needed for group theory, making the book ideal for self-study.\n<br>\n<ul>\n<li>Provides physicists with a modern and accessible introduction to group theory</li>\n<li>Covers applications to various areas of physics, including field theory, particle physics, relativity, and much more</li>\n<li>Topics include finite group and character tables; real, pseudoreal, and complex representations; Weyl, Dirac, and Majorana equations; the expanding universe and group theory; grand unification; and much more</li>\n<li>The essential textbook for students and an invaluable resource for researchers</li>\n<li>Features a brief, self-contained treatment of linear algebra</li>\n<li>An online illustration package is available to professors</li>\n<li>Solutions manual (available only to professors)</li>\n</ul>",
+    "description": "Although group theory is a mathematical subject, it is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory. In particular, it is essential for an understanding of the fundamental forces. Yet until now, what has been missing is a modern, accessible, and self-contained textbook on the subject written especially for physicists.",
     "image": "books-00131.png"
    },
    {
     "title": "Abstract Algebra for Beginners: A Rigorous Introduction to Groups, Rings, Fields, Vector Spaces, Modules, Substructures, Homomorphisms, Quotients, ... Group Actions, Polynomials, and Galois Theory",
     "author": "Steve Warner",
     "note": "",
-    "description": "\"Abstract Algebra for Beginners\" consists of a series of basic to intermediate lessons in abstract algebra. In addition, all the proofwriting skills that are essential for advanced study in mathematics are covered and reviewed extensively. Abstract Algebra for Beginners is perfect for:\n<ul>\n<li>professors teaching an undergraduate course or basic graduate course in abstract algebra.</li>\n<li>high school teachers working with advanced math students.</li>\n<li>students wishing to see the type of mathematics they would be exposed to as a math major.</li>\n</ul>",
+    "description": "\"Abstract Algebra for Beginners\" consists of a series of basic to intermediate lessons in abstract algebra. In addition, all the proofwriting skills that are essential for advanced study in mathematics are covered and reviewed extensively. ",
     "image": "books-00132.png"
    },
    {
     "title": "The Art of Computer Programming, Volumes 1-4A Boxed Set - 1st Edition",
     "author": "Donald Knuth",
     "note": "",
-    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf.\n<br><br>\n\nThe bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.<br>\n--- <i>Byte</i>, September 1995\n<br><br>\n\nPrimarily written as a reference, some people have nevertheless found it possible and interesting to read each volume from beginning to end. A programmer in China even compared the experience to reading a poem.<br>\nIf you think you're a really good programmer... read [Knuth's] Art of Computer Programming... You should definitely send me a r&eacute;sum&eacute; if you can read the whole thing.<br>\n--- <i>Bill Gates</i>",
+    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf. \n\"The bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.\" (<i>Byte</i>, September 1995)",
     "image": "books-00138.png"
    },
    {
     "title": "Uncommon Mathematical Excursions: Polynomia and Related Realms",
     "author": "Dan Kalman",
     "note": "",
-    "description": "This text serves as a tour guide to little known corners of the mathematical landscape, not far from the main byways of algebra, geometry, and calculus. It is for the seasoned mathematical traveller who has visited these subjects many times and, familiar with the main attractions, is ready to venture abroad off the beaten track. For the old hand and new devotee alike, this book will surprise, intrigue, and delight readers with unexpected aspects of old and familiar subjects. In the first part of the book all of the topics are related to polynomials: properties and applications of Horner form, reverse and palindromic polynomials and identities linking roots and coefficients, among others. Topics in the second part are all connected in some way with maxima and minima. In the final part calculus is the focus.",
+    "description": "This text serves as a tour guide to little known corners of the mathematical landscape, not far from the main byways of algebra, geometry, and calculus. It is for the seasoned mathematical traveller who has visited these subjects many times and, familiar with the main attractions, is ready to venture abroad off the beaten track. For the old hand and new devotee alike, this book will surprise, intrigue, and delight readers with unexpected aspects of old and familiar subjects.",
     "image": "books-00144.png"
    },
    {
     "title": "The Riemann Hypothesis",
     "author": "Roland van der Veen, Jan van de Craats",
     "note": "",
-    "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859. As an aside in his article, Riemann formulated his now famous hypothesis that so far no one has come close to proving: All nontrivial zeroes of the zeta function lie on the critical line. Hidden behind this at first mysterious phrase lies a whole mathematical universe of prime numbers, infinite sequences, infinite products, and complex functions.",
+    "description": "The Riemann hypothesis concerns the prime numbers 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 ... Ubiquitous and fundamental in mathematics as they are, it is important and interesting to know as much as possible about these numbers. Simple questions would be: how are the prime numbers distributed among the positive integers? What is the number of prime numbers of 100 digits? Of 1,000 digits? These questions were the starting point of a groundbreaking paper by Bernhard Riemann written in 1859.",
     "image": "books-00145.png"
    },
    {
     "title": "Bicycle or Unicycle?: A Collection of Intriguing Mathematical Puzzles",
     "author": "Daniel J. Velleman, Stan Wagon",
     "note": "",
-    "description": "Bicycle or Unicycle? is a collection of 105 mathematical puzzles whose defining characteristic is the surprise encountered in their solutions. Solvers will be surprised, even occasionally shocked, at those solutions. The problems unfold into levels of depth and generality very unusual in the types of problems seen in contests. In contrast to contest problems, these are problems meant to be savored; many solutions, all beautifully explained, lead to unanswered research questions. At the same time, the mathematics necessary to understand the problems and their solutions is all at the undergraduate level. The puzzles will, nonetheless, appeal to professionals as well as to students and, in fact, to anyone who finds delight in an unexpected discovery.",
+    "description": "Bicycle or Unicycle? is a collection of 105 mathematical puzzles whose defining characteristic is the surprise encountered in their solutions. Solvers will be surprised, even occasionally shocked, at those solutions. The problems unfold into levels of depth and generality very unusual in the types of problems seen in contests. In contrast to contest problems, these are problems meant to be savored; many solutions, all beautifully explained, lead to unanswered research questions. ",
     "image": "books-00167.png"
    },
    {
     "title": "A Course in Cryptography",
     "author": "Heiko Knospe",
     "note": "",
-    "description": "This book provides a compact course in modern cryptography. The mathematical foundations in algebra, number theory and probability are presented with a focus on their cryptographic applications. The text provides rigorous definitions and follows the provable security approach. The most relevant cryptographic schemes are covered, including block ciphers, stream ciphers, hash functions, message authentication codes, public-key encryption, key establishment, digital signatures and elliptic curves. The current developments in post-quantum cryptography are also explored, with separate chapters on quantum computing, lattice-based and code-based cryptosystems.",
+    "description": "This book provides a compact course in modern cryptography. The mathematical foundations in algebra, number theory and probability are presented with a focus on their cryptographic applications. The text provides rigorous definitions and follows the provable security approach. The most relevant cryptographic schemes are covered, including block ciphers, stream ciphers, hash functions, message authentication codes, public-key encryption, key establishment, digital signatures and elliptic curves. ",
     "image": "books-00168.png"
    },
    {
     "title": "The Art of Computer Programming, Volume 4, Fascicle 5: Mathematical Preliminaries Redux; Introduction to Backtracking; Dancing Links",
     "author": "Donald Knuth",
     "note": "",
-    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. All have admired Knuth for the breadth, clarity, accuracy, and good humor found in his books.\n<br />\nTo continue the fourth and later volumes of the set, and to update parts of the existing volumes, Knuth has created a series of small books called fascicles, which are published at regular intervals. Each fascicle encompasses a section or more of wholly new or revised material. Ultimately, the content of these fascicles will be rolled up into the comprehensive, final versions of each volume, and the enormous undertaking that began in 1962 will be complete.\n<br />\nThis fascicle covers three separate topics:\n<ul>\n<li>Mathematical Preliminaries.  Knuth writes that this portion of fascicle 5 \"extends the 'Mathematical Preliminaries' of Section 1.2 in Volume 1 to things that I didn't know about in the 1960s. Most of this new material deals with probabilities and expectations of random events; there's also an introduction to the theory of martingales.\"</li>\n<li>Backtracking: this section is the counterpart to section 7.2.1 which covered the generation of basic combinatorial patterns.  This section covers non-basic patterns, ones where the developer needs to make tentative choices and then may need to backtrack when those choices need revision.</li>\n<li>Dancing Links: this section is related to 2 above.  It develops an important data structure technique that is suitable for backtrack programming described above.</li>\n</ul>",
+    "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. ",
     "image": "books-00078.png"
    }
   ]
@@ -765,14 +781,14 @@ var books =
     "title": "Asymptotic Methods For Integrals",
     "author": "Temme, Nico M.",
     "note": "",
-    "description": "This Book Gives Introductory Chapters On The Classical Basic And Standard Methods For Asymptotic Analysis, Such As Watson's Lemma, Laplace's Method, The Saddle Point And Steepest Descent Methods, Stationary Phase And Darboux's Method The Methods, Explained In Great Detail, Will Obtain Asymptotic Approximations Of The Well-Known Special Functions Of Mathematical Physics And Probability Theory After These Introductory Chapters, The Methods Of Uniform Asymptotic Analysis Are Described In Which Several Parameters Have Influence On Typical Phenomena: Turning Points And Transition Points, Coinciding Saddle And Singularities In All These Examples, The Special Functions Are Indicated That Describe The Peculiar Behavior Of The Integrals The Text Extensively Covers The Classical Methods With An Emphasis On How To Obtain Expansions, And How To Use The Results For Numerical Methods, In Particular For Approximating Special Functions In This Way, We Work With A Computational Mind: How Can We Use Certain Expansions In Numerical Analysis And In Computer Programs, How Can We Compute Coefficients, And So On",
+    "description": "This Book Gives Introductory Chapters On The Classical Basic And Standard Methods For Asymptotic Analysis, Such As Watson's Lemma, Laplace's Method, The Saddle Point And Steepest Descent Methods, Stationary Phase And Darboux's Method The Methods, Explained In Great Detail, Will Obtain Asymptotic Approximations Of The Well-Known Special Functions Of Mathematical Physics And Probability Theory After These Introductory Chapters, The Methods Of Uniform Asymptotic Analysis Are Described In Which Several Parameters Have Influence On Typical Phenomena: ...",
     "image": "books-00166.png"
    },
    {
     "title": "An Introduction to the Geometry of N Dimensions",
     "author": "D. M. Y. Sommerville",
     "note": "",
-    "description": "For many years, this was the only English-language book devoted to the subject of higher-dimensional geometry. While that is no longer the case, it remains a significant contribution to the literature, exploring topics of perennial interest to geometers.\nIn the first four chapters, author D. M. Y. Sommerville explains the fundamental ideas of incidence, parallelism, perpendicularity, and angles between linear spaces. Chapter V presents analytical geometry from the projective point of view, exploring some of the simplest ideas relating to algebraic varieties and offering a more detailed account of quadratics. Chapter VI examines analytic geometry of n dimensions from the metric point of view. The remaining four chapters deal with polytopes and address some of the elementary ideas in analysis situs. Chapter VIII treats the content of hyper-special figures, and the final chapter establishes the regular polytope.\nFor advanced undergraduate and graduate students in mathematics as well as historians of mathematics",
+    "description": "For many years, this was the only English-language book devoted to the subject of higher-dimensional geometry. While that is no longer the case, it remains a significant contribution to the literature, exploring topics of perennial interest to geometers.\nIn the first four chapters, author D. M. Y. Sommerville explains the fundamental ideas of incidence, parallelism, perpendicularity, and angles between linear spaces. ",
     "image": "books-00156.png"
    },
    {
@@ -786,7 +802,7 @@ var books =
     "title": "Genius At Play: The Curious Mind of John Horton Conway",
     "author": "Siobhan Roberts",
     "note": "",
-    "description": "John Horton Conway is a singular mathematician with a lovely loopy brain. He is Archimedes, Mick Jagger, Salvador Dali, and Richard Feynman all rolled into one--he boasts a rock star's charisma, a slyly bent sense of humor, a polymath's promiscuous curiosity, and an insatiable compulsion to explain everything about the world to everyone in it. At Cambridge, Conway wrestled with \"Monstrous Moonshine,\" discovered the aptly named surreal numbers, and invented the cult classic Game of Life--more than just a cool fad, Life demonstrates how simplicity generates complexity and provides an analogy for mathematics and the entire universe. As a \"mathemagician\" at Princeton, he used ropes, dice, pennies, coat hangers, even the occasional Slinky, as props to extend his winning imagination and share his many nerdish delights. He granted Roberts full access to his idiosyncrasies and intellect both, though not without the occasional grumble: \"Oh hell,\" he'd say. \"You're not going to put that in the book. Are you?!?\"",
+    "description": "John Horton Conway is a singular mathematician with a lovely loopy brain. He is Archimedes, Mick Jagger, Salvador Dali, and Richard Feynman all rolled into one--he boasts a rock star's charisma, a slyly bent sense of humor, a polymath's promiscuous curiosity, and an insatiable compulsion to explain everything about the world to everyone in it. At Cambridge, Conway wrestled with \"Monstrous Moonshine,\" discovered the aptly named surreal numbers, and invented the cult classic Game of Life--more than just a cool fad, Life demonstrates how simplicity generates complexity and provides an analogy for mathematics and the entire universe. As a \"mathemagician\" at Princeton,...",
     "image": "books-00159.png"
    },
    {
@@ -800,14 +816,14 @@ var books =
     "title": "Applications of Fibonacci Numbers: Volume 9: Proceedings of The Tenth International Research Conference on Fibonacci Numbers and Their Applications",
     "author": "Fredric T. Howard (Editor)",
     "note": "",
-    "description": "This book contains 28 research articles from among the 49 papers and abstracts presented at the Tenth International Conference on Fibonacci Numbers and Their Applications. These articles have been selected after a careful review by expert referees, and they range over many areas of mathematics. The Fibonacci numbers and recurrence relations are their unifying bond. We note that the article \"Fibonacci, Vern and Dan\" , which follows the Introduction to this volume, is not a research paper. It is a personal reminiscence by Marjorie Bicknell-Johnson, a longtime member of the Fibonacci Association. The editor believes it will be of interest to all readers. It is anticipated that this book, like the eight predecessors, will be useful to research workers and students at all levels who are interested in the Fibonacci numbers and their applications. March 16, 2003 The Editor Fredric T. Howard Mathematics Department Wake Forest University Box 7388 Reynolda Station Winston-Salem, NC 27109 xxi THE ORGANIZING COMMITTEES LOCAL COMMITTEE INTERNATIONAL COMMITTEE Calvin Long, Chairman A. F. Horadam (Australia), Co-Chair Terry Crites A. N. Philippou (Cyprus), Co-Chair Steven Wilson A. Adelberg (U. S. A. ) C. Cooper (U. S. A. ) Jeff Rushal H. Harborth (Germany) Y. Horibe (Japan) M. Bicknell-Johnson (U. S. A. ) P. Kiss (Hungary) J. Lahr (Luxembourg) G. M. Phillips (Scotland) J. 'Thrner (New Zealand) xxiii xxiv LIST OF CONTRlBUTORS TO THE CONFERENCE * ADELBERG, ARNOLD, \"Universal Bernoulli Polynomials and p-adic Congruences. \" *AGRATINI, OCTAVIAN, \"A Generalization of Durrmeyer-Type Polynomials. \" BENJAMIN, ART, \"Mathemagics.",
+    "description": "This book contains 28 research articles from among the 49 papers and abstracts presented at the Tenth International Conference on Fibonacci Numbers and Their Applications. These articles have been selected after a careful review by expert referees, and they range over many areas of mathematics. The Fibonacci numbers and recurrence relations are their unifying bond. ",
     "image": "books-00165.png"
    },
    {
     "title": "Visual Differential Geometry and Forms: A Mathematical Drama in Five Acts",
     "author": "Tristan Needham",
     "note": "",
-    "description": "An inviting, intuitive, and visual exploration of differential geometry and forms\n<br/>\nVisual Differential Geometry and Forms fulfills two principal goals. In the first four acts, Tristan Needham puts the geometry back into differential geometry. Using 235 hand-drawn diagrams, Needham deploys Newton's geometrical methods to provide geometrical explanations of the classical results. In the fifth act, he offers the first undergraduate introduction to differential forms that treats advanced topics in an intuitive and geometrical manner.\n<br/>\nUnique features of the first four acts include: four distinct geometrical proofs of the fundamentally important Global Gauss-Bonnet theorem, providing a stunning link between local geometry and global topology; a simple, geometrical proof of Gauss's famous Theorema Egregium; a complete geometrical treatment of the Riemann curvature tensor of an n-manifold; and a detailed geometrical treatment of Einstein's field equation, describing gravity as curved spacetime (General Relativity), together with its implications for gravitational waves, black holes, and cosmology. The final act elucidates such topics as the unification of all the integral theorems of vector calculus; the elegant reformulation of Maxwell's equations of electromagnetism in terms of 2-forms; de Rham cohomology; differential geometry via Cartan's method of moving frames; and the calculation of the Riemann tensor using curvature 2-forms. Six of the seven chapters of Act V can be read completely independently from the rest of the book.\n<br/>\nRequiring only basic calculus and geometry, Visual Differential Geometry and Forms provocatively rethinks the way this important area of mathematics should be considered and taught.\n\n",
+    "description": "An inviting, intuitive, and visual exploration of differential geometry and forms\n<br/>\nVisual Differential Geometry and Forms fulfills two principal goals. In the first four acts, Tristan Needham puts the geometry back into differential geometry. Using 235 hand-drawn diagrams, Needham deploys Newton's geometrical methods to provide geometrical explanations of the classical results. In the fifth act, he offers the first undergraduate introduction to differential forms that treats advanced topics in an intuitive and geometrical manner.\n",
     "image": "books-00151.png"
    },
    {
@@ -835,14 +851,14 @@ var books =
     "title": "The Quantum Dice",
     "author": "L.I Ponomarev, I.V Kurchatov",
     "note": "",
-    "description": "\"Real black magic calculus\" is how Albert Einstein described quantum mechanics in a letter in 1925. Quantum mechanics is now rather more widely understood by physicists, but still many \"outsiders\" are unaware of what quantum mechanics is, how it has changed the course of development of physics and how it affects their everyday lives. This book gives a fascinating account of the evolution of the ideas and concepts of quantum theory and modern physics, written by an \"insider\" but aimed specifically at the general science reader. Many anecdotes from famous past physicists give an insight into their work and personalities. The many illustrations are an important and attractive feature of the book.\n<br/>\nLeonid Ponomarev is a leading theoretical physicist. His deep understanding of the subject is allied with his wide knowledge of history, literature and philosophy to produce this history of the development of modern physics and its impact on our lives.",
+    "description": "\"Real black magic calculus\" is how Albert Einstein described quantum mechanics in a letter in 1925. Quantum mechanics is now rather more widely understood by physicists, but still many \"outsiders\" are unaware of what quantum mechanics is, how it has changed the course of development of physics and how it affects their everyday lives. This book gives a fascinating account of the evolution of the ideas and concepts of quantum theory and modern physics, written by an \"insider\" but aimed specifically at the general science reader.",
     "image": "books-00158.png"
    },
    {
     "title": "Admissible Sets and Structures: An Approach to Definability Theory (Perspectives in Mathematical Logic)",
     "author": "Jon Barwise",
     "note": "",
-    "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. In this volume, the seventh publication in the Perspectives in Logic series, Jon Barwise presents the basic facts about admissible sets and admissible ordinals in a way that makes them accessible to logic students and specialists alike. It fills the artificial gap between model theory and recursion theory and covers everything the logician should know about admissible sets.",
+    "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. ",
     "image": "books-00181.png"
    }
   ]
@@ -908,19 +924,22 @@ var books =
     "image": "books-00089.jpg",
     "title": "Elements: A Visual Exploration of Every Known Atom in the Universe",
     "author": "Theodore Gray, Nick Mann",
-    "description": "An eye-opening, original collection of gorgeous, never-before-seen photographic representations of the 118 elements in the periodic table. The Elements provides this rare opportunity. Based on seven years of research and photography, the pictures in this book make up the most complete, and visually arresting, representation available to the naked eye of every atom in the universe. Organized in order of appearance on the periodic table, each element is represented by a spread that includes a stunning, full-page, full-color photograph that most closely represents it in its purest form."
+    "description": "An eye-opening, original collection of gorgeous, never-before-seen photographic representations of the 118 elements in the periodic table. The Elements provides this rare opportunity. Based on seven years of research and photography, the pictures in this book make up the most complete, and visually arresting, representation available to the naked eye of every atom in the universe.",
+    "note": ""
    },
    {
     "image": "books-00090.jpg",
     "title": "Balancing Chemical Equations Worksheets (Over 200 Reactions to Balance): Chemistry Essentials Practice Workbook with Answers",
     "author": "Chris McMullen",
-    "description": "Master the art of balancing chemical reactions through examples and practice: - 10 examples are fully solved step-by-step with explanations to serve as a guide. - Over 200 chemical equations provide ample practice. - Exercises start out easy and grow progressively more challenging and involved. - Answers to every problem are tabulated at the back of the book. - A chapter of pre-balancing exercises helps develop essential counting skills. - Opening chapter reviews pertinent concepts and ideas."
+    "description": "Master the art of balancing chemical reactions through examples and practice: - 10 examples are fully solved step-by-step with explanations to serve as a guide. - Over 200 chemical equations provide ample practice. - Exercises start out easy and grow progressively more challenging and involved. - Answers to every problem are tabulated at the back of the book.",
+    "note": ""
    },
    {
     "image": "books-00091.jpg",
     "title": "General Chemistry (Dover Books on Chemistry)",
     "author": "Linus Pauling (Two-Time Nobel Laureate)",
-    "description": "When it was first published, this first-year chemistry text revolutionized the teaching of chemistry by presenting it in terms of unifying principles instead of as a body of unrelated facts. Those principles included modern theories of atomic and molecular structure, quantum mechanics, statistical mechanics, and thermodynamics. In addition, Dr. Pauling attempted to correlate the theories with descriptive chemistry, the observed properties of substances, to introduce the student to the multitude of chemical substances and their properties.<br> In this extensively revised and updated third edition, the Nobel Prize-winning author maintains an excellent balance between theoretical and descriptive material, although the amount of descriptive chemistry has been decreased somewhat, and the presentation of the subject, especially in relation to the nonmetals, has been revised in such a way as to permit greater correlation with the electronic structure of atoms, especially electronegativity."
+    "description": "When it was first published, this first-year chemistry text revolutionized the teaching of chemistry by presenting it in terms of unifying principles instead of as a body of unrelated facts. Those principles included modern theories of atomic and molecular structure, quantum mechanics, statistical mechanics, and thermodynamics. In addition, Dr. Pauling attempted to correlate the theories with descriptive chemistry, the observed properties of substances, to introduce the student to the multitude of chemical substances and their properties.",
+    "note": ""
    },
    {
     "image": "books-00059.jpg",
@@ -980,7 +999,8 @@ var books =
     "image": "books-00100.jpg",
     "title": "A Brief History of Time",
     "author": "Stephen Hawking",
-    "description": "A landmark volume in science writing by one of the great minds of our time, Stephen Hawking&#39;s book explores such profound questions as: How did the universe begin-and what made its start possible? Does time always flow forward? Is the universe unending-or are there boundaries? Are there other dimensions in space? What will happen when it all ends?<br> Told in language we all can understand, A Brief History of Time plunges into the exotic realms of black holes and quarks, of antimatter and &ldquo;arrows of time,&rdquo; of the big bang and a bigger God - where the possibilities are wondrous and unexpected. With exciting images and profound imagination, Stephen Hawking brings us closer to the ultimate secrets at the very heart of creation."
+    "description": "A landmark volume in science writing by one of the great minds of our time, Stephen Hawking&#39;s book explores such profound questions as: How did the universe begin-and what made its start possible? Does time always flow forward? Is the universe unending-or are there boundaries? Are there other dimensions in space? What will happen when it all ends?<br> Told in language we all can understand, A Brief History of Time plunges into the exotic realms of black holes and quarks, of antimatter and &ldquo;arrows of time,&rdquo; of the big bang and a bigger God - where the possibilities are wondrous and unexpected.",
+    "note": ""
    },
    {
     "image": "books-00004.jpg",
@@ -992,19 +1012,22 @@ var books =
     "image": "books-00005.jpg",
     "title": "Python Without Fear, 1st Edition",
     "author": "Brian Overland",
-    "description": "Whether you&#39;re new to programming or moving from another language, Python Without Fear will quickly make you productive! Brian Overland&#39;s unique approach to Python includes:<ul> <li>Taking you by the hand while teaching topics from the very basics to intermediate and advanced features of Python</li> <li>Teaching by examples that are explained line by line</li> <li>Heavy emphasis on examples that are fun and useful, including games, graphics, database applications, file storage, puzzles, and more!</li> <li>How to think &ldquo;Pythonically&rdquo; and avoid common &ldquo;gotchas&rdquo;</li></ul>"
+    "description": "Whether you&#39;re new to programming or moving from another language, Python Without Fear will quickly make you productive!",
+    "note": ""
    },
    {
     "image": "books-00006.jpg",
     "title": "JavaScript and JQuery: Interactive Front-End Web Development, 1st Edition",
     "author": "Jon Duckett",
-    "description": "THIS BOOK COVERS:<ul> <li>Basic programming concepts - assuming no prior knowledge of programming beyond an ability to create a web page using HTML & CSS</li> <li>Core elements of the JavaScript language - so you can learn how to write your own scripts from scratch</li> <li>jQuery - which will allow you to simplify the process of writing scripts (this is introduced half-way through the book once you have a solid understanding of JavaScript)</li> <li>How to recreate techniques you will have seen on other web sites such as sliders, content filters, form validation, updating content using Ajax, and much more (these examples demonstrate writing your own scripts from scratch and how the theory you have learned is put into practice).</li></ul>"
+    "description": "THIS BOOK COVERS: Basic programming concepts, Core elements of the JavaScript language, jQuery, How to recreate techniques you will have seen on other web sites such as sliders, content filters, form validation, updating content using Ajax, and much more",
+    "note": ""
    },
    {
     "image": "books-00007.jpg",
     "title": "HTML and CSS: Design and Build Websites 1st Edition",
     "author": "Jon Duckett",
-    "description": "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! <ul> <li>Introduces HTML and CSS in a way that makes them accessible to everyone-hobbyists, students, and professionals-and it&#39;s full-color throughout</li> <li>Utilizes information graphics and lifestyle photography to explain the topics in a simple way that is engaging</li> <li>Boasts a unique structure that allows you to progress through the chapters from beginning to end or just dip into topics of particular interest at your leisure</li></ul>"
+    "description": "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox!",
+    "note": ""
    }
   ]
  },
@@ -1015,13 +1038,15 @@ var books =
     "image": "books-00101.jpg",
     "title": "The Feynman Lectures on Physics, Vol. I: The New Millennium Edition: Mainly Mechanics, Radiation, and Heat (Volume 1)",
     "author": "Richard P. Feynman , Robert B. Leighton , et al.",
-    "description": "&ldquo;The whole thing was basically an experiment,&rdquo; Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades. Ranging from the basic principles of Newtonian physics through such formidable theories as general relativity and quantum mechanics, Feynman&#39;s lectures stand as a monument of clear exposition and deep insight. Timeless and collectible, the lectures are essential reading, not just for students of physics but for anyone seeking an introduction to the field from the inimitable Feynman."
+    "description": "&ldquo;The whole thing was basically an experiment,&rdquo; Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades. ",
+    "note": ""
    },
    {
     "image": "books-00102.jpg",
     "title": "How To: Absurd Scientific Advice for Common Real-World Problems",
     "author": "Randall Munroe",
-    "description": "Bestselling author and cartoonist Randall Munroe explains how to predict the weather by analyzing the pixels of your Facebook photos. He teaches you how to tell if you&#39;re a baby boomer or a 90&#39;s kid by measuring the radioactivity of your teeth. He offers tips for taking a selfie with a telescope, crossing a river by boiling it, and powering your house by destroying the fabric of space-time. And if you want to get rid of the book once you&#39;re done with it, he walks you through your options for proper disposal, including dissolving it in the ocean, converting it to a vapor, using tectonic plates to subduct it into the Earth&#39;s mantle, or launching it into the Sun."
+    "description": "Bestselling author and cartoonist Randall Munroe explains how to predict the weather by analyzing the pixels of your Facebook photos. He teaches you how to tell if you&#39;re a baby boomer or a 90&#39;s kid by measuring the radioactivity of your teeth. He offers tips for taking a selfie with a telescope, crossing a river by boiling it, and powering your house by destroying the fabric of space-time.",
+    "note": ""
    },
    {
     "image": "books-00103.jpg",
@@ -1058,21 +1083,21 @@ var books =
     "title": "Fundamentals of Physics, Volume 1",
     "author": "David Halliday, Robert Resnick, Jearl Walker",
     "note": "",
-    "description": "Fundamentals of Physics, 10th Edition, Volume 1 contains Chapters 1 - 20. Access to WileyPLUS is not included with this textbook. The 10th edition of Halliday, Resnick and Walkers Fundamentals of Physics provides the perfect solution for teaching a 2 or 3 semester calc-based physics course, providing instructors with a tool by which they can teach students how to effectively read scientific material, identify fundamental concepts, reason through scientific questions, and solve quantitative problems. The 10th edition builds upon previous editions by offering new features designed to better engage students and support critical thinking. These include NEW Video Illustrations that bring the subject matter to life, NEW Vector Drawing Questions that test student's conceptual understanding, and additional multimedia resources (videos and animations) that provide an alternative pathway through the material for those who struggle with reading scientific exposition.",
+    "description": "Fundamentals of Physics, 10th Edition, Volume 1 contains Chapters 1 - 20. Access to WileyPLUS is not included with this textbook. The 10th edition of Halliday, Resnick and Walkers Fundamentals of Physics provides the perfect solution for teaching a 2 or 3 semester calc-based physics course, providing instructors with a tool by which they can teach students how to effectively read scientific material, identify fundamental concepts, reason through scientific questions, and solve quantitative problems. ",
     "image": "books-00150.png"
    },
    {
     "title": "A History of the Universe in 21 Stars (and 3 Impostors)",
     "author": "Giles Sparrow",
     "note": "",
-    "description": "On a clear evening, if you look up you can see thousands of stars shining in the dark sky, each with a story of their own. Taking 21 stars (and three imposters, that cheekily aren't technically stars), expert science writer Giles Sparrow offers a complete introduction to what is happening up in the night sky. Sparrow draws 'star maps' to help you easily identify the celestial bodies and then explains (for anyone not an astronomer themselves) what this particular pinprick of light can tell us about the birth, life and death of our universe.\n\nFrom red giants, quasars and supernovae to black holes, multiple stars and even our own Sun, this fascinating book tells the intriguing, inspiring and sometimes incredible story of how we came to unravel the mysteries of the cosmos, and what we learnt along the way. So look up at the sky and marvel at its wonders with this exciting new book.",
+    "description": "On a clear evening, if you look up you can see thousands of stars shining in the dark sky, each with a story of their own. Taking 21 stars (and three imposters, that cheekily aren't technically stars), expert science writer Giles Sparrow offers a complete introduction to what is happening up in the night sky. Sparrow draws 'star maps' to help you easily identify the celestial bodies and then explains (for anyone not an astronomer themselves) what this particular pinprick of light can tell us about the birth, life and death of our universe.\n",
     "image": "books-00152.png"
    },
    {
     "title": "The Code Breaker: Jennifer Doudna, Gene Editing, and the Future of the Human Race",
     "author": "Walter Isaacson",
     "note": "",
-    "description": "When Jennifer Doudna was in sixth grade, she came home one day to find that her dad had left a paperback titled The Double Helix on her bed. She put it aside, thinking it was one of those detective tales she loved. When she read it on a rainy Saturday, she discovered she was right, in a way. As she sped through the pages, she became enthralled by the intense drama behind the competition to discover the code of life. Even though her high school counselor told her girls didn't become scientists, she decided she would.\n\nDriven by a passion to understand how nature works and to turn discoveries into inventions, she would help to make what the book's author, James Watson, told her was the most important biological advance since his co-discovery of the structure of DNA. She and her collaborators turned a curiosity of nature into an invention that will transform the human race: an easy-to-use tool that can edit DNA. Known as CRISPR, it opened a brave new world of medical miracles and moral questions.\n\nThe development of CRISPR and the race to create vaccines for coronavirus will hasten our transition to the next great innovation revolution. The past half-century has been a digital age, based on the microchip, computer, and internet. Now we are entering a life-science revolution. Children who study digital coding will be joined by those who study genetic code.\n\nShould we use our new evolution-hacking powers to make us less susceptible to viruses? What a wonderful boon that would be! And what about preventing depression? Hmmm...Should we allow parents, if they can afford it, to enhance the height or muscles or IQ of their kids?\n\nAfter helping to discover CRISPR, Doudna became a leader in wrestling with these moral issues and, with her collaborator Emmanuelle Charpentier, won the Nobel Prize in 2020. Her story is a thrilling detective tale that involves the most profound wonders of nature, from the origins of life to the future of our species.",
+    "description": "When Jennifer Doudna was in sixth grade, she came home one day to find that her dad had left a paperback titled The Double Helix on her bed. She put it aside, thinking it was one of those detective tales she loved. When she read it on a rainy Saturday, she discovered she was right, in a way. As she sped through the pages, she became enthralled by the intense drama behind the competition to discover the code of life. Even though her high school counselor told her girls didn't become scientists, she decided she would.",
     "image": "books-00160.png"
    },
    {
