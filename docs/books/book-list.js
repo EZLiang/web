@@ -737,7 +737,7 @@ var books =
   ]
  },
  {
-  "group": "Mathematics, 8th  grade. 2021 fall - 2022 summer",
+  "group": "Mathematics, 8th  grade. 2021 fall -",
   "hidden": false,
   "list": [
    {
@@ -830,6 +830,20 @@ var books =
     "note": "",
     "description": "This is an introductory book on Non-Commutative Probability or Free Probability and Large Dimensional Random Matrices. Basic concepts of free probability are introduced by analogy with classical probability in a lucid and quick manner. It then develops the results on the convergence of large dimensional random matrices, with a special focus on the interesting connections to free probability. The book assumes almost no prerequisite for the most part. However, familiarity with the basic convergence concepts in probability and a bit of mathematical maturity will be helpful.",
     "image": "books-00172.png"
+   },
+   {
+    "title": "The Quantum Dice",
+    "author": "L.I Ponomarev, I.V Kurchatov",
+    "note": "",
+    "description": "\"Real black magic calculus\" is how Albert Einstein described quantum mechanics in a letter in 1925. Quantum mechanics is now rather more widely understood by physicists, but still many \"outsiders\" are unaware of what quantum mechanics is, how it has changed the course of development of physics and how it affects their everyday lives. This book gives a fascinating account of the evolution of the ideas and concepts of quantum theory and modern physics, written by an \"insider\" but aimed specifically at the general science reader. Many anecdotes from famous past physicists give an insight into their work and personalities. The many illustrations are an important and attractive feature of the book.\n<br/>\nLeonid Ponomarev is a leading theoretical physicist. His deep understanding of the subject is allied with his wide knowledge of history, literature and philosophy to produce this history of the development of modern physics and its impact on our lives.",
+    "image": "books-00158.png"
+   },
+   {
+    "title": "Admissible Sets and Structures: An Approach to Definability Theory (Perspectives in Mathematical Logic)",
+    "author": "Jon Barwise",
+    "note": "",
+    "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. In this volume, the seventh publication in the Perspectives in Logic series, Jon Barwise presents the basic facts about admissible sets and admissible ordinals in a way that makes them accessible to logic students and specialists alike. It fills the artificial gap between model theory and recursion theory and covers everything the logician should know about admissible sets.",
+    "image": "books-00181.png"
    }
   ]
  },
@@ -1187,13 +1201,6 @@ var books =
     "image": "books-00143.png"
    },
    {
-    "title": "The Quantum Dice",
-    "author": "L.I Ponomarev, I.V Kurchatov",
-    "note": "",
-    "description": "\"Real black magic calculus\" is how Albert Einstein described quantum mechanics in a letter in 1925. Quantum mechanics is now rather more widely understood by physicists, but still many \"outsiders\" are unaware of what quantum mechanics is, how it has changed the course of development of physics and how it affects their everyday lives. This book gives a fascinating account of the evolution of the ideas and concepts of quantum theory and modern physics, written by an \"insider\" but aimed specifically at the general science reader. Many anecdotes from famous past physicists give an insight into their work and personalities. The many illustrations are an important and attractive feature of the book.\n<br/>\nLeonid Ponomarev is a leading theoretical physicist. His deep understanding of the subject is allied with his wide knowledge of history, literature and philosophy to produce this history of the development of modern physics and its impact on our lives.",
-    "image": "books-00158.png"
-   },
-   {
     "title": "Number Theory and Its Applications (Lecture Notes in Pure and Applied Mathematics, Vol. 204)",
     "author": "Serguei Stepanov, C.Y. Yildirim",
     "note": "",
@@ -1234,13 +1241,6 @@ var books =
     "note": "",
     "description": "Abstract Calculus: A Categorical Approach provides an abstract approach to calculus. It is intended for graduate students pursuing PhDs in pure mathematics but junior and senior researchers in basically any field of mathematics and theoretical physics will also be interested. Any calculus text for undergraduate students majoring in engineering, mathematics or physics deals with the classical concepts of limits, continuity, differentiability, optimization, integrability, summability, and approximation. This book covers the exact same topics, but from a categorical perspective, making the classification of topological modules as the main category involved.",
     "image": "books-00175.png"
-   },
-   {
-    "title": "Admissible Sets and Structures: An Approach to Definability Theory (Perspectives in Mathematical Logic)",
-    "author": "Jon Barwise",
-    "note": "",
-    "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. In this volume, the seventh publication in the Perspectives in Logic series, Jon Barwise presents the basic facts about admissible sets and admissible ordinals in a way that makes them accessible to logic students and specialists alike. It fills the artificial gap between model theory and recursion theory and covers everything the logician should know about admissible sets.",
-    "image": "books-00181.png"
    }
   ]
  },
