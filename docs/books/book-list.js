@@ -1113,6 +1113,20 @@ var books =
     "note": "",
     "description": "Written for the full year or three term Calculus-based University Physics course for science and engineering majors, the publication of the first edition of Physics in 1960 launched the modern era of Physics textbooks. It was a new paradigm at the time and continues to be the dominant model for all texts. Physics is the most realistic option for schools looking to teach a more demanding course. The entirety of Volume 2 of the 5th edition has been edited to clarify conceptual development in light of recent findings of physics education research. End-of-chapter problem sets are thoroughly over-hauled, new problems are added, outdated references are deleted, and new short-answer conceptual questions are added.",
     "image": "books-00163.png"
+   },
+   {
+    "title": "Quantum Field Theory in a Nutshell, 2nd Edition",
+    "author": "A. Zee",
+    "note": "",
+    "description": "Since it was first published, Quantum Field Theory in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.",
+    "image": "books-00184.png"
+   },
+   {
+    "title": "Chemistry, 10th Edition",
+    "author": "Steven S. Zumdahl, Susan A. Zumdahl, Donald J. DeCoste",
+    "note": "",
+    "description": "Learn the skills you need to succeed in your chemistry course with CHEMISTRY, Tenth Edition. This trusted text has helped generations of students learn to think like chemists, and develop problem-solving skills needed to master even the most challenging problems.",
+    "image": "books-00182.png"
    }
   ]
  },
@@ -1266,6 +1280,27 @@ var books =
     "note": "",
     "description": "Abstract Calculus: A Categorical Approach provides an abstract approach to calculus. It is intended for graduate students pursuing PhDs in pure mathematics but junior and senior researchers in basically any field of mathematics and theoretical physics will also be interested. Any calculus text for undergraduate students majoring in engineering, mathematics or physics deals with the classical concepts of limits, continuity, differentiability, optimization, integrability, summability, and approximation. This book covers the exact same topics, but from a categorical perspective, making the classification of topological modules as the main category involved.",
     "image": "books-00175.png"
+   },
+   {
+    "title": "Physics: Principles with Applications, 7th Edition",
+    "author": "Douglas Giancoli",
+    "note": "",
+    "description": "Elegant, engaging, exacting, and concise, Giancoli's Physics: Principles with Applications, Seventh Edition, helps you view the world through eyes that know physics.",
+    "image": "books-00183.png"
+   },
+   {
+    "title": "The Feynman Lectures on Physics, Vol. II: The New Millennium Edition: Mainly Electromagnetism and Matter",
+    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
+    "note": "",
+    "description": "The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
+    "image": "books-00185.png"
+   },
+   {
+    "title": "The Feynman Lectures on Physics, Vol. III: The New Millennium Edition: Quantum Mechanics",
+    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
+    "note": "",
+    "description": "\"The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
+    "image": "books-00186.png"
    }
   ]
  },
