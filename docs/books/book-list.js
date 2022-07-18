@@ -1301,6 +1301,27 @@ var books =
     "note": "",
     "description": "\"The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
     "image": "books-00186.png"
+   },
+   {
+    "title": "Earth Science, 15th Edition",
+    "author": "Edward Tarbuck, Frederick Lutgens, Dennis Tasa",
+    "note": "",
+    "description": "Ideal for undergraduates with little or no science background, Earth Science provides a student-friendly overview of our physical environment that offers balanced, up-to-date coverage of geology, oceanography, astronomy, and meteorology. The authors' texts have always been recognized for their readability, currency, dynamic art program, delivery of basic principles and instructor flexibility. The Fifteenth Edition incorporates a new active learning approach, a fully updated and mobile visual program.",
+    "image": "books-00191.png"
+   },
+   {
+    "title": "Proof Theory: Second Edition",
+    "author": "Gaisi Takeuti",
+    "note": "",
+    "description": "Focusing on Gentzen-type proof theory, this volume presents a detailed overview of creative works by author Gaisi Takeuti and other twentieth-century logicians. The text explores applications of proof theory to logic as well as other areas of mathematics. Suitable for advanced undergraduates and graduate students of mathematics, this long-out-of-print monograph forms a cornerstone for any library in mathematical logic and related topics.",
+    "image": "books-00192.png"
+   },
+   {
+    "title": "A Proof Theory for Description Logics, 2012th Edition",
+    "author": "Alexandre Rademaker",
+    "note": "",
+    "description": "A Proof Theory for Description Logics introduces Sequent Calculi and Natural Deduction for some DLs (ALC, ALCQ). Cut-elimination and Normalization are proved for the calculi. The author argues that such systems can improve the extraction of computational content from DLs proofs for explanation purposes.",
+    "image": "books-00193.png"
    }
   ]
  },
