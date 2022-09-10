@@ -753,7 +753,7 @@ var books =
   ]
  },
  {
-  "group": "Mathematics, 8th  grade. 2021 fall -",
+  "group": "Mathematics, 8th  grade. 2021 fall - 2022 summer",
   "hidden": false,
   "list": [
    {
@@ -864,17 +864,72 @@ var books =
   ]
  },
  {
+  "group": "Mathematics, 9th grade. 2022 fall - ",
+  "hidden": false,
+  "list": [
+   {
+    "title": "Mathematics Magazine",
+    "author": "Mathematical Association of America (publisher)",
+    "note": "",
+    "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
+    "image": "books-00198.png"
+   },
+   {
+    "title": "The American Mathematical Monthly",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The American Mathematical Monthly publishes research on mathematics, mathematical ideas, mathematical problems and solutions.",
+    "image": "books-00199.png"
+   },
+   {
+    "title": "The College Mathematics Journal",
+    "author": "Mathematical Association of America (Publisher)",
+    "note": "",
+    "description": "The College Mathematics Journal publishes international research to enhance classroom learning, focused on mathematics curriculum and undergraduates mathematics.",
+    "image": "books-00200.png"
+   },
+   {
+    "title": "Principles of Microeconomics, 8th Edition",
+    "author": "N. Gregory Mankiw",
+    "note": "",
+    "description": "PRINCIPLES OF MICROECONOMICS, 8E. With its clear and engaging writing style, this book emphasizes only the material that will help you better understand the world in which you live, will make you a more astute participant in the economy, and will give you a better understanding of both the potential and limits of economic policy.",
+    "image": "books-00187.png"
+   },
+   {
+    "title": "The Best Writing on Mathematics 2021",
+    "author": "Mircea Pitici",
+    "note": "",
+    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
+    "image": "books-00154.png"
+   },
+   {
+    "title": "Visual Complex Analysis",
+    "author": "Tristan Needham",
+    "note": "",
+    "description": "This radical first course on complex analysis brings a beautiful and powerful subject to life by consistently using geometry (not calculation) as the means of explanation. Aimed at undergraduate students in mathematics, physics, and engineering, the book's intuitive explanations, lack of advanced prerequisites, and consciously user-friendly prose style will help students to master the subject more readily than was previously possible. The key to this is the book's use of new geometric arguments in place of the standard calculational ones. These geometric arguments are communicated with the aid of hundreds of diagrams of a standard seldom encountered in mathematical works. A new approach to a classical topic, this work will be of interest to students in mathematics, physics, and engineering, as well as to professionals in these fields.",
+    "image": "books-00143.png"
+   },
+   {
+    "title": "Proof Theory: Second Edition",
+    "author": "Gaisi Takeuti",
+    "note": "",
+    "description": "Focusing on Gentzen-type proof theory, this volume presents a detailed overview of creative works by author Gaisi Takeuti and other twentieth-century logicians. The text explores applications of proof theory to logic as well as other areas of mathematics. Suitable for advanced undergraduates and graduate students of mathematics, this long-out-of-print monograph forms a cornerstone for any library in mathematical logic and related topics.",
+    "image": "books-00192.png"
+   }
+  ]
+ },
+ {
   "group": "Other Science/Tech Books, Elementary School, 2016 - 2019",
   "list": [
    {
     "image": "books-00080.jpg",
-    "title": "Astronomy magazine, 2014 - current",
+    "title": "Astronomy magazine",
     "author": "",
     "description": "The world's best-selling astronomy magazine offers you the most exciting, visually stunning, and timely coverage of the heavens above. Each monthly issue includes expert science reporting, vivid color photography, complete sky coverage, spot-on observing tips, informative telescope reviews, and much more! All this in an easy-to-understand, user-friendly style that's perfect for astronomers at any level."
    },
    {
     "image": "books-00081.jpg",
-    "title": "Popular Science, 2014 - current",
+    "title": "Popular Science",
     "author": "",
     "description": "Popular Science is an American quarterly magazine carrying popular science content, which refers to articles for the general reader on science and technology subjects. Popular Science has won over 58 awards, including the American Society of Magazine Editors awards for its journalistic excellence in 2003, 2004, and 2019. With roots beginning in 1872, Popular Science has been translated into over 30 languages and is distributed to at least 45 countries."
    },
@@ -1032,7 +1087,7 @@ var books =
   ]
  },
  {
-  "group": "Other Science/Tech Books, Middle School, 2019 -",
+  "group": "Other Science/Tech Books, Middle School, 2019 - 2022",
   "list": [
    {
     "image": "books-00101.jpg",
@@ -1127,6 +1182,61 @@ var books =
     "note": "",
     "description": "Learn the skills you need to succeed in your chemistry course with CHEMISTRY, Tenth Edition. This trusted text has helped generations of students learn to think like chemists, and develop problem-solving skills needed to master even the most challenging problems.",
     "image": "books-00182.png"
+   },
+   {
+    "title": "The Feynman Lectures on Physics, Vol. II: The New Millennium Edition: Mainly Electromagnetism and Matter",
+    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
+    "note": "",
+    "description": "The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
+    "image": "books-00185.png"
+   },
+   {
+    "title": "The Feynman Lectures on Physics, Vol. III: The New Millennium Edition: Quantum Mechanics",
+    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
+    "note": "",
+    "description": "\"The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
+    "image": "books-00186.png"
+   },
+   {
+    "title": "Earth Science, 15th Edition",
+    "author": "Edward Tarbuck, Frederick Lutgens, Dennis Tasa",
+    "note": "",
+    "description": "Ideal for undergraduates with little or no science background, Earth Science provides a student-friendly overview of our physical environment that offers balanced, up-to-date coverage of geology, oceanography, astronomy, and meteorology. The authors' texts have always been recognized for their readability, currency, dynamic art program, delivery of basic principles and instructor flexibility. The Fifteenth Edition incorporates a new active learning approach, a fully updated and mobile visual program.",
+    "image": "books-00191.png"
+   }
+  ]
+ },
+ {
+  "group": "Other Science/Tech Books, High School, 2022 -",
+  "hidden": false,
+  "list": [
+   {
+    "image": "books-00197.png",
+    "title": "Astronomy magazine",
+    "author": "",
+    "description": "The world's best-selling astronomy magazine offers you the most exciting, visually stunning, and timely coverage of the heavens above. Each monthly issue includes expert science reporting, vivid color photography, complete sky coverage, spot-on observing tips, informative telescope reviews, and much more! All this in an easy-to-understand, user-friendly style that's perfect for astronomers at any level.",
+    "note": ""
+   },
+   {
+    "title": "The Black Hole War",
+    "author": "Leonard Susskind",
+    "note": "",
+    "description": "The Black Hole War is the thrilling story of their united effort to reconcile Hawking's revolutionary theories of black holes with their own sense of reality -- effort that would eventually result in Hawking admitting he was wrong, paying up, and Susskind and t'Hooft realizing that our world is a hologram projected from the outer boundaries of space.",
+    "image": "books-00190.png"
+   },
+   {
+    "title": "Before The Big Bang: The Origin of the Universe and What Lies Beyond",
+    "author": "Laura Mersini-Houghton ",
+    "note": "",
+    "description": "A revolutionary new account of our universe's creation and a breathtaking exploration of the landscape from which we sprang from one of the world's most celebrated cosmologists",
+    "image": "books-00194.png"
+   },
+   {
+    "title": "Einstein Gravity in a Nutshell",
+    "author": "A.Zee",
+    "note": "",
+    "description": "This unique textbook provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.",
+    "image": "books-00189.png"
    }
   ]
  },
@@ -1219,25 +1329,11 @@ var books =
     "image": "books-00169.png"
    },
    {
-    "title": "The Best Writing on Mathematics 2021",
-    "author": "Mircea Pitici",
-    "note": "",
-    "description": "This annual anthology brings together the year's finest mathematics writing from around the world-and you don't need to be a mathematician to enjoy the pieces collected here. These essays-from leading names and fresh new voices-delve into the history, philosophy, teaching, and everyday aspects of math, offering surprising insights into its nature, meaning, and practice, and taking readers behind the scenes of today's hottest mathematical debates.\n\nHere, Viktor Blasjo gives a brief history of \"lockdown mathematics\"; Yelda Nasifoglu decodes the politics of a seventeenth-century play in which the characters are geometric shapes; and Andrew Lewis-Pye explains the basic algorithmic rules and computational procedures behind cryptocurrencies. In other essays, Terence Tao candidly recalls the adventures and misadventures of growing up to become a leading mathematician; Natalie Wolchover shows how old math gives new clues about whether time really flows; and David Hand discusses the problem of \"dark data\"-information that is missing or ignored. And there is much, much more.",
-    "image": "books-00154.png"
-   },
-   {
     "title": "Real Analysis: Modern Techniques and Their Applications",
     "author": "Gerald B. Folland",
     "note": "",
     "description": "An in-depth look at real analysis and its applications-now expanded and revised.\n<br/>\nThis new edition of the widely used analysis book continues to cover real analysis in greater detail and at a more advanced level than most books on the subject. Encompassing several subjects that underlie much of modern analysis, the book focuses on measure and integration theory, point set topology, and the basics of functional analysis. It illustrates the use of the general theories and introduces readers to other branches of analysis such as Fourier analysis, distribution theory, and probability theory.\n<br/>\nThis edition is bolstered in content as well as in scope-extending its usefulness to students outside of pure analysis as well as those interested in dynamical systems. The numerous exercises, extensive bibliography, and review chapter on sets and metric spaces make Real Analysis: Modern Techniques and Their Applications, Second Edition invaluable for students in graduate-level analysis courses. New features include:\n* Revised material on the n-dimensional Lebesgue integral.\n* An improved proof of Tychonoff's theorem.\n* Expanded material on Fourier analysis.\n* A newly written chapter devoted to distributions and differential equations.\n* Updated material on Hausdorff dimension and fractal dimension.",
     "image": "books-00142.png"
-   },
-   {
-    "title": "Visual Complex Analysis",
-    "author": "Tristan Needham",
-    "note": "",
-    "description": "This radical first course on complex analysis brings a beautiful and powerful subject to life by consistently using geometry (not calculation) as the means of explanation. Aimed at undergraduate students in mathematics, physics, and engineering, the book's intuitive explanations, lack of advanced prerequisites, and consciously user-friendly prose style will help students to master the subject more readily than was previously possible. The key to this is the book's use of new geometric arguments in place of the standard calculational ones. These geometric arguments are communicated with the aid of hundreds of diagrams of a standard seldom encountered in mathematical works. A new approach to a classical topic, this work will be of interest to students in mathematics, physics, and engineering, as well as to professionals in these fields.",
-    "image": "books-00143.png"
    },
    {
     "title": "Number Theory and Its Applications (Lecture Notes in Pure and Applied Mathematics, Vol. 204)",
@@ -1289,39 +1385,32 @@ var books =
     "image": "books-00183.png"
    },
    {
-    "title": "The Feynman Lectures on Physics, Vol. II: The New Millennium Edition: Mainly Electromagnetism and Matter",
-    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
-    "note": "",
-    "description": "The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
-    "image": "books-00185.png"
-   },
-   {
-    "title": "The Feynman Lectures on Physics, Vol. III: The New Millennium Edition: Quantum Mechanics",
-    "author": "Richard P. Feynman, Robert B. Leighton, Matthew Sands",
-    "note": "",
-    "description": "\"The whole thing was basically an experiment,\" Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades.",
-    "image": "books-00186.png"
-   },
-   {
-    "title": "Earth Science, 15th Edition",
-    "author": "Edward Tarbuck, Frederick Lutgens, Dennis Tasa",
-    "note": "",
-    "description": "Ideal for undergraduates with little or no science background, Earth Science provides a student-friendly overview of our physical environment that offers balanced, up-to-date coverage of geology, oceanography, astronomy, and meteorology. The authors' texts have always been recognized for their readability, currency, dynamic art program, delivery of basic principles and instructor flexibility. The Fifteenth Edition incorporates a new active learning approach, a fully updated and mobile visual program.",
-    "image": "books-00191.png"
-   },
-   {
-    "title": "Proof Theory: Second Edition",
-    "author": "Gaisi Takeuti",
-    "note": "",
-    "description": "Focusing on Gentzen-type proof theory, this volume presents a detailed overview of creative works by author Gaisi Takeuti and other twentieth-century logicians. The text explores applications of proof theory to logic as well as other areas of mathematics. Suitable for advanced undergraduates and graduate students of mathematics, this long-out-of-print monograph forms a cornerstone for any library in mathematical logic and related topics.",
-    "image": "books-00192.png"
-   },
-   {
     "title": "A Proof Theory for Description Logics, 2012th Edition",
     "author": "Alexandre Rademaker",
     "note": "",
     "description": "A Proof Theory for Description Logics introduces Sequent Calculi and Natural Deduction for some DLs (ALC, ALCQ). Cut-elimination and Normalization are proved for the calculi. The author argues that such systems can improve the extraction of computational content from DLs proofs for explanation purposes.",
     "image": "books-00193.png"
+   },
+   {
+    "title": "Intermediate Microeconomics: A Modern Approach, Ninth Edition",
+    "author": "Hal R. Varian",
+    "note": "",
+    "description": "From Google's chief economist, Varian's best-selling intermediate microeconomics texts are revered as some of the best in the field.",
+    "image": "books-00188.png"
+   },
+   {
+    "title": "String Theory, Vol. 1",
+    "author": "Joseph Polchinski",
+    "note": "",
+    "description": "Volume 1 provides a thorough introduction to the bosonic string, based on the Polyakov path integral and conformal field theory.",
+    "image": "books-00195.png"
+   },
+   {
+    "title": "String Theory, Vol. 2",
+    "author": "Joseph Polchinski",
+    "note": "",
+    "description": "Volume 2: Superstring Theory and Beyond, begins with an introduction to supersymmetric string theories and goes on to a broad presentation of the important advances of recent years.",
+    "image": "books-00196.png"
    }
   ]
  },
