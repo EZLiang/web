@@ -101,7 +101,9 @@ var books =
     "author": "William Simon",
     "description": "You don't have to be a mathematician or magician to perform the tricks in this fascinating treasury of numerical entertainments. Based on such mathematical ideas and principles as magic squares, the Fibonacci Series, Moebius strips, cycloids, topology, and more, these ingenious brain teasers are amazingly simple to work and require only simple props: playing cards, matches, coins, calendars, and other common items."
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 3
  },
  {
   "group": "Mathematics, 4th grade, 2017 fall - 2018 summer",
@@ -162,7 +164,9 @@ var books =
     "author": "Euclid, Dana Densmore, et al.",
     "description": "The classic Heath translation, in a completely new layout with plenty of space and generous margins. An affordable but sturdy student and teacher sewn softcover edition in one volume, with minimal notes and a new index/glossary."
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 4
  },
  {
   "group": "Mathematics, 5th grade, 2018 fall - 2019 summer",
@@ -293,7 +297,9 @@ var books =
     "author": "Thomas Lin, James Gleick",
     "description": "These stories from Quanta Magazine map the routes of mathematical exploration, showing readers how cutting-edge research is done, while illuminating the productive tension between conjecture and proof, theory and intuition. Readers of The Prime Number Conspiracy, says Quanta editor-in-chief Thomas Lin, are headed on &rdquo;breathtaking intellectual journeys to the bleeding edge of discovery strapped to the narrative rocket of humanity&#39;s never-ending pursuit of knowledge."
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 5
  },
  {
   "group": "Mathematics, 6th grade, 2019 fall - 2020 summer",
@@ -480,7 +486,9 @@ var books =
     "description": "Jacob's Geometry textbook has guided nearly one million students through the process of developing not just knowledge about Geometry, but a lasting understanding of Geometry concepts, principles, and application. Considered by many to be the authoritative Geometry text, Jacobs' math has solidified its reputation of preparing students for academic & career success and is a highly respected standard for teaching high school Geometry. ",
     "note": ""
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 6
  },
  {
   "group": "Mathematics, 7th grade, 2020 fall - 2021 summer",
@@ -750,7 +758,9 @@ var books =
     "description": "This multivolume work on the analysis of algorithms has long been recognized as the definitive description of classical computer science. The four volumes published to date already comprise a unique and invaluable resource in programming theory and practice. Countless readers have spoken about the profound personal influence of Knuth's writings. Scientists have marveled at the beauty and elegance of his analysis, while practicing programmers have successfully applied his \"cookbook\" solutions to their day-to-day problems. ",
     "image": "books-00078.png"
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 7
  },
  {
   "group": "Mathematics, 8th  grade. 2021 fall - 2022 summer",
@@ -861,7 +871,8 @@ var books =
     "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. ",
     "image": "books-00181.png"
    }
-  ]
+  ],
+  "grade": 8
  },
  {
   "group": "Mathematics, 9th grade. 2022 fall - ",
@@ -916,7 +927,8 @@ var books =
     "description": "Focusing on Gentzen-type proof theory, this volume presents a detailed overview of creative works by author Gaisi Takeuti and other twentieth-century logicians. The text explores applications of proof theory to logic as well as other areas of mathematics. Suitable for advanced undergraduates and graduate students of mathematics, this long-out-of-print monograph forms a cornerstone for any library in mathematical logic and related topics.",
     "image": "books-00192.png"
    }
-  ]
+  ],
+  "grade": 9
  },
  {
   "group": "Other Science/Tech Books, Elementary School, 2016 - 2019",
@@ -1084,7 +1096,9 @@ var books =
     "description": "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox!",
     "note": ""
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 4
  },
  {
   "group": "Other Science/Tech Books, Middle School, 2019 - 2022",
@@ -1204,7 +1218,9 @@ var books =
     "description": "Ideal for undergraduates with little or no science background, Earth Science provides a student-friendly overview of our physical environment that offers balanced, up-to-date coverage of geology, oceanography, astronomy, and meteorology. The authors' texts have always been recognized for their readability, currency, dynamic art program, delivery of basic principles and instructor flexibility. The Fifteenth Edition incorporates a new active learning approach, a fully updated and mobile visual program.",
     "image": "books-00191.png"
    }
-  ]
+  ],
+  "hidden": false,
+  "grade": 7
  },
  {
   "group": "Other Science/Tech Books, High School, 2022 -",
@@ -1238,7 +1254,8 @@ var books =
     "description": "This unique textbook provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.",
     "image": "books-00189.png"
    }
-  ]
+  ],
+  "grade": 9
  },
  {
   "group": "To Read",
@@ -1412,7 +1429,8 @@ var books =
     "description": "Volume 2: Superstring Theory and Beyond, begins with an introduction to supersymmetric string theories and goes on to a broad presentation of the important advances of recent years.",
     "image": "books-00196.png"
    }
-  ]
+  ],
+  "grade": 0
  },
  {
   "group": "Nonexistent books",
@@ -1432,7 +1450,8 @@ var books =
     "description": "<marquee style=\"color: blue;\">",
     "image": "books-00119.jpg"
    }
-  ]
+  ],
+  "grade": 0
  }
 ]
 

@@ -32,24 +32,23 @@ title: Edit Books Groups
 <table>
     <tr>
         <td>
+            <input id="groupName" type="text"><br>
             <select id="groupListBox" size="15" onchange="OnGroupSelectionChanged(this.value)"></select>
         </td>
         <td>
             <button onclick='OnGroupMoveUp()'>Move Up</button></br>
             <button onclick='OnGroupMoveDown()'>Move Down</button></br>
             <br>
-            <input id='groupHidden' type="checkbox" style="width:initial;" onclick="OnGroupHiddenChanged(this.checked)"> Hidden<br>
+            <input id='groupHidden' type="checkbox" style="width:initial;"> Hidden<br>
+            <br>
+            Grade:<br>
+            <input id='groupGrade' type='number' width="20"><br>
     
-            <button id='saveButton' style="vertical-align: bottom; margin-top:8rem;">Save</button>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <input id="groupName" type="text">
-        </td>
-        <td>
-            <button onclick='OnGroupRename()'>Rename</button><br>
-            <button onclick='OnGroupCreate()'>New Group</button>
+            <br><br><br>
+            
+            <button onclick='OnGroupCreate()'>New Group</button><br>
+            <button onclick='OnGroupApply()'>Apply</button><br>
+            <button id='saveButton'>Save</button>
         </td>
     </tr>
 </table>
@@ -108,16 +107,10 @@ title: Edit Books Groups
         var groupHiddenBox = document.getElementById("groupHidden");
         groupHiddenBox.checked = books[selectedIndex].hidden == true;
 
+        var groupGradeBox = document.getElementById("groupGrade");
+        groupGradeBox.value = books[selectedIndex].grade == undefined ? 0 : books[selectedIndex].grade;
+
         RefreshBookList();
-    }
-
-    function OnGroupHiddenChanged(bHidden)
-    {
-        if (selectedGroup < 0)
-            return;
-
-        books[selectedGroup].hidden = bHidden;
-        BooksSaver.OnChanged();
     }
 
     function OnGroupMoveUp()
@@ -142,7 +135,7 @@ title: Edit Books Groups
         BooksSaver.OnChanged();
     }
 
-    function OnGroupRename()
+    function OnGroupApply()
     {
         if (selectedGroup < 0)
         {
@@ -150,13 +143,14 @@ title: Edit Books Groups
             return;
         }
 
-        var groupNameBox = document.getElementById("groupName");
-        if (groupNameBox.value == "") {
-            alert("No name");
+        let group = getGroupValue();
+        if (group == null) {
             return;
         }
 
-        books[selectedGroup].group = groupNameBox.value;
+        books[selectedGroup].group = group.group;
+        books[selectedGroup].hidden = group.hidden;
+        books[selectedGroup].grade = group.grade;
 
         RefreshGroupList();
         BooksSaver.OnChanged();
@@ -164,20 +158,38 @@ title: Edit Books Groups
 
     function OnGroupCreate()
     {
-        var groupNameBox = document.getElementById("groupName");
-        if (groupNameBox.value == "") {
-            alert("No name");
+        let group = getGroupValue();
+        if (group == null) {
             return;
         }
 
-        books.push({
-            group: groupNameBox.value,
-            hidden: false,
-            list: []
-        })
+        books.push(group);
 
         RefreshGroupList();
         BooksSaver.OnChanged();
+    }
+
+    function getGroupValue() {
+        let groupName = document.getElementById("groupName").value;
+        if (groupName.value == "") {
+            alert("No name");
+            return null;
+        }
+
+        let groupHidden = document.getElementById("groupHidden").checked;
+
+        let groupGrade = document.getElementById("groupGrade").value;
+        if (groupGrade == undefined || groupGrade == null || groupGrade == "") {
+            alert("No grade");
+            return null;
+        }
+
+        return {
+            group: groupName,
+            hidden: groupHidden,
+            grade: parseInt(groupGrade),
+            list: []
+        };
     }
 
 </script>

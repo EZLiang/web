@@ -59,6 +59,7 @@ title: Edit Books In Group
 <hr>
 
 <strong>Book Details</strong> &nbsp; &nbsp; &nbsp;
+<input id="bookMark" type="checkbox"> Mark &nbsp; &nbsp; &nbsp;
 <button onclick='OnBookApplyChange()'>Apply Change</button>
 
 <div class="flex-container">
@@ -149,10 +150,13 @@ title: Edit Books In Group
 
         var listHtml = '';
         list.forEach( (book,index) => {
+            let title = (book.title=='' ? '{untitled}' : book.title);
+            if (book.mark) {
+                title = '*' + title;
+            }
             listHtml += '<option value="' + index + 
                 (selectedBookIndex==index ? '" selected>' : '">') + 
-                (book.title=='' ? '{untitled}' : book.title) + 
-                '</option>';
+                title + '</option>';
         });
 
         var bookBox = document.getElementById("bookListBox");
@@ -183,7 +187,8 @@ title: Edit Books In Group
             document.getElementById("bookTitle").value = "";
             document.getElementById("bookAuthor").value = "";
             document.getElementById("bookNote").value = "";
-            document.getElementById("bookDescription").value = "";            
+            document.getElementById("bookDescription").value = "";
+            document.getElementById("bookMark").checked = false;      
             RefreshBookImageField("");
 
             document.getElementById("preview").innerHTML = "";
@@ -193,6 +198,7 @@ title: Edit Books In Group
             document.getElementById("bookAuthor").value = book.author;
             document.getElementById("bookNote").value = book.note === undefined ? "" : book.note;
             document.getElementById("bookDescription").value = book.description;
+            document.getElementById("bookMark").checked = book.mark;
             RefreshBookImageField(book.image);
 
             document.getElementById("preview").innerHTML = FormatBook(book);
@@ -262,7 +268,8 @@ title: Edit Books In Group
             author: document.getElementById('bookAuthor').value,
             note: document.getElementById('bookNote').value,
             description: document.getElementById('bookDescription').value,
-            image: document.getElementById('bookImageName').value         
+            image: document.getElementById('bookImageName').value,
+            mark: document.getElementById('bookMark').checked     
         }
 
         if (newBook.title == '') {
@@ -285,6 +292,7 @@ title: Edit Books In Group
         book.note = newBook.note;
         book.description = newBook.description;
         book.image = newBook.image;
+        book.mark = newBook.mark;
 
         RefreshBookList();
         document.getElementById("preview").innerHTML = FormatBook(book);
@@ -302,7 +310,8 @@ title: Edit Books In Group
             author: "",
             note: "",
             description: "",
-            image: ""
+            image: "",
+            mark: false
         });
 
         selectedBookIndex = list.length - 1;
