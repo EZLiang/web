@@ -1,0 +1,35 @@
+---
+layout: default
+title: Selected Reading List
+---
+
+<script type="text/javascript">
+    const StyleA = ' style="color:black; text-decoration: none;" onmouseover="this.style.color="blue" onmouseout="this.style.color="black" ';
+
+    books.forEach(group => {
+        let groupGrade = '';
+        if (group.grade != undefined && group.grade != 0) {
+            groupGrade = 'grade ' + group.grade ;
+        }
+
+        group.list.forEach(book => {
+            if (book.mark == undefined || !book.mark) {
+                return;
+            }
+
+            let grade = "";
+            if (groupGrade != "") {
+                grade = ` - (${groupGrade})`;
+            }
+            else if (book.note != "") {
+                grade = ` - (${book.note})`;
+            }
+            
+
+            document.write(`<details><summary>${book.title}, <i>${book.author}</i> ${grade}</summary>
+                <img align="left" style="width: 5rem; padding: 0.5rem;" src="images/${book.image}">
+                ${book.description}<br clear="left"></details>`);
+        });
+    });
+
+</script>
