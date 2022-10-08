@@ -48,6 +48,7 @@ title: Edit Books In Group
               </script>
             </div>
         </div><br>
+        <button onclick='OnBookCopyToSelected()'>Copy to Selected</button><br>
         <br>
         <button onclick='OnBookAddNew()'>Add New</button><br>
         <button onclick='OnBookDelete()' style="background-color: red;">Delete</button><br>
@@ -255,6 +256,24 @@ title: Edit Books In Group
         RefreshBookList();
         OnBookSelectionChanged(-1);
         BooksSaver.OnChanged();
+    }
+
+    function OnBookCopyToSelected()
+    {
+        var book = GetSelectedBook();
+        if (book == null) {
+          return;
+        }
+            
+        for (let i = 0; i < books.length; i++) {
+            if (books[i].group == 'Selected Books') {
+                books[i].list.push(book);
+                BooksSaver.OnChanged();
+                return;
+            }
+        }
+        
+        alert("no 'Selected Books' group");
     }
 
     function OnBookApplyChange()
