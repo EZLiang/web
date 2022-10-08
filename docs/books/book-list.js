@@ -6,7 +6,7 @@ var books =
   "grade": 0,
   "list": [
    {
-    "title": "Mathematics Magazine (2019 - present)",
+    "title": "Mathematics Magazine (Magazine, 2019 - present)",
     "author": "Mathematical Association of America (publisher)",
     "note": "Grade 6-9",
     "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
@@ -14,7 +14,7 @@ var books =
     "mark": true
    },
    {
-    "title": "The College Mathematics Journal, Magazine (2021 - present)",
+    "title": "The College Mathematics Journal (Magazine, 2021 - present)",
     "author": "Mathematical Association of America (Publisher)",
     "note": "Grade 7-9",
     "description": "The College Mathematics Journal publishes international research to enhance classroom learning, focused on mathematics curriculum and undergraduates mathematics.",
@@ -22,7 +22,7 @@ var books =
     "mark": true
    },
    {
-    "title": "The American Mathematical Monthly, Magazine (2020 - present)",
+    "title": "The American Mathematical Monthly (Magazine, 2020 - present)",
     "author": "Mathematical Association of America (Publisher)",
     "note": "Grade 7-9",
     "description": "The American Mathematical Monthly publishes research on mathematics, mathematical ideas, mathematical problems and solutions.",
@@ -54,20 +54,20 @@ var books =
     "mark": true
    },
    {
-    "image": "books-00014.jpg",
-    "title": "Catalan Numbers",
-    "author": "Richard P. Stanley",
-    "description": "Catalan numbers are probably the most ubiquitous sequence of numbers in mathematics. This book provides, for the first time, a comprehensive collection of their properties and applications in combinatorics, algebra, analysis, number theory, probability theory, geometry, topology, and other areas.",
-    "note": "Grade 3",
-    "mark": true
-   },
-   {
     "image": "books-00017.jpg",
     "title": "Guide to Essential Math: A Review for Physics, Chemistry and Engineering Students",
     "author": "S.M. Blinder",
     "description": "This book reminds students in junior, senior and graduate level courses in physics, chemistry and engineering of the math they may have forgotten (or learned imperfectly) which is needed to succeed in science courses. The focus is on math actually used in physics, chemistry and engineering, and the approach to mathematics begins with 12 examples of increasing complexity, designed to hone the student&#39;s ability to think in mathematical terms and to apply quantitative methods to scientific problems.",
     "note": "Grade 3",
     "mark": true
+   },
+   {
+    "image": "books-00024.jpg",
+    "title": "The Irrationals: A Story of the Numbers You Can&#39;t Count On",
+    "author": "Julian Havil",
+    "description": "In The Irrationals, the first popular and comprehensive book on the subject, Julian Havil tells the story of irrational numbers and the mathematicians who have tackled their challenges, from antiquity to the twenty-first century. Along the way, he explains why irrational numbers are surprisingly difficult to define-and why so many questions still surround them. Fascinating and illuminating, this is a book for everyone who loves math and the history behind it.",
+    "note": "Grade 4",
+    "mark": false
    },
    {
     "image": "books-00031.jpg",
@@ -102,6 +102,22 @@ var books =
     "mark": true
    },
    {
+    "image": "books-00065.jpg",
+    "title": "Winning Ways: For Your Mathematical Plays. Volume 1, 2, 3, 4",
+    "author": "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
+    "description": "This classic on games and how to play them intelligently is being re-issued in a new, four volume editions. This book has laid the foundation to a mathematical approach to playing games. The wise authors wield witty words, which wangle wonderfully winning ways. ",
+    "note": "Grade 6",
+    "mark": false
+   },
+   {
+    "image": "books-00070.jpg",
+    "title": "On Numbers and Games",
+    "author": "John H. Conway",
+    "description": "ONAG, as the book is commonly known, is one of those rare publications that sprang to life in a moment of creative energy and has remained influential for over a quarter of a century. Originally written to define the relation between the theories of transfinite numbers and mathematical games, the resulting work is a mathematically sophisticated but eminently enjoyable guide to game theory. By defining numbers as the strengths of positions in certain games, the author arrives at a new class, the surreal numbers, that includes both real numbers and ordinal numbers. These surreal numbers are applied in the author&#39;s mathematical analysis of game strategies.",
+    "note": "Grade 6",
+    "mark": false
+   },
+   {
     "title": "The Art of Computer Programming, Volumes 1, 2, 3, 4A, 4F5, 4F6",
     "author": "Donald Knuth",
     "note": "Grade 6, 7",
@@ -120,7 +136,7 @@ var books =
    {
     "title": "Einstein Gravity in a Nutshell, Quantum Field Theory in a Nutshell, Group Theory in a Nutshell for Physicists",
     "author": "A. Zee",
-    "note": "Grade 9, 8, 7",
+    "note": "Grade 7, 8, 9",
     "description": "<i>Einstein Gravity in a Nutshell</i> provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.<br><i>Quantum Field Theory</i> in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.<br><i>Group Theory (in a Nutshell for Physicists)</i> is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory.",
     "image": "books-00189.png",
     "mark": true
@@ -312,7 +328,9 @@ var books =
     "image": "books-00024.jpg",
     "title": "The Irrationals: A Story of the Numbers You Can&#39;t Count On",
     "author": "Julian Havil",
-    "description": "In The Irrationals, the first popular and comprehensive book on the subject, Julian Havil tells the story of irrational numbers and the mathematicians who have tackled their challenges, from antiquity to the twenty-first century. Along the way, he explains why irrational numbers are surprisingly difficult to define-and why so many questions still surround them. Fascinating and illuminating, this is a book for everyone who loves math and the history behind it."
+    "description": "In The Irrationals, the first popular and comprehensive book on the subject, Julian Havil tells the story of irrational numbers and the mathematicians who have tackled their challenges, from antiquity to the twenty-first century. Along the way, he explains why irrational numbers are surprisingly difficult to define-and why so many questions still surround them. Fascinating and illuminating, this is a book for everyone who loves math and the history behind it.",
+    "note": "Grade 4",
+    "mark": false
    },
    {
     "image": "books-00025.jpg",
@@ -583,9 +601,11 @@ var books =
    },
    {
     "image": "books-00065.jpg",
-    "title": "Winning Ways: For Your Mathematical Plays. Volume 1: Games in General",
+    "title": "Winning Ways: For Your Mathematical Plays. Volume 1, 2, 3, 4",
     "author": "Elwyn R. Berlekamp, John H. Conway, Richard K. Guy",
-    "description": "This classic on games and how to play them intelligently is being re-issued in a new, four volume edition. This book has laid the foundation to a mathematical approach to playing games. The wise authors wield witty words, which wangle wonderfully winning ways. In Volume 1, the authors do the Spade Work, presenting theories and techniques to &ldquo;dissect&rdquo; games of varied structures and formats in order to develop winning strategies."
+    "description": "This classic on games and how to play them intelligently is being re-issued in a new, four volume editions. This book has laid the foundation to a mathematical approach to playing games. The wise authors wield witty words, which wangle wonderfully winning ways. ",
+    "note": "Grade 6",
+    "mark": false
    },
    {
     "image": "books-00066.jpg",
@@ -619,7 +639,8 @@ var books =
     "title": "On Numbers and Games",
     "author": "John H. Conway",
     "description": "ONAG, as the book is commonly known, is one of those rare publications that sprang to life in a moment of creative energy and has remained influential for over a quarter of a century. Originally written to define the relation between the theories of transfinite numbers and mathematical games, the resulting work is a mathematically sophisticated but eminently enjoyable guide to game theory. By defining numbers as the strengths of positions in certain games, the author arrives at a new class, the surreal numbers, that includes both real numbers and ordinal numbers. These surreal numbers are applied in the author&#39;s mathematical analysis of game strategies.",
-    "note": ""
+    "note": "Grade 6",
+    "mark": false
    },
    {
     "image": "books-00071.jpg",

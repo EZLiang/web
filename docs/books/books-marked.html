@@ -3,18 +3,55 @@ layout: default
 title: Selected Reading List
 ---
 
+<div id="selectedBookListBox"></div>
 <script type="text/javascript">
+    var imageFolder = "./images/"
 
-    for (let i = 0; i < books.length; i++) {
-        if (books[i].group == 'Selected Books') {
-            books[i].list.forEach(book => {                
-                document.write(`<details><summary>${book.title}, <i>${book.author}</i> ${book.note}</summary>
-                    <img align="left" style="width: 5rem; padding: 0.5rem;" src="images/${book.image}">
-                    ${book.description}<br clear="left"></details>`);
-            });
-
-            break;
-        }
+    function getBookSummary(book) {
+        return `${book.title}, <i style="font-family: times, serif;">${book.author}</i>, (${book.note})`;
     }
+    
+    function updateBookList(isPrinting) {
+        let html = '';
+
+        if (isPrinting) {
+            html += '<ul>';
+        }
+
+        
+        for (let i = 0; i < books.length; i++) {
+            if (books[i].group == 'Selected Books') {
+                books[i].list.forEach(book => {
+                                
+                    if (isPrinting) {
+                        html += '<li>' + getBookSummary(book) + '</li>';                    
+                    }
+                    else {
+                        html += '<details><summary>' + getBookSummary(book) + '</summary>' +
+                            `<img align="left" style="width: 5rem; padding: 0.5rem;" src="${imageFolder}${book.image}">
+                            ${book.description}<br clear="left"></details>`;
+                    }
+                });
+
+                break;
+            }
+        }
+
+        if (isPrinting) {
+            html += '</ul>';
+        }
+
+        document.getElementById('selectedBookListBox').innerHTML = html;
+    }
+
+    let body = document.getElementsByTagName("body")[0];
+    body.onbeforeprint = function() {
+        updateBookList(true);
+    };
+    body.onafterprint = function() {
+        updateBookList(false);
+    };
+
+    updateBookList(false);
 
 </script>
