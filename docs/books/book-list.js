@@ -6,28 +6,28 @@ var books =
   "grade": 0,
   "list": [
    {
-    "title": "Mathematics Magazine (Magazine, 2019 - present)",
+    "title": "Mathematics Magazine (2019 - present)",
     "author": "Mathematical Association of America (publisher)",
     "note": "Grade 6-9",
     "description": "Mathematics Magazine publishes international research on mathematics, including historical content and connections between  mathematics and other disciplines. ",
     "image": "books-00177.png",
-    "mark": true
+    "mark": false
    },
    {
-    "title": "The College Mathematics Journal (Magazine, 2021 - present)",
+    "title": "The College Mathematics Journal, Magazine (2021 - present)",
     "author": "Mathematical Association of America (Publisher)",
     "note": "Grade 7-9",
     "description": "The College Mathematics Journal publishes international research to enhance classroom learning, focused on mathematics curriculum and undergraduates mathematics.",
     "image": "books-00179.png",
-    "mark": true
+    "mark": false
    },
    {
-    "title": "The American Mathematical Monthly (Magazine, 2020 - present)",
+    "title": "The American Mathematical Monthly, Magazine (2020 - present)",
     "author": "Mathematical Association of America (Publisher)",
     "note": "Grade 7-9",
     "description": "The American Mathematical Monthly publishes research on mathematics, mathematical ideas, mathematical problems and solutions.",
     "image": "books-00178.png",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00008.jpg",
@@ -35,15 +35,7 @@ var books =
     "author": "Matt Parker",
     "description": "A Mathematician's Journey Through Narcissistic Numbers, Optimal Dating Algorithms, at Least Two Kinds of Infinity, and More.\nIn the absorbing and exhilarating Things to Make and Do in the Fourth Dimension, Parker sets out to convince his readers to revisit the very math that put them off the subject as fourteen-year-olds. Starting with the foundations of math familiar from school (numbers, geometry, and algebra), he takes us on a grand tour, from four dimensional shapes, knot theory, the mysteries of prime numbers, optimization algorithms, and the math behind barcodes and iPhone screens to the different kinds of infinity-and slightly beyond.",
     "note": "Grade 3",
-    "mark": true
-   },
-   {
-    "image": "books-00201.png",
-    "title": "The Best Writing on Mathematics, series 2010-2021",
-    "author": "Mircea Pitici",
-    "description": "This anthology brings together the year&#39;s finest writing on mathematics from around the world. Featuring promising new voices alongside some of the foremost names in mathematics, <em>The Best Writing on Mathematics</em> makes available to a wide audience many articles not easily found anywhere else&ndash;and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday occurrences of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
-    "note": "Grade 3-9",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00012.jpg",
@@ -51,7 +43,7 @@ var books =
     "author": "Paul J. Nahin (Princeton Science Library)",
     "description": "Dr. Euler&#39;s Fabulous Formula shares the fascinating story of the groundbreaking formula-long regarded as the gold standard for mathematical beauty-and shows why it still lies at the heart of complex number theory. In some ways a sequel to Nahin&#39;s An Imaginary Tale, this book examines the many applications of complex numbers alongside intriguing stories from the history of mathematics.",
     "note": "Grade 3",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00017.jpg",
@@ -59,7 +51,15 @@ var books =
     "author": "S.M. Blinder",
     "description": "This book reminds students in junior, senior and graduate level courses in physics, chemistry and engineering of the math they may have forgotten (or learned imperfectly) which is needed to succeed in science courses. The focus is on math actually used in physics, chemistry and engineering, and the approach to mathematics begins with 12 examples of increasing complexity, designed to hone the student&#39;s ability to think in mathematical terms and to apply quantitative methods to scientific problems.",
     "note": "Grade 3",
-    "mark": true
+    "mark": false
+   },
+   {
+    "image": "books-00201.png",
+    "title": "The Best Writing on Mathematics, series 2010-2021",
+    "author": "Mircea Pitici",
+    "description": "This anthology brings together the year&#39;s finest writing on mathematics from around the world. Featuring promising new voices alongside some of the foremost names in mathematics, <em>The Best Writing on Mathematics</em> makes available to a wide audience many articles not easily found anywhere else&ndash;and you don&#39;t need to be a mathematician to enjoy them. These writings offer surprising insights into the nature, meaning, and practice of mathematics today. They delve into the history, philosophy, teaching, and everyday occurrences of math, and take readers behind the scenes of today&#39;s hottest mathematical debates.",
+    "note": "Grade 3-9",
+    "mark": false
    },
    {
     "image": "books-00024.jpg",
@@ -75,7 +75,7 @@ var books =
     "author": "Morris Tenenbaum, Harry Pollard",
     "description": "This unusually well-written, skillfully organized introductory text provides an exhaustive survey of ordinary differential equations &ndash; equations which express the relationship between variables and their derivatives. In a disarmingly simple, step-by-step style that never sacrifices mathematical rigor, the authors &ndash; Morris Tenenbaum of Cornell University, and Harry Pollard of Purdue University &ndash; introduce and explain complex, critically-important concepts to undergraduate students of mathematics, engineering and the sciences.",
     "note": "Grade 5",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00042.jpg",
@@ -83,7 +83,7 @@ var books =
     "author": "G.H. Hardy, E.M. Wright",
     "description": "on the reading list of virtually all elementary number theory courses and is widely regarded as the primary and classic text in elementary number theory. The text retains the style and clarity of previous editions making it highly suitable for undergraduates in mathematics from the first year upwards as well as an essential reference for all number theorists",
     "note": "Grade 5",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00047.jpg",
@@ -91,7 +91,7 @@ var books =
     "author": "Nakhle H. Asmar",
     "description": "This text provides an introduction to partial differential equations and boundary value problems, including Fourier series. The treatment offers students a smooth transition from a course in elementary ordinary differential equations to more advanced topics in a first course in partial differential equations. This widely adopted and successful book also serves as a valuable reference for engineers and other professionals. The approach emphasizes applications, with particular stress on physics and engineering applications. Rich in proofs and examples, the treatment features many exercises in each section.",
     "note": "Grade 5",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00072.jpg",
@@ -99,7 +99,7 @@ var books =
     "author": "Ronald L. Graham, Donald E. Knuth , et al.",
     "description": "This book introduces the mathematics that supports advanced computer programming and the analysis of algorithms. The primary aim of its well-known authors is to provide a solid and relevant base of mathematical skills - the skills needed to solve complex problems, to evaluate horrendous sums, and to discover subtle patterns in data. It is an indispensable text and reference not only for computer scientists - the authors themselves rely heavily on it! - but for serious users of mathematics in virtually every discipline.",
     "note": "Grade 6",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00065.jpg",
@@ -123,7 +123,7 @@ var books =
     "note": "Grade 6, 7",
     "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf. \n\"The bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.\"",
     "image": "books-00138.png",
-    "mark": true
+    "mark": false
    },
    {
     "title": "Reflections on Relativity",
@@ -131,15 +131,7 @@ var books =
     "note": "Grade 7",
     "description": "\"Reflections on Relativity\" is a comprehensive presentation of the classical, special, and general theories of relativity, including in-depth historical perspectives, showing how the relativity principle has repeatedly inspired advances in our understanding of the physical world.",
     "image": "books-00128.png",
-    "mark": true
-   },
-   {
-    "title": "Einstein Gravity in a Nutshell, Quantum Field Theory in a Nutshell, Group Theory in a Nutshell for Physicists",
-    "author": "A. Zee",
-    "note": "Grade 7, 8, 9",
-    "description": "<i>Einstein Gravity in a Nutshell</i> provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.<br><i>Quantum Field Theory</i> in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.<br><i>Group Theory (in a Nutshell for Physicists)</i> is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory.",
-    "image": "books-00189.png",
-    "mark": true
+    "mark": false
    },
    {
     "image": "books-00101.jpg",
@@ -147,7 +139,15 @@ var books =
     "author": "Richard P. Feynman , Robert B. Leighton , et al.",
     "description": "&ldquo;The whole thing was basically an experiment,&rdquo; Richard Feynman said late in his career, looking back on the origins of his lectures. The experiment turned out to be hugely successful, spawning publications that have remained definitive and introductory to physics for decades. ",
     "note": "Grade 7, 8",
-    "mark": true
+    "mark": false
+   },
+   {
+    "title": "Einstein Gravity in a Nutshell, Quantum Field Theory in a Nutshell, Group Theory in a Nutshell for Physicists",
+    "author": "A. Zee",
+    "note": "Grade 7, 8, 9",
+    "description": "<i>Einstein Gravity in a Nutshell</i> provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.<br><i>Quantum Field Theory</i> in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.<br><i>Group Theory (in a Nutshell for Physicists)</i> is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory.",
+    "image": "books-00189.png",
+    "mark": false
    },
    {
     "title": "Visual Differential Geometry and Forms: A Mathematical Drama in Five Acts",
@@ -155,7 +155,7 @@ var books =
     "note": "Grade 8",
     "description": "An inviting, intuitive, and visual exploration of differential geometry and forms\n<br/>\nVisual Differential Geometry and Forms fulfills two principal goals. In the first four acts, Tristan Needham puts the geometry back into differential geometry. Using 235 hand-drawn diagrams, Needham deploys Newton's geometrical methods to provide geometrical explanations of the classical results. In the fifth act, he offers the first undergraduate introduction to differential forms that treats advanced topics in an intuitive and geometrical manner.\n",
     "image": "books-00151.png",
-    "mark": true
+    "mark": false
    },
    {
     "title": "Admissible Sets and Structures: An Approach to Definability Theory (Perspectives in Mathematical Logic)",
@@ -163,7 +163,7 @@ var books =
     "note": "Grade 8",
     "description": "Since their inception, the Perspectives in Logic and Lecture Notes in Logic series have published seminal works by leading logicians. Many of the original books in the series have been unavailable for years, but they are now in print once again. Admissible set theory is a major source of interaction between model theory, recursion theory and set theory, and plays an important role in definability theory. ",
     "image": "books-00181.png",
-    "mark": true
+    "mark": false
    },
    {
     "title": "Visual Complex Analysis",
@@ -171,7 +171,7 @@ var books =
     "note": "Grade 9",
     "description": "This radical first course on complex analysis brings a beautiful and powerful subject to life by consistently using geometry (not calculation) as the means of explanation. Aimed at undergraduate students in mathematics, physics, and engineering, the book's intuitive explanations, lack of advanced prerequisites, and consciously user-friendly prose style will help students to master the subject more readily than was previously possible. The key to this is the book's use of new geometric arguments in place of the standard calculational ones. These geometric arguments are communicated with the aid of hundreds of diagrams of a standard seldom encountered in mathematical works. A new approach to a classical topic, this work will be of interest to students in mathematics, physics, and engineering, as well as to professionals in these fields.",
     "image": "books-00143.png",
-    "mark": true
+    "mark": false
    },
    {
     "title": "String Theory, Vol. 1, 2",
@@ -179,7 +179,7 @@ var books =
     "note": "Grade 9",
     "description": "Volume 1 provides a thorough introduction to the bosonic string, based on the Polyakov path integral and conformal field theory. <br>Volume 2 begins with an introduction to supersymmetric string theories and goes on to a broad presentation of the important advances of recent years.",
     "image": "books-00195.png",
-    "mark": true
+    "mark": false
    }
   ]
  },
