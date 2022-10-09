@@ -121,7 +121,7 @@ var books =
     "title": "The Art of Computer Programming, Volumes 1, 2, 3, 4A, 4F5, 4F6",
     "author": "Donald Knuth",
     "note": "Grade 6, 7",
-    "description": "These four books comprise what easily could be the most important set of information on any serious programmer's bookshelf. \n\"The bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.\"",
+    "description": "These six books comprise what easily could be the most important set of information on any serious programmer's bookshelf. \n\"The bible of all fundamental algorithms and the work that taught many of today's software developers most of what they know about computer programming.\"",
     "image": "books-00138.png",
     "mark": false
    },
@@ -145,7 +145,7 @@ var books =
     "title": "Einstein Gravity in a Nutshell, Quantum Field Theory in a Nutshell, Group Theory in a Nutshell for Physicists",
     "author": "A. Zee",
     "note": "Grade 7, 8, 9",
-    "description": "<i>Einstein Gravity in a Nutshell</i> provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.<br><i>Quantum Field Theory</i> in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.<br><i>Group Theory (in a Nutshell for Physicists)</i> is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory.",
+    "description": "<i>Einstein Gravity in a Nutshell</i> provides an accessible introduction to Einstein's general theory of relativity, a subject of breathtaking beauty and supreme importance in physics.<br>\n<i>Quantum Field Theory</i> in a Nutshell has quickly established itself as the most accessible and comprehensive introduction to this profound and deeply fascinating area of theoretical physics.<br>\n<i>Group Theory in a Nutshell for Physicists</i> is indispensable to many areas of modern theoretical physics, from atomic physics to condensed matter physics, particle physics to string theory.<br>",
     "image": "books-00189.png",
     "mark": false
    },
@@ -177,7 +177,7 @@ var books =
     "title": "String Theory, Vol. 1, 2",
     "author": "Joseph Polchinski",
     "note": "Grade 9",
-    "description": "Volume 1 provides a thorough introduction to the bosonic string, based on the Polyakov path integral and conformal field theory. <br>Volume 2 begins with an introduction to supersymmetric string theories and goes on to a broad presentation of the important advances of recent years.",
+    "description": "<i>Volume 1</i> provides a thorough introduction to the bosonic string, based on the Polyakov path integral and conformal field theory. <br>\n<i>Volume 2</i> begins with an introduction to supersymmetric string theories and goes on to a broad presentation of the important advances of recent years.",
     "image": "books-00195.png",
     "mark": false
    }
